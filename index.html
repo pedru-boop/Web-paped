@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FAFBFC">
+<title>ป้าเป็ด CFP® เมาส์ประกัน | กรุงเทพประกันชีวิต</title>
+<meta name="description" content="ป้าเป็ด CFP® จอมวางแผน — ประกันชีวิต ประกันสุขภาพ ประกันโรคร้ายแรง เงินออมลูกรัก บำนาญ และมรดก จากกรุงเทพประกันชีวิต">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light only;
+    --navy:#0A2A57;
+    --navy-deep:#071D3E;
+    --sky:#2E8FD6;
+    --sky-light:#EAF5FD;
+    --mint:#4FC3A1;
+    --mint-light:#E7F8F2;
+    --gold:#F0B429;
+    --paper:#FAFBFC;
+    --ink:#152238;
+    --ink-soft:#5B6B84;
+    --line:#E3EAF2;
+    --radius:20px;
+    --shadow: 0 8px 24px rgba(10,42,87,0.08);
+    --shadow-lg: 0 16px 40px rgba(10,42,87,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; font-size:18px; background:var(--paper);}
+  body{
+    font-family:'Noto Sans Thai', sans-serif;
+    background:var(--paper) !important;
+    color:var(--ink);
+    line-height:1.75;
+    font-size:1.3rem;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Noto Sans Thai', sans-serif;
+    font-weight:700;
+    color:var(--navy);
+    line-height:1.35;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px;}
+
+  /* ===== Header / Nav ===== */
+  header.site{
+    position:sticky; top:0; z-index:100;
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color:#fff;
+    box-shadow:0 2px 16px rgba(0,0,0,0.15);
+  }
+  .nav-bar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 20px;
+    max-width:1080px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{
+    width:46px; height:46px; border-radius:12px;
+    background:linear-gradient(135deg, var(--mint), var(--sky));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Noto Sans Thai'; font-weight:800; font-size:23px; color:#fff;
+    flex-shrink:0;
+  }
+  .brand-text{font-family:'Noto Sans Thai'; font-weight:700; font-size:23px; color:#fff; letter-spacing:.2px;}
+  .brand-text small{display:block; font-family:'Noto Sans Thai'; font-weight:400; font-size:17px; color:#AFC6E6;}
+  .call-btn{
+    background:var(--gold); color:var(--navy-deep); font-family:'Noto Sans Thai'; font-weight:700;
+    font-size:20px; padding:9px 16px; border-radius:100px; white-space:nowrap;
+    box-shadow:0 4px 10px rgba(240,180,41,0.35);
+  }
+  nav.menu-strip{
+    background:rgba(255,255,255,0.06);
+    overflow-x:auto; white-space:nowrap;
+    -ms-overflow-style:none; scrollbar-width:none;
+    border-top:1px solid rgba(255,255,255,0.08);
+  }
+  nav.menu-strip::-webkit-scrollbar{display:none;}
+  nav.menu-strip .wrap{display:flex; gap:4px; padding:0 16px;}
+  nav.menu-strip a{
+    padding:11px 14px; font-size:21px; color:#DCEBFA; font-weight:500;
+    border-bottom:2.5px solid transparent; flex-shrink:0;
+  }
+  nav.menu-strip a:hover{color:#fff; border-color:var(--mint);}
+
+  /* ===== Hero ===== */
+  .hero{
+    background:
+      radial-gradient(circle at 15% 20%, rgba(79,195,161,0.18), transparent 45%),
+      radial-gradient(circle at 85% 0%, rgba(46,143,214,0.18), transparent 50%),
+      var(--paper);
+    padding:44px 0 34px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .eyebrow{
+    display:inline-block; font-family:'Noto Sans Thai'; font-weight:600; font-size:19px;
+    color:var(--mint); background:var(--mint-light); padding:6px 14px; border-radius:100px;
+    letter-spacing:.5px; margin-bottom:16px;
+  }
+  .hero h1{font-size:clamp(34px,8vw,52px); font-weight:800;}
+  .hero h1 span{color:var(--sky);}
+  .hero p{color:var(--ink-soft); max-width:520px; margin:14px auto 0; font-size:24px;}
+  .hero-cta{margin-top:22px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;}
+  .btn{
+    font-family:'Noto Sans Thai'; font-weight:600; font-size:22px; padding:12px 22px; border-radius:100px;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .btn-primary{background:var(--navy); color:#fff; box-shadow:var(--shadow);}
+  .btn-ghost{background:#fff; color:var(--navy); border:1.5px solid var(--line);}
+  .btn-line{background:#06C755; color:#fff; box-shadow:0 4px 14px rgba(6,199,85,0.35);}
+
+  /* ===== Profile / About ===== */
+  .profile-section{padding:0 0 40px;}
+  .profile-card{
+    background:#fff; border:1px solid var(--line); border-radius:28px;
+    box-shadow:var(--shadow-lg); overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  @media(min-width:680px){ .profile-card{flex-direction:row; align-items:stretch;} }
+  .profile-photo{
+    width:100%; height:280px; object-fit:cover; object-position:top center;
+    background:var(--sky-light);
+  }
+  @media(min-width:680px){ .profile-photo{width:260px; height:auto; flex-shrink:0;} }
+  .profile-info{padding:26px 26px 30px;}
+  .profile-badge{
+    display:inline-block; background:var(--mint-light); color:#1E8A6C;
+    font-weight:600; font-size:0.72em; padding:5px 12px; border-radius:100px; margin-bottom:10px;
+  }
+  .profile-info h2{font-size:1.7em; margin-bottom:2px;}
+  .profile-role{color:var(--sky); font-weight:600; font-size:0.95em; margin-bottom:10px;}
+  .profile-desc{color:var(--ink-soft); font-size:0.92em; margin-bottom:18px;}
+  .profile-cta{display:flex; gap:10px; flex-wrap:wrap;}
+  .profile-cta .btn{padding:11px 20px; font-size:0.85em;}
+
+  /* ===== Floating LINE button ===== */
+  .line-float{
+    position:fixed; bottom:22px; right:18px; z-index:200;
+    width:58px; height:58px; border-radius:50%;
+    background:#06C755; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px rgba(6,199,85,0.45);
+    animation:line-pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes line-pulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.08); }
+  }
+  @media(prefers-reduced-motion: reduce){ .line-float{animation:none;} }
+
+  /* ===== Plan Finder Quiz ===== */
+  .quiz-section{padding:6px 0 40px;}
+  .quiz-card{
+    background:linear-gradient(160deg, #0F2E5C, var(--navy-deep));
+    border-radius:28px; padding:30px 22px; color:#fff;
+    box-shadow:var(--shadow-lg); position:relative; overflow:hidden;
+  }
+  .quiz-card::before{
+    content:""; position:absolute; top:-60px; right:-60px; width:220px; height:220px;
+    background:radial-gradient(circle, rgba(79,195,161,0.25), transparent 70%);
+  }
+  .quiz-head{position:relative; margin-bottom:18px;}
+  .quiz-head .tag{
+    display:inline-block; font-weight:600; font-size:0.68em; color:var(--mint);
+    background:rgba(79,195,161,0.15); padding:5px 12px; border-radius:100px; margin-bottom:10px;
+  }
+  .quiz-head h2{color:#fff; font-size:1.5em;}
+  .quiz-q{font-weight:600; font-size:1.05em; margin-bottom:14px; position:relative;}
+  .quiz-options{display:grid; grid-template-columns:1fr; gap:10px; position:relative;}
+  @media(min-width:520px){ .quiz-options{grid-template-columns:1fr 1fr;} }
+  .quiz-opt{
+    background:rgba(255,255,255,0.07); border:1.5px solid rgba(255,255,255,0.16);
+    color:#fff; padding:14px 16px; border-radius:14px; text-align:right;
+    font-family:'Noto Sans Thai'; font-size:0.95em; font-weight:500;
+    cursor:pointer; transition:background .15s, border-color .15s;
+  }
+  .quiz-opt:hover, .quiz-opt:focus-visible{background:rgba(79,195,161,0.22); border-color:var(--mint); outline:none;}
+  .quiz-back{
+    margin-top:18px; background:none; border:none; color:#AFC6E6;
+    font-family:'Noto Sans Thai'; font-size:0.85em; cursor:pointer; position:relative;
+  }
+  .quiz-back:hover{color:#fff;}
+  .quiz-result{position:relative;}
+  .quiz-result .r-tag{
+    display:inline-block; font-weight:600; font-size:0.68em; color:var(--mint);
+    background:rgba(79,195,161,0.15); padding:5px 12px; border-radius:100px; margin-bottom:12px;
+  }
+  .quiz-result h3{color:#fff; font-size:1.5em; margin-bottom:10px;}
+  .quiz-result p{color:#CFE0F5; font-size:0.95em; margin-bottom:20px;}
+  .quiz-result .r-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--gold); color:var(--navy-deep); font-family:'Noto Sans Thai'; font-weight:700;
+    font-size:0.9em; padding:13px 24px; border-radius:100px;
+  }
+
+  /* ===== Category Menu (signature grid) ===== */
+  .menu-section{padding:34px 0 8px;}
+  .menu-section h2{font-size:31px; text-align:center; margin-bottom:4px;}
+  .menu-section .sub{text-align:center; color:var(--ink-soft); font-size:21px; margin-bottom:22px;}
+  .cat-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:12px;
+  }
+  @media(min-width:520px){ .cat-grid{grid-template-columns:repeat(3,1fr);} }
+  @media(min-width:760px){ .cat-grid{grid-template-columns:repeat(4,1fr); gap:16px;} }
+  .cat-card{
+    background:#fff; border:1px solid var(--line); border-radius:18px;
+    padding:20px 10px; text-align:center; transition:transform .15s, box-shadow .15s;
+  }
+  .cat-card:hover{transform:translateY(-3px); box-shadow:var(--shadow);}
+  .cat-ic{
+    width:56px; height:56px; margin:0 auto 10px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center; font-size:28px;
+  }
+  .cat-card span{display:block; font-size:19px; font-weight:600; color:var(--navy); font-family:'Noto Sans Thai'; line-height:1.3;}
+
+  /* ===== Section Frame ===== */
+  section.block{padding:52px 0; scroll-margin-top:96px;}
+  section.block.alt{background:var(--sky-light);}
+  .block-head{text-align:center; max-width:600px; margin:0 auto 32px;}
+  .block-head .tag{
+    display:inline-block; font-family:'Noto Sans Thai'; font-weight:600; font-size:18px;
+    color:var(--sky); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;
+  }
+  .block-head h2{font-size:clamp(30px,6.5vw,42px);}
+  .block-head p{color:var(--ink-soft); margin-top:10px; font-size:22px;}
+
+  /* ===== Product Cards ===== */
+  .plan-grid{display:grid; grid-template-columns:1fr; gap:18px;}
+  @media(min-width:760px){ .plan-grid{grid-template-columns:repeat(3,1fr);} }
+  @media(min-width:760px){ .plan-grid.cols-2{grid-template-columns:repeat(2,1fr);} }
+  .plan-card{
+    background:#fff; border-radius:var(--radius); border:1px solid var(--line);
+    box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column;
+  }
+  .plan-card .top{
+    background:linear-gradient(135deg, var(--navy), #123a76);
+    color:#fff; padding:20px; position:relative;
+  }
+  .plan-card .top .badge{
+    position:absolute; top:14px; right:14px; background:var(--gold); color:var(--navy-deep);
+    font-family:'Noto Sans Thai'; font-weight:700; font-size:17px; padding:4px 10px; border-radius:100px;
+  }
+  .plan-card .top h3{color:#fff; font-size:28px;}
+  .plan-card .top .term{font-size:20px; color:#AFC6E6; margin-top:4px;}
+  .plan-card .body{padding:18px 20px; flex:1; display:flex; flex-direction:column;}
+  .plan-card ul{list-style:none; margin:0 0 16px; flex:1;}
+  .plan-card li{
+    display:flex; gap:8px; font-size:21px; color:var(--ink); padding:6px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .plan-card li:last-child{border-bottom:none;}
+  .plan-card li::before{content:"✓"; color:var(--mint); font-weight:700; flex-shrink:0;}
+  .plan-card .stat-row{
+    display:flex; justify-content:space-between; background:var(--mint-light);
+    border-radius:12px; padding:10px 14px; margin-bottom:14px;
+  }
+  .plan-card .stat-row div{text-align:center; flex:1;}
+  .plan-card .stat-row b{display:block; font-family:'Noto Sans Thai'; color:var(--navy); font-size:23px;}
+  .plan-card .stat-row span{font-size:17px; color:var(--ink-soft);}
+  .plan-card .cta{
+    text-align:center; font-family:'Noto Sans Thai'; font-weight:600; font-size:21px;
+    color:var(--sky); border:1.5px solid var(--sky); border-radius:100px; padding:10px; margin-top:auto;
+  }
+
+  /* ===== Feature list block (health/rules) ===== */
+  .info-card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px; box-shadow:var(--shadow);
+  }
+  .info-card h3{font-size:25px; margin-bottom:12px; display:flex; align-items:center; gap:8px;}
+  .info-card h3 .ic{
+    width:32px; height:32px; border-radius:9px; background:var(--mint-light);
+    display:flex; align-items:center; justify-content:center; font-size:23px; flex-shrink:0;
+  }
+  .chip-list{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    background:var(--sky-light); color:var(--navy); font-size:19px; padding:7px 12px;
+    border-radius:100px; border:1px solid #D6E9F9;
+  }
+  .chip.warn{background:#FDECEC; color:#B23A3A; border-color:#F6D2D2;}
+  .two-col{display:grid; grid-template-columns:1fr; gap:16px;}
+  @media(min-width:760px){ .two-col{grid-template-columns:1fr 1fr;} }
+
+  /* ===== Contact strip ===== */
+  .contact-cta{
+    background:linear-gradient(135deg, var(--navy), #0f3a75);
+    color:#fff; border-radius:24px; padding:32px 24px; text-align:center; margin-top:10px;
+  }
+  .contact-cta h3{color:#fff; font-size:31px;}
+  .contact-cta p{color:#B9CDEA; margin-top:8px; font-size:22px;}
+  .contact-cta .btn-primary{background:var(--gold); color:var(--navy-deep); margin-top:16px;}
+
+  footer{
+    background:var(--navy-deep); color:#D3E0F2; text-align:center;
+    padding:26px 20px; font-size:19px;
+  }
+  footer b{color:#fff;}
+
+  .note-src{font-size:18px; color:var(--ink-soft); text-align:center; margin-top:6px;}
+
+  /* ===== Premium Calculator ===== */
+  .calc-card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 22px; box-shadow:var(--shadow-lg); max-width:480px; margin:0 auto;
+  }
+  .calc-row{margin-bottom:16px;}
+  .calc-row label{display:block; font-weight:600; font-size:0.85em; color:var(--navy); margin-bottom:6px;}
+  .calc-row select, .calc-row input{
+    width:100%; padding:12px 14px; border:1.5px solid var(--line); border-radius:12px;
+    font-family:'Noto Sans Thai'; font-size:0.95em; color:var(--ink); background:#fff;
+  }
+  .calc-row select:focus, .calc-row input:focus{outline:none; border-color:var(--sky);}
+  .calc-row-split{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .calc-btn{
+    width:100%; background:var(--navy); color:#fff; font-family:'Noto Sans Thai'; font-weight:700;
+    font-size:1em; padding:14px; border-radius:100px; border:none; cursor:pointer; margin-top:6px;
+  }
+  .calc-btn:hover{background:var(--navy-deep);}
+  .calc-result{
+    margin-top:20px; padding:20px; background:var(--mint-light); border-radius:16px;
+    border:1px solid #C8ECDF;
+  }
+  .calc-result .r-label{font-size:0.8em; color:var(--ink-soft); margin-bottom:4px;}
+  .calc-result .r-value{font-family:'Noto Sans Thai'; font-weight:800; font-size:1.6em; color:var(--navy); margin-bottom:10px;}
+  .calc-result .r-note{font-size:0.8em; color:var(--ink-soft);}
+  .calc-result.calc-error{background:#FDECEC; color:#B23A3A;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-bar">
+    <div class="brand">
+      <div class="brand-mark">ป</div>
+      <div class="brand-text">ป้าเป็ด CFP® <small>กรุงเทพประกันชีวิต · เชียงใหม่</small></div>
+    </div>
+    <a class="call-btn" href="tel:0965954789">📞 096-595-4789</a>
+  </div>
+  <nav class="menu-strip">
+    <div class="wrap">
+      <a href="#finder" style="color:var(--mint);">✨ แผนไหนเหมาะกับคุณ</a>
+      <a href="#kids">เงินออมลูกรัก</a>
+      <a href="#savings">สะสมทรัพย์/ลดหย่อนภาษี</a>
+      <a href="#health">ประกันสุขภาพ</a>
+      <a href="#critical">โรคร้ายแรง</a>
+      <a href="#life">ตลอดชีพ</a>
+      <a href="#riders">สัญญาเพิ่มเติม</a>
+      <a href="#calc" style="color:var(--gold);">🧮 คำนวณเบี้ย</a>
+      <a href="#pension">บำนาญ</a>
+      <a href="#legacy">มรดก</a>
+      <a href="#apply">สมัครทำประกัน</a>
+      <a href="#contact">ติดต่อป้าเป็ด</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">CFP® จอมวางแผน</span>
+    <h1>ประกันดี ๆ <span>By ป้าเป็ด</span></h1>
+    <p>วางแผนประกันชีวิต สุขภาพ และภาษี ให้ตรงเป้าหมายของครอบครัวคุณ — อธิบายชัด เปรียบเทียบแผนตรงไปตรงมา ไม่ยัดเยียด</p>
+    <div class="hero-cta">
+      <a href="#kids" class="btn btn-primary">ดูแผนประกันทั้งหมด</a>
+      <a href="https://lin.ee/SrSuQsI" class="btn btn-line" target="_blank" rel="noopener">💬 ทักไลน์ป้าเป็ด</a>
+    </div>
+  </div>
+</section>
+
+<section class="profile-section">
+  <div class="wrap">
+    <div class="profile-card">
+      <img class="profile-photo" src="images/ped-profile.jpg" alt="ป้าเป็ด CFP® ตัวแทนกรุงเทพประกันชีวิต">
+      <div class="profile-info">
+        <span class="profile-badge">✓ ตัวแทนกรุงเทพประกันชีวิต</span>
+        <h2>ป้าเป็ด CFP®</h2>
+        <p class="profile-role">ผู้จัดการหน่วย · กรุงเทพประกันชีวิต สาขาเชียงใหม่</p>
+        <p class="profile-desc">ที่ปรึกษาการเงินและวางแผนภาษีที่ได้รับวุฒิบัตร CFP® (Certified Financial Planner) วางแผนประกันให้ตรงเป้าหมายจริงของแต่ละครอบครัว ไม่ยัดเยียดแผนที่ไม่จำเป็น</p>
+        <div class="profile-cta">
+          <a href="https://lin.ee/SrSuQsI" class="btn btn-line" target="_blank" rel="noopener">💬 แอดไลน์คุยกับป้าเป็ด</a>
+          <a href="tel:0965954789" class="btn btn-ghost">📞 096-595-4789</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="https://lin.ee/SrSuQsI" class="line-float" target="_blank" rel="noopener" aria-label="แอดไลน์ป้าเป็ด">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff"><path d="M12 2C6.48 2 2 5.94 2 10.7c0 4.27 3.58 7.85 8.42 8.55.33.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .88.55 1.08-.46 5.82-3.43 7.94-5.87C21.44 14.02 22 12.42 22 10.7 22 5.94 17.52 2 12 2z"/></svg>
+</a>
+
+<!-- ===================== PLAN FINDER QUIZ ===================== -->
+<section class="quiz-section" id="finder">
+  <div class="wrap">
+    <div class="quiz-card">
+
+      <div class="quiz-step" data-step="1">
+        <div class="quiz-head">
+          <span class="tag">แผนไหนเหมาะกับคุณ</span>
+          <h2>ตอบ 2 ข้อ ให้ป้าเป็ดช่วยแนะนำ</h2>
+        </div>
+        <p class="quiz-q">1. เป้าหมายหลักตอนนี้คืออะไร</p>
+        <div class="quiz-options" id="opt-goal">
+          <button class="quiz-opt" data-goal="tax">💰 ลดหย่อนภาษี</button>
+          <button class="quiz-opt" data-goal="kids">🧸 ออมเงินให้ลูก</button>
+          <button class="quiz-opt" data-goal="health">🩺 คุ้มครองค่ารักษาพยาบาล</button>
+          <button class="quiz-opt" data-goal="critical">🎗️ กังวลเรื่องโรคร้ายแรง</button>
+          <button class="quiz-opt" data-goal="protect">🛡️ คุ้มครองชีวิต/รายได้ครอบครัว</button>
+          <button class="quiz-opt" data-goal="legacy">🏛️ ส่งต่อมรดกให้ลูกหลาน</button>
+          <button class="quiz-opt" data-goal="retire">🌴 เตรียมเงินไว้ใช้ยามเกษียณ</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="2" style="display:none;">
+        <div class="quiz-head">
+          <span class="tag">แผนไหนเหมาะกับคุณ</span>
+          <h2>อีกนิดเดียว</h2>
+        </div>
+        <p class="quiz-q">2. ช่วงอายุของคุณ</p>
+        <div class="quiz-options" id="opt-age">
+          <button class="quiz-opt" data-age="kid">👶 แรกเกิด – 14 ปี</button>
+          <button class="quiz-opt" data-age="young">🧑 15 – 40 ปี</button>
+          <button class="quiz-opt" data-age="mid">🧑‍💼 41 – 60 ปี</button>
+          <button class="quiz-opt" data-age="senior">🧓 60 ปีขึ้นไป</button>
+        </div>
+        <button class="quiz-back" id="quiz-back">← ย้อนกลับ</button>
+      </div>
+
+      <div class="quiz-step" data-step="3" style="display:none;">
+        <div class="quiz-result" id="quiz-result">
+          <!-- filled by JS -->
+        </div>
+        <button class="quiz-back" id="quiz-restart">↺ เริ่มใหม่</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="wrap">
+    <h2>เลือกดูตามความต้องการ</h2>
+    <p class="sub">แตะหมวดที่สนใจ เพื่อดูรายละเอียดแผนประกัน</p>
+    <div class="cat-grid">
+      <a class="cat-card" href="#legacy"><div class="cat-ic" style="background:#FDECEC;">🏛️</div><span>ประกันมรดก</span></a>
+      <a class="cat-card" href="#legacy"><div class="cat-ic" style="background:var(--sky-light);">⏳</div><span>ประกันระยะสั้น</span></a>
+      <a class="cat-card" href="#savings"><div class="cat-ic" style="background:var(--mint-light);">🐷</div><span>สะสมทรัพย์<br>ลดหย่อนภาษี</span></a>
+      <a class="cat-card" href="#kids"><div class="cat-ic" style="background:#FFF3E0;">🧸</div><span>เงินออมลูกรัก</span></a>
+      <a class="cat-card" href="#health"><div class="cat-ic" style="background:var(--sky-light);">🩺</div><span>ประกันสุขภาพ</span></a>
+      <a class="cat-card" href="#critical"><div class="cat-ic" style="background:#FDECEC;">🎗️</div><span>ประกัน<br>โรคร้ายแรง</span></a>
+      <a class="cat-card" href="#pension"><div class="cat-ic" style="background:var(--mint-light);">🌴</div><span>ประกันบำนาญ</span></a>
+      <a class="cat-card" href="#riders"><div class="cat-ic" style="background:#F3F0FF;">➕</div><span>สัญญา<br>เพิ่มเติม</span></a>
+      <a class="cat-card" href="#calc"><div class="cat-ic" style="background:#FFF7E0;">🧮</div><span>คำนวณ<br>เบี้ยประกัน</span></a>
+      <a class="cat-card" href="#apply"><div class="cat-ic" style="background:#FFF3E0;">📝</div><span>สมัคร<br>ทำประกัน</span></a>
+      <a class="cat-card" href="#contact"><div class="cat-ic" style="background:#E8F5E9;">🏥</div><span>โรงพยาบาล<br>คู่สัญญา</span></a>
+      <a class="cat-card" href="#contact"><div class="cat-ic" style="background:#E9F6FF;">💬</div><span>ติดต่อป้าเป็ด</span></a>
+      <a class="cat-card" href="#contact"><div class="cat-ic" style="background:var(--sky-light);">📱</div><span>ดาวน์โหลดแอป</span></a>
+      <a class="cat-card" href="#contact"><div class="cat-ic" style="background:#F3F0FF;">📍</div><span>สำนักงาน</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KIDS SAVINGS ===================== -->
+<section class="block" id="kids">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">เงินออมลูกรัก</span>
+      <h2>กรุงเทพ สมาร์ท คิดส์</h2>
+      <p>รับประกันตั้งแต่แรกเกิด–14 ปี กำหนดเงินออมเองได้ (เท่ากันทุกงวด) เบี้ยลดหย่อนภาษีได้สูงสุด 100,000 บาท คุ้มครองครบทั้งลูกและพ่อหรือแม่ผู้ชำระเบี้ย</p>
+    </div>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="top">
+          <h3>ระยะสั้น</h3>
+          <div class="term">ออม 9 ปี · คุ้มครอง 15 ปี</div>
+        </div>
+        <div class="body">
+          <div class="stat-row">
+            <div><b>12,000</b><span>ออม/ปี (บาท)</span></div>
+            <div><b>124,200</b><span>รับคืนเมื่อครบ 15 ปี</span></div>
+          </div>
+          <ul>
+            <li>คืนเบี้ยกรณีเสียชีวิต + เงินคืนพิเศษ 15% ของเงินออม</li>
+            <li>ค่ารักษาอุบัติเหตุ 5,000 บาท/ครั้ง ไม่จำกัดจำนวนครั้ง</li>
+            <li>ชดเชยสูญเสียอวัยวะ 25–100% ของทุนประกัน</li>
+            <li>ชดเชยโรคร้ายแรงเด็ก 4 โรค 50% ของทุน</li>
+            <li>ผู้ชำระเบี้ยเสียชีวิต ไม่ต้องจ่ายเบี้ยต่อ แต่ยังได้รับเงินคืนตามแผน</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="top">
+          <span class="badge">ยอดนิยม</span>
+          <h3>ระยะกลาง</h3>
+          <div class="term">ออม 12 ปี · คุ้มครอง 18 ปี</div>
+        </div>
+        <div class="body">
+          <div class="stat-row">
+            <div><b>12,000</b><span>ออม/ปี (บาท)</span></div>
+            <div><b>144,000</b><span>รับคืนเมื่อครบ 18 ปี</span></div>
+          </div>
+          <ul>
+            <li>คืนเบี้ยกรณีเสียชีวิต + เงินคืนพิเศษ 18% ของเงินออม</li>
+            <li>ค่ารักษาอุบัติเหตุ 5,000 บาท/ครั้ง ไม่จำกัดจำนวนครั้ง</li>
+            <li>ชดเชยสูญเสียอวัยวะ 25–100% ของทุนประกัน</li>
+            <li>เสียชีวิตทั่วไปรับทุน 100% + เบี้ยที่ออม 118%</li>
+            <li>เสียชีวิตจากอุบัติเหตุรับทุน 200% + เบี้ยที่ออม 118%</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="top">
+          <h3>ระยะยาว</h3>
+          <div class="term">ออม 15 ปี · คุ้มครอง 21 ปี</div>
+        </div>
+        <div class="body">
+          <div class="stat-row">
+            <div><b>12,000</b><span>ออม/ปี (บาท)</span></div>
+            <div><b>217,800</b><span>รับคืนเมื่อครบ 21 ปี</span></div>
+          </div>
+          <ul>
+            <li>คืนเบี้ยกรณีเสียชีวิต + เงินคืนพิเศษ 21% ของเงินออม</li>
+            <li>ค่ารักษาอุบัติเหตุ 5,000 บาท/ครั้ง ไม่จำกัดจำนวนครั้ง</li>
+            <li>ชดเชยสูญเสียอวัยวะ 25–100% ของทุนประกัน</li>
+            <li>เสียชีวิตทั่วไปรับทุน 100% + เบี้ยที่ออม 121%</li>
+            <li>เสียชีวิตจากอุบัติเหตุรับทุน 200% + เบี้ยที่ออม 121%</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;">
+      <div class="info-card">
+        <h3><span class="ic">🧸</span> กรุงเทพ แฮปปี้ คิดส์</h3>
+        <p style="color:var(--ink-soft); font-size:21px; margin-bottom:12px;">จ่ายเบี้ย 20 ปี คุ้มครองถึงอายุ 99 ปี — เน้นความคุ้มครองชีวิตระยะยาวให้ลูก พร้อมผลประโยชน์คืนทุกปี</p>
+        <div class="chip-list">
+          <span class="chip">คุ้มครองชีวิตสูงสุด 220% ของทุน</span>
+          <span class="chip">คืนเงินทุกปี 1%</span>
+          <span class="chip">คืนพิเศษปีที่ 21 อีก 20%</span>
+          <span class="chip">ผู้ชำระเบี้ยเสียชีวิต รับทุน 50%</span>
+          <span class="chip">ทุพพลภาพ/เสียชีวิตก่อน ไม่ต้องจ่ายเบี้ยต่อ</span>
+          <span class="chip">ลดหย่อนภาษีสูงสุด 100,000 บาท</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SAVINGS / TAX ===================== -->
+<section class="block alt" id="savings">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">สะสมทรัพย์ · ลดหย่อนภาษี</span>
+      <h2>ประกันสะสมทรัพย์ เหมาะกับใคร</h2>
+      <p>ผลตอบแทนดีกว่าดอกเบี้ยเงินฝาก มีความคุ้มครองชีวิตติดมาด้วย และลดหย่อนภาษีได้ระหว่างทาง</p>
+    </div>
+
+    <div class="two-col" style="margin-bottom:28px;">
+      <div class="info-card">
+        <h3><span class="ic">✅</span> เหมาะกับใคร</h3>
+        <ul style="list-style:none;">
+          <li style="padding:6px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px; font-size:21px;"><span>✓</span>ต้องการผลตอบแทนมากกว่าดอกเบี้ยเงินฝาก พร้อมความคุ้มครองชีวิต</li>
+          <li style="padding:6px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px; font-size:21px;"><span>✓</span>ออมเงินเองไม่ค่อยสำเร็จ เพราะถอนใช้ก่อนถึงเป้าหมายบ่อย</li>
+          <li style="padding:6px 0; display:flex; gap:8px; font-size:21px;"><span>✓</span>ต้องการใช้สิทธิลดหย่อนภาษี แล้วนำเงินไปต่อยอดเมื่อครบสัญญา</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3><span class="ic">✕</span> ไม่เหมาะกับใคร</h3>
+        <ul style="list-style:none;">
+          <li style="padding:6px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px; font-size:21px;"><span>✕</span>ต้องการทุนประกันสูงมาก (ทุนสูง เบี้ยก็สูงตาม)</li>
+          <li style="padding:6px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px; font-size:21px;"><span>✕</span>ยังไม่มีแบบตลอดชีพ (จ่ายเบี้ยเท่ากัน แบบสะสมทรัพย์ได้ทุนน้อยกว่า)</li>
+          <li style="padding:6px 0; display:flex; gap:8px; font-size:21px;"><span>✕</span>ต้องการซื้อพ่วงสุขภาพเป็นหลัก</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block-head" style="margin-bottom:20px;">
+      <h2 style="font-size:34px;">กรุงเทพ สุดคุ้ม</h2>
+      <p>มี 3 ระยะการออมให้เลือก — ทุกแผนแถมค่ารักษาจากอุบัติเหตุและเงินชดเชยสูญเสียอวัยวะ คุ้มครองเสียชีวิต 100% และคืนเบี้ย เป็นแบบประกันเดียวที่คืนเบี้ยประกัน</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="top"><h3>สุดคุ้ม 15/9</h3><div class="term">ออม 9 ปี · คุ้มครอง 15 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>คุ้มครองเสียชีวิต 100% ของทุน + คืนเบี้ย</li>
+            <li>อุบัติเหตุคุ้มครองเพิ่ม 200% + คืนเบี้ย</li>
+            <li>ลดหย่อนภาษีสูงสุด 100,000 บาท</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>สุดคุ้ม 18/12</h3><div class="term">ออม 12 ปี · คุ้มครอง 18 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>คุ้มครองเสียชีวิต 100% ของทุน + คืนเบี้ย</li>
+            <li>อุบัติเหตุคุ้มครองเพิ่ม 200% + คืนเบี้ย</li>
+            <li>ลดหย่อนภาษีสูงสุด 100,000 บาท</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>สุดคุ้ม 21/15</h3><div class="term">ออม 15 ปี · คุ้มครอง 21 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>คุ้มครองเสียชีวิต 100% ของทุน + คืนเบี้ย</li>
+            <li>อุบัติเหตุคุ้มครองเพิ่ม 200% + คืนเบี้ย</li>
+            <li>ลดหย่อนภาษีสูงสุด 100,000 บาท</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+    <p class="note-src">* ตัวเลขผลประโยชน์เป็นตัวอย่างจากเอกสารเดิม โปรดยืนยันตัวเลขล่าสุดกับป้าเป็ดก่อนเผยแพร่จริง</p>
+
+    <div class="block-head" style="margin:40px auto 20px;">
+      <h2 style="font-size:1.5em;">ปันสุข 80/20</h2>
+      <p>สะสมทรัพย์แบบมีเงินคืนระหว่างทางยาวนาน คุ้มครองชีวิตเพิ่มขึ้นตามช่วงปี</p>
+    </div>
+    <div class="plan-grid cols-2">
+      <div class="plan-card">
+        <div class="top"><h3>ปันสุข 80/20</h3><div class="term">จ่ายเบี้ย 20 ปี · คุ้มครองถึงอายุ 80 ปี</div></div>
+        <div class="body">
+          <div class="stat-row">
+            <div><b>150,000</b><span>ทุนเริ่มต้น (บาท)</span></div>
+            <div><b>100%</b><span>เงินคืนวันครบกำหนด</span></div>
+          </div>
+          <ul>
+            <li>คุ้มครองชีวิต: ปีที่ 1–10 รับ 100% · ปีที่ 11–20 รับ 110% · ปีที่ 21 เป็นต้นไป รับ 120% ของทุน</li>
+            <li>เงินคืน 1.5% ของทุน ทุก 2 ปี (ปีที่ 2, 4, 6…20)</li>
+            <li>เงินคืน 1% ของทุน ทุกปี ตั้งแต่ปีที่ 21 ถึงอายุครบ 79 ปี</li>
+            <li>รับประกันอายุ 0–60 ปี ชำระเบี้ยได้รายปี/6 เดือน/3 เดือน/รายเดือน</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>ตระกูลแฮปปี้เซฟวิ่ง</h3><div class="term">มีหลายรุ่นให้เลือก (มีเงินปันผลบางรุ่น)</div></div>
+        <div class="body">
+          <ul>
+            <li>สร้างความมั่นคง + เงินคืนสะสม เลือกระยะเวลาชำระเบี้ยได้หลากหลาย (5–15 ปี)</li>
+            <li>คุ้มครองชีวิตเพิ่มขึ้นเป็นขั้นบันไดทุกปี สูงสุด 300–1,000% ของทุน แล้วแต่รุ่น</li>
+            <li>ผลประโยชน์รวมตลอดสัญญาขั้นต่ำ 212.5–1,035% ของทุน แล้วแต่รุ่น</li>
+          </ul>
+          <a class="cta" href="#happy-saving-table" style="border-color:var(--gold); color:var(--navy);">ดูตารางเปรียบเทียบ 7 รุ่น ↓</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="block-head" style="margin:40px auto 20px;" id="happy-saving-table">
+      <h2 style="font-size:1.5em;">เปรียบเทียบตระกูลแฮปปี้เซฟวิ่ง</h2>
+      <p>ทั้ง 7 รุ่นเป็นแบบ "สร้างมั่นคงออม" ประเภทเดียวกัน ต่างกันที่ระยะเวลาชำระเบี้ยและทุนขั้นต่ำ — เบี้ยต่อทุนประกัน 1,000 บาท เป็นตัวอย่างขั้นต่ำ ตัวเลขจริงแปรผันตามอายุและเพศ สอบถามเบี้ยที่ตรงกับคุณจากป้าเป็ด</p>
+    </div>
+    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+    <table style="width:100%; min-width:640px; border-collapse:collapse; background:#fff; border-radius:16px; overflow:hidden; box-shadow:var(--shadow); font-size:0.85em;">
+      <thead>
+        <tr style="background:var(--navy); color:#fff;">
+          <th style="padding:12px 14px; text-align:right;">รุ่น</th>
+          <th style="padding:12px 14px; text-align:right;">คุ้มครอง / ชำระเบี้ย</th>
+          <th style="padding:12px 14px; text-align:right;">ทุนขั้นต่ำ</th>
+          <th style="padding:12px 14px; text-align:right;">คุ้มครองชีวิตสูงสุด</th>
+          <th style="padding:12px 14px; text-align:right;">ผลประโยชน์รวมขั้นต่ำ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 14px;">99/5 (มีเงินปันผล)</td><td style="padding:10px 14px;">99 ปี / 5 ปี</td><td style="padding:10px 14px;">50,000 บาท</td><td style="padding:10px 14px;">700%</td><td style="padding:10px 14px;">เงินคืนปีละ 4% + 700%</td></tr>
+        <tr style="border-bottom:1px solid var(--line); background:var(--sky-light);"><td style="padding:10px 14px;">99/10 (มีเงินปันผล)</td><td style="padding:10px 14px;">99 ปี / 10 ปี</td><td style="padding:10px 14px;">50,000 บาท</td><td style="padding:10px 14px;">700%</td><td style="padding:10px 14px;">เงินคืนปีละ 4% + 700%</td></tr>
+        <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 14px;">16/8 (มีเงินปันผล)</td><td style="padding:10px 14px;">16 ปี / 8 ปี</td><td style="padding:10px 14px;">30,000 บาท</td><td style="padding:10px 14px;">800%</td><td style="padding:10px 14px;">895%</td></tr>
+        <tr style="border-bottom:1px solid var(--line); background:var(--sky-light);"><td style="padding:10px 14px;">18/10 (มีเงินปันผล)</td><td style="padding:10px 14px;">18 ปี / 10 ปี</td><td style="padding:10px 14px;">50,000 บาท</td><td style="padding:10px 14px;">300%</td><td style="padding:10px 14px;">390%</td></tr>
+        <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 14px;">126</td><td style="padding:10px 14px;">12 ปี / 6 ปี</td><td style="padding:10px 14px;">50,000 บาท</td><td style="padding:10px 14px;">600%</td><td style="padding:10px 14px;">663%</td></tr>
+        <tr style="border-bottom:1px solid var(--line); background:var(--sky-light);"><td style="padding:10px 14px;">208</td><td style="padding:10px 14px;">20 ปี / 8 ปี</td><td style="padding:10px 14px;">30,000 บาท</td><td style="padding:10px 14px;">1,000%</td><td style="padding:10px 14px;">1,035%</td></tr>
+        <tr><td style="padding:10px 14px;">2515 (มีเงินปันผล)</td><td style="padding:10px 14px;">25 ปี / 15 ปี</td><td style="padding:10px 14px;">100,000 บาท</td><td style="padding:10px 14px;">300% (อุบัติเหตุ)</td><td style="padding:10px 14px;">212.5% + ปันผล</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note-src">* "มีเงินปันผล" หมายถึงมีโอกาสได้รับเงินปันผลเพิ่มเติมจากผลประกอบการ ไม่ใช่ผลตอบแทนรับประกัน ตัวเลข % คือสัดส่วนของทุนประกันภัย</p>
+  </div>
+</section>
+
+<!-- ===================== HEALTH ===================== -->
+<section class="block" id="health">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">ประกันสุขภาพ</span>
+      <h2>เรื่องควรรู้ก่อนทำประกันสุขภาพ</h2>
+      <p>เข้าใจระยะเวลารอคอยและข้อยกเว้นก่อน จะได้ไม่ตกใจตอนเคลม</p>
+    </div>
+
+    <div class="two-col" style="margin-bottom:20px;">
+      <div class="info-card">
+        <h3><span class="ic">⏳</span> ระยะเวลารอคอย</h3>
+        <p style="color:var(--ink-soft); font-size:0.85em; margin-bottom:12px;">คือช่วงที่กรมธรรม์อนุมัติแล้ว แต่ยังไม่คุ้มครองโรคนั้น ๆ</p>
+        <div class="chip-list">
+          <span class="chip">อุบัติเหตุ — คุ้มครองทันทีที่อนุมัติ</span>
+          <span class="chip">ทุกโรคทั่วไป — รอ 30 วัน</span>
+          <span class="chip warn">โรคเฉพาะทาง — รอ 120 วัน</span>
+        </div>
+        <p style="font-size:0.8em; color:var(--ink-soft); margin-top:12px;">โรคเฉพาะทางที่ต้องรอ 120 วัน เช่น เนื้องอก/ถุงน้ำ/มะเร็ง, ทอนซิลอักเสบ, ริดสีดวงทวาร, นิ่วทุกชนิด, ไส้เลื่อน, เส้นเลือดขอดที่ขา, ต้อเนื้อ/ต้อกระจก</p>
+      </div>
+      <div class="info-card">
+        <h3><span class="ic">🚫</span> ข้อยกเว้นมาตรฐาน</h3>
+        <p style="color:var(--ink-soft); font-size:0.85em; margin-bottom:12px;">คุ้มครองทุกโรคที่ไม่ได้เป็นมาก่อนทำประกัน แต่มีข้อยกเว้นมาตรฐานเหมือนกันทุกบริษัท</p>
+        <div class="chip-list">
+          <span class="chip warn">ตั้งครรภ์ & คลอดบุตร</span>
+          <span class="chip warn">กามโรค & โรคติดต่อทางเพศสัมพันธ์</span>
+          <span class="chip warn">โรคจิตเวช & ความเครียด</span>
+          <span class="chip warn">บาดเจ็บจากเมาสุรา/ยาเสพติด</span>
+          <span class="chip warn">กีฬาผาดโผน</span>
+          <span class="chip warn">ศัลยกรรมเสริมสวย</span>
+          <span class="chip warn">ทันตกรรม & สายตา</span>
+        </div>
+        <p style="font-size:0.8em; color:var(--ink-soft); margin-top:12px;">💡 โรคที่เป็นมาแต่กำเนิด ถ้าอาการแสดงหลังอายุ 16 ปี และถือกรมธรรม์เกิน 1 ปี ยังเคลมได้</p>
+      </div>
+    </div>
+
+    <div class="block-head" style="margin:36px auto 20px;">
+      <h2 style="font-size:1.6em;">เลือกแผนสุขภาพที่ใช่</h2>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="top"><h3>เหมาจ่าย มาตรฐาน</h3><div class="term">วงเงิน 1 / 5 / 10 ล้านบาท</div></div>
+        <div class="body">
+          <ul>
+            <li>จ่ายค่าห้องตามราคาห้องมาตรฐาน ไม่ต้องกลัวห้องไม่พอ</li>
+            <li>ชดเชยผู้ป่วยวิกฤต — นอน รพ. ไม่เคลม รับ 2,000 บาท/วัน</li>
+            <li>รับอายุ 11–80 ปี ซื้อคุ้มครองต่อเนื่องถึง 99 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><span class="badge">เบี้ยเบา</span><h3>แยกค่าใช้จ่าย</h3><div class="term">ค่าห้อง 4,000 / 5,000</div></div>
+        <div class="body">
+          <ul>
+            <li>เบี้ยเบา คุ้มครองครบ เบิกตามสิทธิ์แต่ละรายการ</li>
+            <li>ครอบคลุมค่ารักษาทุกหมวดมาตรฐาน</li>
+            <li>รับอายุ 11–80 ปี ซื้อคุ้มครองต่อเนื่องถึง 99 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>เพรสทีจ</h3><div class="term">วงเงิน 20–200 ล้านบาท</div></div>
+        <div class="body">
+          <ul>
+            <li>เลือกความคุ้มครองในไทยหรือต่างประเทศได้</li>
+            <li>ห้องพักเดี่ยวมาตรฐาน + OPD, ทันตกรรม, วัคซีน (บางแผน)</li>
+            <li>รับอายุ 11–80 ปี ซื้อคุ้มครองต่อเนื่องถึง 99 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>แยกค่าใช้จ่าย (เด็ก)</h3><div class="term">ค่าห้อง 4,000 / 5,000</div></div>
+        <div class="body">
+          <ul>
+            <li>มี OPD 2,000 บาท/ครั้ง ร่วมด้วย</li>
+            <li>ร่วมจ่าย 10,000 บาท/ครั้ง (อายุ 11 ปีขึ้นไปไม่ต้องร่วมจ่าย)</li>
+            <li>รับประกัน 1 เดือน – 10 ปี ต่อเนื่องถึง 99 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CRITICAL ILLNESS ===================== -->
+<section class="block alt" id="critical">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">ประกันโรคร้ายแรง</span>
+      <h2>เจอจ่ายจบ หรือ จ่ายแล้วคุ้มครองต่อ</h2>
+      <p>เป็นเงินก้อนทันทีเมื่อตรวจพบ ไม่เกี่ยวกับการนอนโรงพยาบาล — มีระยะเวลารอคอย 90 วัน เบี้ยลดหย่อนภาษีได้ (ไม่เกิน 25,000 บาท ในหมวดสุขภาพ)</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="top"><h3>มะเร็งห่วงใย</h3><div class="term">5 แผน · 3 แสน–3 ล้านบาท</div></div>
+        <div class="body">
+          <ul>
+            <li>คุ้มครองมะเร็งระยะไม่ลุกลาม</li>
+            <li>มีเงินชดเชยเมื่อเข้ารักษาตัวจากมะเร็ง</li>
+            <li>รับแรกเกิด–70 ปี ซื้อต่อได้ถึง 90 ปี</li>
+            <li>เบี้ยปรับทุก 5 ปีอายุ มีเงินคืนเมื่อครบสัญญา</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><span class="badge">ยอดนิยม</span><h3>ห่วงใยมะฮิต</h3><div class="term">7 แผน · 1 แสน–3 ล้านบาท</div></div>
+        <div class="body">
+          <ul>
+            <li>คุ้มครองมะเร็งไม่ลุกลาม + โรคร้ายแรงอื่นรวม 11 โรค</li>
+            <li>รับอายุ 20–75 ปี ซื้อต่อได้ถึง 90 ปี</li>
+            <li>เบี้ยคงที่ตลอดสัญญา วางแผนค่าใช้จ่ายง่าย</li>
+            <li>มีเงินคืนเมื่อครบสัญญา</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>ห่วงใยรวมโรคจัก</h3><div class="term">คุ้มครอง 5 กลุ่ม 14 โรค</div></div>
+        <div class="body">
+          <ul>
+            <li>ชำระเบี้ย 20 ปี หรือถึงอายุ 99 ปี เลือกได้</li>
+            <li>รับแรกเกิด–75 ปี ซื้อต่อได้ถึง 99 ปี</li>
+            <li>เบี้ยคงที่ตลอดสัญญา มีเงินคืนเมื่อครบสัญญา</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>คุ้มครอง 6 กลุ่ม 47 โรค</h3><div class="term">กลุ่มละ 100% สูงสุด 600%</div></div>
+        <div class="body">
+          <ul>
+            <li>เบี้ยต่ำ ความคุ้มครองสูง เหมาะเริ่มตอนอายุน้อย</li>
+            <li>รับอายุ 1–65 ปี ซื้อต่อได้ถึง 80 ปี</li>
+            <li>เบี้ยปรับเพิ่มตามอายุทุกปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>ห่วงใยโรคก็จ่าย จากไปก็จ่าย</h3><div class="term">ซื้อ 1 ได้ถึง 2 ความคุ้มครอง</div></div>
+        <div class="body">
+          <ul>
+            <li>เป็นโรคร้ายแรงก็จ่าย จากไปด้วยสาเหตุใดก็จ่าย</li>
+            <li>คุ้มครองมะเร็งและโรคร้ายแรงอื่นรวม 17 โรค</li>
+            <li>รับอายุ 15–55 ปี ซื้อต่อได้ถึง 65 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><span class="badge">47 โรค</span><h3>BLA Super Care</h3><div class="term">คุ้มครองครบ 100%</div></div>
+        <div class="body">
+          <ul>
+            <li>เจอ จ่าย ไม่จบ — คุ้มครองต่อเนื่องหลังเคลม</li>
+            <li>ครอบคลุม 6 กลุ่มโรคร้ายแรง 47 โรค</li>
+            <li>รับอายุ 1–65 ปี ระยะเวลารอคอย 90 วัน</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHOLE LIFE ===================== -->
+<section class="block" id="life">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">ประกันตลอดชีพ</span>
+      <h2>เหมาะเป็นประกันเล่มแรก</h2>
+      <p>ความคุ้มครองสูง เบี้ยต่ำ เบี้ยคงที่ตลอดสัญญา เหมาะพ่วงประกันสุขภาพเพราะไม่หมดสัญญาระหว่างทาง มีมูลค่ากรมธรรม์กู้ได้ยามการเงินสะดุด</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="top"><span class="badge">ยอดนิยม</span><h3>ตลอดชีพ สุดคุ้ม</h3><div class="term">จ่ายเบี้ย 20 ปี · คุ้มครองถึง 99 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>เบี้ยต่ำ ความคุ้มครองสูง มีส่วนลดเบี้ย กู้กรมธรรม์ได้</li>
+            <li>แถมชดเชยทุพพลภาพ + อุบัติเหตุ 50% ของทุน (20 ปีแรก)</li>
+            <li>คุ้มครอง 100% ของทุน หรือเบี้ยที่จ่ายมา (แล้วแต่มากกว่า)</li>
+            <li>รับอายุแรกเกิด–70 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>ห่วงรักพรีเมียร์</h3><div class="term">จ่ายเบี้ย 20 ปี · คุ้มครองถึง 99 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>เหมาะกับคนต้องการความคุ้มครองสูง เบี้ยต่ำ</li>
+            <li>คุ้มครองทุนประกัน 100% กู้กรมธรรม์ได้</li>
+            <li>รับอายุแรกเกิด–70 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>แฮปปี้ โฮลไลฟ์</h3><div class="term">เลือกจ่ายเบี้ย 1/5/10/15 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>คุ้มครองชีวิต 100% หรือเบี้ยสะสม (แล้วแต่มากกว่า)</li>
+            <li>คุ้มครองอุบัติเหตุ 200% ทุนเริ่มต้น 5 แสนบาท</li>
+            <li>มีโอกาสรับเงินปันผล มีส่วนลดเบี้ย</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><span class="badge">ทุนสูง</span><h3>เพรสทีจ ไลฟ์</h3><div class="term">เลือกจ่ายเบี้ย 5/10/15/20 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>ทุนประกันเริ่มต้น 5 ล้านบาท กู้กรมธรรม์ได้</li>
+            <li>คุ้มครองทุนประกัน 100% หรือเบี้ยสะสม (แล้วแต่มากกว่า)</li>
+            <li>รับอายุแรกเกิด–70 ปี เหมาะทุนประกันสูง</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RIDERS / ADD-ONS ===================== -->
+<section class="block alt" id="riders">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">สัญญาเพิ่มเติม</span>
+      <h2>ความคุ้มครองเสริม</h2>
+      <p>ซื้อพ่วงกับสัญญาหลักเพื่อเติมเต็มความคุ้มครองเฉพาะจุด — ไม่ใช่กรมธรรม์เดี่ยว ต้องมีสัญญาหลักก่อนจึงซื้อได้</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="top"><h3>ทุพพลภาพ โพรเทค</h3><div class="term">อายุรับประกัน 15–65 ปี</div></div>
+        <div class="body">
+          <ul>
+            <li>ทุพพลภาพถาวรสิ้นเชิง รับเท่าจำนวนเงินเอาประกันของสัญญาเพิ่มเติม</li>
+            <li>ทุนสูงสุดไม่เกิน 10 เท่าของทุนสัญญาหลัก และไม่เกิน 30,000,000 บาท</li>
+            <li>ต่ออายุได้ถึงอายุ 74 ปี ตามสัญญาหลัก</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>อบ.3 พลัส</h3><div class="term">ค่ารักษาพยาบาลจากอุบัติเหตุ</div></div>
+        <div class="body">
+          <ul>
+            <li>ค่ารักษาจากอุบัติเหตุสูงสุด 15,000 บาท/ครั้ง (แผน 15,000)</li>
+            <li>คุ้มครองทั่วโลก ตลอด 24 ชั่วโมง</li>
+            <li>รับอายุแรกเกิด–64 ปี คุ้มครองถึงอายุ 65 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><span class="badge">พรีเมียม</span><h3 style="padding-right:70px;">เพรสทีจ เฮลธ์ ปลดล็อค</h3><div class="term">วงเงิน 20–200 ล้านบาท</div></div>
+        <div class="body">
+          <ul>
+            <li>ค่าห้องมาตรฐาน 8,000–25,000 บาท/วัน ตามแผน จ่ายตามจริงหมวดอื่น</li>
+            <li>เลือกความคุ้มครองในไทย ทวีปเอเชีย หรือทั่วโลกได้</li>
+            <li>รับอายุ 11–80 ปี คุ้มครองต่อเนื่องถึงอายุ 98 ปี ต้องซื้อพ่วงกับสัญญาชีวิตขั้นต่ำ 50,000 บาท</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><h3>ค่ารักษาพยาบาลรายวัน ปัญจรักษ์</h3><div class="term">รพ.ปร. — ผู้ป่วยใน</div></div>
+        <div class="body">
+          <ul>
+            <li>ผู้ป่วยในจ่าย 1 เท่าของผลประโยชน์ต่อวัน สูงสุด 1,250 วัน</li>
+            <li>เข้า ICU หรือป่วยโรคร้ายแรง 4 โรค (มะเร็ง อัมพาต ผ่าตัดเส้นเลือดหัวใจ กล้ามเนื้อหัวใจตาย) จ่าย 2 เท่า</li>
+            <li>ผ่าตัดใหญ่จ่ายเพิ่มอีก 10 เท่า เปลี่ยนอวัยวะสำคัญจ่ายเพิ่มอีก 200 เท่า</li>
+            <li>ซื้อความคุ้มครองได้ 300–5,000 บาท/วัน ตามทุนประกันหลัก รับอายุ 6–64 ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREMIUM CALCULATOR ===================== -->
+<section class="block" id="calc">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">เครื่องคำนวณเบี้ย</span>
+      <h2>คำนวณเบี้ยคร่าวๆ ด้วยตัวเอง</h2>
+      <p>กรอกอายุ เพศ และทุนประกันที่ต้องการ ระบบจะประเมินเบี้ยรายปีให้ทันที — ใช้อัตราเบี้ยจริงจากตารางกรมธรรม์ เป็นตัวเลขเบื้องต้นก่อนขอใบเสนอราคาจริงจากป้าเป็ด</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-row">
+        <label>เลือกแบบประกัน</label>
+        <select id="calc-product">
+          <optgroup label="ตระกูลแฮปปี้เซฟวิ่ง (สะสมทรัพย์)">
+            <option value="hs9910">แฮปปี้เซฟวิ่ง 99/10 (มีเงินปันผล)</option>
+            <option value="hs995">แฮปปี้เซฟวิ่ง 99/5 (มีเงินปันผล)</option>
+            <option value="hs1810">แฮปปี้เซฟวิ่ง 18/10 (มีเงินปันผล)</option>
+            <option value="hs208">แฮปปี้เซฟวิ่ง 208</option>
+            <option value="hs126">แฮปปี้เซฟวิ่ง 126</option>
+            <option value="hs168">แฮปปี้เซฟวิ่ง 16/8 (มีเงินปันผล)</option>
+            <option value="hs2515">แฮปปี้เซฟวิ่ง 2515 (มีเงินปันผล)</option>
+          </optgroup>
+          <optgroup label="ประกันระยะสั้น">
+            <option value="cp2">คุ้มครอง 2 พลัส</option>
+          </optgroup>
+          <optgroup label="สัญญาเพิ่มเติม">
+            <option value="tpd">ทุพพลภาพ โพรเทค</option>
+            <option value="ob3">อบ.3 พลัส (ค่ารักษาอุบัติเหตุ)</option>
+            <option value="rpp">ค่ารักษาพยาบาลรายวัน ปัญจรักษ์ (รพ.ปร.)</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="calc-row calc-row-split" id="calc-row-genderage">
+        <div>
+          <label>เพศ</label>
+          <select id="calc-gender">
+            <option value="f">หญิง</option>
+            <option value="m">ชาย</option>
+          </select>
+        </div>
+        <div>
+          <label>อายุ (ปี)</label>
+          <input type="number" id="calc-age" min="0" max="75" value="30">
+        </div>
+      </div>
+
+      <div class="calc-row" id="calc-row-duration" style="display:none;">
+        <label>ระยะเวลาคุ้มครอง</label>
+        <select id="calc-duration">
+          <option value="10">10 ปี</option>
+          <option value="15">15 ปี</option>
+          <option value="20">20 ปี</option>
+        </select>
+      </div>
+
+      <div class="calc-row" id="calc-row-occclass" style="display:none;">
+        <label>ชั้นอาชีพ</label>
+        <select id="calc-occclass">
+          <option value="1">ชั้นอาชีพ 1</option>
+          <option value="2">ชั้นอาชีพ 2</option>
+          <option value="3">ชั้นอาชีพ 3</option>
+        </select>
+      </div>
+
+      <div class="calc-row" id="calc-row-ob3plan" style="display:none;">
+        <label>แผนความคุ้มครอง</label>
+        <select id="calc-ob3plan">
+          <option value="5000">แผน 5,000 บาท/ครั้ง</option>
+          <option value="10000">แผน 10,000 บาท/ครั้ง</option>
+          <option value="15000">แผน 15,000 บาท/ครั้ง</option>
+        </select>
+      </div>
+
+      <div class="calc-row" id="calc-row-sum">
+        <label id="calc-sum-label">ทุนประกันที่ต้องการ (บาท)</label>
+        <input type="number" id="calc-sum" min="300" step="10000" value="500000">
+      </div>
+
+      <button class="calc-btn" id="calc-run">คำนวณเบี้ย</button>
+
+      <div id="calc-result" class="calc-result" style="display:none;"></div>
+    </div>
+    <p class="note-src">* ตัวเลขจากตารางอัตราเบี้ยในเอกสารกรมธรรม์ ใช้เพื่อประเมินเบื้องต้นเท่านั้น เบี้ยจริงขึ้นกับผลการพิจารณารับประกันของบริษัท สำหรับ "เพรสทีจ เฮลธ์ ปลดล็อค" มีตัวแปรมาก (แผน/ชั้นอาชีพ/พื้นที่คุ้มครอง) กรุณาติดต่อป้าเป็ดเพื่อใบเสนอราคาที่แม่นยำ</p>
+  </div>
+</section>
+
+<!-- ===================== PENSION ===================== -->
+<section class="block alt" id="pension">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">ประกันบำนาญ</span>
+      <h2>แฮปปี้ เพนชั่น (มีเงินปันผล)</h2>
+      <p>เกษียณสุข เป็นจริงได้ — วางแผนไว้ตั้งแต่วันนี้ ประเทศไทยกำลังเข้าสู่สังคมผู้สูงอายุอย่างสมบูรณ์ การมีบำนาญของตัวเองคือหลักประกันที่พึ่งพาตัวเองได้ยามเกษียณ</p>
+    </div>
+    <div class="two-col">
+      <div class="info-card">
+        <h3><span class="ic">🌴</span> จุดเด่นของแผนบำนาญ</h3>
+        <ul style="list-style:none;">
+          <li style="padding:8px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px;"><span>✓</span>รับเงินบำนาญเป็นงวดสม่ำเสมอหลังเกษียณ วางแผนกระแสเงินสดได้แน่นอน</li>
+          <li style="padding:8px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px;"><span>✓</span>มีโอกาสรับเงินปันผลเพิ่มเติมจากผลประกอบการบริษัท</li>
+          <li style="padding:8px 0; display:flex; gap:8px;"><span>✓</span>เบี้ยประกันชีวิตแบบบำนาญลดหย่อนภาษีได้ตามเงื่อนไขสรรพากร (แยกวงเงินจากประกันทั่วไป)</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3><span class="ic">👴</span> เหมาะกับใคร</h3>
+        <ul style="list-style:none;">
+          <li style="padding:8px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px;"><span>✓</span>วัยทำงานที่อยากมีรายได้ประจำหลังเกษียณ นอกเหนือจากประกันสังคม/กบข.</li>
+          <li style="padding:8px 0; border-bottom:1px dashed var(--line); display:flex; gap:8px;"><span>✓</span>อาชีพอิสระที่ไม่มีสวัสดิการเกษียณจากนายจ้าง</li>
+          <li style="padding:8px 0; display:flex; gap:8px;"><span>✓</span>ต้องการวางแผนภาษีระยะยาวควบคู่การออม</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note-src">* รายละเอียดผลตอบแทนและเงื่อนไขเฉพาะแผนอาจแตกต่างกัน ติดต่อป้าเป็ดเพื่อคำนวณตามอายุและเป้าหมายเกษียณของคุณ</p>
+  </div>
+</section>
+
+<!-- ===================== LEGACY / SHORT-TERM ===================== -->
+<section class="block" id="legacy">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">ประกันมรดก</span>
+      <h2>วางแผนครั้งเดียว คุ้มค่าถึง 3 ต่อ</h2>
+      <p>ลดหย่อนภาษีทันที · มีเงินไว้ใช้ยามเกษียณ · สร้างมรดกให้คนข้างหลัง ให้เงินทุกบาททำงานหลายหน้าที่ในแผนเดียว</p>
+    </div>
+    <div class="plan-grid cols-2">
+      <div class="plan-card">
+        <div class="top"><h3>ประกันมรดก ซื้อ 1 ได้ถึง 3</h3><div class="term">จ่ายเบี้ยแค่ส่วนเดียว</div></div>
+        <div class="body">
+          <div class="stat-row">
+            <div><b>1,000,000</b><span>ทุนมรดก ชุดชีวิตทุกวัย</span></div>
+            <div><b>1,500,000</b><span>ทุนมรดก ชุดวัยเกษียณ</span></div>
+          </div>
+          <ul>
+            <li>ตัวอย่างหญิงอายุ 35 ปี ออม 20 ปี คุ้มครองถึงอายุ 99 ปี</li>
+            <li>เบี้ยประมาณ 22,440 บาท/ปี (ทุน 1,000,000 บาท)</li>
+            <li>ชุดพลัส: มรดกเพิ่มพิเศษอีก 500,000 บาท</li>
+            <li>ลดหย่อนภาษีสูงสุด 100,000 บาท/ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="top"><span class="badge">ทุนสูง</span><h3>เตรียมมรดก 10 ล้านบาท</h3><div class="term">จ่ายเบี้ยแค่ 1 แต่คุ้มครองถึง 3 ต่อ</div></div>
+        <div class="body">
+          <ul>
+            <li><b>ต่อ 1</b> คุ้มครองชีวิตทุกกรณี 10,000,000 บาท ถึงอายุ 99 ปี</li>
+            <li><b>ต่อ 2</b> คุ้มครองอุบัติเหตุเพิ่ม 5,000,000 บาท</li>
+            <li><b>ต่อ 3</b> แผนสะสมทรัพย์เพิ่มเติม 5,000,000 บาท มีมูลค่าเวนคืน</li>
+            <li>ลดหย่อนภาษีสูงสุด 100,000 บาท/ปี</li>
+          </ul>
+          <a class="cta" href="tel:0965954789">รายละเอียดเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="block-head" style="margin:40px auto 20px;">
+      <span class="tag">ประกันระยะสั้น</span>
+      <h2 style="font-size:1.6em;">คุ้มครอง 2 พลัส</h2>
+      <p>คุ้มครองจำกัดเวลา เลือกได้ 10 / 15 / 20 ปี เหมาะกับคนมีภาระหนี้หรือกองทุนการศึกษาบุตรที่ต้องปิดความเสี่ยงเป็นช่วง ๆ</p>
+    </div>
+    <div class="two-col">
+      <div class="info-card">
+        <h3><span class="ic">🛡️</span> ความคุ้มครองหลัก</h3>
+        <div class="chip-list">
+          <span class="chip">เสียชีวิต — รับทุนประกัน 100%</span>
+          <span class="chip">ทุพพลภาพถาวรสิ้นเชิง — รับ 3 เท่าของทุน (สูงสุดไม่เกิน 30 ล้านบาท)</span>
+          <span class="chip">ทุนเอาประกันขั้นต่ำ 1,000,000 บาท</span>
+          <span class="chip warn">รับประกันเฉพาะผู้มีชั้นอาชีพ 1 และ 2 เท่านั้น</span>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3><span class="ic">✅</span> เหมาะกับใคร</h3>
+        <p style="font-size:0.9em; color:var(--ink-soft);">คนที่กังวลเรื่องภาระหนี้หรือทุนการศึกษาบุตรในช่วงเวลาหนึ่ง — หากเกิดเหตุไม่คาดฝันจนไม่สามารถทำหน้าที่เสาหลักของครอบครัวได้ แผนนี้ตอบโจทย์ รับอายุ 20–65 ปี (ตามระยะเวลาคุ้มครองที่เลือก 10/15/20 ปี) มีส่วนลดเบี้ยเมื่อทุนประกันตั้งแต่ 3,000,000 บาทขึ้นไป</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APPLY ===================== -->
+<section class="block alt" id="apply">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="tag">สมัครทำประกัน</span>
+      <h2>สมัครง่าย ได้ทุกที่! แค่ 3 ขั้นตอน</h2>
+      <p>ทำประกันกับป้าเป็ด สมัครออนไลน์ได้เลย ไม่ต้องออกจากบ้าน</p>
+    </div>
+    <div class="plan-grid cols-2">
+      <div class="info-card">
+        <h3><span class="ic">1️⃣</span> กรอกข้อมูลส่วนตัว</h3>
+        <p style="font-size:0.9em; color:var(--ink-soft);">กรอกข้อมูลส่วนตัวและประวัติสุขภาพผ่านแบบฟอร์มออนไลน์ ง่าย ๆ ไม่กี่ขั้นตอน</p>
+      </div>
+      <div class="info-card">
+        <h3><span class="ic">2️⃣</span> ป้าเป็ดช่วยจัดการ</h3>
+        <p style="font-size:0.9em; color:var(--ink-soft);">ป้าเป็ดกรอกข้อมูลในใบคำขอให้ (ลูกค้าได้ SMS แจ้งครั้งที่ 1) แล้วส่งให้ตรวจสอบความถูกต้อง (SMS ครั้งที่ 2) จากนั้นยืนยันผ่านลิงก์และชำระเงิน</p>
+      </div>
+      <div class="info-card">
+        <h3><span class="ic">3️⃣</span> รอผลพิจารณา</h3>
+        <p style="font-size:0.9em; color:var(--ink-soft);">รอผลการพิจารณาจากบริษัท แล้วรับความคุ้มครองได้ทันทีเมื่ออนุมัติ</p>
+      </div>
+      <div class="info-card" style="display:flex; flex-direction:column; justify-content:center; gap:10px; text-align:center;">
+        <a class="cta" href="tel:0965954789" style="border-color:var(--navy); color:var(--navy);">สมัครทำประกัน<br>เด็กแรกเกิด–14 ปี</a>
+        <a class="cta" href="tel:0965954789" style="border-color:var(--navy); color:var(--navy);">สมัครทำประกัน<br>อายุ 15 ปีขึ้นไป</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="contact-cta">
+      <h3>คุยกับป้าเป็ด CFP® ได้เลย</h3>
+      <p>วางแผนประกันและภาษีให้ตรงเป้าหมาย — ปรึกษาฟรี ไม่มีค่าใช้จ่าย</p>
+      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:16px;">
+        <a class="btn btn-line" href="https://lin.ee/SrSuQsI" target="_blank" rel="noopener">💬 แอดไลน์ป้าเป็ด</a>
+        <a class="btn" style="background:var(--gold); color:var(--navy-deep);" href="tel:0965954789">📞 096-595-4789</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>ป้าเป็ด CFP®</b> จอมวางแผน · กรุงเทพประกันชีวิต สาขาเชียงใหม่</p>
+  <p style="margin-top:6px;">เนื้อหานี้จัดทำเพื่อให้ข้อมูลเบื้องต้น เงื่อนไขความคุ้มครองเป็นไปตามกรมธรรม์ โปรดศึกษารายละเอียดเพิ่มเติมก่อนตัดสินใจทำประกัน</p>
+</footer>
+
+<script>
+(function(){
+  var goal = null, age = null;
+  var step1 = document.querySelector('.quiz-step[data-step="1"]');
+  var step2 = document.querySelector('.quiz-step[data-step="2"]');
+  var step3 = document.querySelector('.quiz-step[data-step="3"]');
+  var resultBox = document.getElementById('quiz-result');
+
+  var RECS = {
+    tax:      { section:'savings', title:'สะสมทรัพย์ / ลดหย่อนภาษี', desc:'เบี้ยลดหย่อนภาษีได้สูงสุด 100,000 บาท พร้อมผลตอบแทนคืนเมื่อครบสัญญา เหมาะกับเป้าหมายลดภาษีของคุณ' },
+    tax_kid:  { section:'kids', title:'เงินออมลูกรัก', desc:'ออมให้ลูกและลดหย่อนภาษีของพ่อแม่ได้พร้อมกันในแผนเดียว สูงสุด 100,000 บาท' },
+    kids:     { section:'kids', title:'เงินออมลูกรัก', desc:'แผน Smart Kids และ Happy Kids ออกแบบมาให้ลูกมีทุนการศึกษา พร้อมคุ้มครองทั้งลูกและพ่อแม่ผู้ชำระเบี้ย' },
+    health:   { section:'health', title:'ประกันสุขภาพ', desc:'เลือกได้ตั้งแต่แผนเหมาจ่าย ไปจนถึงแผนเพรสทีจวงเงินสูง ครอบคลุมค่ารักษาตามไลฟ์สไตล์ของคุณ' },
+    critical: { section:'critical', title:'ประกันโรคร้ายแรง', desc:'รับเงินก้อนทันทีเมื่อตรวจพบโรคร้ายแรง ไม่ต้องรอผลรักษา มีให้เลือกทั้งแบบเจอจ่ายจบและจ่ายแล้วคุ้มครองต่อ' },
+    protect_y:{ section:'legacy', title:'ประกันระยะสั้น คุ้มครอง 2 พลัส', desc:'ปิดความเสี่ยงช่วงที่มีภาระหนี้หรือลูกยังเล็ก คุ้มครองสูง เบี้ยจับต้องได้' },
+    protect_o:{ section:'life', title:'ประกันตลอดชีพ', desc:'ความคุ้มครองสูง เบี้ยคงที่ตลอดชีพ เหมาะเป็นหลักประกันรายได้ให้ครอบครัวระยะยาว' },
+    legacy:   { section:'legacy', title:'ประกันมรดก', desc:'วางแผนส่งต่อทรัพย์สินให้ลูกหลานแบบชัดเจน ไม่ต้องผ่านการแบ่งมรดกยุ่งยาก พร้อมลดหย่อนภาษีระหว่างทาง' },
+    retire:   { section:'pension', title:'ประกันบำนาญ', desc:'วางแผนกระแสเงินสดหลังเกษียณให้ตัวเอง มีโอกาสรับเงินปันผลเพิ่มเติม' }
+  };
+
+  var sectionLabel = {
+    kids:'เงินออมลูกรัก', savings:'สะสมทรัพย์/ลดหย่อนภาษี', health:'ประกันสุขภาพ',
+    critical:'ประกันโรคร้ายแรง', life:'ประกันตลอดชีพ', pension:'ประกันบำนาญ', legacy:'ประกันมรดก'
+  };
+
+  document.getElementById('opt-goal').addEventListener('click', function(e){
+    var btn = e.target.closest('.quiz-opt');
+    if(!btn) return;
+    goal = btn.getAttribute('data-goal');
+    step1.style.display = 'none';
+    step2.style.display = '';
+  });
+
+  document.getElementById('opt-age').addEventListener('click', function(e){
+    var btn = e.target.closest('.quiz-opt');
+    if(!btn) return;
+    age = btn.getAttribute('data-age');
+    showResult();
+  });
+
+  document.getElementById('quiz-back').addEventListener('click', function(){
+    step2.style.display = 'none';
+    step1.style.display = '';
+  });
+
+  document.getElementById('quiz-restart').addEventListener('click', function(){
+    goal = null; age = null;
+    step3.style.display = 'none';
+    step1.style.display = '';
+  });
+
+  function pickRec(){
+    if(goal === 'tax' && age === 'kid') return RECS.tax_kid;
+    if(goal === 'protect'){
+      return (age === 'kid' || age === 'young') ? RECS.protect_y : RECS.protect_o;
+    }
+    return RECS[goal] || RECS.tax;
+  }
+
+  function showResult(){
+    var rec = pickRec();
+    resultBox.innerHTML =
+      '<span class="r-tag">ผลลัพธ์ของคุณ</span>' +
+      '<h3>' + rec.title + '</h3>' +
+      '<p>' + rec.desc + '</p>' +
+      '<a class="r-btn" href="#' + rec.section + '">ดูหมวด ' + (sectionLabel[rec.section]||'') + ' →</a>';
+    step2.style.display = 'none';
+    step3.style.display = '';
+  }
+})();
+</script>
+
+<script>
+(function(){
+  // Rate tables: baht premium per 1,000 baht sum insured, by age (index = age)
+  // Source: official rate tables from product brochures, female/male arrays
+
+  var RATE_9910_F = [396.01,397.47,399.08,400.73,402.42,404.15,405.91,407.72,409.56,411.44,413.35,415.30,417.28,419.30,421.36,423.45,425.58,427.75,429.96,432.21,434.50,436.83,439.20,441.63,444.10,446.61,449.18,451.81,454.48,457.22,460.01,462.86,465.78,468.75,471.79,474.89,478.05,481.28,484.57,487.93,491.35,494.84,498.39,502.02,505.72,509.49,513.35,517.30,521.35,525.50,529.75,534.12,538.62,543.24,548.00,552.91,557.98,563.24,568.72,574.44,580.46,586.82,593.59,600.83,608.59,616.95,625.98,635.71,646.20,657.48,669.57];
+  var RATE_9910_M = [407.25,408.89,410.72,412.59,414.51,416.49,418.54,420.65,422.83,425.07,427.36,429.68,432.02,434.36,436.71,439.05,441.39,443.74,446.09,448.47,450.86,453.29,455.76,458.28,460.85,463.49,466.18,468.94,471.77,474.66,477.62,480.64,483.72,486.87,490.08,493.35,496.69,500.09,503.57,507.12,510.75,514.46,518.25,522.13,526.09,530.13,534.27,538.50,542.82,547.25,551.79,556.47,561.29,566.28,571.45,576.84,582.47,588.36,594.53,601.03,607.89,615.15,622.86,631.08,639.90,649.36,659.57,670.58,682.48,683.50,684.53];
+
+  var RATE_995_F = [641.65,645.33,649.33,653.44,657.64,661.94,666.34,670.84,675.44,680.14,684.93,689.83,694.82,699.92,705.12,710.43,715.85,721.37,727.02,732.78,738.66,744.67,750.81,757.08,763.48,770.03,776.72,783.55,790.53,797.67,804.95,812.40,820.00,827.76,835.68,843.76,852.00,860.40,868.96,877.69,886.58,895.63,904.85,914.23,923.78,933.50,943.40,953.47,963.71,974.13,984.72,995.48,1006.42,1017.53,1028.80,1040.22,1051.81,1063.55,1075.43,1087.46,1099.63,1111.93,1124.36,1136.92,1149.58,1162.36,1175.22,1188.17,1201.19,1214.26,1227.37];
+  var RATE_995_M = [670.31,674.54,679.19,683.95,688.83,693.82,698.94,704.18,709.54,714.99,720.55,726.18,731.86,737.58,743.35,749.15,755.01,760.92,766.91,772.98,779.15,785.43,791.84,798.38,805.06,811.89,818.87,826.01,833.31,840.75,848.35,856.10,864.00,872.04,880.23,888.57,897.05,905.67,914.44,923.36,932.42,941.63,950.99,960.49,970.13,979.91,989.82,999.87,1010.05,1020.37,1030.81,1041.39,1052.09,1062.93,1073.90,1085.00,1096.22,1107.57,1119.02,1130.59,1142.25,1154.01,1165.85,1177.76,1189.75,1201.80,1213.93,1226.12,1238.38,1250.72,1263.14];
+
+  // 18/10: near-flat table, age 0-70, female/male
+  var RATE_1810_F = [350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,350,351,351,351,351,351,351,351,351,351,351,351,352,352,352,352,352,353,353,354,354,354,355,356,356,357,358,359,361,362,364,366,368,370,373,375];
+  var RATE_1810_M = [350,350,350,350,350,350,350,350,350,350,350,350,350,350,351,351,351,351,351,351,351,351,351,351,351,351,351,351,351,351,351,351,352,352,352,352,352,352,352,352,352,352,353,353,353,353,353,354,354,354,355,356,356,357,357,358,359,360,361,362,363,364,366,368,369,372,374,376,379,383,386];
+
+  // Flat-rate savings products (per 1000, same all ages, some vary slightly by gender - noted where applicable)
+  var FLAT = {
+    hs208: 999,
+    hs126: 970,
+    hs168: 999,
+    hs2515: 120
+  };
+
+  // ทุพพลภาพ โพรเทค: age 15-74, female/male, per 1000 rider sum insured
+  var RATE_TPD_F = [0.12,0.13,0.13,0.14,0.14,0.15,0.16,0.16,0.16,0.17,0.17,0.17,0.18,0.18,0.19,0.20,0.20,0.21,0.22,0.23,0.24,0.25,0.26,0.28,0.29,0.30,0.31,0.33,0.34,0.37,0.39,0.42,0.45,0.49,0.54,0.60,0.66,0.74,0.84,0.94,1.07,1.21,1.37,1.54,1.74,1.95,2.19,2.46,2.76,3.09,3.47,3.90,4.38,4.91,5.49,6.11,6.78,7.47,8.19,8.91];
+  var RATE_TPD_M = [0.25,0.29,0.33,0.37,0.40,0.46,0.48,0.49,0.50,0.51,0.51,0.51,0.51,0.51,0.52,0.52,0.53,0.55,0.56,0.58,0.60,0.63,0.66,0.66,0.70,0.74,0.77,0.82,0.88,0.93,1.00,1.02,1.09,1.17,1.26,1.36,1.47,1.60,1.73,1.89,2.06,2.26,2.48,2.73,3.01,3.32,3.68,4.07,4.51,4.99,5.51,6.07,6.65,7.27,7.93,8.63,9.38,10.22,11.14,12.17];
+  var TPD_MIN_AGE = 15;
+
+  // คุ้มครอง 2 พลัส: age 20-65, by duration (10/15/20), per 1000 — สัญญาชีวิต (life) + สัญญาเพิ่มเติมทุพพลภาพ (rider)
+  // index 0 = age 20 ... index 45 = age 65. null = ไม่รับประกันช่วงอายุนั้นสำหรับระยะเวลานี้
+  var CP2_LIFE_F = {
+    10:[2.79,2.81,2.83,2.85,2.88,2.90,2.93,2.97,3.01,3.05,3.11,3.17,3.24,3.33,3.42,3.53,3.65,3.78,3.92,4.07,4.24,4.43,4.63,4.85,5.10,5.37,5.68,6.03,6.41,6.85,7.35,7.91,8.54,9.26,10.07,10.99,12.05,13.26,14.66,16.28,18.17,20.37,22.92,25.87,29.28,33.17],
+    15:[2.74,2.76,2.79,2.83,2.86,2.90,2.95,3.01,3.07,3.14,3.22,3.31,3.41,3.52,3.65,3.78,3.93,4.10,4.28,4.49,4.71,4.96,5.24,5.55,5.90,6.29,6.73,7.22,7.78,8.41,9.12,9.93,10.87,11.94,13.17,14.60,16.24,18.14,20.32,22.82,25.66,null,null,null,null,null],
+    20:[2.75,2.79,2.84,2.89,2.94,3.00,3.07,3.15,3.24,3.33,3.44,3.56,3.69,3.84,4.00,4.18,4.38,4.61,4.86,5.15,5.46,5.81,6.21,6.65,7.14,7.71,8.34,9.07,9.89,10.85,11.94,13.20,14.65,16.30,18.19,20.33,null,null,null,null,null,null,null,null,null,null]
+  };
+  var CP2_LIFE_M = {
+    10:[4.38,4.43,4.47,4.52,4.58,4.64,4.72,4.81,4.92,5.04,5.18,5.34,5.51,5.70,5.90,6.13,6.38,6.65,6.95,7.28,7.64,8.03,8.46,8.93,9.44,9.99,10.60,11.26,11.98,12.77,13.64,14.61,15.69,16.90,18.26,19.79,21.51,23.45,25.64,28.10,30.88,34.02,37.55,41.52,45.97,50.96],
+    15:[4.42,4.49,4.56,4.64,4.73,4.83,4.95,5.07,5.22,5.38,5.56,5.77,5.99,6.23,6.50,6.80,7.12,7.47,7.86,8.27,8.73,9.22,9.76,10.36,11.01,11.73,12.52,13.40,14.37,15.46,16.66,18.01,19.52,21.20,23.10,25.22,27.61,30.29,33.30,36.66,40.42,null,null,null,null,null],
+    20:[4.57,4.66,4.77,4.88,5.00,5.14,5.29,5.47,5.66,5.87,6.11,6.37,6.66,6.97,7.31,7.69,8.09,8.53,9.02,9.55,10.13,10.77,11.49,12.27,13.15,14.12,15.20,16.39,17.73,19.21,20.87,22.71,24.77,27.06,29.61,32.45,null,null,null,null,null,null,null,null,null,null]
+  };
+  var CP2_RIDER_F = {
+    10:[0.16,0.16,0.17,0.17,0.18,0.18,0.19,0.20,0.20,0.21,0.22,0.23,0.24,0.26,0.27,0.28,0.30,0.31,0.33,0.35,0.37,0.40,0.43,0.47,0.51,0.57,0.63,0.70,0.78,0.88,0.99,1.11,1.25,1.41,1.58,1.78,2.00,2.24,2.51,2.81,3.15,3.52,3.93,4.38,4.87,5.39],
+    15:[0.17,0.18,0.18,0.19,0.19,0.20,0.21,0.22,0.23,0.24,0.25,0.26,0.27,0.29,0.30,0.32,0.34,0.37,0.40,0.43,0.46,0.51,0.56,0.62,0.69,0.76,0.85,0.95,1.07,1.20,1.34,1.50,1.69,1.89,2.12,2.38,2.66,2.96,3.30,3.67,4.06,null,null,null,null,null],
+    20:[0.19,0.19,0.20,0.21,0.21,0.22,0.23,0.24,0.25,0.27,0.28,0.30,0.32,0.34,0.37,0.39,0.43,0.46,0.51,0.56,0.61,0.68,0.75,0.84,0.93,1.04,1.16,1.29,1.44,1.61,1.80,2.01,2.25,2.50,2.78,3.07,null,null,null,null,null,null,null,null,null,null]
+  };
+  var CP2_RIDER_M = {
+    10:[0.48,0.48,0.49,0.49,0.50,0.50,0.51,0.52,0.53,0.54,0.56,0.58,0.60,0.63,0.66,0.69,0.73,0.77,0.81,0.86,0.91,0.97,1.03,1.11,1.18,1.27,1.37,1.48,1.61,1.75,1.91,2.09,2.29,2.51,2.76,3.04,3.35,3.69,4.07,4.48,4.92,5.40,5.91,6.46,7.05,7.68],
+    15:[0.49,0.50,0.50,0.51,0.52,0.53,0.54,0.56,0.57,0.60,0.62,0.65,0.68,0.71,0.75,0.79,0.83,0.89,0.94,1.01,1.07,1.15,1.24,1.33,1.44,1.56,1.69,1.84,2.01,2.20,2.40,2.64,2.89,3.17,3.48,3.81,4.17,4.57,4.99,5.45,5.95,null,null,null,null,null],
+    20:[0.51,0.52,0.53,0.55,0.56,0.58,0.60,0.62,0.64,0.67,0.70,0.73,0.77,0.81,0.86,0.92,0.98,1.05,1.12,1.20,1.30,1.40,1.51,1.64,1.78,1.94,2.11,2.30,2.51,2.74,2.99,3.26,3.56,3.88,4.22,4.60,null,null,null,null,null,null,null,null,null,null]
+  };
+  var CP2_MIN_AGE = 20;
+  var CP2_MIN_SUM = 1000000;
+
+  // อบ.3 พลัส: flat annual premium by occupation class x plan (not age-based)
+  var OB3_RATES = {
+    1: {5000:588, 10000:883, 15000:1177},
+    2: {5000:617, 10000:928, 15000:1236},
+    3: {5000:647, 10000:972, 15000:1295}
+  };
+
+  // รพ.ปร: rate per 100-baht daily benefit, by age band x gender
+  var RPP_BANDS = [
+    {min:6,  max:29, f:222, m:209},
+    {min:30, max:39, f:277, m:252},
+    {min:40, max:49, f:349, m:317},
+    {min:50, max:59, f:439, m:414},
+    {min:60, max:64, f:601, m:567}
+  ];
+
+  function lookupRate(arr, age, minAge){
+    minAge = minAge || 0;
+    var idx = age - minAge;
+    if(idx < 0) idx = 0;
+    if(idx >= arr.length) idx = arr.length - 1;
+    return arr[idx];
+  }
+
+  function formatBaht(n){
+    return Math.round(n).toLocaleString('th-TH');
+  }
+
+  var PRODUCTS = {
+    hs9910: {name:'แฮปปี้เซฟวิ่ง 99/10', kind:'age', minAge:0, f:RATE_9910_F, m:RATE_9910_M, note:'เบี้ยชำระ 10 ปี คุ้มครองถึงอายุ 99 ปี'},
+    hs995:  {name:'แฮปปี้เซฟวิ่ง 99/5', kind:'age', minAge:0, f:RATE_995_F, m:RATE_995_M, note:'เบี้ยชำระ 5 ปี คุ้มครองถึงอายุ 99 ปี'},
+    hs1810: {name:'แฮปปี้เซฟวิ่ง 18/10', kind:'age', minAge:0, f:RATE_1810_F, m:RATE_1810_M, note:'เบี้ยชำระ 10 ปี คุ้มครอง 18 ปี'},
+    hs208:  {name:'แฮปปี้เซฟวิ่ง 208', kind:'flat', rate:FLAT.hs208, note:'เบี้ยชำระ 8 ปี คุ้มครอง 20 ปี (เบี้ยเท่ากันทุกอายุ)'},
+    hs126:  {name:'แฮปปี้เซฟวิ่ง 126', kind:'flat', rate:FLAT.hs126, note:'เบี้ยชำระ 6 ปี คุ้มครอง 12 ปี (เบี้ยเท่ากันทุกอายุ)'},
+    hs168:  {name:'แฮปปี้เซฟวิ่ง 16/8', kind:'flat', rate:FLAT.hs168, note:'เบี้ยชำระ 8 ปี คุ้มครอง 16 ปี (เบี้ยเท่ากันทุกอายุ)'},
+    hs2515: {name:'แฮปปี้เซฟวิ่ง 2515', kind:'flat', rate:FLAT.hs2515, note:'เบี้ยชำระ 15 ปี คุ้มครอง 25 ปี (เบี้ยเท่ากันทุกอายุ)'},
+    tpd:    {name:'ทุพพลภาพ โพรเทค', kind:'age', minAge:15, f:RATE_TPD_F, m:RATE_TPD_M, note:'สัญญาเพิ่มเติม รับอายุ 15–65 ปี'},
+    cp2:    {name:'คุ้มครอง 2 พลัส', kind:'cp2', note:'รวมเบี้ยสัญญาชีวิต + สัญญาเพิ่มเติมทุพพลภาพ · รับเฉพาะชั้นอาชีพ 1–2 · ทุนขั้นต่ำ 1,000,000 บาท'},
+    ob3:    {name:'อบ.3 พลัส', kind:'ob3', note:'ค่ารักษาพยาบาลจากอุบัติเหตุ เบี้ยคงที่ตามชั้นอาชีพและแผน ไม่ขึ้นกับอายุ'},
+    rpp:    {name:'ค่ารักษาพยาบาลรายวัน ปัญจรักษ์ (รพ.ปร.)', kind:'rpp', note:'เบี้ยตามช่วงอายุ คำนวณจากความคุ้มครองรายวันที่ต้องการ (300–5,000 บาท/วัน)'}
+  };
+
+  // ---- Adaptive form show/hide ----
+  var elProduct = document.getElementById('calc-product');
+  var rowGenderAge = document.getElementById('calc-row-genderage');
+  var rowDuration = document.getElementById('calc-row-duration');
+  var rowOccClass = document.getElementById('calc-row-occclass');
+  var rowOb3Plan = document.getElementById('calc-row-ob3plan');
+  var rowSum = document.getElementById('calc-row-sum');
+  var sumLabel = document.getElementById('calc-sum-label');
+  var sumInput = document.getElementById('calc-sum');
+
+  function updateFormVisibility(){
+    if(!elProduct) return;
+    var key = elProduct.value;
+    var kind = PRODUCTS[key] ? PRODUCTS[key].kind : 'age';
+
+    rowGenderAge.style.display = (kind === 'ob3') ? 'none' : '';
+    rowDuration.style.display = (kind === 'cp2') ? '' : 'none';
+    rowOccClass.style.display = (kind === 'ob3') ? '' : 'none';
+    rowOb3Plan.style.display = (kind === 'ob3') ? '' : 'none';
+    rowSum.style.display = (kind === 'ob3') ? 'none' : '';
+
+    if(kind === 'rpp'){
+      sumLabel.textContent = 'ความคุ้มครองที่ต้องการ (บาท/วัน)';
+      sumInput.value = 1000; sumInput.min = 300; sumInput.step = 100;
+    } else if(kind === 'cp2'){
+      sumLabel.textContent = 'ทุนประกันที่ต้องการ (บาท, ขั้นต่ำ 1,000,000)';
+      sumInput.value = 1000000; sumInput.min = 1000000; sumInput.step = 100000;
+    } else {
+      sumLabel.textContent = 'ทุนประกันที่ต้องการ (บาท)';
+      sumInput.value = 500000; sumInput.min = 10000; sumInput.step = 10000;
+    }
+  }
+  if(elProduct){
+    elProduct.addEventListener('change', updateFormVisibility);
+    updateFormVisibility();
+  }
+
+  var runBtn = document.getElementById('calc-run');
+  if(runBtn){
+    runBtn.addEventListener('click', function(){
+      var productKey = document.getElementById('calc-product').value;
+      var gender = document.getElementById('calc-gender').value;
+      var age = parseInt(document.getElementById('calc-age').value, 10);
+      var sum = parseFloat(document.getElementById('calc-sum').value);
+      var duration = parseInt(document.getElementById('calc-duration').value, 10);
+      var occClass = parseInt(document.getElementById('calc-occclass').value, 10);
+      var ob3plan = parseInt(document.getElementById('calc-ob3plan').value, 10);
+      var resultEl = document.getElementById('calc-result');
+
+      var product = PRODUCTS[productKey];
+      resultEl.style.display = 'block';
+      resultEl.classList.remove('calc-error');
+
+      // ---- อบ.3 พลัส: flat lookup, no age/sum ----
+      if(product.kind === 'ob3'){
+        var flatPremium = OB3_RATES[occClass][ob3plan];
+        resultEl.innerHTML =
+          '<div class="r-label">เบี้ยประกันภัยรายปี — ' + product.name + '</div>' +
+          '<div class="r-value">' + formatBaht(flatPremium) + ' บาท / ปี</div>' +
+          '<div class="r-note">' + product.note + ' · ชั้นอาชีพ ' + occClass + ' · แผน ' + formatBaht(ob3plan) + ' บาท/ครั้ง</div>';
+        return;
+      }
+
+      if(!age || age < 0 || !sum || sum <= 0){
+        resultEl.classList.add('calc-error');
+        resultEl.innerHTML = '<div class="r-value" style="font-size:1em;">กรุณากรอกอายุและความคุ้มครองให้ถูกต้อง</div>';
+        return;
+      }
+
+      // ---- คุ้มครอง 2 พลัส ----
+      if(product.kind === 'cp2'){
+        if(age < CP2_MIN_AGE || age > 65){
+          resultEl.classList.add('calc-error');
+          resultEl.innerHTML = '<div class="r-value" style="font-size:1em;">แบบประกันนี้รับอายุ 20–65 ปี</div>';
+          return;
+        }
+        if(sum < CP2_MIN_SUM){
+          resultEl.classList.add('calc-error');
+          resultEl.innerHTML = '<div class="r-value" style="font-size:1em;">ทุนประกันขั้นต่ำ 1,000,000 บาท</div>';
+          return;
+        }
+        var lifeArr = (gender === 'f' ? CP2_LIFE_F : CP2_LIFE_M)[duration];
+        var riderArr = (gender === 'f' ? CP2_RIDER_F : CP2_RIDER_M)[duration];
+        var lifeRate = lookupRate(lifeArr, age, CP2_MIN_AGE);
+        var riderRate = lookupRate(riderArr, age, CP2_MIN_AGE);
+        if(lifeRate === null || riderRate === null){
+          resultEl.classList.add('calc-error');
+          resultEl.innerHTML = '<div class="r-value" style="font-size:1em;">อายุนี้ไม่รับประกันสำหรับระยะเวลา ' + duration + ' ปี กรุณาเลือกระยะเวลาสั้นลง</div>';
+          return;
+        }
+        var lifePremium = (lifeRate/1000) * sum;
+        var riderPremium = (riderRate/1000) * sum;
+        var totalPremium = lifePremium + riderPremium;
+        resultEl.innerHTML =
+          '<div class="r-label">เบี้ยประกันภัยรายปี โดยประมาณ — ' + product.name + ' (' + duration + ' ปี)</div>' +
+          '<div class="r-value">' + formatBaht(totalPremium) + ' บาท / ปี</div>' +
+          '<div class="r-note">สัญญาชีวิต ' + formatBaht(lifePremium) + ' บาท + สัญญาเพิ่มเติมทุพพลภาพ ' + formatBaht(riderPremium) + ' บาท · ' + product.note + '</div>';
+        return;
+      }
+
+      // ---- รพ.ปร. ----
+      if(product.kind === 'rpp'){
+        var band = null;
+        for(var i=0;i<RPP_BANDS.length;i++){
+          if(age >= RPP_BANDS[i].min && age <= RPP_BANDS[i].max){ band = RPP_BANDS[i]; break; }
+        }
+        if(!band){
+          resultEl.classList.add('calc-error');
+          resultEl.innerHTML = '<div class="r-value" style="font-size:1em;">แบบประกันนี้รับอายุ 6–64 ปี</div>';
+          return;
+        }
+        var rateRPP = gender === 'f' ? band.f : band.m;
+        var premiumRPP = (rateRPP/100) * sum;
+        resultEl.innerHTML =
+          '<div class="r-label">เบี้ยประกันภัยรายปี โดยประมาณ — ' + product.name + '</div>' +
+          '<div class="r-value">' + formatBaht(premiumRPP) + ' บาท / ปี</div>' +
+          '<div class="r-note">' + product.note + ' · อัตราเบี้ยช่วงอายุ ' + band.min + '–' + band.max + ' ปี: ' + rateRPP + ' บาท ต่อความคุ้มครอง 100 บาท/วัน · ความคุ้มครอง ' + formatBaht(sum) + ' บาท/วัน</div>';
+        return;
+      }
+
+      // ---- age-based & flat savings/rider products ----
+      if(product.kind === 'age' && age < product.minAge){
+        resultEl.classList.add('calc-error');
+        resultEl.innerHTML = '<div class="r-value" style="font-size:1em;">แบบประกันนี้รับอายุตั้งแต่ ' + product.minAge + ' ปีขึ้นไป</div>';
+        return;
+      }
+
+      var ratePer1000;
+      if(product.kind === 'flat'){
+        ratePer1000 = product.rate;
+      } else {
+        var arr = gender === 'f' ? product.f : product.m;
+        ratePer1000 = lookupRate(arr, age, product.minAge);
+      }
+
+      var premium = (ratePer1000 / 1000) * sum;
+
+      resultEl.innerHTML =
+        '<div class="r-label">เบี้ยประกันภัยรายปี โดยประมาณ — ' + product.name + '</div>' +
+        '<div class="r-value">' + formatBaht(premium) + ' บาท / ปี</div>' +
+        '<div class="r-note">' + product.note + ' · อัตราเบี้ย ' + ratePer1000 + ' บาทต่อทุนประกัน 1,000 บาท · ทุนประกัน ' + formatBaht(sum) + ' บาท</div>';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
