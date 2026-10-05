@@ -178,7 +178,7 @@ footer{padding:1.5rem 0 7rem;font-size:.82rem;color:var(--ink-soft)}
 /* chat */
 .fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;gap:.5rem;background:#fff;color:var(--ink);border:3px solid var(--sky);border-radius:999px;padding:.6rem 1.2rem .6rem .7rem;font-weight:700;font-size:1rem;box-shadow:0 6px 18px rgba(46,120,194,.25)}
 .fab .av{width:2.4rem;height:2.4rem;border:2px solid var(--sky)}
-.chat{position:fixed;inset:auto 1rem calc(1rem + env(safe-area-inset-bottom,0px)) auto;z-index:40;width:min(26rem,calc(100vw - 2rem));height:min(38rem,calc(100% - 6rem - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)));background:var(--card);border:2px solid var(--sky);border-radius:1.3rem;display:none;flex-direction:column;overflow:hidden;box-shadow:0 12px 40px rgba(16,24,40,.3)}
+.chat{position:fixed;inset:auto 1rem calc(1rem + env(safe-area-inset-bottom,0px)) auto;z-index:60;width:min(26rem,calc(100vw - 2rem));height:min(38rem,calc(100% - 6rem - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)));background:var(--card);border:2px solid var(--sky);border-radius:1.3rem;display:none;flex-direction:column;overflow:hidden;box-shadow:0 12px 40px rgba(16,24,40,.3)}
 .chat.open{display:flex}
 @media (max-width:560px){.chat{inset:env(safe-area-inset-top,0px) 0 0 0;width:100%;height:auto;border-radius:0;border:0;padding-bottom:env(safe-area-inset-bottom,0px)}}
 .chat header{display:flex;align-items:center;gap:.6rem;padding:.6rem .8rem;background:var(--sky-soft);color:var(--ink);border-bottom:2px solid var(--sky)}
@@ -232,8 +232,64 @@ footer{padding:1.5rem 0 7rem;font-size:.82rem;color:var(--ink-soft)}
 .consent{position:fixed;left:1rem;right:1rem;bottom:calc(5.2rem + env(safe-area-inset-bottom,0px));z-index:35;max-width:34rem;margin:0 auto;background:var(--card);border:2px solid var(--ink);border-radius:1rem;padding:.9rem 1rem;box-shadow:0 8px 24px rgba(15,58,115,.2);font-size:.92rem}
 .consent p{margin:0}
 .consent[hidden]{display:none}
+/* ===== detail page ===== */
+:root{--navy:#16365F}
+body.noscroll{overflow:hidden}
+.detail{position:fixed;inset:0;z-index:50;background:var(--paper);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.detail[hidden]{display:none}
+.dbar{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.97);border-bottom:3px solid var(--navy)}
+.dbar .wrap{display:flex;align-items:center;gap:.7rem;min-height:3.7rem}
+.dbar button{flex:none;min-height:2.7rem;padding:0 1rem;border:2px solid var(--navy);border-radius:.8rem;background:var(--card);color:var(--navy);font-weight:700}
+.dbar span{font-weight:700;font-size:.95rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dhead{padding:1.5rem 0 .8rem}
+.dhead .dtag{display:inline-block;font-size:.82rem;font-weight:700;color:var(--green-deep);background:var(--green-soft);border:1.5px solid var(--green);border-radius:.5rem;padding:0 .55rem;margin-bottom:.5rem}
+.dhead h1{font-size:1.85rem;margin-bottom:.3em;outline:none}
+.dhead p{color:var(--ink-soft);font-size:1.05rem;max-width:36em;margin:0}
+.dbox{background:var(--card);border:2px solid var(--navy);border-radius:1.1rem;padding:1.1rem 1.1rem 1rem;margin:0 0 1.1rem}
+.dbox h2{font-size:1.25rem;margin-bottom:.55em;color:var(--navy)}
+.dbox ul{padding-left:1.2rem;margin:.2rem 0 .6rem}
+.dbox li{margin:.25rem 0}
+.dbox p:last-child,.dbox ul:last-child{margin-bottom:0}
+.dbox .note{margin-top:.4rem}
+.kv{margin:0}
+.kv div{display:grid;grid-template-columns:10rem 1fr;gap:.8rem;padding:.6rem 0;border-top:1px dashed var(--line)}
+.kv div:first-child{border-top:0;padding-top:0}
+.kv dt{color:var(--ink-soft);font-size:.92rem}
+.kv dd{margin:0;font-weight:600}
+@media (max-width:479px){.kv div{grid-template-columns:1fr;gap:0}}
+.cmp-wrap{overflow-x:auto;margin:0 -.4rem;padding:0 .4rem .3rem}
+.cmp{border-collapse:separate;border-spacing:0;width:100%;font-size:.92rem;line-height:1.5}
+.cmp th,.cmp td{padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp td{text-align:center;font-weight:700;min-width:6.4rem}
+.cmp th[scope=row]{position:sticky;left:0;z-index:1;background:var(--card);text-align:left;font-weight:500;min-width:8rem;width:38%;box-shadow:2px 0 0 var(--line)}
+@media (max-width:479px){.cmp{font-size:.86rem}.cmp th[scope=row]{min-width:7.2rem;max-width:8.5rem}.cmp th,.cmp td{padding:.5rem .45rem}}
+.cmp small{display:block;font-weight:500;font-size:.78rem;color:var(--ink-soft);line-height:1.4}
+.cmp thead th{border-bottom:0;padding:0 .25rem .4rem}
+.cmp thead th.corner{position:sticky;left:0;z-index:2;background:var(--card);text-align:left;vertical-align:bottom;font-size:.82rem;font-weight:500;color:var(--ink-soft);padding-left:.6rem}
+.cmp thead .pl{display:block;background:var(--navy);color:#fff;border-radius:.8rem;padding:.55rem .5rem;text-align:center}
+.cmp thead .pl b{display:block;font-size:1rem}
+.cmp thead .pl small{color:#D8E8F7}
+.cmp tr.grp th{background:var(--sky-soft);text-align:left;font-weight:700;color:var(--navy);padding:.45rem .6rem;border-bottom:0}
+.cmp tr.grp th span{position:sticky;left:.6rem;display:inline-block;max-width:calc(100vw - 5rem)}
+.cmp .na{color:var(--ink-soft);font-weight:500}
+.cmp .ask{color:var(--pond);font-weight:600;font-size:.85rem}
+.cmp tfoot th,.cmp tfoot td{border-bottom:0;padding-top:.9rem;vertical-align:middle}
+.cmp tfoot .btn{min-height:2.7rem;font-size:.9rem;padding:.3rem .8rem;white-space:nowrap}
+.swipe{font-size:.82rem;color:var(--ink-soft);margin:0 0 .5rem}
+@media (min-width:700px){.swipe{display:none}}
+.ex{display:grid;gap:.5rem;margin:.6rem 0}
+.ex div{background:var(--paper);border-radius:.8rem;padding:.6rem .8rem;font-size:.93rem;line-height:1.6}
+.ex b{color:var(--navy)}
+.pair{display:grid;gap:.6rem}
+.pair a,.pair div{display:block;border:2px solid var(--line);border-radius:.9rem;padding:.65rem .85rem;text-decoration:none;color:var(--ink);line-height:1.55}
+.pair a:hover{border-color:var(--navy)}
+.pair b{display:block}
+.pair span{font-size:.9rem;color:var(--ink-soft)}
+.dcta{background:var(--sky-soft)}
+.dsrc{font-size:.8rem;color:var(--ink-soft);padding:0 0 3rem}
+.addons a{font-weight:700}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-@media print{.top,.fab,.chat{display:none!important}}
+@media print{.top,.fab,.chat,.dbar{display:none!important}.detail{position:static;overflow:visible}}
 </style>
 </head>
 <body>
@@ -331,6 +387,8 @@ footer{padding:1.5rem 0 7rem;font-size:.82rem;color:var(--ink-soft)}
 
 <button class="fab" type="button" data-open-chat aria-controls="chat"><img class="av" src="data:image/jpeg;base64,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" alt="" width="40" height="40">ถามป้าเป็ด</button>
 
+<div class="detail" id="detail" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle"></div>
+
 <div class="chat" id="chat" role="dialog" aria-modal="false" aria-label="แชทถามป้าเป็ด">
   <header><img class="av" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wgARCACgAKADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAABAUCAwYHAQD/xAAYAQADAQEAAAAAAAAAAAAAAAABAgMABP/aAAwDAQACEAMQAAAB13v0m333qvbzntY0bAjFj4UzIJIAhdbsBfVYQ02OFJDdk+wm7pOMZxIn79LaPLeh8aVij0xU6XTr1aU8E2eIV8y9XvGTNh6lGVFK9HZTOj80akdTj5Ospe+JRs3jWY86hTrYqbui4noU7JsqcJtQeadihSF+MpKfVZ0ZbGYlY9W0XJuq0n9zXc8qR7wbIo0XCfWBlXSs6Srq1LFdtsy6FobPDWBPN1nzFuwkD6Hl71HmGsOYZHTZRWGFu+KsugptRHoztD0A4tiK1U1hMV5CsWS8hnl3RwPN/aCr89uqxDUY6sWaUoHYLSN9tsjsZ29+t9ZB6rqgavPJjXUmxOWBN1gbj5wvtueDRX7ho1GozCUmIes26fpMZrEobVH46r2ENpfAE7M/h/doo2uE2xc4sawGPDLVtEj3aHHKxZgKXPSuJ9a2ZiGZ9aN5ICTRr4lV7a6wM4SD5N0LlbyLJrvxEagaEr0tefK8edK+sDzpy9ru6CL/AJY35+lTTo4mmcKa14eVRTBMcl6Si6OfMGnMJUV9Ai1pKfvntE9+jAi2k4RXzLpFoeXoK9BiScFCANQ5RZW4F/Dr5Vs6IkGefeKf/8QAKhAAAgIBBAEEAgICAwAAAAAAAQIAAwQFERITIRAiIzEUIBUyJDAzQUL/2gAIAQEAAQUC/TMylpTLuLHy0b7g+/8AzYIIp2KzTtS2/wBGoZAx6O98i24blpxlVRaPVxRhGTdDBKzPuaRnGtv1Pga7kmzJrs4x/cOESnsenF2mp18KV8tXX7TVvNuLRTyA+tLye+n9M+4UY9z8ra/trCDTuWwKd4a/ZqVv5Dom0Ptrevili/K6T+s3mn5HTkL5HrreR2M/gn2rSnO7HU9+NXwTVr+nGA60pr5PlrtjZLe5RzsFO0yF4t/1vNHvNuP6Z+SqVWcrGcAIJhDyGFeev1rDf5WN8rUV8XevnTfuqYw5JvvRds1ljAudwdHy2pvRgy2txTMvDkWIBZbvEUvFYJUzfkX1H4tVXnMC3rtC7Ii7TWB15OO/U1jiXneH7P3TNJyBZjamxGI6Eyutd34xLfNWFyWrTyFOPcot7IlJe3gTj2ZprW4XZT9DqbQ3Eb8dwYyyteM0TiW1rM4uzbVBwoJLzSsbtvLCofyVhg1K2JxtFKRl4hkDS7IqqiZdLlwhFlJ2DQsRAwdNOWlcXUKkN2R5O2620lZotXCh6g8/E2n8eivVSeVP3fLFZqr8Vmi4hC0Y1m19XxfR4F18ocfnZLWdrb12igEdhE0N+aAenGMsT7ulc6xGrhWXr7cobZFTAVjaxqbW5WF6LVbsG3x7btoicUX1cxJdK/PoY0u+sw75QHKupeUYbTJr67rB7w/tZws0s746zeEwkbVWowfzF9s3m8aZr9dP9mTeIOtqaQz5mOypcQ0Rua3Di2gvzw1M39HrDwUqotxgxG8Bm8czXr9kXxKvFZXecZeLN7qOIRSZZuToF3XlCHxO9N+9J3KY1yTmIp9Hmp3d2Yo9iMqJuSUr5pkYbcMjmofGZA/2nJHwclcmj7GdjK0q4gfBH6gStrviUdatNXyPx8SV/wBSo2HufFwO30yMfslgsDGqV4llhwFsw7kMZdwaShPKdbNKaQkEscKusF77Fr5ThEqULUnuwsfpq9Np1LOob2IAtD7RPM4woJxjQtM0l67MYGvJoCVdXYcOjlKsTZf2vHGrBPIqeMDTeEx2hir2XtX4anyEQqqhR+m4EDhmUTM/4tIHxkem5nmbRvA06vxtGSZalErt39f/xAAgEQACAgICAwEBAAAAAAAAAAAAAQIRECExQQMSIBNh/9oACAEDAQE/AcRVDPUrHI1WUJkY2PgiiUSqHtZoitiOyh7ZJYZA2Q/nxexsaHwR0jZBUhpjEbsayh/feXwJ/LdISEJ2URfQlZ6V0emPI+hHGP0PbYheVolNyxexUTleY8/EnSxeP//EAB4RAAIDAAMBAQEAAAAAAAAAAAABAhARICExEkET/9oACAECAQE/AalLRGm1uCe2zCTwXoxM0Tx3ox2ukRpE6lwwSpekval2xZTOjeC45xXHRLR01lSXGC/RntfzPjri44jshHKwl5WmkFrr5/a//8QAMBAAAQMBBwMCBgEFAAAAAAAAAQACESEDEBIiMUFRIGFxMkITMFJigZGxI4Kh4fH/2gAIAQEABj8C6NarE/8AAUm+UEIvlCztz/d8hzii8/8AFVG7sjRNQ5VboNFB1QsbU5du3X8PZu3dDfobRTzRCVKe88qLu4ug+oa9LnH8J5PKzBQvF4ZZ6C48Qg26iB3QTT7XUPS1jTlCxbLTMgO6I5KChvrdRHd7t0F/K7Kbjd+UAfbS91Z7LE7VQqrEmdzcz6cJ/aHiqA7JzEGO9WinhCN12RhFR7TRSFPCikfaqz+1QXGdSrPDVwTTqp/XlR/Kdau4oigQsTc1mVlNCmxxfLdUPq3Vph1AUkqXGl2UJtPMqAQPCgOood6U0WQdiB9UURaeFFqw4x+ljLfC9JVBB7I8haKgX4RkkHaq+CwTyViXcqqk+lqronfAs5Dd0PiNFa0qpi+qqo0WytLVuh27X/cnutPWOCmvs6uAk/7RXcLXKhyVUI7SsTUSb4ZqsmUwQe6fibM6LCfSiip2uyiqIDpYTKIme6PKwu0R7fMtB9yM6BSsNlR5pKLW18I4jotFATzyfmWh+5OAREwVrJlS4Vb/AJWUaqHCFlFSmHkDolxhS0gjqe7gXZVVNkwvrZzwhFAix1Y0uA3aY6KrKIUuk/lCehtkPdU3GoBuxODmysPtJKq3CDujgOihwqnWLvf/ADfGIStVqtVQ9DyNBQXUbLuVLlIeCOOFk1G6+HaMl53KrRQEHtMPaU20b+fN0wgHskcoDMOUcOIqGOw+FqSe5uNc7qNuIu7JpxEM3F2JpwvAiUG21m7LSAp0TiUKE2Vpr2vliqFxeXO0CFr7BtxfmqUMuqaDqOjSi0WBgjlEDQdZbzRRCY1sNgz5X9Kf1oobLn9ws58gb9ZVqNwetreK3aL0iFAEdNVDa3O8J7/rdPW60Pu0vxtMELNrf//EACYQAQACAgICAgIDAQEBAAAAAAEAESExQVFhcRCBkaEgscHR4fD/2gAIAQEAAT8h/hmWTBW4uXX0RcvV6PE4jj9TetTNLBqJ7LzLLctxd7iE8RWmR13MWs4P+4ZLIxj/AAWHXBt8R0LddDxMoFDUTSreiL13tiF1kz3xMANykBARoZmZCu6xpg5YJsLJpsb+H4IrF4gjK6vKMQ0vEVSc8wFq5CPT+YFrQGGJ3aBfgsxbljnwITdcSuOmYL1R3bkg2F0n/Xww+Otuh2xn4rbMPJ9XNcDX48S7OP7zaTModbqBm4Z8PMtAb1AK0NoIx5Z7NzCw31UpkaYvjLjpbv51POkkrY267gAqm3bOQOU5TYnVNE7waeuYQ3AL6RBV5ipWsfsQqJxuYac0eZd7OXqDAWEdxZl4y9TOm7O/hgVkcUdy5F/Qgp7M/cWL+p3KFwHLAfR/ZMLxkG6FcYHhwTCmcj8waK8oxq1jfvqMB+spzEPI1cTW0uokso/qCsXSgJLITPWUxFRxh9x05PM+PPm40IV6YeKoXJ2LU4IKxMMx1fV/iiDhbxDVAqleJatyELw5SCwI7szT5lgcctXplvhP2jL1LK5lMNhshq2BoRMvkYl7arcZgDw7YitBXqIV2Rb5usspkKOkFYDphbXg7uKx5WD2lkstIuJLOI17VBeBLBHCejFYzZbMdpnuPXimhyxopW2FMaoPGbXipcDb3BakkL4cdQDz5PbHriIpDgtcOlFSlKC89R45nYkGqCHEvWiGdDWav1O6mczPvtKMBeX57TdTjqXVNHEMmqVcsZWTQv1uKBVGZseYtXMLmBMXL+mH2BWamc9kEwMoANMGupVKqZBlkzOyqz3DUPGJjAJz6hojJd2hmd5SwVVQFxjAeKgZnDOgzsn4YK87KOGLLQo4/M0lhgQ6eFyzYpxmIR8fiolHiAGIanaDNcRTiCQTRMycegog+nLdNV+IQKfVYSJlCvEcEgbVc75Y02aN3BM7/gBNQvkxENfAx5QeOtHqJRcrBQ5/uCr6EqAzyws1/wDCAXCoreUcARl+44nmffqL4PxCMgOVnCXrG4x0bjuQxjDgouxmxecyyzlibkVWZRi9519wZm3J39MSpWfwwSx+1FyaDE7lS/uIfC4RWZ0ykF6kA3BpEVMHRMEYxx2tK+ggA3KtsJiJa3be5ahrgI2Qbo0AXi70TKNlC5lqJteeZkI0u5bjAs9P/PjihYwGy4deGWCITGKmCWYjdTWWetvqJcw3e4PG7kWfujU8nPPkyixWwdvuFHPYXj/IDyXHUx3MczZ4B7mFhcDrkRiSbzk3HhJVTbG9V0Ydx4zzCby/b8zZPbbprBq0/Pdws3uOtQYHT6hr5puob048iPXxfLICl46jJFGjt7itmkcVbBC4yHJErHgnPiWEshl1vphWm/UcCgTO89x1HgorWZcVUdEo8/UOJf3HOWyrxKwHl1x/ksbg1WL/AN+UuyY6r4VDhOpVAOXRB5AqMijudCIJQlWIaNYIUdsVDDZvDDEVeUG4BYOCaffEIy26TUL5PlvRuD3qtl6ZyYz8QU38Q+ao2svwiooa7ICPQqURDo/i7AIZNXLwTPPoxe7af8/FSaj2xUZYQckt5N+BHOAkHORTXM0sexqbjP/aAAwDAQACAAMAAAAQQVbyRW8BpcwwpKktTNdSPxDJzt4o4lOfD9nbxIDgGH28DrLn4/Sy6f8AbzpdKYeckKfYAVGPPgn1xsX1tyRf5k0IDAi/PXM8VIifQv/EAB0RAQEBAQADAQEBAAAAAAAAAAEAESEQMUFRcbH/2gAIAQMBAT8Qg3kY37HYebdwSAxnWPk825XuNkwWOrAZKh4eAVwjJloC5MiHCeAWS5HukOKSoh9gp7nd0lyV0W/L6Q+r4J0QFts0Zc8PyOWhCvId42DkEzJ9Ex6vkLBHFkLlumzTRaA+MLOWW82nYZyAYXpcoSxkey/2Smgn9svRBwy/TCjpGDMh9EtN8ZxGXC66sDb0jxpHiHL342Xw94+P/8QAGhEBAQEAAwEAAAAAAAAAAAAAAQARITFBEP/aAAgBAgEBPxCeJFnkpPXwsJaRjT6/JnSIrpnvBOxr7C53O3Z4NzdvJed+BOwbPSXRAbI6bh6jMyDYGY2HMPk/Fy5RhOFjEg5u1mO4xYXXJOvMtvbLOb2RN4bYbJjkTcZMctjZfjRksl3mZa283pHzPoWPMeCTZ07tjgyY5Azsd3QSJyXk/BMsU93CdWDbaTHz/8QAJxABAAICAgIBBQEBAQEBAAAAAQARITFBUWFxgZGhscHw0eEQ8SD/2gAIAQEAAT8QDMCBArLFzkEMkm6Pt7hugF2YGz55XuYoIvYdoTjaB/NzdBjQecy1M4coM6T2sI2McL0xLF+3TLgCmkeJviM6Hw7goYK04/nf17iCQRLE5IIIIECBF6jWlyN0Orpz0MI0rq+vwOvy+5e6xV35hWUdT7EIHL+J/sBhlQ8hGRYQU1xW5izQwTYJClP7xMIA3fEu41dfcgrfleL6YgzRx4f8jhbRtni3hggsbIkwYGIITYAK34hOU9BrUK+AwepfWB1oeg/MSs8LfgI2xuFdsYsbev29TUAzZtRmAD5Ewn4ZXRobs9w4tAVH0/UZ7dB1/JFOC6MFa2mo+sK7ZnbyGyKpHC748eSGabsc9fIPrGD/AMEOS18gIBE7sDuq219ZS1YZ0H2loANAoHAOPMRZQcXz/wDWZfMk77YQxRseyXCJUNI5fqUWu1L5ZYS0BcFh/e5nU/TVuvgoj3uk7TouAgHKJ/z8TDLEtTqJqkyeu/7xFVVdjRnfimY3BBGJDcUFuKjqSlhy9rCkcdWMvA9zKHOz6Lf1GXNBfxuApq9fVg1QwzVdA6Ba+kCi0FsJdeMx/wDgfBv/ACOAc8HBY/hgEAsH2r7XFyocuCezi4OxCGsaDhLuGy7P0vH7lPgaxusP2RhhCC6cY4xLwSgZx5h8Bk5y+NkdxRtLLOD/AOEUkOC2kc4KbzLTh/MWpE7+WJEA1vvD8kQdQxFbCK2LF1X0IAYED0U/mDzjD3evpUf1j+g/KS7IXLdKFPwfWLfQKBsdxWAEr3tX6XMg1bTyG/1L820Fdf8AZlATkc9j6xhKAkUbKfHUIMgfHiX92Cpr+zUbgMjdZrKVLfiLCFxk9YIab7MOyWxHeSH+c4Ci9XXqCGs5cGm3rN/WXIgIvmtfWUgxVjNpn6lwL0uTurjzHhQQtk4XzuE7HU+1/iENRfb5f8YDWq9KAaTUoqVh2DNf3coQcBT5MzXhLO4nwsAtckyqJpy3wkDDoVtdnV7qMMKjtmkz4iKlFI2v6lZg7MSetxgGXJhjrtlANuhriXEEVNLTgidbg4b9w4FZmm/iIOBvz1xBdUWRF3ZeuO4ctnVp4fhzCR9KZnsdIxxYaMLHijv3C+GHJb8R0fKX+DKVytsqtYAamfmJSRkKe/Mq2zaXp3+okSBEyKDk2o1kYeClFzZP2OYKFzryHU22zW3yvzLiobAx7QmH4XgIqQW2I0iZgDnOD7xKZbqIBg2rHDmHGb4IzDI4xEWpaCsmSGAlV2GDpt/EWhuKNEjZwJYG7PEGi2o0FUfdytFbapb+Ya2bHl3DdWjPJUFoilIQoA2ta9wAo1EZVmrut5mlCEVpuz8ynBfbzf8Ak/mYLgAc0+OYTQbbWcyn+IS5eYdpYVwwTWxCxRsXGYZNC1ZuEbSVAi6lATxyrzGx0BpWkWsWWeoMGvwBWazLNydmGur6hUw6go1Uql6cr0wCWAofERVNPol6ekBtrpPZGfXDWW5Re4ZISFEyy7xgf++IaVoRrj6Qw8LLphUYl3E0NJRxRLGOyOpSkWoNbReSJasO4xQEFMw1FLKEfL/2NqUBTa9HtiyfcCKj3CbzWwNqsOtGY5hQILGzo3BsWaIXj64WZyUJn6L85lNhBQzUehQszxKYiDMs6QRhzC2pzLuepVRliglQBUJiobOtXQ1+pffcirx/lwrQQgcJoPw38QKUKD4HKxiLDhC7E7FCTTV08nUZMWiir4+WK9i1f8Zhh1lK7oP3INGYVJnGbBYRaID5jNaWnF/EP7nUQnDLhCqHTma/UeWsfeYW5SnedsVHVOF1MXkAs/aV8ZTsGtLiJwqQM2Fic5+IlC7C5JyDyTJgtnYd0xekKjG8n8wVHDXRp9mVAzIzAcSqBfdViwVYvFct5O0BeKYWCs5La+5jTHKFmXyyp3qD5fxHDJq39QoiIABZ49zEKLmw/wC6gdUkMhVF1kgwcSWqshdjnrUYXfWYRu14jvh4B+JgZbGVmCUm+fD8p+kw+Y8niDe/CLPZKWypxr8LTBQtfMyY+mW0PmfaxKngiZyK40X9bYN9VkjPvweIqY5vwS5MOFYPRMo8GxPBwAK+4kQWdK1g/Gn6RQIbtLpjj4Tm671kd/SoNk8L2HqYFJu6NzGYO2X8ekleyUcXW4h5Eg9yz2bt8x0VdWFrWZRi6WsG3fxK2MYVju1x6hV56Ua/Mx6cBF0rHdYz8C36QIu3uOhmjdeOICUBfK/k6lmsuY0sxfzEiBSAKUPh5TioZ3LvjnoVyP3shLMhm7n16nm2VD8fxKXyhpHdV6QzAtuSrdg5TmuHxDUsYZCxjvYzRZNgVi6kDohtDMQa29rbCsuiA/SRwEEK7jK5L9vMAlqGQHHB7mCoV037I+3uGMH95iV/ApythOhrLLzmvUATa2cHV/SGJuFtDitcTgWiUBj4gg0AUp0RSIFhj1eXuIPun8FQW73BFDEtXSLYCEaKgDKg3EpSgDtav7wVgLMbjoTGKU+5slKuiWj2HWfBcyXjIp2U0CVZ9UROF3WNFX/+RMVNvXiXrsk7lnKC/lLgkggkIeYbnUNum2JcrCQtn4cH3ftBoVCElWFw+GATzxwzlDtFEWLCBDbE8x0jzoDtYebms3DbuiXxGQq0vrX2BBoam4k9Qun9JkhF51AZaI5zNHhd+W4TSpo0CfsNA4ySkGfJP8lgsROz/wAf/9k=" alt="" width="40" height="40"><b>ถามป้าเป็ด<br><small style="font-weight:500">ตอบอัตโนมัติ 24 ชม.</small></b><button type="button" id="chatClose">ปิด</button></header>
   <div class="msgs" id="msgs" aria-live="polite"></div>
@@ -422,7 +480,8 @@ const PRODUCTS = [
 ];
 
 const RIDERS = [
- {id:"happyhealth",name:"บีแอลเอ แฮปปี้ เฮลธ์ / แฮปปี้ เฮลธ์ พรีเมียร์",age:[11,80],pts:["ประกันสุขภาพค่ารักษาพยาบาล แนบกับประกันชีวิต","มีแผนวงเงิน 1 ล้าน และ 5 ล้านบาท เลือกแบบมีค่าใช้จ่ายส่วนแรก 30,000 หรือ 100,000 บาท เพื่อให้เบี้ยถูกลงได้"]},
+ {id:"happyhealth",name:"บีแอลเอ แฮปปี้ เฮลธ์",age:[11,80],pts:["ประกันสุขภาพค่ารักษาพยาบาล แนบกับประกันชีวิต วงเงิน 1, 5 หรือ 10 ล้านบาทต่อการนอนโรงพยาบาล","มีค่าใช้จ่ายส่วนแรก 30,000 หรือ 100,000 บาท ช่วยให้เบี้ยถูกลง เหมาะกับคนที่มีสวัสดิการอยู่แล้ว"]},
+ {id:"hhpremier",name:"บีแอลเอ แฮปปี้ เฮลธ์ พรีเมียร์",age:[11,80],pts:["ประกันสุขภาพวงเงิน 1, 5 หรือ 10 ล้านบาทต่อการนอนโรงพยาบาล เลือกแบบไม่มีส่วนแรกได้","ค่าห้องขั้นต่ำ 3,000–5,000 บาทต่อวัน และมีเงินชดเชยผู้ป่วยอาการวิกฤต 300,000 บาท"]},
  {id:"prestigehealth",name:"เพรสทีจ เฮลธ์ปลดล็อค",age:[11,80],pts:["ประกันสุขภาพวงเงินสูง สำหรับคนที่ต้องการความคุ้มครองระดับพรีเมียม","แนบกับประกันชีวิตทุนขั้นต่ำ 50,000 บาท"]},
  {id:"valuehealth",name:"แวลู เฮลธ์",age:[11,80],pts:["ประกันสุขภาพตามแผนความคุ้มครอง เบี้ยย่อมเยา"]},
  {id:"vhkids",name:"แวลู เฮลธ์ คิดส์ พรีเมียร์",age:[0,10],ageText:"1 เดือน – 10 ปี",pts:["ประกันสุขภาพสำหรับเด็กเล็ก"]},
@@ -728,7 +787,7 @@ function renderResult(){
     sum.push(`${i+1}. ${p.name}`);
   });
   if (adds.length){
-    html += `<div class="addons"><b>แนะนำให้แนบเพิ่ม</b><ul>${adds.map(a=>`<li><b>${esc(a.name)}</b> ${esc(a.pts[0])}</li>`).join("")}</ul></div>`;
+    html += `<div class="addons"><b>แนะนำให้แนบเพิ่ม</b><ul>${adds.map(a=>`<li><b>${esc(a.name)}</b> ${esc(a.pts[0])}${DETAILS[a.id] ? ` <a href="#d-${a.id}">ดูรายละเอียด</a>` : ""}</li>`).join("")}</ul></div>`;
     sum.push(`สนใจแนบ: ${adds.map(a=>a.name).join(", ")}`);
   }
   sum.push("รบกวนช่วยทำใบเสนอราคาให้หน่อยค่ะ/ครับ");
@@ -757,7 +816,7 @@ function prodHTML(p, isRider){
   const sub = isRider ? esc(p.pts[0]) : `${esc(p.cover)} · จ่าย ${esc(p.pay)}`;
   return `<details class="prod" id="p-${p.id}"><summary><span class="t"><b>${esc(p.name)}</b><span>${sub}</span></span><span class="tg tg-${isRider?"rider":p.cat}">${esc(tag)}</span></summary>
     <div class="pbody">${!isRider ? `<div class="tlwrap" data-tl="${p.id}"></div>` : ""}<dl class="facts">${facts}</dl>${p.ageNote?`<p class="hint">${esc(p.ageNote)}</p>`:""}<ul>${p.pts.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
-    <div class="cta-row tight"><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a>
+    <div class="cta-row tight">${DETAILS[p.id] ? `<a class="btn small" href="#d-${p.id}">ดูรายละเอียดเต็ม</a>` : ""}<a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a>
     ${!isRider ? `<button type="button" class="btn small" data-ask="${p.id}">ถามป้าเป็ด</button>` : ""}</div></div></details>`;
 }
 function fillTimelines(){ document.querySelectorAll("#plist [data-tl]").forEach(el => { el.innerHTML = timelineHTML(byId(el.dataset.tl), tlAge); }); }
@@ -817,6 +876,13 @@ function answer(raw){
   if (/(ราคา|เบี้ยเท่าไร|เบี้ยเท่าไหร่|กี่บาท|คำนวณ|ใบเสนอ|แพงไหม|ถูกไหม)/.test(t)) {
     return botSay("เบี้ยประกันขึ้นกับอายุ เพศ สุขภาพ อาชีพ และทุนประกันของแต่ละคนค่ะ ทักป้าเป็ดทาง LINE ป้าเป็ดจะทำใบเสนอราคาที่ตรงกับคุณให้ฟรี ไม่มีข้อผูกมัด", contactLinkHTML());
   }
+  // detail pages (riders with full info)
+  for (const [id, keys] of DETAIL_ALIAS){
+    if (keys.some(k => t.includes(norm(k)))){
+      const r = RIDERS.find(x => x.id === id), d = DETAILS[id];
+      return botSay(`${d.name}\nรับอายุ ${r.age[0]}–${r.age[1]} ปี\n\n• ${r.pts.join("\n• ")}`, `\n<a href="#d-${id}" data-close>ดูรายละเอียดและเปรียบเทียบแผน</a>`);
+    }
+  }
   // product mentions
   for (const [id, keys] of ALIAS){
     if (keys.some(k => t.includes(norm(k)))){
@@ -852,7 +918,7 @@ function openChat(){
 function closeChat(){ $("#chat").classList.remove("open"); }
 document.querySelectorAll("[data-open-chat]").forEach(b => b.onclick = openChat);
 $("#chatClose").onclick = closeChat;
-document.addEventListener("keydown", e => { if (e.key === "Escape") closeChat(); });
+document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if ($("#chat").classList.contains("open")) closeChat(); else if (detailId) closeDetail(); });
 $("#composer").onsubmit = e => { e.preventDefault(); const v = $("#chatIn").value.trim(); if (!v) return; $("#chatIn").value = ""; ask(v); };
 $("#msgs").addEventListener("click", e => {
   const a = e.target.closest("a"); if (!a) return;
@@ -860,8 +926,246 @@ $("#msgs").addEventListener("click", e => {
   else if (a.hasAttribute("data-close") && matchMedia("(max-width:560px)").matches) closeChat();
 });
 
+/* ---------- หน้ารายละเอียดแบบประกัน ----------
+   ค่าในตาราง: ข้อความเดียว = ทุกแผนเท่ากัน, อาร์เรย์ = แยกตามแผน
+   NA = ไม่คุ้มครอง, ASK = ยังไม่ระบุในคู่มือ (แสดง "สอบถามป้าเป็ด")         */
+const NA = "ไม่คุ้มครอง", REAL = "จ่ายตามจริง", ASK = "?";
+
+const H_WAIT = `<p>ช่วงแรกหลังเริ่มคุ้มครอง ถ้าเจ็บป่วยในช่วงนี้จะยังเคลมไม่ได้</p>
+<ul><li><b>30 วัน</b> สำหรับการเจ็บป่วยทั่วไป</li>
+<li><b>120 วัน</b> สำหรับ 8 กลุ่มโรคนี้ เนื้องอก ถุงน้ำ หรือมะเร็งทุกชนิด, ริดสีดวงทวาร, ไส้เลื่อนทุกชนิด, ต้อเนื้อหรือต้อกระจก, การตัดทอนซิลหรืออดีนอยด์, นิ่วทุกชนิด, เส้นเลือดขอดที่ขา และเยื่อบุโพรงมดลูกเจริญผิดที่</li></ul>
+<p class="note">ถ้าภายหลังเปลี่ยนเป็นแผนวงเงินสูงขึ้น ส่วนที่เพิ่มจะเริ่มนับระยะรอคอยใหม่</p>`;
+
+const H_COPAY = `<p>Copayment คือการร่วมจ่ายค่ารักษาเป็นเปอร์เซ็นต์ <b>ไม่ใช้ในปีแรก</b> บริษัทจะดูประวัติเคลมทีละปี แล้วใช้กับปีต่ออายุถัดไปเท่านั้น และจะแจ้งก่อนครบรอบปีกรมธรรม์</p>
+<ul><li>นอนโรงพยาบาลด้วยโรคเล็กน้อยทั่วไป (เช่น หวัด ไข้หวัดใหญ่ ท้องเสียเฉียบพลัน เวียนศีรษะ) ตั้งแต่ 3 ครั้งในปีเดียว และยอดเคลมจากโรคกลุ่มนี้ตั้งแต่ 2 เท่าของเบี้ยสุขภาพที่จ่าย ปีถัดไป<b>ร่วมจ่าย 30%</b></li>
+<li>นอนโรงพยาบาลตั้งแต่ 3 ครั้งในปีเดียว และยอดเคลมตั้งแต่ 4 เท่าของเบี้ย (ไม่นับโรคร้ายแรงและการผ่าตัดใหญ่) ปีถัดไป<b>ร่วมจ่าย 30%</b></li>
+<li>เข้าทั้ง 2 ข้อ ปีถัดไป<b>ร่วมจ่าย 50%</b></li></ul>
+<p>ถ้าปีต่อมาเคลมลดลง บริษัทจะพิจารณาลดอัตราร่วมจ่ายให้</p>`;
+
+const H_EXCL = `<ul><li>โรคหรืออาการที่เป็นมาก่อนทำประกัน เว้นแต่แถลงไว้และบริษัทรับโดยไม่ยกเว้น หรือไม่มีอาการและไม่ได้พบแพทย์เลยใน 5 ปีก่อนทำประกัน และ 3 ปีแรกหลังทำประกัน</li>
+<li>ความผิดปกติแต่กำเนิดหรือโรคทางพันธุกรรม เว้นแต่คุ้มครองมาแล้วอย่างน้อย 1 ปี และอาการเริ่มหลังอายุ 16 ปี</li>
+<li>เสริมสวย ปัญหาผิวพรรณ สิว ฝ้า ผมร่วง หรือควบคุมน้ำหนัก</li>
+<li>ตั้งครรภ์ คลอดบุตร แท้งบุตร ภาวะมีบุตรยาก ทำหมัน หรือคุมกำเนิด</li>
+<li>การรักษาที่ยังอยู่ระหว่างทดลอง และการพักฟื้นอย่างเดียว</li></ul>
+<p class="note">ข้อยกเว้นทั้งหมดเป็นไปตามกรมธรรม์ ป้าเป็ดอธิบายให้ละเอียดได้ก่อนตัดสินใจ</p>`;
+
+const H_DED = (premier) => `<p>ส่วนแรก (Deductible) คือเงินก้อนแรกของการนอนโรงพยาบาลแต่ละครั้งที่เราจ่ายเอง หรือให้สวัสดิการอื่นจ่ายแทนได้ เช่น ประกันสังคม สวัสดิการข้าราชการ หรือประกันกลุ่มของบริษัท ยิ่งส่วนแรกสูง เบี้ยยิ่งถูก${premier ? " ถ้าเลือกแบบไม่มีส่วนแรก เคลมได้ตั้งแต่บาทแรก" : ""}</p>
+<p><b>ตัวอย่าง</b> เลือกส่วนแรก 30,000 บาท ค่ารักษาครั้งนี้ 75,000 บาท</p>
+<div class="ex"><div>สวัสดิการอื่นจ่ายแล้ว 35,000 บาท (เกินส่วนแรก)<br><b>แผนนี้จ่ายส่วนที่เหลือ 40,000 บาท</b></div>
+<div>สวัสดิการอื่นจ่าย 20,000 บาท (ไม่ถึงส่วนแรก) จ่ายเองเพิ่ม 10,000 บาทให้ครบ 30,000<br><b>แผนนี้จ่าย 45,000 บาท</b></div></div>`;
+
+const H_EXAM = "ตอบคำถามสุขภาพอย่างละเอียดในใบคำขอ ถ้าอายุ 66 ปีขึ้นไปต้องตรวจสุขภาพตามแบบฟอร์มบริษัท และบริษัทอาจขอผลตรวจเพิ่มถ้ามีประวัติสุขภาพ";
+const H_TAX = "ได้ สูงสุด 25,000 บาทต่อปี (เมื่อรวมกับเบี้ยประกันชีวิตแล้วไม่เกิน 100,000 บาท)";
+const H_PREM = "ปรับตามอายุและชั้นอาชีพ และอาจปรับตามค่ารักษาพยาบาลที่สูงขึ้น โดยแจ้งล่วงหน้าไม่น้อยกว่า 30 วัน";
+
+const ROWS_TOP = (gen, big) => [
+  ["วงเงินสูงสุดต่อการนอนโรงพยาบาล 1 ครั้ง"],
+  ["เจ็บป่วยหรือบาดเจ็บทั่วไป", gen],
+  ["มะเร็ง โรคหัวใจ หรือโรคหลอดเลือดสมอง", big],
+];
+const ROWS_IPD = (room, homeMed) => [
+  ["นอนโรงพยาบาล (ผู้ป่วยใน)"],
+  ["ค่าห้อง ค่าอาหาร ค่าบริการ", room, "สูงสุด 180 วันต่อครั้ง"],
+  ["ห้อง ICU", REAL, "สูงสุด 60 วัน"],
+  ["ค่ายา ค่าตรวจวินิจฉัย ค่ารักษา ค่าเวชภัณฑ์", REAL],
+  ["ยาและเวชภัณฑ์กลับบ้าน", homeMed, "ไม่เกิน 7 วัน"],
+  ["ค่าแพทย์ตรวจเยี่ยม", REAL],
+  ["ค่าผ่าตัด หัตถการ ค่าแพทย์ผ่าตัดและวิสัญญีแพทย์", REAL],
+  ["ผ่าตัดเปลี่ยนอวัยวะ", REAL, "1 ครั้งตลอดสัญญา"],
+  ["ผ่าตัดใหญ่แบบไม่ต้องนอนโรงพยาบาล (Day Surgery)", REAL],
+];
+const ROWS_OPD = (prePost, dialysis) => [
+  ["ไม่ต้องนอนโรงพยาบาล"],
+  ["ตรวจและรักษาต่อเนื่อง ก่อนและหลังนอนโรงพยาบาล", prePost, "ภายใน 30 วัน ต่อการนอน 1 ครั้ง"],
+  ["ผู้ป่วยนอกจากอุบัติเหตุ ภายใน 24 ชั่วโมง", [NA, NA, "10,000"], "ต่อครั้ง"],
+  ["กายภาพบำบัด เวชศาสตร์ฟื้นฟูหลังนอนโรงพยาบาล", NA],
+  ["ล้างไตผ่านเส้นเลือด, ฉายแสงรักษามะเร็ง, เคมีบำบัดรวมยามุ่งเป้า (Targeted Therapy)", dialysis, "ต่อปี ใช้วงเงินเดียวกัน"],
+  ["รถพยาบาลฉุกเฉิน", REAL],
+  ["ผ่าตัดเล็ก", REAL],
+];
+const PLANS3 = [
+  {t:"แผน 1 ล้าน"}, {t:"แผน 5 ล้าน"}, {t:"แผน 10 ล้าน"},
+];
+const GEN3 = ["1,000,000","5,000,000","10,000,000"], BIG3 = ["1,100,000","5,500,000","11,000,000"];
+const PAIRS_HEALTH = [
+  {t:"โอพีดี สบายใจ", d:"เพิ่มค่ารักษาผู้ป่วยนอก (ไม่ต้องนอนโรงพยาบาล) 500–2,000 บาทต่อครั้ง ไม่เกิน 30 ครั้งต่อปี แนบกับแผนนี้ได้สูงสุด 2,000 บาทต่อครั้ง"},
+  {id:"happyci", t:"แฮปปี้ ซีไอ", d:"รับเงินก้อนเมื่อตรวจพบโรคร้ายแรง ไว้ใช้จ่ายระหว่างหยุดงานรักษาตัว"},
+  {id:"cancermax", t:"บีแอลเอ แคนเซอร์ แม็กซ์", d:"เงินก้อนเฉพาะโรคมะเร็ง เสริมวงเงินค่ารักษาที่ยาวนาน"},
+];
+
+const DETAILS = {
+  happyhealth: {
+    name:"บีแอลเอ แฮปปี้ เฮลธ์",
+    type:"ประกันสุขภาพ แนบกับประกันชีวิต",
+    lead:"ประกันค่ารักษาวงเงินสูงถึง 10 ล้านบาทต่อการนอนโรงพยาบาล มีค่าใช้จ่ายส่วนแรกช่วยให้เบี้ยถูกลง",
+    fit:[
+      "คนที่มีสวัสดิการค่ารักษาอยู่แล้ว เช่น ประกันสังคม ข้าราชการ หรือประกันกลุ่มของบริษัท และอยากเติมวงเงินก้อนใหญ่ไว้สำหรับป่วยหนัก",
+      "คนที่อยากได้วงเงินสูงแต่คุมเบี้ยให้อยู่ในงบ",
+      "คนวัยทำงานที่อยากวางแผนสุขภาพยาวไปถึงวัยเกษียณ",
+    ],
+    facts:[
+      ["ประเภท","สัญญาเพิ่มเติมสุขภาพ ต้องแนบกับประกันชีวิตแบบหลัก"],
+      ["อายุที่รับ","11 – 80 ปี"],
+      ["วงเงิน","3 แผน คือ 1, 5 และ 10 ล้านบาทต่อการนอนโรงพยาบาล 1 ครั้ง"],
+      ["ทุนประกันชีวิตหลัก","ตามทุนขั้นต่ำของแบบประกันชีวิตที่แนบ"],
+      ["ค่าใช้จ่ายส่วนแรก","มีทุกแผน เลือก 30,000 หรือ 100,000 บาทต่อครั้ง"],
+      ["จ่ายเบี้ยและคุ้มครอง","สัญญาปีต่อปี จ่ายรายปี ราย 6 เดือน ราย 3 เดือน หรือรายเดือนได้ ตามประกันชีวิตหลัก"],
+      ["ต่ออายุได้ถึง","จ่ายเบี้ยต่ออายุได้ถึงอายุ 98 ปี ไม่เกินระยะเวลาของประกันชีวิตหลัก"],
+      ["ระยะเวลารอคอย","30 วัน และ 120 วันสำหรับ 8 กลุ่มโรค"],
+      ["ตรวจสุขภาพ",H_EXAM],
+      ["ลดหย่อนภาษี",H_TAX],
+      ["Copayment","มี เป็นเงื่อนไขตอนต่ออายุ ใช้เฉพาะคนที่เคลมเข้าเกณฑ์"],
+      ["เบี้ยประกัน",H_PREM],
+      ["ซื้อได้กี่ฉบับ","มีได้มากกว่า 1 กรมธรรม์"],
+    ],
+    plans:PLANS3,
+    rows:[
+      ...ROWS_TOP(GEN3, BIG3),
+      ...ROWS_IPD("ห้องเดี่ยวราคาเริ่มต้นของโรงพยาบาล", ["20,000","20,000","50,000"]),
+      ...ROWS_OPD(["2,000","2,000","10,000"], ["100,000","100,000","200,000"]),
+      ["ค่าใช้จ่ายส่วนแรก"],
+      ["ส่วนแรกต่อการนอนโรงพยาบาล 1 ครั้ง", "เลือก 30,000 หรือ 100,000"],
+    ],
+    tableNote:"ตัวเลขเป็นบาท",
+    extra:[
+      ["ค่าใช้จ่ายส่วนแรก ทำงานอย่างไร", H_DED(false)],
+      ["สิทธิลดส่วนแรกช่วงเกษียณ", `<p>ถือกรมธรรม์ต่อเนื่องอย่างน้อย 5 ปี เมื่ออายุ 55–65 ปี ขอปรับลดค่าใช้จ่ายส่วนแรกได้ตามเงื่อนไขของบริษัท ช่วยให้ใช้สิทธิ์ได้มากขึ้นตอนที่เลิกมีสวัสดิการจากที่ทำงาน</p>`],
+    ],
+    pairs:PAIRS_HEALTH,
+  },
+
+  hhpremier: {
+    name:"บีแอลเอ แฮปปี้ เฮลธ์ พรีเมียร์",
+    type:"ประกันสุขภาพ แนบกับประกันชีวิต",
+    lead:"ประกันค่ารักษาวงเงินสูงถึง 10 ล้านบาทต่อการนอนโรงพยาบาล เลือกแบบไม่มีส่วนแรกได้ มีค่าห้องขั้นต่ำและเงินชดเชยผู้ป่วยวิกฤต",
+    fit:[
+      "คนที่ไม่มีสวัสดิการค่ารักษาอื่น และอยากเคลมได้ตั้งแต่บาทแรก",
+      "คนที่อยากได้ค่าห้องขั้นต่ำ 3,000–5,000 บาทต่อวัน",
+      "คนที่อยากได้เงินก้อนเพิ่มเมื่อป่วยหนักจนอาการวิกฤต",
+      "คนที่มีสวัสดิการอยู่แล้วก็เลือกแบบมีส่วนแรกเพื่อลดเบี้ยได้",
+    ],
+    facts:[
+      ["ประเภท","สัญญาเพิ่มเติมสุขภาพ ต้องแนบกับประกันชีวิตแบบหลัก"],
+      ["อายุที่รับ","11 – 80 ปี"],
+      ["วงเงิน","3 แผน คือ 1, 5 และ 10 ล้านบาทต่อการนอนโรงพยาบาล 1 ครั้ง"],
+      ["ทุนประกันชีวิตหลัก","ตามทุนขั้นต่ำของแบบประกันชีวิตที่แนบ"],
+      ["ค่าใช้จ่ายส่วนแรก","เลือกได้ ไม่มี, 30,000 หรือ 100,000 บาทต่อครั้ง (ใช้กับค่ารักษาตอนนอนโรงพยาบาลและผ่าตัด)"],
+      ["จ่ายเบี้ยและคุ้มครอง","สัญญาปีต่อปี จ่ายรายปี ราย 6 เดือน ราย 3 เดือน หรือรายเดือนได้ ตามประกันชีวิตหลัก"],
+      ["ต่ออายุได้ถึง","จ่ายเบี้ยต่ออายุได้ถึงอายุ 98 ปี ไม่เกินระยะเวลาของประกันชีวิตหลัก"],
+      ["ระยะเวลารอคอย","30 วัน และ 120 วันสำหรับ 8 กลุ่มโรค"],
+      ["ตรวจสุขภาพ",H_EXAM],
+      ["ลดหย่อนภาษี",H_TAX],
+      ["Copayment","มี เป็นเงื่อนไขตอนต่ออายุ ใช้เฉพาะคนที่เคลมเข้าเกณฑ์"],
+      ["เบี้ยประกัน",H_PREM],
+      ["ซื้อได้กี่ฉบับ","1 กรมธรรม์ซื้อได้ 1 แผน และมีได้มากกว่า 1 กรมธรรม์"],
+    ],
+    plans:PLANS3,
+    rows:[
+      ...ROWS_TOP(GEN3, BIG3),
+      ...ROWS_IPD([{v:"3,000/วัน",s:"หรือห้องเดี่ยวราคาเริ่มต้น ถ้าสูงกว่า"},{v:"3,000/วัน",s:"หรือห้องเดี่ยวราคาเริ่มต้น ถ้าสูงกว่า"},{v:"5,000/วัน",s:"หรือห้องเดี่ยวราคาเริ่มต้น ถ้าสูงกว่า"}], ["20,000","20,000","50,000"]),
+      ...ROWS_OPD(["2,000","2,000","10,000"], ["1,000,000","3,000,000","5,000,000"]),
+      ["สิทธิประโยชน์เพิ่ม"],
+      ["เงินชดเชยผู้ป่วยอาการวิกฤต", "300,000", "1 ครั้งตลอดชีวิต จ่ายเพิ่มนอกวงเงิน"],
+      ["ชดเชยรายวัน เมื่อนอนโรงพยาบาลแต่ไม่ได้เคลมกับแผนนี้", {v:"2,000/วัน",s:"ไม่เกิน 10 วันต่อปี"}, "เฉพาะแบบไม่มีส่วนแรก"],
+      ["ค่าใช้จ่ายส่วนแรก"],
+      ["ส่วนแรกต่อการนอนโรงพยาบาล 1 ครั้ง", "เลือก ไม่มี, 30,000 หรือ 100,000"],
+    ],
+    tableNote:"ตัวเลขเป็นบาท",
+    extra:[
+      ["ค่าใช้จ่ายส่วนแรก ทำงานอย่างไร", H_DED(true)],
+      ["สิทธิลดส่วนแรกช่วงเกษียณ", `<p>ถือแบบมีส่วนแรกต่อเนื่องอย่างน้อย 5 ปี เมื่ออายุ 55–65 ปี ขอลดส่วนแรกได้ 1 ครั้ง โดยไม่ต้องแถลงสุขภาพใหม่และไม่เริ่มนับระยะรอคอยใหม่</p>
+<ul><li>จาก 30,000 บาท ลดเป็นไม่มีส่วนแรก</li><li>จาก 100,000 บาท ลดเป็น 30,000 บาท หรือไม่มีส่วนแรก</li></ul>`],
+    ],
+    pairs:PAIRS_HEALTH,
+  },
+};
+const DETAIL_ALIAS = [
+  ["hhpremier", ["แฮปปี้เฮลธ์พรีเมียร์","แฮปปี้เฮลท์พรีเมียร์","happyhealthpremier","hhpremier"]],
+  ["happyhealth", ["แฮปปี้เฮลธ์","แฮปปี้เฮลท์","happyhealth"]],
+];
+
+function cellHTML(v){
+  if (v && typeof v === "object") return esc(v.v) + (v.s ? `<small>${esc(v.s)}</small>` : "");
+  if (v === ASK) return `<span class="ask">สอบถามป้าเป็ด</span>`;
+  if (v === NA) return `<span class="na">${NA}</span>`;
+  return esc(v);
+}
+function detailHTML(id){
+  const d = DETAILS[id], n = d.plans.length;
+  const head = `<tr><th class="corner" scope="col">ความคุ้มครอง</th>${d.plans.map(p => `<th scope="col"><span class="pl"><b>${esc(p.t)}</b>${p.s ? `<small>${esc(p.s)}</small>` : ""}</span></th>`).join("")}</tr>`;
+  const body = d.rows.map(r => r.length === 1
+    ? `<tr class="grp"><th colspan="${n+1}" scope="colgroup"><span>${esc(r[0])}</span></th></tr>`
+    : `<tr><th scope="row">${esc(r[0])}${r[2] ? `<small>${esc(r[2])}</small>` : ""}</th>${(Array.isArray(r[1]) ? r[1] : Array(n).fill(r[1])).map(v => `<td>${cellHTML(v)}</td>`).join("")}</tr>`).join("");
+  const foot = `<tr><th scope="row">เลือกแผน</th>${d.plans.map(p => `<td><a class="btn line" target="_blank" rel="noopener" data-plan="${esc(p.t)}" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ${p.t} ขอใบเสนอราคาค่ะ`)}">สนใจแผนนี้</a></td>`).join("")}</tr>`;
+  const box = (h, inner) => `<section class="dbox" aria-label="${esc(h)}"><h2>${esc(h)}</h2>${inner}</section>`;
+  const pairs = d.pairs.map(x => x.id
+    ? `<a href="#p-${x.id}" data-card="${x.id}"><b>${esc(x.t)}</b><span>${esc(x.d)}</span></a>`
+    : `<div><b>${esc(x.t)}</b><span>${esc(x.d)}</span></div>`).join("");
+  return `<div class="dbar"><div class="wrap"><button type="button" data-dclose>กลับ</button><span>${esc(d.name)}</span></div></div>
+  <div class="wrap">
+    <div class="dhead"><span class="dtag">${esc(d.type)}</span><h1 id="dTitle" tabindex="-1">${esc(d.name)}</h1><p>${esc(d.lead)}</p></div>
+    ${box("เหมาะกับใคร", `<ul>${d.fit.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`)}
+    ${box("ข้อมูลสำคัญ", `<dl class="kv">${d.facts.map(f => `<div><dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd></div>`).join("")}</dl>`)}
+    ${box(`เปรียบเทียบ ${n} แผน`, `<p class="swipe">เลื่อนตารางไปทางซ้าย-ขวาเพื่อดูครบทุกแผน</p><div class="cmp-wrap" tabindex="0" role="region" aria-label="ตารางเปรียบเทียบแผน"><table class="cmp"><thead>${head}</thead><tbody>${body}</tbody><tfoot>${foot}</tfoot></table></div><p class="note">${esc(d.tableNote)} ช่องที่เขียนว่า “สอบถามป้าเป็ด” ทักถามได้เลย ป้าเป็ดตอบตามกรมธรรม์ให้ค่ะ</p>`)}
+    ${d.extra.map(e => box(e[0], e[1])).join("")}
+    ${box("ระยะเวลารอคอย", H_WAIT)}
+    ${box("Copayment คืออะไร", H_COPAY)}
+    ${box("ข้อยกเว้นหลัก", H_EXCL)}
+    ${box("ซื้อคู่กับอะไรได้", `<p>ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้ และเสริมความคุ้มครองได้ด้วย</p><div class="pair">${pairs}</div>`)}
+    <section class="dbox dcta"><h2>อยากรู้เบี้ยของคุณ</h2><p>เบี้ยขึ้นกับอายุ เพศ อาชีพ แผน และค่าใช้จ่ายส่วนแรกที่เลือก ป้าเป็ดทำใบเสนอราคาให้ฟรี ไม่มีข้อผูกมัด</p>
+      <div class="cta-row tight"><a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn" data-dask>ถามป้าเป็ด</button></div></section>
+    <p class="dsrc">สรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้น รายละเอียดความคุ้มครองและเงื่อนไขเป็นไปตามกรมธรรม์</p>
+  </div>`;
+}
+
+let detailId = null, detailInternal = false;
+const baseTitle = document.title;
+function openDetail(id){
+  const d = DETAILS[id], el = $("#detail");
+  detailId = id;
+  el.innerHTML = detailHTML(id);
+  el.hidden = false; el.scrollTop = 0;
+  document.body.classList.add("noscroll");
+  document.title = `${d.name} รายละเอียดและเปรียบเทียบแผน | ${CONFIG.name}`;
+  el.querySelector("[data-dclose]").onclick = closeDetail;
+  el.querySelector("[data-dask]").onclick = () => { openChat(); ask(d.name); };
+  el.querySelectorAll("[data-plan]").forEach(a => a.addEventListener("click", () => track("plan_interest", {product:id, plan:a.dataset.plan})));
+  el.querySelectorAll("[data-card]").forEach(a => a.onclick = e => { e.preventDefault(); hideDetail(); history.replaceState(null, "", "#p-"+a.dataset.card); focusCard(a.dataset.card); });
+  setTimeout(() => $("#dTitle").focus({preventScroll:true}), 30);
+  track("view_detail", {product:id});
+}
+function hideDetail(){
+  const el = $("#detail"); if (el.hidden) return null;
+  const id = detailId;
+  el.hidden = true; el.innerHTML = "";
+  document.body.classList.remove("noscroll");
+  document.title = baseTitle; detailId = null;
+  return id;
+}
+function closeDetail(){
+  const internal = detailInternal; detailInternal = false;
+  if (internal) { history.back(); return; }
+  const id = hideDetail();
+  history.replaceState(null, "", "#p-"+id);
+  focusCard(id);
+}
+function focusCard(id){
+  let c = $("#p-"+id);
+  if (!c){ curCat = "all"; renderCatalogue(); c = $("#p-"+id); }
+  if (!c) return;
+  c.open = true; c.scrollIntoView({block:"start"});
+  const s = c.querySelector("summary"); if (s) s.focus({preventScroll:true});
+}
+function route(){
+  const m = location.hash.match(/^#d-([\w-]+)$/);
+  if (m && DETAILS[m[1]]) { if (detailId !== m[1]) openDetail(m[1]); }
+  else { hideDetail(); detailInternal = false; }
+}
+window.addEventListener("hashchange", route);
+document.addEventListener("click", e => { if (e.target.closest('a[href^="#d-"]')) detailInternal = true; }, true);
+
 /* ---------- init ---------- */
-renderQuiz(); renderCatalogue(); bindTlAge(); renderFAQ(); renderContact(); initConsent();
+renderQuiz(); renderCatalogue(); bindTlAge(); renderFAQ(); renderContact(); initConsent(); route();
 
 </script>
 </body>
