@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 1.2 | อัปเดต 5 ต.ค. 2569 -->
+<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 2.0 | อัปเดต 5 ต.ค. 2569 -->
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<meta name="version" content="1.2">
+<meta name="version" content="2.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ป้าเป็ด CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ | ช่วยเลือกแบบประกันที่ใช่</title>
 <meta name="description" content="ป้าเป็ด (ศศธร รุจิเรกานุสรณ์) นักวางแผนการเงิน CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ ช่วยเลือกแบบประกันชีวิต ประกันสุขภาพ ออมเงิน ลดหย่อนภาษี และวางแผนเกษียณ ตอบ 5 ข้อรู้ผลทันที ปรึกษาฟรีทาง LINE @422cilco">
@@ -32,7 +32,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Prompt:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   color-scheme:light;
@@ -296,6 +296,55 @@ body.noscroll{overflow:hidden}
 .dsrc{font-size:.8rem;color:var(--ink-soft);padding:0 0 3rem}
 .addons a{font-weight:700}
 .ver{font-size:.8rem;opacity:.75}
+/* ===== v2 refresh ===== */
+:root{--mint:#D9F5E6;--grad:linear-gradient(135deg,#DDF0FC 0%,#E4F7EC 55%,#FFF6DD 100%)}
+body{background:linear-gradient(180deg,#EAF6FD 0%,#F1FAF4 45%,#EEF7FD 100%) fixed}
+h1,h2,h3,.wtile b,.wcard h3{font-family:"Prompt","Mali","Leelawadee UI","Thonburi",system-ui,sans-serif;letter-spacing:0}
+.hero{position:relative;margin:1rem 0 .5rem;padding:2rem 1.3rem 1.8rem;border-radius:2rem;background:var(--grad);overflow:hidden;box-shadow:0 10px 30px rgba(31,78,133,.10)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(2px);z-index:0}
+.hero::before{width:16rem;height:16rem;right:-5rem;top:-6rem;background:radial-gradient(circle,#BFE6FA 0%,rgba(191,230,250,0) 70%)}
+.hero::after{width:14rem;height:14rem;left:-5rem;bottom:-7rem;background:radial-gradient(circle,#CDEFB0 0%,rgba(205,239,176,0) 70%)}
+.hero>*{position:relative;z-index:1}
+.hero h1{font-size:2.15rem;line-height:1.3}
+.hl{background:linear-gradient(90deg,#1F4E85,#2E78C2 45%,#4C8F22);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .pill{display:inline-block;font-size:.85rem;font-weight:700;background:#fff;border-radius:999px;padding:.15rem .8rem;margin-bottom:.8rem;box-shadow:0 2px 8px rgba(31,78,133,.08)}
+section{padding-top:2.2rem}
+.secHead h2{font-size:1.7rem;margin-bottom:.2em}
+.secHead p{color:var(--ink-soft);margin-bottom:1.1rem}
+.wgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+@media (min-width:640px){.wgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.wtile{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;text-align:left;background:var(--card);border:2px solid transparent;border-radius:1.4rem;padding:1rem .95rem 1.05rem;box-shadow:0 6px 18px rgba(31,78,133,.09);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;min-height:9.5rem}
+.wtile:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(31,78,133,.14)}
+.wtile[aria-pressed="true"]{border-color:var(--navy);box-shadow:0 0 0 4px var(--sky-soft),0 10px 24px rgba(31,78,133,.14)}
+.wic{display:grid;place-items:center;width:3.3rem;height:3.3rem;border-radius:1.1rem;background:linear-gradient(135deg,var(--c1),var(--c2));margin-bottom:.25rem}
+.wic svg{width:1.9rem;height:1.9rem;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.wtile b{font-size:1.05rem;line-height:1.35;color:var(--ink)}
+.wtile small{font-size:.85rem;line-height:1.45;color:var(--ink-soft)}
+.wpanel{margin-top:1.1rem;background:var(--card);border:2px solid var(--navy);border-radius:1.6rem;overflow:hidden;box-shadow:0 10px 30px rgba(31,78,133,.12)}
+.wpanel[hidden]{display:none}
+.wpanel{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 9.5rem)}
+@media (max-width:479px){.hero{padding:1.5rem 1.05rem 1.4rem;border-radius:1.6rem}.hero h1{font-size:1.9rem}}
+.whead{display:flex;gap:.9rem;align-items:center;padding:1.1rem 1.1rem 1rem;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.whead .wic{background:#fff;margin:0;flex:none}
+.whead h3{margin:0;font-size:1.35rem}
+.wbody{padding:1rem 1.1rem 1.2rem}
+.wbody>p{font-size:1.02rem}
+.wcards{display:grid;gap:.8rem;margin:.4rem 0 1rem}
+@media (min-width:700px){.wcards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.wcard{display:flex;flex-direction:column;border:2px solid var(--line);border-radius:1.2rem;padding:.9rem .95rem 1rem;background:linear-gradient(180deg,#fff,#F7FBFF)}
+.wcard .tg{align-self:flex-start;font-size:.75rem;font-weight:700;border-radius:.45rem;padding:0 .5rem;background:var(--sky-soft);color:var(--navy);margin-bottom:.4rem}
+.wcard h3{font-size:1.05rem;margin:0 0 .3rem}
+.wcard p{font-size:.92rem;line-height:1.6;margin:0 0 .5rem}
+.wcard .meta{font-size:.82rem;color:var(--ink-soft);margin-bottom:.7rem}
+.wcard .cta-row{margin-top:auto;gap:.5rem}
+.wcard .btn{min-height:2.7rem;font-size:.9rem;padding:.3rem .9rem}
+.wmore{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;border-top:1px dashed var(--line);padding-top:.9rem}
+.wmore span{font-size:.92rem;color:var(--ink-soft);flex-basis:100%}
+.allBtn{margin:.2rem 0 .5rem}
+#catalog[hidden]{display:none}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.wtile{transition:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media print{.top,.fab,.chat,.dbar{display:none!important}.detail{position:static;overflow:visible}}
 </style>
@@ -315,8 +364,9 @@ body.noscroll{overflow:hidden}
       </div>
     </div>
     <nav class="tabs" aria-label="เมนู">
-      <a href="#finder">หาแบบที่ใช่</a>
-      <a href="#plans">แบบประกันทั้งหมด</a>
+      <a href="#worries">เรื่องที่ห่วง</a>
+      <a href="#finder">ให้ช่วยเลือก</a>
+      <a href="#plans" data-show-all>แบบทั้งหมด</a>
       <a href="#faq">คำถามที่พบบ่อย</a>
       <a href="#contact">ติดต่อป้าเป็ด</a>
     </nav>
@@ -328,10 +378,11 @@ body.noscroll{overflow:hidden}
     <div class="hero">
       <div class="hero-grid">
         <div>
-          <h1>อยากทำประกัน แต่ไม่รู้จะเริ่มตรงไหน?</h1>
-          <p class="lead">ตอบคำถามง่าย ๆ 5 ข้อ ป้าเป็ดจะคัดแบบประกันที่เข้ากับอายุ งบ และเป้าหมายของคุณให้ พร้อมไทม์ไลน์ว่าจ่ายถึงเมื่อไร คุ้มครองถึงเมื่อไร ไม่ต้องกรอกชื่อหรือเบอร์โทร</p>
+          <span class="pill">วางแผนประกันแบบเข้าใจง่าย</span>
+          <h1>อนาคตที่อุ่นใจ<br>เริ่มจาก<span class="hl">เรื่องที่คุณห่วง</span></h1>
+          <p class="lead">เกษียณ สุขภาพ ลูก หรือครอบครัว แตะเรื่องที่คุณห่วง แล้วดูแบบประกันที่ตอบโจทย์ได้ทันที ไม่ต้องกรอกชื่อหรือเบอร์โทร</p>
           <div class="cta-row">
-            <a class="btn main" href="#finder" id="startBtn">เริ่มหาแบบที่ใช่</a>
+            <a class="btn main" href="#worries" id="startBtn">เลือกเรื่องที่ห่วง</a>
             <button class="btn" type="button" data-open-chat>ถามป้าเป็ดก่อน</button>
           </div>
         </div>
@@ -343,21 +394,30 @@ body.noscroll{overflow:hidden}
     </div>
   </div>
 
+  <section id="worries">
+    <div class="wrap">
+      <div class="secHead rv"><h2>คุณห่วงเรื่องไหนอยู่</h2><p>แตะเรื่องที่ตรงกับใจ ป้าเป็ดคัดแบบที่ตอบโจทย์มาให้ดูก่อน</p></div>
+      <div class="wgrid rv" id="wgrid"></div>
+      <div class="wpanel" id="wpanel" hidden aria-live="polite"></div>
+    </div>
+  </section>
+
   <section id="finder">
     <div class="wrap">
-      <h2>หาแบบที่ใช่</h2>
-      <p class="kicker">กดเลือกคำตอบได้เลย ย้อนกลับมาแก้ได้ทุกข้อ</p>
+      <div class="secHead rv"><h2>ไม่แน่ใจ? ให้ป้าเป็ดช่วยเลือก</h2><p>ตอบ 5 ข้อ ป้าเป็ดคัดแบบที่เข้ากับอายุ งบ และเป้าหมายให้ ย้อนกลับมาแก้ได้ทุกข้อ</p></div>
       <div class="quiz" id="quiz" aria-live="polite"></div>
     </div>
   </section>
 
   <section id="plans">
     <div class="wrap">
-      <h2>แบบประกันทั้งหมด</h2>
-      <p class="kicker">แตะชื่อแบบเพื่อดูรายละเอียดและไทม์ไลน์ เลือกหมวดเพื่อกรองได้</p>
+      <div class="secHead rv"><h2>แบบประกันทั้งหมด</h2><p>อยากดูครบทุกแบบ แตะชื่อแบบเพื่อดูรายละเอียดและไทม์ไลน์ได้</p></div>
+      <button type="button" class="btn allBtn" id="showAll" data-show-all>ดูแบบประกันทั้งหมด</button>
+      <div id="catalog" hidden>
       <div class="tlctrl"><span>ดูไทม์ไลน์ ถ้าเริ่มทำตอนอายุ</span><div class="agebox sm"><button type="button" id="tlMinus" aria-label="ลดอายุ">−</button><input id="tlAge" type="number" inputmode="numeric" min="0" max="85" value="35" aria-label="อายุที่เริ่มทำ (ปี)"><button type="button" id="tlPlus" aria-label="เพิ่มอายุ">+</button><span>ปี</span></div></div>
       <div class="chips" id="chips" role="group" aria-label="หมวดแบบประกัน"></div>
       <div class="plist" id="plist"></div>
+      </div>
     </div>
   </section>
 
@@ -385,7 +445,7 @@ body.noscroll{overflow:hidden}
     <p>ข้อมูลแบบประกันสรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้นเท่านั้น ไทม์ไลน์เป็นตัวอย่างประกอบความเข้าใจ เงินปันผลไม่รับประกันผล รายละเอียดความคุ้มครองเป็นไปตามกรมธรรม์</p>
     <p><b>ผู้ซื้อควรทำความเข้าใจรายละเอียดความคุ้มครองและเงื่อนไขก่อนตัดสินใจทำประกันภัยทุกครั้ง</b></p>
     <p id="licenseLine"></p>
-    <p class="ver">เวอร์ชัน 1.2 · อัปเดต 5 ต.ค. 2569</p>
+    <p class="ver">เวอร์ชัน 2.0 · อัปเดต 5 ต.ค. 2569</p>
   </div>
 </footer>
 
@@ -1310,6 +1370,7 @@ function closeDetail(){
   focusCard(id);
 }
 function focusCard(id){
+  if (typeof showCatalog === "function") showCatalog();
   let c = $("#p-"+id);
   if (!c){ curCat = "all"; renderCatalogue(); c = $("#p-"+id); }
   if (!c) return;
@@ -1324,8 +1385,78 @@ function route(){
 window.addEventListener("hashchange", route);
 document.addEventListener("click", e => { if (e.target.closest('a[href^="#d-"]')) detailInternal = true; }, true);
 
+
+/* ---------- v2: เรื่องที่ห่วง ---------- */
+const WORRIES = [
+  {id:"retire", t:"แก่ตัวไม่มีเงินใช้", s:"อยากเกษียณแบบมีเงินเข้าทุกปี", c1:"#FFE7A8", c2:"#FFF7DE",
+   icon:'<path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 7V4M5.8 10.2 4 8.4M18.2 10.2 20 8.4"/>',
+   story:"วันที่เลิกทำงาน ค่าใช้จ่ายยังเดินต่อ แต่รายได้หยุด การเริ่มเก็บตั้งแต่วันนี้ทำให้ออมเบาลงและมีเงินใช้แบบไม่ต้องเป็นภาระลูกหลาน",
+   ids:["pension","pansuk","longlife"]},
+  {id:"health", t:"ค่ารักษาพยาบาลแพง", s:"ป่วยทีเดียว เงินเก็บไม่หาย", c1:"#BFE6FA", c2:"#E8F6FE",
+   icon:'<rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><path d="M12 8v8M8 12h8"/>',
+   story:"นอนโรงพยาบาลไม่กี่คืนก็อาจเป็นหลักหมื่นถึงหลักแสน ประกันสุขภาพช่วยจ่ายค่าห้อง ค่ายา และค่าผ่าตัดแทน เงินเก็บจึงยังอยู่ครบ",
+   ids:["valuehealth","happyhealth","prestigehealth"]},
+  {id:"ci", t:"โรคร้ายแรง", s:"มะเร็ง หัวใจ หลอดเลือดสมอง", c1:"#FFD3D6", c2:"#FFF0F1",
+   icon:'<path d="M12 20s-7.5-4.5-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.5 12 20 12 20z"/><path d="M5 12.5h3.2l1.6-2.6 2.2 5 1.6-2.4H19"/>',
+   story:"เมื่อตรวจเจอโรคร้าย นอกจากค่ารักษา รายได้ก็อาจหายไปช่วงพักรักษาตัว เงินก้อนจากประกันโรคร้ายแรงช่วยให้โฟกัสกับการหายได้เต็มที่",
+   ids:["happyci","unjai","cancermax"]},
+  {id:"edu", t:"ทุนการศึกษาลูก", s:"เตรียมเงินก้อนตามจังหวะการเรียน", c1:"#D7D9FF", c2:"#F1F1FF",
+   icon:'<path d="M2.5 9.5 12 5l9.5 4.5L12 14z"/><path d="M6.5 11.6v4c0 1.4 2.5 2.6 5.5 2.6s5.5-1.2 5.5-2.6v-4M21.5 9.5v5"/>',
+   story:"ค่าเทอมมาตามกำหนด ไม่รอว่าเรามีเงินพร้อมหรือยัง เริ่มเก็บตั้งแต่ลูกยังเล็ก ได้ทั้งเงินก้อนตอนเรียนและความคุ้มครองระหว่างทาง",
+   ids:["smartkids","happykids","vhkids"]},
+  {id:"family", t:"ถ้าวันหนึ่งเราไม่อยู่", s:"ให้ครอบครัวมีเงินดูแลต่อ", c1:"#CDEFC0", c2:"#EFFAEA",
+   icon:'<path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.6V20h13V9.6"/><path d="M12 17.6s-3-1.8-3-3.9a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2.1-3 3.9-3 3.9z"/>',
+   story:"ถ้าเราเป็นเสาหลักของบ้าน ประกันชีวิตคือเงินที่ช่วยให้คนข้างหลังจ่ายหนี้ ค่าบ้าน และค่าเรียนลูกต่อได้ โดยไม่ต้องเริ่มจากศูนย์",
+   ids:["wl9999","sudkhum","hr9920"]},
+  {id:"save", t:"ออมเงินและลดหย่อนภาษี", s:"ให้เงินงอกเงย และคืนภาษีทุกปี", c1:"#C6F0E4", c2:"#ECFBF6",
+   icon:'<path d="M12 21v-8"/><path d="M12 13c0-3.6-2.6-6.1-6.6-6.1 0 3.6 2.6 6.1 6.6 6.1z"/><path d="M12 11c0-3.3 2.3-5.6 6.1-5.6 0 3.3-2.3 5.6-6.1 5.6z"/><path d="M7.5 21h9"/>',
+   story:"ออมแบบมีวินัย มีเงินคืนระหว่างทาง ได้ความคุ้มครองชีวิต และใช้เบี้ยลดหย่อนภาษีได้ เหมือนได้ผลตอบแทนเพิ่มอีกต่อ",
+   ids:["hs999","tax105","ps104"]},
+];
+const anyById = id => byId(id) || RIDERS.find(r => r.id === id);
+const icoSVG = w => `<svg viewBox="0 0 24 24" aria-hidden="true">${w.icon}</svg>`;
+function renderWorries(){
+  $("#wgrid").innerHTML = WORRIES.map(w => `<button type="button" class="wtile" data-w="${w.id}" aria-pressed="false" aria-controls="wpanel" style="--c1:${w.c1};--c2:${w.c2}"><span class="wic">${icoSVG(w)}</span><b>${esc(w.t)}</b><small>${esc(w.s)}</small></button>`).join("");
+  $("#wgrid").querySelectorAll(".wtile").forEach(b => b.onclick = () => openWorry(b.dataset.w));
+}
+function wcardHTML(p, w){
+  const rider = RIDERS.includes(p);
+  const age = p.age ? `รับอายุ ${p.age[0]}–${p.age[1]} ปี` : "";
+  const meta = [age, p.cover ? `คุ้มครอง${p.cover.startsWith("ถึง") ? "" : " "}${p.cover}` : ""].filter(Boolean).join(" · ");
+  const more = DETAILS[p.id] ? `<a class="btn small" href="#d-${p.id}">ดูรายละเอียด</a>` : `<button type="button" class="btn small" data-card="${p.id}">ดูรายละเอียด</button>`;
+  return `<article class="wcard"><span class="tg">${rider ? "สัญญาเพิ่มเติม" : "แบบประกันหลัก"}</span><h3>${esc(p.name)}</h3><p>${esc((p.pts||[""])[0])}</p>${meta ? `<div class="meta">${esc(meta)}</div>` : ""}<div class="cta-row tight">${more}<a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด ห่วงเรื่อง${w.t} สนใจ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a></div></article>`;
+}
+function openWorry(id){
+  const w = WORRIES.find(x => x.id === id), el = $("#wpanel");
+  $("#wgrid").querySelectorAll(".wtile").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.w === id)));
+  const items = w.ids.map(anyById).filter(Boolean);
+  el.style.setProperty("--c1", w.c1); el.style.setProperty("--c2", w.c2);
+  el.innerHTML = `<div class="whead"><span class="wic">${icoSVG(w)}</span><h3>${esc(w.t)}</h3></div>
+  <div class="wbody"><p>${esc(w.story)}</p><h3 style="font-size:1.1rem">แบบที่ตอบโจทย์</h3>
+  <div class="wcards">${items.map(p => wcardHTML(p, w)).join("")}</div>
+  <div class="wmore"><span>อยากได้คำแนะนำที่ตรงกับตัวคุณที่สุด</span><a class="btn main small" href="#finder">ให้ป้าเป็ดช่วยเลือก</a><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด ห่วงเรื่อง${w.t} อยากปรึกษาค่ะ`)}">ปรึกษาป้าเป็ดฟรี</a></div></div>`;
+  el.hidden = false;
+  el.querySelectorAll("[data-card]").forEach(b => b.onclick = () => focusCard(b.dataset.card));
+  el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+  track("worry_open", {worry:id});
+}
+function showCatalog(){
+  const c = $("#catalog"); if (!c.hidden) return;
+  c.hidden = false; $("#showAll").hidden = true;
+}
+function initV2(){
+  renderWorries();
+  document.querySelectorAll("[data-show-all]").forEach(b => b.addEventListener("click", showCatalog));
+  if (/^#(plans|p-)/.test(location.hash)) { showCatalog(); const t = $(location.hash); if (t) setTimeout(() => t.scrollIntoView(), 50); }
+  const rv = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window){
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12});
+    rv.forEach(x => io.observe(x));
+  } else rv.forEach(x => x.classList.add("in"));
+}
+
 /* ---------- init ---------- */
-renderQuiz(); renderCatalogue(); bindTlAge(); renderFAQ(); renderContact(); initConsent(); route();
+renderQuiz(); renderCatalogue(); bindTlAge(); renderFAQ(); renderContact(); initConsent(); initV2(); route();
 
 </script>
 </body>
