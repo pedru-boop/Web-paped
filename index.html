@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 2.4 | อัปเดต 5 ต.ค. 2569 -->
+<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 3.0 | อัปเดต 6 ต.ค. 2569 -->
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<meta name="version" content="2.4">
+<meta name="version" content="3.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ป้าเป็ด CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ | ช่วยเลือกแบบประกันที่ใช่</title>
 <meta name="description" content="ป้าเป็ด (ศศธร รุจิเรกานุสรณ์) นักวางแผนการเงิน CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ ช่วยเลือกแบบประกันชีวิต ประกันสุขภาพ ออมเงิน ลดหย่อนภาษี และวางแผนเกษียณ ตอบ 5 ข้อรู้ผลทันที ปรึกษาฟรีทาง LINE @422cilco">
@@ -349,6 +349,95 @@ section{padding-top:2.2rem}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.wtile{transition:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media print{.top,.fab,.chat,.dbar{display:none!important}.detail{position:static;overflow:visible}}
+
+/* ===== v3 BLA style ===== */
+:root{--ink:#0D3F7A;--ink-soft:#4F6B8C;--paper:#F3F9FD;--sky:#29ABE2;--sky-soft:#E3F4FC;--pay:#1B75BB;--pond:#1B75BB;--navy:#0D3F7A;--lime:#B5D334;--line:#D3E6F3}
+body{background:linear-gradient(180deg,#fff 0,#F3F9FD 420px,#F3F9FD 100%)}
+.top{background:#fff;box-shadow:0 2px 12px rgba(13,63,122,.08)}
+.top::after{display:none}
+.top .row{padding:.55rem 0;flex-wrap:nowrap}
+.brand{gap:.6rem}
+.brand b{display:block;font-family:"Prompt","Mali",system-ui,sans-serif;font-size:1.12rem;color:var(--navy);line-height:1.2}
+.brand small{display:block;font-size:.72rem;color:var(--ink-soft);font-weight:500;line-height:1.3}
+.menuBtn{flex:none;width:3rem;height:3rem;border:0;border-radius:.6rem;background:var(--sky);display:grid;place-items:center}
+.menuBtn svg{width:1.6rem;height:1.6rem;stroke:#fff;stroke-width:2.4;stroke-linecap:round;fill:none}
+.fbar{background:var(--sky);color:#fff;padding:.9rem 0 1rem}
+.fgrid{display:grid;grid-template-columns:7.5rem 1fr;gap:.6rem .7rem;align-items:end}
+.fcol-go{grid-column:1 / -1}
+@media (min-width:700px){.fgrid{grid-template-columns:9rem 1fr auto}.fcol-go{grid-column:auto}}
+.fbar label{display:block;font-weight:700;font-size:.92rem;margin-bottom:.3rem}
+.fbar input,.fbar select{width:100%;min-height:3rem;border:0;border-radius:.35rem;padding:0 .7rem;font:inherit;font-size:1rem;color:var(--ink);background:#fff}
+.fage{display:flex;align-items:center;gap:.4rem}.fage input{text-align:center}
+.fbar .go{width:100%;min-height:3rem;background:var(--navy);color:#fff;border:0;border-radius:.35rem;padding:0 1.4rem;font-weight:700}
+.fbar small{display:block;margin-top:.5rem;font-size:.84rem}
+.fbar small.warn{font-weight:700;color:#FFF6B0}
+.hero{background:linear-gradient(120deg,#E7F5FD 0%,#FFFFFF 70%);border:1px solid var(--line);box-shadow:0 6px 20px rgba(13,63,122,.06);border-radius:1.3rem}
+.hero::before,.hero::after{display:none}
+.hl{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--sky)}
+.lime{width:6.5rem;height:5px;border-radius:3px;background:var(--lime);margin:.1rem 0 1rem}
+.hero .pill{background:var(--sky-soft);color:var(--navy);box-shadow:none}
+.portrait img{box-shadow:8px 8px 0 var(--sky-soft);border-color:#fff}
+.btn{border-color:var(--navy);color:var(--navy);border-radius:.6rem}
+.btn.main{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:none}
+.btn.main:active{transform:none;box-shadow:none}
+.btn.line{color:#fff}
+.chip[aria-pressed="true"]{background:var(--sky);border-color:var(--sky);color:#fff}
+section{border-top:0}
+.secHead h2,h2{color:var(--navy)}
+.secHead h2::after{content:"";display:block;width:4rem;height:4px;border-radius:2px;background:var(--lime);margin-top:.4rem}
+.wgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:640px){.wgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.wtile{border:1px solid var(--line);border-radius:1rem;box-shadow:0 4px 14px rgba(13,63,122,.07);min-height:8.5rem}
+.wtile .wic{background:var(--sky-soft)}
+.wic svg{stroke:var(--sky)}
+.wtile[aria-pressed="true"]{border-color:var(--sky);box-shadow:0 0 0 3px var(--sky-soft)}
+.wpanel{border:2px solid var(--sky);border-radius:1.2rem}
+.whead{background:var(--sky);color:#fff}
+.whead h3{color:#fff}
+.whead .cnt{margin-left:auto;font-size:.85rem;font-weight:700;background:rgba(255,255,255,.22);border-radius:999px;padding:.1rem .7rem;white-space:nowrap}
+.wcard .tg.feat{background:#F3F8DD;color:#4C6A00}
+.wcard .tgs{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.4rem}.wcard .tgs .tg{margin:0}
+.agenote{background:var(--sky-soft);border-radius:.8rem;padding:.55rem .8rem;font-size:.92rem;margin:0 0 .8rem;display:flex;flex-wrap:wrap;gap:.4rem .8rem;align-items:center}
+.agenote button{border:0;background:none;color:var(--pay);font-weight:700;text-decoration:underline;padding:0}
+.gmore{margin-top:1.2rem;border-top:1px dashed var(--line);padding-top:1rem}
+.gmore p{font-size:.95rem;margin:0 0 .6rem}
+.gmore .row{display:flex;flex-wrap:wrap;gap:.5rem}
+.drawer{position:fixed;inset:0;z-index:58;display:none}
+.drawer.open{display:block}
+.drawer .scrim{position:absolute;inset:0;background:rgba(13,63,122,.38)}
+.drawer .panel{position:absolute;top:0;right:0;bottom:0;width:min(22rem,88vw);background:#fff;overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + .8rem) 1.1rem calc(env(safe-area-inset-bottom,0px) + 1.4rem);box-shadow:-6px 0 24px rgba(0,0,0,.18)}
+.phead{display:flex;justify-content:space-between;align-items:center;padding-bottom:.6rem;border-bottom:3px solid var(--sky)}
+.phead b{font-family:"Prompt","Mali",system-ui,sans-serif;font-size:1.2rem;color:var(--navy)}
+.phead .x{border:2px solid var(--navy);background:#fff;color:var(--navy);border-radius:.6rem;min-height:2.6rem;padding:0 .9rem;font-weight:700}
+.plabel{margin:1rem 0 .2rem;font-size:.8rem;font-weight:700;color:var(--ink-soft);letter-spacing:.02em}
+.drawer .item{display:flex;gap:.7rem;align-items:center;padding:.7rem .3rem;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:600;min-height:3rem}
+.drawer .item svg{width:1.5rem;height:1.5rem;flex:none;fill:none;stroke:var(--sky);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.drawer .sizer{margin-top:.4rem}
+.drawer .sizer>span{display:none}
+.crumb{font-size:.85rem;color:var(--ink-soft);padding-top:1rem}
+.crumb a{color:var(--pay);font-weight:600}
+.qfacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;margin:0 0 1.1rem}
+.qf{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:.75rem .5rem;text-align:center}
+.qf svg{width:2rem;height:2rem;fill:none;stroke:var(--sky);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.qf b{display:block;font-size:.76rem;color:var(--ink-soft);font-weight:500;margin-top:.2rem}
+.qf span{display:block;font-weight:700;font-size:.88rem;line-height:1.35;color:var(--navy)}
+details.dbox>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:.6rem}
+details.dbox>summary::-webkit-details-marker{display:none}
+details.dbox>summary h2{margin:0}
+details.dbox>summary::after{content:"+";flex:none;display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--sky-soft);color:var(--pay);font-weight:700;font-size:1.3rem}
+details.dbox[open]>summary::after{content:"−"}
+details.dbox[open]>summary{margin-bottom:.7rem}
+.share{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
+.share a{display:inline-flex;align-items:center;min-height:2.6rem;padding:0 1rem;border-radius:.6rem;border:2px solid var(--line);text-decoration:none;color:var(--ink);font-weight:600;font-size:.9rem;background:#fff}
+.sibs{display:flex;gap:.7rem;overflow-x:auto;padding:.1rem .1rem .5rem;scroll-snap-type:x mandatory}
+.sibs a{flex:0 0 13.5rem;scroll-snap-align:start;border:1px solid var(--line);border-radius:1rem;padding:.8rem .9rem;text-decoration:none;color:var(--ink);background:#fff}
+.sibs b{display:block;line-height:1.35;margin-bottom:.25rem}
+.sibs span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:.84rem;color:var(--ink-soft);line-height:1.5}
+.legal ul{font-size:.86rem}
+.dbox{border:2px solid var(--navy)}
+.wpanel{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
+@media (max-width:679px){.hero .pill{display:none}}
 </style>
 </head>
 <body>
@@ -356,35 +445,33 @@ section{padding-top:2.2rem}
 <header class="top">
   <div class="wrap">
     <div class="row">
-      <a class="brand" href="#top"><img class="av" src="data:image/jpeg;base64,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" alt="" width="40" height="40"><span id="brandName">ป้าเป็ด CFP®</span></a>
-      <div class="sizer" role="group" aria-label="ขนาดตัวอักษร">
-        <span aria-hidden="true">ตัวอักษร</span>
-        <button class="s1" data-fs="1" aria-label="ขนาดปกติ">ก</button>
-        <button class="s2" data-fs="1.18" aria-label="ขนาดใหญ่">ก</button>
-        <button class="s3" data-fs="1.36" aria-label="ขนาดใหญ่มาก">ก</button>
-        <button id="boldBtn" aria-pressed="false" aria-label="ตัวหนังสือเข้มขึ้น" title="ตัวเข้ม"><b>B</b></button>
-      </div>
+      <a class="brand" href="#top"><img class="av" src="data:image/jpeg;base64,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" alt="" width="40" height="40"><span><b id="brandName">ป้าเป็ด CFP®</b><small>ตัวแทนกรุงเทพประกันชีวิต</small></span></a>
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
-    <nav class="tabs" aria-label="เมนู">
-      <a href="#worries">เรื่องที่ห่วง</a>
-      <a href="#finder">ให้ช่วยเลือก</a>
-      <a href="#plans" data-show-all>แบบทั้งหมด</a>
-      <a href="#faq">คำถามที่พบบ่อย</a>
-      <a href="#contact">ติดต่อป้าเป็ด</a>
-    </nav>
   </div>
 </header>
+
+<div class="fbar" id="fbar">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol-age"><label for="fAge">อายุปัจจุบัน</label><div class="fage"><input id="fAge" type="number" inputmode="numeric" min="0" max="85" placeholder="เช่น 35"><span>ปี</span></div></div>
+      <div class="fcol-grp"><label for="fGroup">สนใจเรื่อง</label><select id="fGroup"><option value="">โปรดระบุ</option></select></div>
+      <div class="fcol-go"><button type="button" class="go" id="fGo">ค้นหาแบบประกัน</button></div>
+    </div>
+    <small id="fMsg">ทำให้ลูก ใส่อายุของลูก · ถ้าเกินวันเกิด 6 เดือน นับเป็น 1 ปี</small>
+  </div>
+</div>
 
 <main id="top">
   <div class="wrap">
     <div class="hero">
       <div class="hero-grid">
         <div>
-          <span class="pill">วางแผนประกันแบบเข้าใจง่าย</span>
-          <h1>อนาคตที่อุ่นใจ<br>เริ่มจาก<span class="hl">เรื่องที่คุณห่วง</span></h1>
-          <p class="lead">เกษียณ สุขภาพ ลูก หรือครอบครัว แตะเรื่องที่คุณห่วง แล้วดูแบบประกันที่ตอบโจทย์ได้ทันที ไม่ต้องกรอกชื่อหรือเบอร์โทร</p>
+          <span class="pill">นักวางแผนการเงิน CFP® · เชียงใหม่</span>
+          <h1>อนาคตที่อุ่นใจ<br><span class="hl">เริ่มวางแผนได้วันนี้</span></h1><div class="lime" aria-hidden="true"></div>
+          <p class="lead">เลือกความคุ้มครองที่สนใจ แล้วดูแบบประกันกรุงเทพประกันชีวิตที่ตอบโจทย์ได้ทันที ไม่ต้องกรอกชื่อหรือเบอร์โทร ป้าเป็ดทำใบเสนอราคาให้ฟรี</p>
           <div class="cta-row">
-            <a class="btn main" href="#worries" id="startBtn">เลือกเรื่องที่ห่วง</a>
+            <a class="btn main" href="#groups" id="startBtn">เลือกความคุ้มครอง</a>
             <button class="btn" type="button" data-open-chat>ถามป้าเป็ดก่อน</button>
           </div>
         </div>
@@ -396,9 +483,9 @@ section{padding-top:2.2rem}
     </div>
   </div>
 
-  <section id="worries">
+  <section id="groups">
     <div class="wrap">
-      <div class="secHead rv"><h2>คุณห่วงเรื่องไหนอยู่</h2><p>แตะเรื่องที่ตรงกับใจ ป้าเป็ดคัดแบบที่ตอบโจทย์มาให้ดูก่อน</p></div>
+      <div class="secHead rv"><h2>เลือกความคุ้มครองที่สนใจ</h2><p>แตะกลุ่มที่ตรงกับใจ แล้วดูแบบประกันทั้งหมดในกลุ่มนั้น ป้าเป็ดเรียงแบบที่แนะนำไว้ก่อน</p></div>
       <div class="wgrid rv" id="wgrid"></div>
       <div class="wpanel" id="wpanel" hidden aria-live="polite"></div>
     </div>
@@ -447,7 +534,7 @@ section{padding-top:2.2rem}
     <p>ข้อมูลแบบประกันสรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้นเท่านั้น ไทม์ไลน์เป็นตัวอย่างประกอบความเข้าใจ เงินปันผลไม่รับประกันผล รายละเอียดความคุ้มครองเป็นไปตามกรมธรรม์</p>
     <p><b>ผู้ซื้อควรทำความเข้าใจรายละเอียดความคุ้มครองและเงื่อนไขก่อนตัดสินใจทำประกันภัยทุกครั้ง</b></p>
     <p id="licenseLine"></p>
-    <p class="ver">เวอร์ชัน 2.4 · อัปเดต 5 ต.ค. 2569</p>
+    <p class="ver">เวอร์ชัน 3.0 · อัปเดต 6 ต.ค. 2569</p>
   </div>
 </footer>
 
@@ -457,6 +544,28 @@ section{padding-top:2.2rem}
 </div>
 
 <button class="fab" type="button" data-open-chat aria-controls="chat"><img class="av" src="data:image/jpeg;base64,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" alt="" width="40" height="40">ถามป้าเป็ด</button>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="scrim" data-xdrawer></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-label="เมนู">
+    <div class="phead"><b>เมนู</b><button type="button" class="x" data-xdrawer aria-label="ปิดเมนู">ปิด</button></div>
+    <p class="plabel">ผลิตภัณฑ์</p>
+    <div id="dGroups"></div>
+    <p class="plabel">อื่น ๆ</p>
+    <a class="item" href="#finder">ให้ป้าเป็ดช่วยเลือก (ตอบ 5 ข้อ)</a>
+    <a class="item" href="#plans" data-show-all>แบบประกันทั้งหมด</a>
+    <a class="item" href="#faq">คำถามที่พบบ่อย</a>
+    <a class="item" href="#contact">ติดต่อป้าเป็ด</a>
+    <p class="plabel">ขนาดตัวอักษร</p>
+    <div class="sizer" role="group" aria-label="ขนาดตัวอักษร">
+        <span aria-hidden="true">ตัวอักษร</span>
+        <button class="s1" data-fs="1" aria-label="ขนาดปกติ">ก</button>
+        <button class="s2" data-fs="1.18" aria-label="ขนาดใหญ่">ก</button>
+        <button class="s3" data-fs="1.36" aria-label="ขนาดใหญ่มาก">ก</button>
+        <button id="boldBtn" aria-pressed="false" aria-label="ตัวหนังสือเข้มขึ้น" title="ตัวเข้ม"><b>B</b></button>
+      </div>
+  </div>
+</div>
 
 <div class="detail" id="detail" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle"></div>
 
@@ -865,7 +974,10 @@ function renderResult(){
   lastSummary = sum.join("\n");
   html += `<p class="note">ผลนี้เป็นการคัดเบื้องต้นจากข้อมูลที่ตอบ เบี้ยจริงขึ้นกับอายุ เพศ สุขภาพ อาชีพ และทุนประกัน ป้าเป็ดจะทำใบเสนอราคาให้ฟรีค่ะ</p>
     <div class="cta-row"><a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl(lastSummary)}">ส่งผลนี้ให้ป้าเป็ดทาง LINE</a><button type="button" class="btn small" id="copySum">คัดลอกผล</button><button type="button" class="btn small" id="redo">ทำแบบทดสอบใหม่</button></div></div>`;
+  const gids = [...new Set(recs.map(r => (groupOf(r.p.id) || {}).id).filter(Boolean))].slice(0,3);
+  if (gids.length) html = html.replace(/<\/div>$/, `<div class="gmore"><p>อยากเทียบกับแบบอื่นที่คล้ายกัน</p><div class="row">${gids.map(id => { const g = GROUPS.find(x => x.id === id); return `<button type="button" class="btn small" data-gopen="${id}">ดู${esc(g.t)}ทั้งหมด (${g.ids.length})</button>`; }).join("")}</div></div></div>`);
   $("#quiz").innerHTML = html;
+  $("#quiz").querySelectorAll("[data-gopen]").forEach(b => b.onclick = () => openGroup(b.dataset.gopen, ans.age));
   track("quiz_complete", {goal: ans.goal});
   $("#redo").onclick = () => { step = 0; Object.assign(ans,{goal:null,job:null,budget:null,pay:null}); renderQuiz(); scrollQuiz(); };
   $("#copySum").onclick = async (e) => { try { await navigator.clipboard.writeText(lastSummary); e.target.textContent = "คัดลอกแล้ว"; } catch(err){ e.target.textContent = "คัดลอกไม่ได้ ลองกดส่ง LINE แทน"; } };
@@ -892,14 +1004,15 @@ function prodHTML(p, isRider){
 }
 function fillTimelines(){ document.querySelectorAll("#plist [data-tl]").forEach(el => { el.innerHTML = timelineHTML(byId(el.dataset.tl), tlAge); }); }
 function renderCatalogue(){
-  $("#chips").innerHTML = CATS.map(c => `<button type="button" class="chip" data-cat="${c[0]}" aria-pressed="${c[0]===curCat}">${esc(c[1])}</button>`).join("");
+  const cats = [["all","ทั้งหมด"], ...GROUPS.map(g => [g.id, g.t])];
+  if (!cats.some(c => c[0] === curCat)) curCat = "all";
+  $("#chips").innerHTML = cats.map(c => `<button type="button" class="chip" data-cat="${c[0]}" aria-pressed="${c[0]===curCat}">${esc(c[1])}</button>`).join("");
   $("#chips").querySelectorAll(".chip").forEach(b => b.onclick = () => { curCat = b.dataset.cat; renderCatalogue(); });
-  let html = "";
-  if (curCat !== "rider") html += PRODUCTS.filter(p => curCat === "all" || p.cat === curCat).map(p => prodHTML(p,false)).join("");
-  if (curCat === "all" || curCat === "rider") html += RIDERS.map(r => prodHTML(r,true)).join("");
+  const g = GROUPS.find(x => x.id === curCat), keep = p => curCat === "all" || (g && g.ids.includes(p.id));
+  const html = PRODUCTS.filter(keep).map(p => prodHTML(p,false)).join("") + RIDERS.filter(keep).map(r => prodHTML(r,true)).join("");
   $("#plist").innerHTML = html;
   fillTimelines();
-  $("#plist").querySelectorAll("[data-ask]").forEach(b => b.onclick = () => { openChat(); ask(byId(b.dataset.ask).name); });
+  $("#plist").querySelectorAll("[data-ask]").forEach(b => b.onclick = () => { openChat(); ask((anyById(b.dataset.ask)||{}).name || ""); });
 }
 function bindTlAge(){
   const i = $("#tlAge"), set = v => { tlAge = Math.max(0, Math.min(85, v|0)); i.value = tlAge; fillTimelines(); };
@@ -908,7 +1021,7 @@ function bindTlAge(){
 }
 function openProduct(id){
   const p = byId(id); if (!p) return;
-  if (curCat !== "all" && curCat !== p.cat){ curCat = "all"; renderCatalogue(); }
+  if (curCat !== "all" && !(GROUPS.find(g => g.id === curCat) || {ids:[]}).ids.includes(id)){ curCat = "all"; renderCatalogue(); }
   else fillTimelines();
   const d = $("#p-"+id); if (!d) return;
   d.open = true; d.scrollIntoView({behavior:"smooth", block:"start"});
@@ -989,7 +1102,7 @@ function openChat(){
 function closeChat(){ $("#chat").classList.remove("open"); }
 document.querySelectorAll("[data-open-chat]").forEach(b => b.onclick = openChat);
 $("#chatClose").onclick = closeChat;
-document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if ($("#chat").classList.contains("open")) closeChat(); else if (detailId) closeDetail(); });
+document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if (closeDrawer()) return; if ($("#chat").classList.contains("open")) closeChat(); else if (detailId) closeDetail(); });
 $("#composer").onsubmit = e => { e.preventDefault(); const v = $("#chatIn").value.trim(); if (!v) return; $("#chatIn").value = ""; ask(v); };
 $("#msgs").addEventListener("click", e => {
   const a = e.target.closest("a"); if (!a) return;
@@ -1001,6 +1114,7 @@ $("#msgs").addEventListener("click", e => {
    ค่าในตาราง: ข้อความเดียว = ทุกแผนเท่ากัน, อาร์เรย์ = แยกตามแผน
    NA = ไม่คุ้มครอง, ASK = ยังไม่ระบุในคู่มือ (แสดง "สอบถามป้าเป็ด")         */
 const NA = "ไม่คุ้มครอง", REAL = "จ่ายตามจริง", ASK = "?";
+const SITE_URL = "https://pedru-boop.github.io/Web-paped/";
 
 const H_WAIT_BASE = `<p>ช่วงแรกหลังเริ่มคุ้มครอง ถ้าเจ็บป่วยในช่วงนี้จะยังเคลมไม่ได้</p>
 <ul><li><b>30 วัน</b> สำหรับการเจ็บป่วยทั่วไป</li>
@@ -1816,6 +1930,18 @@ function detailHTML(id){
     : `<tr><th scope="row">${esc(r[0])}${r[2] ? `<small>${esc(r[2])}</small>` : ""}</th>${(Array.isArray(r[1]) ? r[1] : Array(n).fill(r[1])).map(v => `<td>${cellHTML(v)}</td>`).join("")}</tr>`).join("");
   const foot = `<tr><th scope="row">เลือกแผน</th>${d.plans.map(p => `<td><a class="btn line" target="_blank" rel="noopener" data-plan="${esc(p.t)}" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ${p.t} ขอใบเสนอราคาค่ะ`)}">สนใจแผนนี้</a></td>`).join("")}</tr>`;
   const box = (h, inner) => `<section class="dbox" aria-label="${esc(h)}"><h2>${esc(h)}</h2>${inner}</section>`;
+  const fold = (h, inner) => `<details class="dbox"><summary><h2>${esc(h)}</h2></summary>${inner}</details>`;
+  const p0 = anyById(id) || {}, grp = groupOf(id);
+  const ICO = {age:'<circle cx="12" cy="7.5" r="3.5"/><path d="M5 20c.8-3.9 3.6-6 7-6s6.2 2.1 7 6"/>', cover:'<path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/>', opt:'<path d="M12 3 3 7.5l9 4.5 9-4.5z"/><path d="M3 12l9 4.5 9-4.5M3 16.5 12 21l9-4.5"/>'};
+  const qf = (ic, b, v) => `<div class="qf"><svg viewBox="0 0 24 24" aria-hidden="true">${ICO[ic]}</svg><b>${esc(b)}</b><span>${esc(v)}</span></div>`;
+  const qfacts = `<div class="qfacts">${qf("age","อายุรับประกัน", p0.age ? `${p0.age[0]}–${p0.age[1]} ปี` : "ตามแบบ")}${qf("cover", p0.cover ? "คุ้มครอง" : "รูปแบบ", p0.cover || "แนบกับประกันชีวิต")}${qf("opt","ทางเลือก", d.noPlanBtn ? "1 แบบ" : `${n} แผน`)}</div>`;
+  const crumb = `<nav class="crumb" aria-label="ตำแหน่งหน้า"><a href="#top" data-home>หน้าแรก</a> › ${grp ? `<a href="#groups" data-grp="${grp.id}">${esc(grp.t)}</a> › ` : ""}${esc(d.name)}</nav>`;
+  const sibIds = grp ? grp.ids.filter(x => x !== id) : [];
+  const sibs = sibIds.map(anyById).filter(Boolean).map(p => DETAILS[p.id]
+    ? `<a href="#d-${p.id}"><b>${esc(p.name)}</b><span>${esc((p.pts||[""])[0])}</span></a>`
+    : `<a href="#p-${p.id}" data-card="${p.id}"><b>${esc(p.name)}</b><span>${esc((p.pts||[""])[0])}</span></a>`).join("");
+  const url = SITE_URL + "#d-" + id;
+  const share = `<div class="share"><a target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}">แชร์ทาง LINE</a><a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}">แชร์ทาง Facebook</a></div>`;
   const pairs = (d.pairs || []).map(x => x.id && DETAILS[x.id]
     ? `<a href="#d-${x.id}"><b>${esc(x.t)}</b><span>${esc(x.d)}</span></a>`
     : x.id
@@ -1823,17 +1949,21 @@ function detailHTML(id){
     : `<div><b>${esc(x.t)}</b><span>${esc(x.d)}</span></div>`).join("");
   return `<div class="dbar"><div class="wrap"><button type="button" data-dclose>กลับ</button><span>${esc(d.name)}</span></div></div>
   <div class="wrap">
+    ${crumb}
     <div class="dhead"><span class="dtag">${esc(d.type)}</span><h1 id="dTitle" tabindex="-1">${esc(d.name)}</h1><p>${esc(d.lead)}</p></div>
+    ${qfacts}
     ${box("เหมาะกับใคร", `<ul>${d.fit.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`)}
     ${box("ข้อมูลสำคัญ", `<dl class="kv">${d.facts.map(f => `<div><dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd></div>`).join("")}</dl>`)}
     ${box(d.tableTitle || `เปรียบเทียบ ${n} แผน`, `${n > 2 ? `<p class="swipe">เลื่อนตารางไปทางซ้าย-ขวาเพื่อดูครบทุกแผน</p>` : ""}<div class="cmp-wrap" tabindex="0" role="region" aria-label="ตารางเปรียบเทียบแผน"><table class="cmp${n <= 2 ? " cmp2" : ""}"><thead>${head}</thead><tbody>${body}</tbody>${d.noPlanBtn ? "" : `<tfoot>${foot}</tfoot>`}</table></div><p class="note">${esc(d.tableNote)}${JSON.stringify(d.rows).includes('"?"') ? " ช่องที่เขียนว่า “สอบถามป้าเป็ด” ทักถามได้เลย ป้าเป็ดตอบตามกรมธรรม์ให้ค่ะ" : ""}</p>`)}
-    ${d.extra.map(e => box(e[0], e[1])).join("")}
-    ${d.wait === false ? "" : box("ระยะเวลารอคอย", d.wait || H_WAIT)}
-    ${d.copay === false ? "" : box("Copayment คืออะไร", H_COPAY)}
-    ${d.excl === false ? "" : box("ข้อยกเว้นหลัก", d.excl || H_EXCL)}
+    ${d.extra.map(e => fold(e[0], e[1])).join("")}
+    ${d.wait === false ? "" : fold("ระยะเวลารอคอย", d.wait || H_WAIT)}
+    ${d.copay === false ? "" : fold("Copayment คืออะไร", H_COPAY)}
+    ${d.excl === false ? "" : fold("ข้อยกเว้นหลัก", d.excl || H_EXCL)}
     ${box("ซื้อคู่กับอะไรได้", `<p>${esc(d.pairIntro || "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้ และเสริมความคุ้มครองได้ด้วย")}</p>${pairs ? `<div class="pair">${pairs}</div>` : ""}`)}
     <section class="dbox dcta"><h2>อยากรู้เบี้ยของคุณ</h2><p>เบี้ยขึ้นกับอายุ เพศ อาชีพ แผน และค่าใช้จ่ายส่วนแรกที่เลือก ป้าเป็ดทำใบเสนอราคาให้ฟรี ไม่มีข้อผูกมัด</p>
-      <div class="cta-row tight"><a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn" data-dask>ถามป้าเป็ด</button></div></section>
+      <div class="cta-row tight"><a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn" data-dask>ถามป้าเป็ด</button></div>${share}</section>
+    ${sibs ? box(`${grp.t} แบบอื่น ๆ`, `<div class="sibs">${sibs}</div>`) : ""}
+    ${fold("หมายเหตุสำคัญ", `<div class="legal"><ul><li>หน้านี้สรุปผลประโยชน์เบื้องต้นจากคู่มือของบริษัท ความคุ้มครอง เงื่อนไข และข้อยกเว้นที่สมบูรณ์เป็นไปตามกรมธรรม์</li><li>การแถลงสุขภาพตามจริงมีผลต่อการพิจารณารับประกันและการจ่ายผลประโยชน์</li><li>การชำระเบี้ยเป็นหน้าที่ของผู้เอาประกัน การที่ตัวแทนรับเบี้ยเป็นเพียงการให้บริการ</li><li>เพื่อประโยชน์สูงสุด ควรชำระเบี้ยให้ครบระยะเวลา และถือกรมธรรม์จนครบสัญญา</li><li>เบี้ยประกันใช้ลดหย่อนภาษีได้ตามหลักเกณฑ์ของกรมสรรพากร</li></ul></div>`)}
     <p class="dsrc">สรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้น รายละเอียดความคุ้มครองและเงื่อนไขเป็นไปตามกรมธรรม์</p>
   </div>`;
 }
@@ -1850,6 +1980,8 @@ function openDetail(id){
   el.querySelector("[data-dclose]").onclick = closeDetail;
   el.querySelector("[data-dask]").onclick = () => { openChat(); ask(d.name); };
   el.querySelectorAll("[data-plan]").forEach(a => a.addEventListener("click", () => track("plan_interest", {product:id, plan:a.dataset.plan})));
+  const gl = el.querySelector("[data-grp]"); if (gl) gl.onclick = e => { e.preventDefault(); hideDetail(); history.replaceState(null, "", "#groups"); openGroup(gl.dataset.grp); };
+  el.querySelector("[data-home]").onclick = e => { e.preventDefault(); hideDetail(); history.replaceState(null, "", "#top"); window.scrollTo(0, 0); };
   el.querySelectorAll("[data-card]").forEach(a => a.onclick = e => { e.preventDefault(); hideDetail(); history.replaceState(null, "", "#p-"+a.dataset.card); focusCard(a.dataset.card); });
   setTimeout(() => $("#dTitle").focus({preventScroll:true}), 30);
   track("view_detail", {product:id});
@@ -1886,58 +2018,90 @@ window.addEventListener("hashchange", route);
 document.addEventListener("click", e => { if (e.target.closest('a[href^="#d-"]')) detailInternal = true; }, true);
 
 /* ---------- v2: เรื่องที่ห่วง ---------- */
-const WORRIES = [
-  {id:"retire", t:"แก่ตัวไม่มีเงินใช้", s:"อยากเกษียณแบบมีเงินเข้าทุกปี", c1:"#FFE7A8", c2:"#FFF7DE",
-   icon:'<path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 7V4M5.8 10.2 4 8.4M18.2 10.2 20 8.4"/>',
-   story:"วันที่เลิกทำงาน ค่าใช้จ่ายยังเดินต่อ แต่รายได้หยุด การเริ่มเก็บตั้งแต่วันนี้ทำให้ออมเบาลงและมีเงินใช้แบบไม่ต้องเป็นภาระลูกหลาน",
-   ids:["pension","pansuk","longlife"]},
-  {id:"health", t:"ค่ารักษาพยาบาลแพง", s:"ป่วยทีเดียว เงินเก็บไม่หาย", c1:"#BFE6FA", c2:"#E8F6FE",
-   icon:'<rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><path d="M12 8v8M8 12h8"/>',
-   story:"นอนโรงพยาบาลไม่กี่คืนก็อาจเป็นหลักหมื่นถึงหลักแสน ประกันสุขภาพช่วยจ่ายค่าห้อง ค่ายา และค่าผ่าตัดแทน เงินเก็บจึงยังอยู่ครบ",
-   ids:["valuehealth","happyhealth","prestigehealth"]},
-  {id:"ci", t:"โรคร้ายแรง", s:"มะเร็ง หัวใจ หลอดเลือดสมอง", c1:"#FFD3D6", c2:"#FFF0F1",
-   icon:'<path d="M12 20s-7.5-4.5-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.5 12 20 12 20z"/><path d="M5 12.5h3.2l1.6-2.6 2.2 5 1.6-2.4H19"/>',
-   story:"เมื่อตรวจเจอโรคร้าย นอกจากค่ารักษา รายได้ก็อาจหายไปช่วงพักรักษาตัว เงินก้อนจากประกันโรคร้ายแรงช่วยให้โฟกัสกับการหายได้เต็มที่",
-   ids:["happyci","unjai","cancermax"]},
-  {id:"edu", t:"ทุนการศึกษาลูก", s:"เตรียมเงินก้อนตามจังหวะการเรียน", c1:"#D7D9FF", c2:"#F1F1FF",
-   icon:'<path d="M2.5 9.5 12 5l9.5 4.5L12 14z"/><path d="M6.5 11.6v4c0 1.4 2.5 2.6 5.5 2.6s5.5-1.2 5.5-2.6v-4M21.5 9.5v5"/>',
-   story:"ค่าเทอมมาตามกำหนด ไม่รอว่าเรามีเงินพร้อมหรือยัง เริ่มเก็บตั้งแต่ลูกยังเล็ก ได้ทั้งเงินก้อนตอนเรียนและความคุ้มครองระหว่างทาง",
-   ids:["smartkids","happykids","vhkids"]},
-  {id:"family", t:"ถ้าวันหนึ่งเราไม่อยู่", s:"ให้ครอบครัวมีเงินดูแลต่อ", c1:"#CDEFC0", c2:"#EFFAEA",
+const GROUPS = [
+  {id:"life", t:"คุ้มครองชีวิต", s:"ส่งต่อเงินก้อนให้คนที่รัก",
    icon:'<path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.6V20h13V9.6"/><path d="M12 17.6s-3-1.8-3-3.9a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2.1-3 3.9-3 3.9z"/>',
    story:"ถ้าเราเป็นเสาหลักของบ้าน ประกันชีวิตคือเงินที่ช่วยให้คนข้างหลังจ่ายหนี้ ค่าบ้าน และค่าเรียนลูกต่อได้ โดยไม่ต้องเริ่มจากศูนย์",
-   ids:["wl9999","sudkhum","hr9920"]},
-  {id:"save", t:"ออมเงินและลดหย่อนภาษี", s:"ให้เงินงอกเงย และคืนภาษีทุกปี", c1:"#C6F0E4", c2:"#ECFBF6",
+   feat:["wl9999","sudkhum","hr9920"], ids:["wl9999","sudkhum","hr9920","hrdiv","hr9901","prestige","hwldiv","hwl9901","hs999","happykids"]},
+  {id:"save", t:"สร้างเงินออม", s:"ออมแบบมีวินัย มีเงินคืน", 
    icon:'<path d="M12 21v-8"/><path d="M12 13c0-3.6-2.6-6.1-6.6-6.1 0 3.6 2.6 6.1 6.6 6.1z"/><path d="M12 11c0-3.3 2.3-5.6 6.1-5.6 0 3.3-2.3 5.6-6.1 5.6z"/><path d="M7.5 21h9"/>',
    story:"ออมแบบมีวินัย มีเงินคืนระหว่างทาง ได้ความคุ้มครองชีวิต และใช้เบี้ยลดหย่อนภาษีได้ เหมือนได้ผลตอบแทนเพิ่มอีกต่อ",
-   ids:["hs999","tax105","ps104"]},
+   feat:["bkk","hs157","tax105"], ids:["bkk","ps104","ps126","hs157","hs126","hs208","hs147","hs168","hs1810","hs2515","hs995","hs9910","tax105","pansuk","smartkids"]},
+  {id:"edu", t:"การศึกษาบุตร", s:"เตรียมเงินก้อนตามจังหวะการเรียน",
+   icon:'<path d="M2.5 9.5 12 5l9.5 4.5L12 14z"/><path d="M6.5 11.6v4c0 1.4 2.5 2.6 5.5 2.6s5.5-1.2 5.5-2.6v-4M21.5 9.5v5"/>',
+   story:"ค่าเทอมมาตามกำหนด ไม่รอว่าเรามีเงินพร้อมหรือยัง เริ่มเก็บตั้งแต่ลูกยังเล็ก ได้ทั้งเงินก้อนตอนเรียนและความคุ้มครองระหว่างทาง",
+   feat:["smartkids","happykids","pansuk"], ids:["smartkids","happykids","pansuk","hs208"]},
+  {id:"retire", t:"วางแผนเกษียณ", s:"มีเงินใช้ทุกปีหลังเลิกงาน",
+   icon:'<path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 7V4M5.8 10.2 4 8.4M18.2 10.2 20 8.4"/>',
+   story:"วันที่เลิกทำงาน ค่าใช้จ่ายยังเดินต่อ แต่รายได้หยุด การเริ่มเก็บตั้งแต่วันนี้ทำให้ออมเบาลงและมีเงินใช้แบบไม่ต้องเป็นภาระลูกหลาน",
+   feat:["pension","hs995","hs9910"], ids:["pension","hs995","hs9910","hs999"]},
+  {id:"health", t:"คุ้มครองสุขภาพ", s:"ป่วยทีเดียว เงินเก็บไม่หาย",
+   icon:'<rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><path d="M12 8v8M8 12h8"/>',
+   story:"นอนโรงพยาบาลไม่กี่คืนก็อาจเป็นหลักหมื่นถึงหลักแสน ประกันสุขภาพช่วยจ่ายค่าห้อง ค่ายา และค่าผ่าตัดแทน เงินเก็บจึงยังอยู่ครบ",
+   feat:["valuehealth","happyhealth","prestigehealth"], ids:["valuehealth","happyhealth","hhpremier","prestigehealth","vhkids","opd","hospcash"]},
+  {id:"ci", t:"คุ้มครองโรคร้าย", s:"มะเร็ง หัวใจ หลอดเลือดสมอง",
+   icon:'<path d="M12 20s-7.5-4.5-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.5 12 20 12 20z"/><path d="M5 12.5h3.2l1.6-2.6 2.2 5 1.6-2.4H19"/>',
+   story:"เมื่อตรวจเจอโรคร้าย นอกจากค่ารักษา รายได้ก็อาจหายไปช่วงพักรักษาตัว เงินก้อนจากประกันโรคร้ายแรงช่วยให้โฟกัสกับการหายได้เต็มที่",
+   feat:["happyci","unjai","cancermax"], ids:["happyci","unjai","cancermax","supercare","longlife"]},
+  {id:"dis", t:"คุ้มครองทุพพลภาพ", s:"ทำงานไม่ได้ ยังมีหลักประกัน",
+   icon:'<path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2 2 4-4"/>',
+   story:"ถ้าเจ็บป่วยหรือบาดเจ็บจนทำงานไม่ได้ถาวร รายได้หยุดทันทีแต่ค่าใช้จ่ายยังอยู่ ความคุ้มครองทุพพลภาพช่วยให้มีเงินก้อน หรือไม่ต้องจ่ายเบี้ยต่อ",
+   feat:["k2plus","protec","tp"], ids:["k2plus","protec","tp","kch"]},
+  {id:"acc", t:"คุ้มครองอุบัติเหตุ", s:"ค่ารักษาและเงินชดเชยเมื่อเกิดเหตุ",
+   icon:'<rect x="2.8" y="8.2" width="18.4" height="7.6" rx="3.8" transform="rotate(-45 12 12)"/><path d="M10.6 10.6h.01M13.4 13.4h.01M13.4 10.6h.01M10.6 13.4h.01"/>',
+   story:"อุบัติเหตุเกิดได้ทุกวัน ทั้งบนถนนและในบ้าน ประกันอุบัติเหตุช่วยจ่ายค่ารักษา และให้เงินก้อนเมื่อสูญเสียอวัยวะหรือเสียชีวิต",
+   feat:["accidentcare","pa"], ids:["accidentcare","pa"]},
 ];
+const groupOf = id => GROUPS.find(g => g.ids.includes(id));
 const anyById = id => byId(id) || RIDERS.find(r => r.id === id);
 const icoSVG = w => `<svg viewBox="0 0 24 24" aria-hidden="true">${w.icon}</svg>`;
 function renderWorries(){
-  $("#wgrid").innerHTML = WORRIES.map(w => `<button type="button" class="wtile" data-w="${w.id}" aria-pressed="false" aria-controls="wpanel" style="--c1:${w.c1};--c2:${w.c2}"><span class="wic">${icoSVG(w)}</span><b>${esc(w.t)}</b><small>${esc(w.s)}</small></button>`).join("");
-  $("#wgrid").querySelectorAll(".wtile").forEach(b => b.onclick = () => openWorry(b.dataset.w));
+  $("#wgrid").innerHTML = GROUPS.map(w => `<button type="button" class="wtile" data-w="${w.id}" aria-pressed="false" aria-controls="wpanel"><span class="wic">${icoSVG(w)}</span><b>${esc(w.t)}</b><small>${esc(w.s)}</small></button>`).join("");
+  $("#wgrid").querySelectorAll(".wtile").forEach(b => b.onclick = () => openGroup(b.dataset.w));
 }
-function wcardHTML(p, w){
+function wcardHTML(p, g, feat){
   const rider = RIDERS.includes(p);
   const age = p.age ? `รับอายุ ${p.age[0]}–${p.age[1]} ปี` : "";
   const meta = [age, p.cover ? `คุ้มครอง${p.cover.startsWith("ถึง") ? "" : " "}${p.cover}` : ""].filter(Boolean).join(" · ");
   const more = DETAILS[p.id] ? `<a class="btn small" href="#d-${p.id}">ดูรายละเอียด</a>` : `<button type="button" class="btn small" data-card="${p.id}">ดูรายละเอียด</button>`;
-  return `<article class="wcard"><span class="tg">${rider ? "สัญญาเพิ่มเติม" : "แบบประกันหลัก"}</span><h3>${esc(p.name)}</h3><p>${esc((p.pts||[""])[0])}</p>${meta ? `<div class="meta">${esc(meta)}</div>` : ""}<div class="cta-row tight">${more}<a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด ห่วงเรื่อง${w.t} สนใจ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a></div></article>`;
+  return `<article class="wcard"><div class="tgs">${feat ? `<span class="tg feat">ป้าเป็ดแนะนำ</span>` : ""}<span class="tg">${rider ? "สัญญาเพิ่มเติม" : "แบบประกันหลัก"}</span></div><h3>${esc(p.name)}</h3><p>${esc((p.pts||[""])[0])}</p>${meta ? `<div class="meta">${esc(meta)}</div>` : ""}<div class="cta-row tight">${more}<a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจเรื่อง${g.t} แบบ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a></div></article>`;
 }
-function openWorry(id){
-  const w = WORRIES.find(x => x.id === id), el = $("#wpanel");
+function openGroup(id, age){
+  const g = GROUPS.find(x => x.id === id), el = $("#wpanel");
+  if (!g) return;
   $("#wgrid").querySelectorAll(".wtile").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.w === id)));
-  const items = w.ids.map(anyById).filter(Boolean);
-  el.style.setProperty("--c1", w.c1); el.style.setProperty("--c2", w.c2);
-  el.innerHTML = `<div class="whead"><span class="wic">${icoSVG(w)}</span><h3>${esc(w.t)}</h3></div>
-  <div class="wbody"><p>${esc(w.story)}</p><h3 style="font-size:1.1rem">แบบที่ตอบโจทย์</h3>
-  <div class="wcards">${items.map(p => wcardHTML(p, w)).join("")}</div>
-  <div class="wmore"><span>อยากได้คำแนะนำที่ตรงกับตัวคุณที่สุด</span><a class="btn main small" href="#finder">ให้ป้าเป็ดช่วยเลือก</a><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด ห่วงเรื่อง${w.t} อยากปรึกษาค่ะ`)}">ปรึกษาป้าเป็ดฟรี</a></div></div>`;
+  const order = [...g.feat, ...g.ids.filter(x => !g.feat.includes(x))];
+  let items = order.map(anyById).filter(Boolean);
+  const total = items.length, hasAge = Number.isFinite(age);
+  if (hasAge) items = items.filter(p => inAge(p, age));
+  const note = hasAge ? `<div class="agenote"><span>แสดงแบบที่รับอายุ ${age} ปี ได้ ${items.length} จาก ${total} แบบ</span>${items.length < total ? `<button type="button" data-allg>ดูทั้งหมดในกลุ่ม</button>` : ""}</div>` : "";
+  el.innerHTML = `<div class="whead"><span class="wic">${icoSVG(g)}</span><h3>${esc(g.t)}</h3><span class="cnt">${items.length} แบบ</span></div>
+  <div class="wbody"><p>${esc(g.story)}</p>${note}
+  ${items.length ? `<div class="wcards">${items.map(p => wcardHTML(p, g, g.feat.includes(p.id))).join("")}</div>` : `<p>ยังไม่มีแบบในกลุ่มนี้ที่รับอายุ ${age} ปี ทักป้าเป็ดได้เลย ป้าเป็ดช่วยหาทางเลือกอื่นให้ค่ะ</p>`}
+  <div class="wmore"><span>อยากได้คำแนะนำที่ตรงกับตัวคุณที่สุด</span><a class="btn main small" href="#finder">ให้ป้าเป็ดช่วยเลือก</a><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจเรื่อง${g.t}${hasAge ? ` อายุ ${age} ปี` : ""} อยากปรึกษาค่ะ`)}">ปรึกษาป้าเป็ดฟรี</a></div></div>`;
   el.hidden = false;
   el.querySelectorAll("[data-card]").forEach(b => b.onclick = () => focusCard(b.dataset.card));
+  const all = el.querySelector("[data-allg]"); if (all) all.onclick = () => openGroup(id);
   el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
-  track("worry_open", {worry:id});
+  track("group_open", {group:id, age: hasAge ? age : null});
+}
+const openWorry = openGroup;
+function openDrawer(){ const d = $("#drawer"); d.classList.add("open"); d.setAttribute("aria-hidden","false"); $("#menuBtn").setAttribute("aria-expanded","true"); document.body.classList.add("noscroll"); setTimeout(() => d.querySelector(".x").focus(), 30); }
+function closeDrawer(){ const d = $("#drawer"); if (!d.classList.contains("open")) return false; d.classList.remove("open"); d.setAttribute("aria-hidden","true"); $("#menuBtn").setAttribute("aria-expanded","false"); if (!detailId) document.body.classList.remove("noscroll"); return true; }
+function initV3(){
+  $("#dGroups").innerHTML = GROUPS.map(g => `<a class="item" href="#groups" data-g="${g.id}"><svg viewBox="0 0 24 24" aria-hidden="true">${g.icon}</svg>${esc(g.t)}</a>`).join("");
+  $("#menuBtn").onclick = openDrawer;
+  $("#drawer").querySelectorAll("[data-xdrawer]").forEach(b => b.onclick = closeDrawer);
+  $("#drawer").querySelectorAll("a").forEach(a => a.addEventListener("click", () => { closeDrawer(); if (a.dataset.g) setTimeout(() => openGroup(a.dataset.g), 40); }));
+  $("#fGroup").innerHTML = `<option value="">โปรดระบุ</option>` + GROUPS.map(g => `<option value="${g.id}">${esc(g.t)}</option>`).join("");
+  $("#fGo").onclick = () => {
+    const gid = $("#fGroup").value, raw = $("#fAge").value.trim(), age = raw === "" ? NaN : Math.max(0, Math.min(99, parseInt(raw,10)));
+    const msg = $("#fMsg");
+    if (!gid){ msg.textContent = "กรุณาเลือกเรื่องที่สนใจก่อนนะคะ"; msg.classList.add("warn"); $("#fGroup").focus(); return; }
+    msg.textContent = "ทำให้ลูก ใส่อายุของลูก · ถ้าเกินวันเกิด 6 เดือน นับเป็น 1 ปี"; msg.classList.remove("warn");
+    if (Number.isFinite(age)) ans.age = age;
+    openGroup(gid, Number.isFinite(age) ? age : undefined);
+  };
 }
 function showCatalog(){
   const c = $("#catalog"); if (!c.hidden) return;
@@ -1955,7 +2119,7 @@ function initV2(){
 }
 
 /* ---------- init ---------- */
-renderQuiz(); renderCatalogue(); bindTlAge(); renderFAQ(); renderContact(); initConsent(); initV2(); route();
+renderQuiz(); renderCatalogue(); bindTlAge(); renderFAQ(); renderContact(); initConsent(); initV3(); initV2(); route();
 
 </script>
 </body>
