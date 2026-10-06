@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 3.1 | อัปเดต 6 ต.ค. 2569 -->
+<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 3.4 | อัปเดต 6 ต.ค. 2569 -->
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<meta name="version" content="3.1">
+<meta name="version" content="3.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ป้าเป็ด CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ | ช่วยเลือกแบบประกันที่ใช่</title>
 <meta name="description" content="ป้าเป็ด (ศศธร รุจิเรกานุสรณ์) นักวางแผนการเงิน CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ ช่วยเลือกแบบประกันชีวิต ประกันสุขภาพ ออมเงิน ลดหย่อนภาษี และวางแผนเกษียณ ตอบ 5 ข้อรู้ผลทันที ปรึกษาฟรีทาง LINE @422cilco">
@@ -438,6 +438,42 @@ details.dbox[open]>summary{margin-bottom:.7rem}
 .wpanel{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
 @media (max-width:679px){.hero .pill{display:none}}
+
+.seg{display:grid;grid-template-columns:repeat(auto-fit,minmax(4.4rem,1fr));gap:.4rem;margin:0 0 .7rem}
+.seg button{min-width:0;line-height:1.25;min-height:2.8rem;padding:.3rem .35rem;font-size:.9rem;border-radius:.9rem;border:2px solid var(--line);background:#fff;color:var(--ink);font-weight:700}
+.seg button[aria-selected="true"]{background:var(--sky);border-color:var(--sky);color:#fff}
+.tlage{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;margin:0 0 .4rem;font-size:.92rem}
+.tlage label{font-weight:600;flex-basis:100%}
+.tlage input{width:4.2rem;min-height:2.5rem;text-align:center;border:2px solid var(--line);border-radius:.6rem;font:inherit}
+.tlage button{width:2.5rem;height:2.5rem;border-radius:50%;border:2px solid var(--line);background:#fff;color:var(--navy);font-weight:700;font-size:1.1rem}
+button.pl.plb{border:0;width:100%;font:inherit;cursor:pointer}
+button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
+.agewarn{background:#FFF7DB;border:1px solid #F1D98A;border-radius:.8rem;padding:.6rem .8rem;font-size:.92rem;margin:0 0 1rem}
+.wcard .tg.kid{background:#FFF0E0;color:#9A4B00}
+.agenote b{color:var(--navy)}
+
+.bc{margin-top:.4rem}
+.bc-scroll{overflow-x:auto;padding-bottom:.3rem;-webkit-overflow-scrolling:touch}
+.bc-cap{margin:.6rem 0 .25rem;font-size:.8rem;font-weight:700;color:var(--pay)}
+.bc-row{display:grid;grid-template-columns:var(--tmpl);gap:2px}
+.bc-deathrow{align-items:end;min-height:4.7rem}
+.bc-bar{background:linear-gradient(180deg,#62C4F0,#29ABE2);border-radius:.45rem .45rem 0 0;color:#fff;display:flex;align-items:flex-start;justify-content:center;padding:.25rem .1rem 0;min-width:0}
+.bc-bar span{font-weight:700;font-size:.58rem;line-height:1.15;text-align:center;white-space:nowrap;letter-spacing:-.02em}
+.bc-deathrow .bc-bar[style*="span"] span{font-size:.72rem}
+@media (min-width:700px){.bc-bar span{font-size:.8rem}.bc-cash b{font-size:.72rem}}
+.bc-band{background:#A3A8AE;color:#fff;font-weight:700;font-size:.78rem;text-align:center;padding:.4rem .5rem;border-radius:.3rem;line-height:1.35}
+.bc-yr{background:var(--navy);color:#fff;text-align:center;font-weight:700;font-size:.76rem;padding:.42rem 0;white-space:nowrap}
+.bc-pay{display:flex;justify-content:center;align-items:center;height:1.2rem}
+.bc-pay i{width:.62rem;height:.62rem;border-radius:50%;background:#8A9099}
+.bc-cash{display:flex;justify-content:center}
+.bc-cash b{display:grid;place-items:center;width:100%;max-width:2.05rem;aspect-ratio:1;border-radius:50%;background:var(--sky);color:#fff;font-size:.6rem;padding:0;box-shadow:0 0 0 2px #fff,0 0 0 3px var(--sky)}
+.bc-mat{margin-top:1rem;background:var(--lime);border-radius:1rem 0 1rem 1rem;padding:.75rem .95rem;color:#2A3A0B}
+.bc-mat span{display:block;font-size:.84rem;font-weight:600}
+.bc-mat b{display:block;font-family:"Prompt","Mali",system-ui,sans-serif;font-size:1.55rem;color:var(--navy);line-height:1.3}
+.bc-mat small{display:block;font-size:.82rem}
+.bc-total{margin:.8rem 0 .2rem;font-weight:600;color:var(--navy)}
+.bc-total b{font-family:"Prompt","Mali",system-ui,sans-serif;font-size:1.45rem;color:var(--sky)}
+.bc-notes{font-size:.8rem;color:var(--ink-soft);padding-left:1.1rem;margin:.5rem 0 0}
 </style>
 </head>
 <body>
@@ -534,7 +570,7 @@ html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
     <p>ข้อมูลแบบประกันสรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้นเท่านั้น ไทม์ไลน์เป็นตัวอย่างประกอบความเข้าใจ เงินปันผลไม่รับประกันผล รายละเอียดความคุ้มครองเป็นไปตามกรมธรรม์</p>
     <p><b>ผู้ซื้อควรทำความเข้าใจรายละเอียดความคุ้มครองและเงื่อนไขก่อนตัดสินใจทำประกันภัยทุกครั้ง</b></p>
     <p id="licenseLine"></p>
-    <p class="ver">เวอร์ชัน 3.1 · อัปเดต 6 ต.ค. 2569</p>
+    <p class="ver">เวอร์ชัน 3.4 · อัปเดต 6 ต.ค. 2569</p>
   </div>
 </footer>
 
@@ -801,8 +837,8 @@ function initConsent(){
 document.addEventListener("click", e => { const a = e.target.closest("a[href*='line.me']"); if (a) track("contact_line"); const t = e.target.closest("a[href^='tel:']"); if (t) track("contact_phone"); });
 
 /* ---------- timeline ---------- */
-function timelineHTML(p, age){
-  const t = TL[p.id]; if (!t) return "";
+function timelineHTML(p, age, tv){
+  const t = tv || TL[p.id]; if (!t) return "";
   if (!inAge(p, age)) return `<p class="tl-no">อายุ ${age} ปี ทำแบบนี้ไม่ได้ (รับอายุ ${p.age[0]}–${p.age[1]} ปี)</p>`;
   const yo = !!t.yearsOnly, single = t.pay === "single";
   const total = t.cover.toAge ? t.cover.toAge - age : t.cover.years;
@@ -975,6 +1011,7 @@ function renderResult(){
   if (gids.length) html = html.replace(/<\/div>$/, `<div class="gmore"><p>อยากเทียบกับแบบอื่นที่คล้ายกัน</p><div class="row">${gids.map(id => { const g = GROUPS.find(x => x.id === id); return `<button type="button" class="btn small" data-gopen="${id}">ดู${esc(g.t)}ทั้งหมด (${g.ids.length})</button>`; }).join("")}</div></div></div>`);
   $("#quiz").innerHTML = html;
   $("#quiz").querySelectorAll("[data-gopen]").forEach(b => b.onclick = () => openGroup(b.dataset.gopen, ans.age));
+  setUserAge(ans.age);
   track("quiz_complete", {goal: ans.goal});
   $("#redo").onclick = () => { step = 0; Object.assign(ans,{goal:null,job:null,budget:null,pay:null}); renderQuiz(); scrollQuiz(); };
   $("#copySum").onclick = async (e) => { try { await navigator.clipboard.writeText(lastSummary); e.target.textContent = "คัดลอกแล้ว"; } catch(err){ e.target.textContent = "คัดลอกไม่ได้ ลองกดส่ง LINE แทน"; } };
@@ -1705,7 +1742,7 @@ const DETAILS = {
     lead:"จ่ายเบี้ยแค่ 4 ปี คุ้มครอง 10 ปี รับเงินคืนทุกปี ครบสัญญารับก้อนใหญ่ 424% ของทุน ไม่ต้องตรวจสุขภาพ",
     fit:["คนที่มีเงินก้อนและอยากออมระยะสั้น จ่ายจบใน 4 ปี","ผู้สูงอายุถึง 80 ปี ที่อยากออมโดยไม่ต้องตรวจสุขภาพ","คนที่อยากใช้สิทธิลดหย่อนภาษีหมวดประกันชีวิตเต็มสิทธิ"],
     facts:[
-      ["ประเภท","ประกันออมทรัพย์ แถมสัญญาเพิ่มเติมอุบัติเหตุ บีแอลเอ เอดีบี"],
+      ["ประเภท","ประกันออมทรัพย์ แถมสัญญาเพิ่มเติมอุบัติเหตุ บีแอลเอ เอดีบี 100% ของทุนประกัน สูงสุดไม่เกิน 10 ล้านบาท"],
       ["อายุที่รับ","แรกเกิด – 80 ปี"],
       ["จ่ายเบี้ยและคุ้มครอง","จ่าย 4 ปี คุ้มครอง 10 ปี จ่ายรายปีเท่านั้น (ใช้บัตรเครดิตไม่ได้)"],
       ["ทุนประกัน","ขั้นต่ำ 100,000 บาท ไม่จำกัดสูงสุด ทุน 3 ล้านบาทขึ้นไปได้ส่วนลดเบี้ย"],
@@ -1730,7 +1767,7 @@ const DETAILS = {
       ["ปีที่ 2", ["200%","200,000"]],
       ["ปีที่ 3", ["300%","300,000"]],
       ["ปีที่ 4–10", ["400%","400,000"]],
-      ["เสียชีวิตจากอุบัติเหตุ (เอดีบี แถมฟรี)", [ASK, ASK], "จ่ายเพิ่มจากข้างบน"],
+      ["เสียชีวิตจากอุบัติเหตุ (เอดีบี แถมฟรี)", ["100%","100,000"], "จ่ายเพิ่มจากข้างบน"],
     ],
     tableNote:"ตัวอย่างคำนวณจากอัตราเบี้ยในคู่มือ ไม่ใช่ใบเสนอราคา",
     copay:false, wait:false, excl:`<p>ความคุ้มครองอุบัติเหตุ (เอดีบี) ที่แถมมา ไม่คุ้มครองกรณีหลัก ๆ เหล่านี้</p><ul><li>แข่งรถ แข่งเรือ ชกมวย โดดร่ม บันจี้จัมพ์ หรือดำน้ำที่ใช้ถังอากาศ</li><li>ขณะขับขี่หรือโดยสารรถจักรยานยนต์</li><li>ขณะเมาสุราหรือใช้สารเสพติดจนขาดสติ ทะเลาะวิวาท หรือทำร้ายตัวเอง</li></ul><p class="note">ข้อยกเว้นทั้งหมดเป็นไปตามกรมธรรม์</p>`, extra:[],
@@ -1914,6 +1951,141 @@ function cellHTML(v){
   return esc(v);
 }
 
+const TLV = (() => {
+  const sk = (k) => [[15,9,15],[18,12,18],[21,15,21]].map(([c,p,x]) => ({label:`${c}/${p}`, t:{pay:p, cover:{years:c}, mat:`รับเบี้ยที่จ่ายทั้งหมดคืน พร้อมเงินเพิ่มพิเศษ ${x}% ของเบี้ยสะสม`, matS:`เบี้ยคืน + ${x}%`}}));
+  const wl = (arr) => arr.map(n => ({label:`จ่าย ${n} ปี`, t:{pay:n, cover:{toAge:99}, mat:"รับทุนประกัน หรือเบี้ยสะสม แล้วแต่อย่างไหนมากกว่า", matS:"ทุนประกันคืน"}}));
+  const pen = (lab, pay, age) => ({label:lab, age, t:{pay, cover:{toAge:99}, cash:[{fromAge:60,toAge:99,label:"รับเงินบำนาญทุกปี ตั้งแต่อายุ 60 ปี"}], cashS:"บำนาญทุกปี"}});
+  return {
+    bkk: sk(), smartkids: sk(),
+    pension: [pen("จ่ายครั้งเดียว","single",[20,50]), pen("จ่าย 5 ปี",5,[20,54]), pen("จ่าย 10 ปี",10,[20,49]), pen("จ่ายถึงอายุ 60",{toAge:60},[20,55])],
+    prestige: wl([5,10,15,20]), hrdiv: wl([5,10,15,20]), hwldiv: wl([5,10,15]),
+    k2plus: [[10,[20,65]],[15,[20,60]],[20,[20,55]]].map(([n,age]) => ({label:`${n} ปี`, age, t:{pay:n, cover:{years:n}}})),
+  };
+})();
+/* ---------- กราฟผลประโยชน์แบบโบรชัวร์ ---------- */
+const DIVN = "อาจได้เงินปันผลเพิ่มทุกปี ขึ้นกับผลการลงทุนของบริษัท ไม่รับประกันผล";
+const stepD = (arr) => arr.map((v,i) => [i+1, i+1, v + "%"]);
+const BC = {
+  wl9999: c => ({death:[[1,null,"100%"]], mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า"}),
+  sudkhum: c => ({death:[[1,null,"100%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", bands:[{label:"เสียชีวิตจากอุบัติเหตุ (เอดีบี แถมฟรี)", to:Math.min(20, 60 - c.age), text:"เพิ่ม 50% ของทุน"},{label:"ทุพพลภาพ (ทีพีดี แถมฟรี)", to:Math.min(20, 60 - c.age), text:"50% ของทุน"}], bandNote:"เอดีบีและทีพีดีคุ้มครองช่วงจ่ายเบี้ย หรือถึงอายุ 60 ปี แล้วแต่อย่างไหนถึงก่อน", mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า"}),
+  hr9920: c => ({death:[[1,null,"100%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า", notes:["แถมฟรี ทพ. สำหรับผู้ที่รับประกันในอัตราปกติ"]}),
+  hrdiv: c => ({death:[[1,null,"100%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า", notes:[DIVN + " เริ่มพิจารณาตั้งแต่ปีที่ 2"]}),
+  hr9901: c => ({death:[[1,null,"100%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า", notes:[DIVN]}),
+  prestige: c => ({death:[[1,null,"100%"]], deathNote:"หรือมูลค่าเวนคืน หรือเบี้ยสะสม แล้วแต่อย่างไหนมากกว่า", mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า"}),
+  hwldiv: c => ({death:[[1,null,"100%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า", notes:[DIVN]}),
+  hwl9901: c => ({death:[[1,null,"100%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", mat:"100%", matSub:"ทุนประกัน หรือเบี้ยสะสม ถ้ามากกว่า", notes:[DIVN]}),
+  hs999: c => ({death:[...stepD([100,200,300,400,500,600,700,800,900]), [10,null,"990%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", bands:[{label:"เสียชีวิตจากอุบัติเหตุ (เอดีบี999 แถมฟรี)", text:"จ่ายเพิ่มตามตารางในกรมธรรม์"}], cash:[[1,null,"9%"]], cashNote:"เงินคืน 8.5% + เงินคืนพิเศษ 0.5% ทุกปี ถึงอายุ 98", mat:"990%"}),
+  happykids: c => ({death:[[1,10,"100%"],[11,20,"120%"],[21,null,"220%"]], deathNote:"หรือเบี้ยสะสม หักเงินคืนที่รับไปแล้ว ถ้ามากกว่า", cash:[[1,null,"1%"],[21,21,"20%"]], cashNote:"เงินคืน 1% ทุกปี และต้นปีที่ 21 รับเพิ่ม 20%", mat:"220%", notes:["ผู้ชำระเบี้ยเสียชีวิตหรือทุพพลภาพ (มี คช.) ไม่ต้องจ่ายเบี้ยต่อ และลูกรับ 50% ของทุนจากเพเยอร์ โพรเทค"]}),
+  pansuk: c => ({death:[[1,10,"100%"],[11,20,"110%"],[21,null,"120%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", cash:[[2,20,"1.5%",2],[21,null,"1%"]], cashNote:"ปีที่ 2–20 รับ 1.5% ทุก 2 ปี จากนั้นรับ 1% ทุกปีถึงอายุ 79", mat:"100%"}),
+  ps104: c => ({death:[...stepD([100,200,300]),[4,10,"400%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", bands:[{label:"เสียชีวิตจากอุบัติเหตุ (เอดีบี แถมฟรี)", text:"100% ของทุน สูงสุดไม่เกิน 10 ล้านบาท"}], cash:[[1,9,"4%"]], mat:"424%"}),
+  ps126: c => ({death:[...stepD([100,200,300,400,500]),[6,12,"600%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", bands:[{label:"เสียชีวิตจากอุบัติเหตุ (เอดีบี แถมฟรี)", text:"300% ของทุน รวมทุกฉบับไม่เกิน 6 ล้านบาท"}], cash:[[1,11,"6%"]], mat:"620%"}),
+  hs208: c => ({death:[...stepD([100,200,300,400,500,600,700]),[8,10,"800%"],...[820,840,860,880,900,920,940,960,980,1000].map((v,i) => [11+i,11+i,v+"%"])], cash:[[1,10,"1.5%"],[11,20,"2%"]], mat:"1,000%"}),
+  hs126: c => ({death:[...stepD([100,200,300,400,500]),[6,12,"600%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", cash:[[1,4,"3%"],[5,8,"6%"],[9,11,"9%"]], mat:"600%"}),
+  hs157: c => ({death:[...stepD([100,200,300,400,500,600]),[7,15,"700%"]], cash:[[1,14,"7%"]], mat:"727%"}),
+  hs147: c => ({death:[...stepD([100,200,300,400,500,600]),[7,14,"700%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", cash:[[1,5,"2%"],[6,10,"4%"],[11,14,"8%"]], mat:"700%", notes:[DIVN]}),
+  hs168: c => ({death:[...stepD([100,200,300,400,500,600,700]),[8,16,"800%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", cash:[[1,8,"8%"],[9,15,"10%"]], mat:"761%", notes:[DIVN]}),
+  hs1810: c => ({death:[[1,3,"100%"],[4,5,"150%"],[6,7,"200%"],[8,9,"250%"],[10,18,"300%"]], deathNote:"หรือเบี้ยสะสม ถ้ามากกว่า", cash:[[1,6,"3%"],[7,12,"5%"],[13,18,"7%"]], cashNote:"เงินคืน 3% ทุกปี บวกเงินคืนพิเศษ 2% (ปีที่ 7–12) และ 4% (ปีที่ 13–18)", mat:"300%", notes:[DIVN]}),
+  hs995: c => ({death:[...stepD([100,200,300,400,500]),[6,24,"510–690%"],[25,null,"700%"]], deathNote:"ปีที่ 6–24 เพิ่มปีละ 10% หรือ 105% ของเบี้ยสะสม ถ้ามากกว่า", cash:[[1,null,"4%"]], cashNote:"เงินคืน 3% + เงินคืนพิเศษ 1% ทุกปี ถึงอายุ 98", mat:"700%", notes:[DIVN]}),
+  hs9910: c => ({death:[...stepD([100,200,300,400,500]),[6,24,"510–690%"],[25,null,"700%"]], deathNote:"ปีที่ 6–24 เพิ่มปีละ 10% หรือ 105% ของเบี้ยสะสม ถ้ามากกว่า", cash:[[1,null,"4%"]], cashNote:"เงินคืน 4% ทุกปี ถึงอายุ 98", mat:"700%", notes:[DIVN]}),
+  hs2515: c => ({death:[[1,6,"100%"],[7,12,"150%"],[13,18,"175%"],[19,25,"200%"]], cash:[[1,15,"1%"],[16,20,"1.5%"],[21,25,"2%"]], mat:"180%", notes:[DIVN]}),
+  tax105: c => ({death:[...stepD([100,200,300,400]),[5,10,"500%"]], cash:[[1,3,"3%"],[4,6,"4%"],[7,9,"5%"]], mat:"479%", notes:[DIVN]}),
+  bkk: c => { const x = {9:15,12:18,15:21}[c.pay] || 15; return {unit:"ของเบี้ยสะสม", death:[[1,null,`ทุน+${100+x}%`]], deathNote:`ทุนประกัน + ${100+x}% ของเบี้ยสะสม`, bands:[{label:"อุบัติเหตุ (รวมอยู่ในแบบ)", text:"เสียชีวิตจากอุบัติเหตุ รับเพิ่ม 100% ของทุน"}], mat:`${100+x}%`, matSub:"ของเบี้ยสะสม (เบี้ยคืนทั้งหมด + " + x + "%)"}; },
+  smartkids: c => { const x = {9:15,12:18,15:21}[c.pay] || 15; return {unit:"ของเบี้ยสะสม", death:[[1,null,`ทุน+${100+x}%`]], deathNote:`ทุนประกัน + ${100+x}% ของเบี้ยสะสม`, bands:[{label:"ซีไอ คิดส์ (แถมฟรี)", to:Math.min(c.N, 21 - c.age), text:"โรคร้ายแรงเด็ก 4 โรค 50% ของทุน"},{label:"เพเยอร์ โพรเทค (เมื่อซื้อ คช.)", to:Math.min(c.pay, 21 - c.age), text:"ผู้จ่ายเบี้ยเสียชีวิต/ทุพพลภาพ 50% ของทุน"}], mat:`${100+x}%`, matSub:"ของเบี้ยสะสม (เบี้ยคืนทั้งหมด + " + x + "%)"}; },
+  pension: c => { const y60 = 60 - c.age, single = c.vt.pay === "single"; return {unit:"ของทุนประกัน", death:[[1,y60,"110% เบี้ย"],[y60+1,null,"เบี้ย−บำนาญ"]], deathNote:"ก่อนอายุ 60 รับ 110% ของเบี้ยสะสม หรือมูลค่าเวนคืน ถ้ามากกว่า หลังอายุ 60 รับเบี้ยสะสม หักบำนาญที่รับไปแล้ว", cash:[[y60, c.N, single ? "0.01%" : "20%"]], cashLabel:"รับเงินบำนาญ", cashNote:`รับบำนาญทุกปี ตั้งแต่อายุ 60 ถึง 99 ปี ปีละ ${single ? "0.01%" : "20%"} ของทุน`, matText:`รับบำนาญปีละ ${single ? "0.01%" : "20%"} ของทุน`, matWhen:"อายุ 60–99 ปี", notes:["อาจได้เงินบำนาญเพิ่มพิเศษจากเงินปันผล คำนวณตอนอายุ 59 ปี ไม่รับประกันผล"]}; },
+  k2plus: c => ({death:[[1,null,"100%"]], bands:[{label:"ทุพพลภาพถาวรสิ้นเชิง", text:"รับ 3 เท่าของทุนชีวิต (สูงสุด 30 ล้านบาท)"}]}),
+  cancermax: c => ({unit:"บาท (ทุนชีวิต 100,000)", death:[[1,null,"100,000"]], deathNote:"ประกันชีวิตบีแอลเอ อุ่นใจ", bands:[{label:"ตรวจพบมะเร็ง (เฟิสต์ แคนเซอร์)", text:"300,000 – 3,000,000 บาท ตามแผน"},{label:"เสียชีวิตจากมะเร็ง (เอ็นดิ้ง แคนเซอร์)", text:"รับเพิ่ม 300,000 – 3,000,000 บาท ตามแผน"}], mat:"100,000", matSub:"บาท"}),
+};
+const pctNum = s => { const m = String(s).replace(/,/g,"").match(/[\d.]+/g); return m ? parseFloat(m[m.length-1]) : NaN; };
+function bcSpec(id, age, vt){
+  const t = vt || TL[id]; if (!BC[id] || !t) return null;
+  const cov = (id === "hs995" || id === "hs9910") ? {toAge:99} : t.cover;
+  const N = cov.toAge ? cov.toAge - age : cov.years;
+  const pay = t.pay === "single" ? 1 : (t.pay.toAge ? t.pay.toAge - age : t.pay);
+  if (N <= 0) return null;
+  const sp = BC[id]({age, N, pay, vt:t}); sp.N = N; sp.pay = pay; sp.single = t.pay === "single"; sp.toAge = cov.toAge; sp.age = age;
+  return sp;
+}
+function benefitChartHTML(sp){
+  const N = sp.N, end = v => v == null ? N : Math.min(v, N);
+  const deathR = (sp.death || []).map(r => [r[0], end(r[1]), r[2]]).filter(r => r[0] <= N);
+  const cashR = (sp.cash || []).map(r => [r[0], r[1] == null ? N - 1 : Math.min(r[1], N), r[2], r[3] || 1]).filter(r => r[0] >= 1 && r[0] <= r[1]);
+  const bandR = (sp.bands || []).map(b => Object.assign({}, b, {to: b.to == null ? N : Math.max(0, Math.min(b.to, N))})).filter(b => b.to > 0);
+  // คอลัมน์
+  let cols;
+  if (N <= 25) cols = Array.from({length:N}, (_,i) => [i+1, i+1]);
+  else {
+    const bp = new Set([1, sp.pay + 1, N]);
+    deathR.forEach(r => { bp.add(r[0]); bp.add(r[1] + 1); });
+    cashR.forEach(r => { if (r[3] === 1) { bp.add(r[0]); bp.add(r[1] + 1); } });
+    bandR.forEach(b => bp.add(b.to + 1));
+    const pts = [...bp].filter(x => x >= 1 && x <= N).sort((a,b) => a-b);
+    cols = pts.map((a,i) => [a, i + 1 < pts.length ? pts[i+1] - 1 : N]).filter(c => c[0] <= c[1]);
+    // แยกปีสุดท้าย (ครบสัญญา) เป็นคอลัมน์เดียว
+    const last = cols[cols.length-1]; if (last[0] < last[1]) { cols[cols.length-1] = [last[0], last[1]-1]; cols.push([N, N]); }
+  }
+  const nc = cols.length, colOf = y => cols.findIndex(c => y >= c[0] && y <= c[1]);
+  const yLab = c => c[0] === c[1] ? `${c[0]}` : `${c[0]}–${c[1]}`;
+  // แถวเสียชีวิต (รวมคอลัมน์ที่ค่าเท่ากัน)
+  const dAt = ci => { const y = cols[ci][0]; const r = deathR.find(r => y >= r[0] && y <= r[1]); return r ? r[2] : ""; };
+  const maxV = Math.max(1, ...deathR.map(r => pctNum(r[2])).filter(Number.isFinite));
+  let dHTML = "", ci = 0;
+  while (ci < nc){ const v = dAt(ci); let j = ci; while (j + 1 < nc && dAt(j+1) === v) j++;
+    const h = Number.isFinite(pctNum(v)) ? 1.5 + pctNum(v) / maxV * 3 : 2.6;
+    dHTML += v ? `<div class="bc-bar" style="grid-column:${ci+1} / ${j+2};height:${h.toFixed(2)}rem"><span>${esc(v)}</span></div>` : `<div style="grid-column:${ci+1} / ${j+2}"></div>`;
+    ci = j + 1; }
+  const bandHTML = bandR.map(b => { const to = colOf(b.to); return `<p class="bc-cap">${esc(b.label)}</p><div class="bc-row"><div class="bc-band" style="grid-column:1 / ${to + 2}">${esc(b.text)}</div></div>`; }).join("");
+  const yHTML = cols.map(c => `<div class="bc-yr">${yLab(c)}</div>`).join("");
+  const payHTML = cols.map(c => `<div class="bc-pay">${c[0] <= sp.pay ? "<i></i>" : ""}</div>`).join("");
+  const cashAt = c => { const hits = cashR.filter(r => { for (let y = r[0]; y <= r[1]; y += r[3]) if (y >= c[0] && y <= c[1]) return true; return false; }); return hits.map(r => r[2]).join("+"); };
+  const cashCells = cols.map(c => { const v = cashAt(c); return `<div class="bc-cash">${v ? `<b>${esc(v)}</b>` : ""}</div>`; }).join("");
+  // ผลรวม
+  let total = null;
+  if (!sp.unit && sp.mat && cashR.length && cashR.every(r => Number.isFinite(pctNum(r[2])))){
+    let sum = pctNum(sp.mat); cashR.forEach(r => { for (let y = r[0]; y <= r[1]; y += r[3]) sum += pctNum(r[2]); });
+    total = (Math.round(sum * 100) / 100).toLocaleString("en-US") + "%";
+  }
+  const unit = sp.unit || "ของทุนประกัน";
+  const endTxt = sp.toAge ? `อายุ ${sp.toAge} ปี` : `ปีที่ ${N}`;
+  const payTxt = sp.single ? "ชำระเบี้ยครั้งเดียว" : `ชำระเบี้ย ${sp.pay} ปี`;
+  const callout = sp.matText ? `<div class="bc-mat"><span>${esc(sp.matWhen || "")}</span><b>${esc(sp.matText)}</b></div>`
+    : sp.mat ? `<div class="bc-mat"><span>มีชีวิตอยู่จนครบสัญญา (${endTxt})</span><b>รับ ${esc(sp.mat)}</b><small>${esc(sp.matSub || unit)}</small></div>` : "";
+  const notes = [sp.deathNote ? "เสียชีวิต: " + sp.deathNote : "", sp.cashNote || "", sp.bandNote || "", ...(sp.notes || [])].filter(Boolean);
+  const tmpl = cols.map(c => c[0] === c[1] ? "minmax(0,1fr)" : "minmax(0,2fr)").join(" ");
+  return `<div class="bc" style="--nc:${nc};--tmpl:${tmpl}"><div class="bc-scroll"><div class="bc-in" style="min-width:${Math.max(cols.reduce((s,c) => s + (c[0] === c[1] ? 1.55 : 3.1), 0), 15)}rem">
+    <p class="bc-cap">คุ้มครองการเสียชีวิต (${esc(unit)})</p><div class="bc-row bc-deathrow">${dHTML}</div>
+    ${bandHTML}
+    <p class="bc-cap">ปีกรมธรรม์ที่${sp.toAge ? ` (เริ่มอายุ ${sp.age} ปี)` : ""}</p><div class="bc-row">${yHTML}</div>
+    <p class="bc-cap">${payTxt}</p><div class="bc-row">${payHTML}</div>
+    ${cashR.length ? `<p class="bc-cap">${esc(sp.cashLabel || "รับเงินคืน")} (${esc(unit)})</p><div class="bc-row">${cashCells}</div>` : ""}
+  </div></div>
+  ${callout}
+  ${total ? `<p class="bc-total">ผลประโยชน์รวมตลอดสัญญา <b>${total}</b> ${esc(unit)}</p>` : ""}
+  ${notes.length ? `<ul class="bc-notes">${notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}</div>`;
+}
+
+const DEFV = {pension:3, prestige:3, hrdiv:3, hwldiv:2, k2plus:2};
+function startAge(id, vi){
+  const p = anyById(id) || {}, v = TLV[id] ? TLV[id][vi] : null, a = (v && v.age) || p.age;
+  if (userAge != null && (!a || (userAge >= a[0] && userAge <= a[1]))) return userAge;
+  return a ? Math.max(a[0], Math.min(a[1], 35)) : 35;
+}
+function bindTl(id){
+  const box = $("#dTlBox"); if (!box) return;
+  let vi = +(box.querySelector('[aria-selected="true"]') || {dataset:{tlv:0}}).dataset.tlv || 0;
+  const draw = (age) => { box.querySelector("#dTlAgeWrap") ; box.innerHTML = `<h2>${BC[id] ? "ผลประโยชน์และความคุ้มครอง" : "ไทม์ไลน์ จ่ายเบี้ยและรับเงิน"}</h2>${tlBoxHTML(id, vi, age)}`; bindTl(id); };
+  const cur = () => Math.max(0, Math.min(85, parseInt($("#dTlAge").value,10) || 0));
+  box.querySelectorAll("[data-tlv]").forEach(b => b.onclick = () => { vi = +b.dataset.tlv; const a = cur(); draw(a); });
+  box.querySelectorAll("[data-tla]").forEach(b => b.onclick = () => draw(Math.max(0, Math.min(85, cur() + (+b.dataset.tla)))));
+  $("#dTlAge").onchange = () => draw(cur());
+}
+function tlBoxHTML(id, vi, age){
+  const p = anyById(id), vs = TLV[id];
+  const v = vs ? vs[vi] : null;
+  const pp = v && v.age ? Object.assign({}, p, {age:v.age}) : p;
+  const seg = vs ? `<div class="seg" role="tablist" aria-label="เลือกแบบ">${vs.map((x,i) => `<button type="button" role="tab" aria-selected="${i===vi}" data-tlv="${i}">${esc(x.label)}</button>`).join("")}</div>` : "";
+  return `${seg}<div class="tlage"><label for="dTlAge">เริ่มทำตอนอายุ</label><button type="button" data-tla="-1" aria-label="ลดอายุ">−</button><input id="dTlAge" type="number" inputmode="numeric" min="0" max="85" value="${age}"><span>ปี</span><button type="button" data-tla="1" aria-label="เพิ่มอายุ">+</button></div><div id="dTl">${BC[id] ? (inAge(pp, age) ? (benefitChartHTML(bcSpec(id, age, v ? v.t : null) || {}) ) : `<p class="tl-no">อายุ ${age} ปี ทำแบบนี้ไม่ได้ (รับอายุ ${pp.age[0]}–${pp.age[1]} ปี)</p>`) : timelineHTML(pp, age, v ? v.t : null)}</div>`;
+}
+
 function autoDetail(id){
   const p = anyById(id); if (!p) return null;
   const rider = RIDERS.includes(p), facts = [];
@@ -1936,9 +2108,61 @@ const fq = q => (FAQ.find(f => f.q === q) || {}).a || "";
 const T_ACC_DEF = "เหตุการณ์ที่เกิดขึ้นอย่างฉับพลัน จากปัจจัยภายนอกร่างกาย และเราไม่ได้ตั้งใจให้เกิด เช่น รถชน ลื่นล้ม ถูกของมีคมบาด ส่วนการเจ็บป่วยจากโรคไม่นับเป็นอุบัติเหตุ";
 const T_TPD = "บาดเจ็บหรือเจ็บป่วยจนทำกิจวัตรประจำวันด้วยตัวเองไม่ได้อย่างถาวรตั้งแต่ 3 ใน 6 อย่าง และทำงานหารายได้ไม่ได้เลย ต่อเนื่องกันอย่างน้อย 180 วัน\n\nรวมถึงกรณีสูญเสียอวัยวะ เช่น ตาบอดสนิททั้ง 2 ข้าง สูญเสียมือหรือเท้า 2 ข้าง หรือสูญเสียมือ 1 ข้างกับเท้า 1 ข้าง\n\nนิยามที่ใช้จริงเป็นไปตามกรมธรรม์ของแต่ละสัญญา";
 const T_ADL = "1. ลุกจากเตียงไปเก้าอี้ได้เอง\n2. เดินหรือเคลื่อนที่จากห้องหนึ่งไปอีกห้องได้เอง\n3. สวมหรือถอดเสื้อผ้าได้เอง\n4. อาบน้ำได้เอง\n5. กินอาหารได้เอง\n6. เข้าห้องน้ำขับถ่ายได้เอง\n\nทำได้เองหมายถึงไม่ต้องให้คนอื่นช่วยและไม่ต้องใช้อุปกรณ์ช่วย";
+const cellTxt = v => v === ASK ? "สอบถามป้าเป็ด" : (v && typeof v === "object") ? v.v + (v.s ? ` (${v.s})` : "") : String(v);
+function rowText(d, start){
+  const r = (d.rows || []).find(r => r.length > 1 && r[0].startsWith(start)); if (!r) return "";
+  const n = d.plans.length, vals = Array.isArray(r[1]) ? r[1] : Array(n).fill(r[1]);
+  if (d.noPlanBtn) return `${cellTxt(vals[0])} ของทุน (ตัวอย่าง ${cellTxt(vals[1])} บาท)` + (r[2] ? `\n(${r[2]})` : "");
+  const same = vals.every(v => cellTxt(v) === cellTxt(vals[0]));
+  return (same ? (n > 1 && !d.noPlanBtn ? `ทุกแผน ${cellTxt(vals[0])}` : cellTxt(d.noPlanBtn ? vals[d.noPlanBtn ? 1 : 0] : vals[0])) : d.plans.map((p,i) => `• ${p.t}: ${cellTxt(vals[i])}`).join("\n")) + (r[2] ? `\n(${r[2]})` : "");
+}
+function groupRows(d, title){
+  const rows = d.rows || [], i = rows.findIndex(r => r.length === 1 && r[0].startsWith(title)); if (i < 0) return "";
+  const out = [];
+  for (let j = i + 1; j < rows.length && rows[j].length > 1; j++){
+    const r = rows[j], n = d.plans.length, vals = Array.isArray(r[1]) ? r[1] : Array(n).fill(r[1]);
+    const same = vals.every(v => cellTxt(v) === cellTxt(vals[0]));
+    const val = d.noPlanBtn ? cellTxt(vals[1] !== undefined ? vals[1] : vals[0]) : same ? cellTxt(vals[0]) : d.plans.map((p,k) => `${p.t} ${cellTxt(vals[k])}`).join(" / ");
+    out.push(`• ${r[0]}: ${val}`);
+  }
+  return out.join("\n");
+}
+function detailFAQ(id){
+  const d = DETAILS[id]; if (!d) return [];
+  const out = [], add = (q,a) => { if (a) out.push({q,a}); };
+  const ex = d.noPlanBtn ? `\n\n(ตัวเลขเป็นตัวอย่าง${d.plans[1] && d.plans[1].s ? " " + d.plans[1].s : ""})` : "";
+  if (["happyhealth","hhpremier"].includes(id)){
+    add("วงเงินนับต่อครั้งหรือต่อปี", "นับต่อการนอนโรงพยาบาล 1 ครั้ง\n" + rowText(d,"เจ็บป่วยหรือบาดเจ็บทั่วไป") + "\n\nมะเร็ง โรคหัวใจ หรือโรคหลอดเลือดสมอง\n" + rowText(d,"มะเร็ง"));
+  }
+  if (id === "prestigehealth"){
+    add("วงเงินนับต่อครั้งหรือต่อปี", "นับรวมต่อปี\n" + rowText(d,"วงเงินสูงสุดต่อปี"));
+    add("เบิกได้กี่ครั้งต่อปี", "ไม่จำกัดจำนวนครั้ง รวมกันทั้งปีต้องไม่เกินวงเงินต่อปีของแผน");
+  }
+  if (id === "valuehealth"){
+    add("วงเงินนับต่อครั้งหรือต่อปี", "แต่ละหมวดมีวงเงินของตัวเอง ส่วนใหญ่นับต่อการนอนโรงพยาบาล 1 ครั้ง และไม่กำหนดวงเงินรวมต่อปี");
+    add("เบิกได้กี่ครั้งต่อปี", "ไม่จำกัดจำนวนครั้ง แต่ละครั้งเบิกได้ตามวงเงินของแต่ละหมวด");
+  }
+  if (["happyhealth","hhpremier","prestigehealth","valuehealth"].includes(id)){
+    add("ค่าห้องได้วันละเท่าไร นอนได้กี่วัน", "ห้องปกติ\n" + rowText(d,"ค่าห้อง") + "\n\nห้อง ICU\n" + rowText(d,"ห้อง ICU"));
+    add("ค่าผ่าตัดเบิกได้เท่าไร", rowText(d,"ค่าผ่าตัด"));
+    add("ไม่ได้นอนโรงพยาบาล เบิกอะไรได้บ้าง", "แบบนี้คุ้มครองกรณีไม่ต้องนอนโรงพยาบาลตามรายการนี้\n" + groupRows(d,"ไม่ต้องนอนโรงพยาบาล") + (groupRows(d,"ผู้ป่วยนอก") ? "\n\nผู้ป่วยนอกและผลประโยชน์พิเศษ\n" + groupRows(d,"ผู้ป่วยนอก") : "") + "\n\nถ้าอยากได้ค่าหาหมอแบบผู้ป่วยนอกทั่วไป ซื้อโอพีดี สบายใจ แนบเพิ่มได้ตามเงื่อนไขของแผน");
+  }
+  if (["unjai","cancermax"].includes(id)){
+    add("ได้เงินเท่าไร", groupRows(d, id === "unjai" ? "คุ้มครองโรคร้ายแรง" : "ตรวจพบมะเร็ง") + (id === "cancermax" ? "\n\nระหว่างรักษา\n" + groupRows(d,"ระหว่างรักษา") : ""));
+  }
+  if (["bkk","smartkids","ps104","ps126","hs208","hs126","hs157"].includes(id)){
+    const cash = groupRows(d,"เงินคืนระหว่างสัญญา");
+    add("ระหว่างสัญญามีเงินคืนไหม", cash ? cash + ex : "ไม่มีเงินคืนระหว่างทาง รับเป็นก้อนเดียวตอนครบสัญญา");
+    add("ครบสัญญาได้เท่าไร", (rowText(d,"รวมรับ") || groupRows(d,"ครบสัญญา")) + ex);
+    add("เสียชีวิตระหว่างสัญญาได้เท่าไร", groupRows(d,"เสียชีวิตระหว่างสัญญา") || groupRows(d,"ลูกเสียชีวิต") + ex);
+  }
+  return out;
+}
+
 function productFAQ(id){
   const p = anyById(id) || {}, d = getDetail(id) || {}, g = groupOf(id) || {}, rider = RIDERS.includes(p), out = [];
   const add = (q, a) => { if (a) out.push({q, a}); };
+  detailFAQ(id).forEach(x => out.push(x));
   const fact = k => ((d.facts || []).find(f => f[0] === k) || [])[1];
   const kids = p.age && p.age[1] <= 14;
 
@@ -1954,7 +2178,7 @@ function productFAQ(id){
   }
   if (id === "ps104" || id === "ps126"){
     add("อุบัติเหตุหมายถึงอะไร", T_ACC_DEF);
-    add("เสียชีวิตจากอุบัติเหตุได้เพิ่มเท่าไร", id === "ps126" ? "ได้เพิ่มจากสัญญาเพิ่มเติมเอดีบี 300% ของทุน (รวมทุกฉบับไม่เกิน 6 ล้านบาท) ต้องเสียชีวิตภายใน 180 วันนับจากวันเกิดเหตุ" : "ได้เพิ่มตามทุนของสัญญาเพิ่มเติมเอดีบีที่ระบุในกรมธรรม์ ต้องเสียชีวิตภายใน 180 วันนับจากวันเกิดเหตุ");
+    add("เสียชีวิตจากอุบัติเหตุได้เพิ่มเท่าไร", id === "ps126" ? "ได้เพิ่มจากสัญญาเพิ่มเติมเอดีบี 300% ของทุน (รวมทุกฉบับไม่เกิน 6 ล้านบาท) ต้องเสียชีวิตภายใน 180 วันนับจากวันเกิดเหตุ" : "ได้เพิ่มจากสัญญาเพิ่มเติมเอดีบี 100% ของทุนประกัน (สูงสุดไม่เกิน 10 ล้านบาท) เช่น ทุน 100,000 บาท ได้เพิ่มอีก 100,000 บาท ต้องเสียชีวิตภายใน 180 วันนับจากวันเกิดเหตุ");
     add("ขี่มอเตอร์ไซค์แล้วเกิดอุบัติเหตุ คุ้มครองไหม", "ส่วนเอดีบี (อุบัติเหตุที่แถมมา) ไม่คุ้มครองขณะขับขี่หรือโดยสารรถจักรยานยนต์ แต่ความคุ้มครองชีวิตหลักของแบบนี้ยังจ่ายตามปกติ");
   }
   if (id === "accidentcare" || id === "pa"){
@@ -1971,7 +2195,7 @@ function productFAQ(id){
     add("เคลมยังไง", fq("เคลมยังไง"));
   }
   if (g.id === "ci"){
-    if (["unjai","cancermax","happyci"].includes(id)) add("มะเร็งระยะไม่ลุกลามกับระยะลุกลามต่างกันอย่างไร", "ระยะไม่ลุกลาม คือเซลล์มะเร็งยังอยู่เฉพาะจุดที่เกิด ยังไม่กระจายไปเนื้อเยื่อรอบข้าง ส่วนระยะลุกลามคือมะเร็งกระจายออกไปแล้ว\n\nแบบนี้จ่ายระยะไม่ลุกลาม 20% ของทุน และจ่ายเต็มทุนเมื่อเป็นระยะลุกลามหรือโรคร้ายแรงอื่น โดยหักส่วนที่จ่ายไปแล้ว นิยามโรคเป็นไปตามกรมธรรม์");
+    if (["unjai","cancermax","happyci"].includes(id)) add("มะเร็งระยะไม่ลุกลามกับระยะลุกลามต่างกันอย่างไร", `ระยะไม่ลุกลาม คือเซลล์มะเร็งยังอยู่เฉพาะจุดที่เกิด ยังไม่กระจายไปเนื้อเยื่อรอบข้าง ส่วนระยะลุกลามคือมะเร็งกระจายออกไปแล้ว\n\nแบบนี้จ่ายระยะไม่ลุกลาม 20% ของทุน และจ่ายเต็มทุนเมื่อเป็นระยะลุกลาม${id === "cancermax" ? "" : "หรือโรคร้ายแรงอื่น"} โดยหักส่วนที่จ่ายไปแล้ว นิยามโรคเป็นไปตามกรมธรรม์`);
     if (id === "unjai" || id === "happyci") add("เคลมแล้วความคุ้มครองที่เหลือเป็นอย่างไร", "ถ้าเคลมมะเร็งระยะไม่ลุกลาม 20% ทุนที่เหลือยังคุ้มครองโรคร้ายแรงอื่นต่อ เมื่อจ่ายครบทุนแล้ว ความคุ้มครองโรคร้ายแรงจะสิ้นสุด" + (id === "unjai" ? " ส่วนประกันชีวิต 50,000 บาทยังอยู่" : ""));
     if (id === "cancermax") add("เคลมแล้วความคุ้มครองที่เหลือเป็นอย่างไร", "ระยะไม่ลุกลามจ่าย 20% ต่อชนิดมะเร็ง ถ้าต่อมาลุกลามรับส่วนที่เหลือ ระหว่างรักษายังได้เงินชดเชยรายวัน และถ้าเสียชีวิตจากมะเร็ง ครอบครัวได้เงินจากเอ็นดิ้ง แคนเซอร์ เพิ่มจากประกันชีวิต");
     add("ทำแล้วเคลมได้ทันทีไหม", DETAILS[id] ? "มีระยะเวลารอคอย 90 วัน ถ้าตรวจพบโรคภายใน 90 วันแรกหลังเริ่มคุ้มครอง จะยังเคลมไม่ได้" : fq("ระยะเวลารอคอยคืออะไร"));
@@ -2020,7 +2244,8 @@ function productFAQ(id){
 
 function detailHTML(id){
   const d = getDetail(id), n = d.plans.length;
-  const head = `<tr><th class="corner" scope="col">ความคุ้มครอง</th>${d.plans.map(p => `<th scope="col"><span class="pl"><b>${esc(p.t)}</b>${p.s ? `<small>${esc(p.s)}</small>` : ""}</span></th>`).join("")}</tr>`;
+  const linkTl = TLV[id] && TLV[id].length === n;
+  const head = `<tr><th class="corner" scope="col">ความคุ้มครอง</th>${d.plans.map((p,i) => `<th scope="col">${linkTl ? `<button type="button" class="pl plb" data-pltl="${i}" title="ดูไทม์ไลน์แบบนี้">` : `<span class="pl">`}<b>${esc(p.t)}</b>${p.s ? `<small>${esc(p.s)}</small>` : ""}${linkTl ? `<small>ดูไทม์ไลน์</small></button>` : `</span>`}</th>`).join("")}</tr>`;
   const body = d.rows.map(r => r.length === 1
     ? `<tr class="grp"><th colspan="${n+1}" scope="colgroup"><span>${esc(r[0])}</span></th></tr>`
     : `<tr><th scope="row">${esc(r[0])}${r[2] ? `<small>${esc(r[2])}</small>` : ""}</th>${(Array.isArray(r[1]) ? r[1] : Array(n).fill(r[1])).map(v => `<td>${cellHTML(v)}</td>`).join("")}</tr>`).join("");
@@ -2033,10 +2258,10 @@ function detailHTML(id){
   const qfacts = `<div class="qfacts">${qf("age","อายุรับประกัน", p0.age ? `${p0.age[0]}–${p0.age[1]} ปี` : "ตามแบบ")}${qf("cover", p0.cover ? "คุ้มครอง" : "รูปแบบ", p0.cover || "แนบกับประกันชีวิต")}${qf("opt", n ? "ทางเลือก" : (p0.minText || p0.minSA ? "ทุนเริ่มต้น" : "ทางเลือก"), n ? (d.noPlanBtn ? "1 แบบ" : `${n} แผน`) : (p0.minText ? p0.minText : p0.minSA ? fmt(p0.minSA)+" บาท" : "ตามแผน"))}</div>`;
   const crumb = `<nav class="crumb" aria-label="ตำแหน่งหน้า"><a href="#top" data-home>หน้าแรก</a> › ${grp ? `<a href="#groups" data-grp="${grp.id}">${esc(grp.t)}</a> › ` : ""}${esc(d.name)}</nav>`;
   const sibIds = grp ? grp.ids.filter(x => x !== id) : [];
-  const sibs = sibIds.map(anyById).filter(Boolean).map(p => `<a href="#d-${p.id}"><b>${esc(p.name)}</b><span>${esc((p.pts||[""])[0])}</span></a>`).join("");
+  const sibs = sibIds.map(anyById).filter(p => p && (userAge == null || inAge(p, userAge))).map(p => `<a href="#d-${p.id}"><b>${esc(p.name)}</b><span>${esc((p.pts||[""])[0])}</span></a>`).join("");
   const url = SITE_URL + "#d-" + id;
   const share = `<div class="share"><a target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}">แชร์ทาง LINE</a><a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}">แชร์ทาง Facebook</a></div>`;
-  const pairs = (d.pairs || []).map(x => x.id && anyById(x.id)
+  const pairs = (d.pairs || []).filter(x => !x.id || !anyById(x.id) || userAge == null || inAge(anyById(x.id), userAge)).map(x => x.id && anyById(x.id)
     ? `<a href="#d-${x.id}"><b>${esc(x.t)}</b><span>${esc(x.d)}</span></a>`
     : `<div><b>${esc(x.t)}</b><span>${esc(x.d)}</span></div>`).join("");
   return `<div class="dbar"><div class="wrap"><button type="button" data-dclose>กลับ</button><span>${esc(d.name)}</span></div></div>
@@ -2044,19 +2269,22 @@ function detailHTML(id){
     ${crumb}
     <div class="dhead"><span class="dtag">${esc(d.type)}</span><h1 id="dTitle" tabindex="-1">${esc(d.name)}</h1><p>${esc(d.lead)}</p></div>
     ${qfacts}
+    ${userAge != null && p0.age && !inAge(p0, userAge) ? `<p class="agewarn">แบบนี้รับอายุ ${p0.age[0]}–${p0.age[1]} ปี ส่วนอายุที่ใส่ไว้คือ ${userAge} ปี ถ้าดูแทนคนอื่น เช่น ลูกหรือพ่อแม่ ดูต่อได้เลยค่ะ</p>` : ""}
     ${d.auto ? box("จุดเด่น", `<ul>${d.highlights.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`) : box("เหมาะกับใคร", `<ul>${d.fit.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`)}
     ${box("ข้อมูลสำคัญ", `<dl class="kv">${d.facts.map(f => `<div><dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd></div>`).join("")}</dl>`)}
     ${!n ? "" : box(d.tableTitle || `เปรียบเทียบ ${n} แผน`, `${n > 2 ? `<p class="swipe">เลื่อนตารางไปทางซ้าย-ขวาเพื่อดูครบทุกแผน</p>` : ""}<div class="cmp-wrap" tabindex="0" role="region" aria-label="ตารางเปรียบเทียบแผน"><table class="cmp${n <= 2 ? " cmp2" : ""}"><thead>${head}</thead><tbody>${body}</tbody>${d.noPlanBtn ? "" : `<tfoot>${foot}</tfoot>`}</table></div><p class="note">${esc(d.tableNote)}${JSON.stringify(d.rows).includes('"?"') ? " ช่องที่เขียนว่า “สอบถามป้าเป็ด” ทักถามได้เลย ป้าเป็ดตอบตามกรมธรรม์ให้ค่ะ" : ""}</p>`)}
-    ${TL[id] ? (d.auto ? box : fold)("ไทม์ไลน์ จ่ายเบี้ยและรับเงิน", `<p class="note">ตัวอย่างเมื่อเริ่มทำตอนอายุ ${tlAge} ปี</p>${timelineHTML(anyById(id), tlAge)}`) : ""}
+    ${TL[id] ? `<section class="dbox" id="dTlBox" aria-label="ผลประโยชน์"><h2>${BC[id] ? "ผลประโยชน์และความคุ้มครอง" : "ไทม์ไลน์ จ่ายเบี้ยและรับเงิน"}</h2>${tlBoxHTML(id, DEFV[id] || 0, startAge(id, DEFV[id] || 0))}</section>` : ""}
     ${d.extra.map(e => fold(e[0], e[1])).join("")}
     ${d.wait === false ? "" : fold("ระยะเวลารอคอย", d.wait || H_WAIT)}
     ${d.copay === false ? "" : fold("Copayment คืออะไร", H_COPAY)}
     ${d.excl === false ? "" : fold("ข้อยกเว้นหลัก", d.excl || H_EXCL)}
-    ${(() => { const fs = productFAQ(id); return fs.length ? fold("คำถามที่พบบ่อยของแบบนี้", fs.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`).join("")) : ""; })()}
+    ${(() => { const fs = productFAQ(id), qa = f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`;
+      const shown = new Set(fs.map(f => f.a)), others = FAQ.filter(f => !shown.has(f.a));
+      return (fs.length ? fold("คำถามเกี่ยวกับแบบนี้", fs.map(qa).join("")) : "") + (others.length ? fold("คำถามอื่น ๆ", others.map(qa).join("")) : ""); })()}
     ${box("ซื้อคู่กับอะไรได้", `<p>${esc(d.pairIntro || "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้ และเสริมความคุ้มครองได้ด้วย")}</p>${pairs ? `<div class="pair">${pairs}</div>` : ""}`)}
     <section class="dbox dcta"><h2>อยากรู้เบี้ยของคุณ</h2><p>เบี้ยขึ้นกับอายุ เพศ อาชีพ แผน และค่าใช้จ่ายส่วนแรกที่เลือก ป้าเป็ดทำใบเสนอราคาให้ฟรี ไม่มีข้อผูกมัด</p>
       <div class="cta-row tight"><a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn" data-dask>ถามป้าเป็ด</button></div>${share}</section>
-    ${sibs ? box(`${grp.t} แบบอื่น ๆ`, `<div class="sibs">${sibs}</div>`) : ""}
+    ${sibs ? box(`${grp.t} แบบอื่น ๆ${userAge != null ? ` (อายุ ${userAge} ปี)` : ""}`, `<div class="sibs">${sibs}</div>`) : ""}
     ${fold("หมายเหตุสำคัญ", `<div class="legal"><ul><li>หน้านี้สรุปผลประโยชน์เบื้องต้นจากคู่มือของบริษัท ความคุ้มครอง เงื่อนไข และข้อยกเว้นที่สมบูรณ์เป็นไปตามกรมธรรม์</li><li>การแถลงสุขภาพตามจริงมีผลต่อการพิจารณารับประกันและการจ่ายผลประโยชน์</li><li>การชำระเบี้ยเป็นหน้าที่ของผู้เอาประกัน การที่ตัวแทนรับเบี้ยเป็นเพียงการให้บริการ</li><li>เพื่อประโยชน์สูงสุด ควรชำระเบี้ยให้ครบระยะเวลา และถือกรมธรรม์จนครบสัญญา</li><li>เบี้ยประกันใช้ลดหย่อนภาษีได้ตามหลักเกณฑ์ของกรมสรรพากร</li></ul></div>`)}
     <p class="dsrc">สรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้น รายละเอียดความคุ้มครองและเงื่อนไขเป็นไปตามกรมธรรม์</p>
   </div>`;
@@ -2074,6 +2302,8 @@ function openDetail(id){
   el.querySelector("[data-dclose]").onclick = closeDetail;
   el.querySelector("[data-dask]").onclick = () => { openChat(); ask(d.name); };
   el.querySelectorAll("[data-plan]").forEach(a => a.addEventListener("click", () => track("plan_interest", {product:id, plan:a.dataset.plan})));
+  bindTl(id);
+  el.querySelectorAll("[data-pltl]").forEach(b => b.onclick = () => { const box = $("#dTlBox"); if (!box) return; const sel = box.querySelector(`[data-tlv="${b.dataset.pltl}"]`); if (sel) sel.click(); $("#dTlBox").scrollIntoView({behavior:"smooth", block:"start"}); });
   const gl = el.querySelector("[data-grp]"); if (gl) gl.onclick = e => { e.preventDefault(); hideDetail(); history.replaceState(null, "", "#groups"); openGroup(gl.dataset.grp); };
   el.querySelector("[data-home]").onclick = e => { e.preventDefault(); hideDetail(); history.replaceState(null, "", "#top"); window.scrollTo(0, 0); };
   el.querySelectorAll("[data-card]").forEach(a => a.onclick = e => { e.preventDefault(); hideDetail(); history.replaceState(null, "", "#p-"+a.dataset.card); focusCard(a.dataset.card); });
@@ -2148,6 +2378,14 @@ const GROUPS = [
    feat:["accidentcare","pa"], ids:["accidentcare","pa"]},
 ];
 const groupOf = id => GROUPS.find(g => g.ids.includes(id));
+let userAge = null;
+try { const a = parseInt(localStorage.getItem("pp_age"), 10); if (a >= 0 && a <= 99) userAge = a; } catch(e){}
+function setUserAge(a){
+  userAge = Number.isFinite(a) ? a : null;
+  try { if (userAge == null) localStorage.removeItem("pp_age"); else localStorage.setItem("pp_age", String(userAge)); } catch(e){}
+  const f = $("#fAge"); if (f) f.value = userAge == null ? "" : userAge;
+}
+const isKid = p => p.age && p.age[1] <= 14;
 const anyById = id => byId(id) || RIDERS.find(r => r.id === id);
 const icoSVG = w => `<svg viewBox="0 0 24 24" aria-hidden="true">${w.icon}</svg>`;
 function renderWorries(){
@@ -2159,24 +2397,29 @@ function wcardHTML(p, g, feat){
   const age = p.age ? `รับอายุ ${p.age[0]}–${p.age[1]} ปี` : "";
   const meta = [age, p.cover ? `คุ้มครอง${p.cover.startsWith("ถึง") ? "" : " "}${p.cover}` : ""].filter(Boolean).join(" · ");
   const more = `<a class="btn small" href="#d-${p.id}">ดูรายละเอียด</a>`;
-  return `<article class="wcard"><div class="tgs">${feat ? `<span class="tg feat">ป้าเป็ดแนะนำ</span>` : ""}<span class="tg">${rider ? "สัญญาเพิ่มเติม" : "แบบประกันหลัก"}</span></div><h3>${esc(p.name)}</h3><p>${esc((p.pts||[""])[0])}</p>${meta ? `<div class="meta">${esc(meta)}</div>` : ""}<div class="cta-row tight">${more}<a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจเรื่อง${g.t} แบบ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a></div></article>`;
+  return `<article class="wcard"><div class="tgs">${feat ? `<span class="tg feat">ป้าเป็ดแนะนำ</span>` : ""}${isKid(p) ? `<span class="tg kid">สำหรับเด็ก</span>` : ""}<span class="tg">${rider ? "สัญญาเพิ่มเติม" : "แบบประกันหลัก"}</span></div><h3>${esc(p.name)}</h3><p>${esc((p.pts||[""])[0])}</p>${meta ? `<div class="meta">${esc(meta)}</div>` : ""}<div class="cta-row tight">${more}<a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจเรื่อง${g.t} แบบ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a></div></article>`;
 }
 function openGroup(id, age){
   const g = GROUPS.find(x => x.id === id), el = $("#wpanel");
   if (!g) return;
   $("#wgrid").querySelectorAll(".wtile").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.w === id)));
+  if (age === undefined) age = userAge;
   const order = [...g.feat, ...g.ids.filter(x => !g.feat.includes(x))];
   let items = order.map(anyById).filter(Boolean);
+  items = [...items.filter(p => !isKid(p)), ...items.filter(isKid)];
   const total = items.length, hasAge = Number.isFinite(age);
   if (hasAge) items = items.filter(p => inAge(p, age));
-  const note = hasAge ? `<div class="agenote"><span>แสดงแบบที่รับอายุ ${age} ปี ได้ ${items.length} จาก ${total} แบบ</span>${items.length < total ? `<button type="button" data-allg>ดูทั้งหมดในกลุ่ม</button>` : ""}</div>` : "";
+  const note = hasAge
+    ? `<div class="agenote"><span>แสดงแบบที่สมัครได้ตอนอายุ <b>${age} ปี</b> (${items.length} จาก ${total} แบบ)</span><button type="button" data-chage>เปลี่ยนอายุ</button>${items.length < total ? `<button type="button" data-allg>ดูทุกช่วงอายุ</button>` : ""}</div>`
+    : `<div class="agenote"><span>แสดงทุกแบบในกลุ่ม ใส่อายุเพื่อดูเฉพาะแบบที่สมัครได้</span><button type="button" data-chage>ใส่อายุ</button></div>`;
   el.innerHTML = `<div class="whead"><span class="wic">${icoSVG(g)}</span><h3>${esc(g.t)}</h3><span class="cnt">${items.length} แบบ</span></div>
   <div class="wbody"><p>${esc(g.story)}</p>${note}
   ${items.length ? `<div class="wcards">${items.map(p => wcardHTML(p, g, g.feat.includes(p.id))).join("")}</div>` : `<p>ยังไม่มีแบบในกลุ่มนี้ที่รับอายุ ${age} ปี ทักป้าเป็ดได้เลย ป้าเป็ดช่วยหาทางเลือกอื่นให้ค่ะ</p>`}
   <div class="wmore"><span>อยากได้คำแนะนำที่ตรงกับตัวคุณที่สุด</span><a class="btn main small" href="#finder">ให้ป้าเป็ดช่วยเลือก</a><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจเรื่อง${g.t}${hasAge ? ` อายุ ${age} ปี` : ""} อยากปรึกษาค่ะ`)}">ปรึกษาป้าเป็ดฟรี</a></div></div>`;
   el.hidden = false;
   el.querySelectorAll("[data-card]").forEach(b => b.onclick = () => focusCard(b.dataset.card));
-  const all = el.querySelector("[data-allg]"); if (all) all.onclick = () => openGroup(id);
+  const all = el.querySelector("[data-allg]"); if (all) all.onclick = () => openGroup(id, null);
+  el.querySelector("[data-chage]").onclick = () => { window.scrollTo({top:0, behavior:"smooth"}); setTimeout(() => $("#fAge").focus(), 350); $("#fGroup").value = id; };
   el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
   track("group_open", {group:id, age: hasAge ? age : null});
 }
@@ -2188,6 +2431,7 @@ function initV3(){
   $("#menuBtn").onclick = openDrawer;
   $("#drawer").querySelectorAll("[data-xdrawer]").forEach(b => b.onclick = closeDrawer);
   $("#drawer").querySelectorAll("a").forEach(a => a.addEventListener("click", () => { closeDrawer(); if (a.dataset.g) setTimeout(() => openGroup(a.dataset.g), 40); }));
+  if (userAge != null) $("#fAge").value = userAge;
   $("#fGroup").innerHTML = `<option value="">โปรดระบุ</option>` + GROUPS.map(g => `<option value="${g.id}">${esc(g.t)}</option>`).join("");
   $("#fGo").onclick = () => {
     const gid = $("#fGroup").value, raw = $("#fAge").value.trim(), age = raw === "" ? NaN : Math.max(0, Math.min(99, parseInt(raw,10)));
@@ -2195,7 +2439,8 @@ function initV3(){
     if (!gid){ msg.textContent = "กรุณาเลือกเรื่องที่สนใจก่อนนะคะ"; msg.classList.add("warn"); $("#fGroup").focus(); return; }
     msg.textContent = "ทำให้ลูก ใส่อายุของลูก · ถ้าเกินวันเกิด 6 เดือน นับเป็น 1 ปี"; msg.classList.remove("warn");
     if (Number.isFinite(age)) ans.age = age;
-    openGroup(gid, Number.isFinite(age) ? age : undefined);
+    setUserAge(Number.isFinite(age) ? age : null);
+    openGroup(gid, Number.isFinite(age) ? age : null);
   };
 }
 function showCatalog(){
