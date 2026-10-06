@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 3.0 | อัปเดต 6 ต.ค. 2569 -->
+<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 3.1 | อัปเดต 6 ต.ค. 2569 -->
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<meta name="version" content="3.0">
+<meta name="version" content="3.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ป้าเป็ด CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ | ช่วยเลือกแบบประกันที่ใช่</title>
 <meta name="description" content="ป้าเป็ด (ศศธร รุจิเรกานุสรณ์) นักวางแผนการเงิน CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ ช่วยเลือกแบบประกันชีวิต ประกันสุขภาพ ออมเงิน ลดหย่อนภาษี และวางแผนเกษียณ ตอบ 5 ข้อรู้ผลทันที ปรึกษาฟรีทาง LINE @422cilco">
@@ -498,7 +498,7 @@ html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
     </div>
   </section>
 
-  <section id="plans">
+  <section id="plans" hidden style="display:none">
     <div class="wrap">
       <div class="secHead rv"><h2>แบบประกันทั้งหมด</h2><p>อยากดูครบทุกแบบ แตะชื่อแบบเพื่อดูรายละเอียดและไทม์ไลน์ได้</p></div>
       <button type="button" class="btn allBtn" id="showAll" data-show-all>ดูแบบประกันทั้งหมด</button>
@@ -534,7 +534,7 @@ html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
     <p>ข้อมูลแบบประกันสรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้นเท่านั้น ไทม์ไลน์เป็นตัวอย่างประกอบความเข้าใจ เงินปันผลไม่รับประกันผล รายละเอียดความคุ้มครองเป็นไปตามกรมธรรม์</p>
     <p><b>ผู้ซื้อควรทำความเข้าใจรายละเอียดความคุ้มครองและเงื่อนไขก่อนตัดสินใจทำประกันภัยทุกครั้ง</b></p>
     <p id="licenseLine"></p>
-    <p class="ver">เวอร์ชัน 3.0 · อัปเดต 6 ต.ค. 2569</p>
+    <p class="ver">เวอร์ชัน 3.1 · อัปเดต 6 ต.ค. 2569</p>
   </div>
 </footer>
 
@@ -553,7 +553,6 @@ html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
     <div id="dGroups"></div>
     <p class="plabel">อื่น ๆ</p>
     <a class="item" href="#finder">ให้ป้าเป็ดช่วยเลือก (ตอบ 5 ข้อ)</a>
-    <a class="item" href="#plans" data-show-all>แบบประกันทั้งหมด</a>
     <a class="item" href="#faq">คำถามที่พบบ่อย</a>
     <a class="item" href="#contact">ติดต่อป้าเป็ด</a>
     <p class="plabel">ขนาดตัวอักษร</p>
@@ -688,8 +687,6 @@ const FAQ = [
   a:"ยื่นขอได้ค่ะ บริษัทจะพิจารณาเป็นราย ๆ ผลอาจเป็นรับปกติ รับโดยเพิ่มเบี้ย หรือรับแต่ยกเว้นบางโรค\n\nสำคัญที่สุดคือแถลงสุขภาพตามจริงทุกข้อ เพราะถ้าปกปิด บริษัทมีสิทธิ์บอกล้างสัญญาได้ในช่วง 2 ปีแรก\n\nบางแบบออมทรัพย์ เช่น เพรสทีจ เซฟวิ่ง 10/4 ไม่มีเบี้ยเพิ่มเพราะสุขภาพ และโครงการอุ่นใจ โรคร้าย ไม่ต้องตรวจสุขภาพ บอกป้าเป็ดได้เลยว่าเป็นอะไรอยู่ จะช่วยหาแบบที่มีโอกาสผ่านให้"},
  {q:"ต้องไปตรวจสุขภาพไหม",k:["ตรวจสุขภาพ","ตรวจเลือด","ต้องตรวจ"],
   a:"ขึ้นกับอายุและทุนประกันรวมทุกฉบับ ถ้าทุนไม่สูง ส่วนใหญ่แค่ตอบคำถามสุขภาพในใบคำขอ ถ้าถึงเกณฑ์ต้องตรวจ บริษัทจะนัดและออกค่าตรวจตามหลักเกณฑ์ของบริษัท\n\nโครงการอุ่นใจ โรคร้าย ไม่ต้องตรวจสุขภาพค่ะ"},
- {q:"ทำแล้วเปลี่ยนใจ ยกเลิกได้ไหม",k:["ยกเลิก","เปลี่ยนใจ","ฟรีลุค","free look","คืนกรมธรรม์"],
-  a:"ได้ค่ะ ภายใน 15 วันนับจากวันที่ได้รับกรมธรรม์ ส่งคืนได้ด้วยเหตุผลใดก็ได้ บริษัทคืนเบี้ยให้ โดยหักค่าตรวจสุขภาพที่จ่ายจริง (ถ้ามี) และค่าใช้จ่ายฉบับละ 500 บาท\n\nถ้าเคยเคลมไปแล้ว จะใช้สิทธิ์ยกเลิกแบบนี้ไม่ได้ค่ะ"},
  {q:"ถ้าจ่ายเบี้ยไม่ทันจะเป็นยังไง",k:["จ่ายไม่ทัน","ขาดส่ง","ผิดนัด","เลยกำหนด","ผ่อนผัน","หยุดจ่าย","ไม่มีเงินจ่าย"],
   a:"มีระยะผ่อนผัน 60 วันหลังวันครบกำหนด ระหว่างนี้กรมธรรม์ยังคุ้มครองอยู่\n\nถ้าเลย 60 วันและกรมธรรม์มีมูลค่าเวนคืนพอ บริษัทจะกู้มาจ่ายเบี้ยให้อัตโนมัติ (คิดดอกเบี้ย) หรือเปลี่ยนเป็นกรมธรรม์ใช้เงินสำเร็จ / ขยายเวลา เพื่อให้ยังมีความคุ้มครองบางส่วน\n\nถ้ารู้ตัวว่าจะจ่ายไม่ไหว ทักป้าเป็ดก่อนนะคะ มีหลายทางช่วยได้ เช่น ลดทุน หรือเปลี่ยนงวดชำระ"},
  {q:"ผ่อนรายเดือนได้ไหม",k:["รายเดือน","ผ่อน","งวด","บัตรเครดิต","ตัดบัญชี"],
@@ -963,11 +960,11 @@ function renderResult(){
   recs.forEach((r, i) => {
     const p = r.p;
     html += `<div class="pick ${i===0?"first":""}"><span class="rank">${i===0?"เหมาะที่สุด":"ตัวเลือกที่ "+(i+1)}</span><h4>${esc(p.name)}</h4><ul>${p.pts.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>${timelineHTML(p, ans.age)}
-      <div class="cta-row tight"><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด ขอใบเสนอราคาแบบ ${p.name} (อายุ ${ans.age} ปี) ค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn small" data-goto="${p.id}">ดูรายละเอียด</button></div></div>`;
+      <div class="cta-row tight"><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด ขอใบเสนอราคาแบบ ${p.name} (อายุ ${ans.age} ปี) ค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn small" data-goto="${p.id}">ดูรายละเอียด</button>${groupOf(p.id) ? `<button type="button" class="btn small" data-gopen="${groupOf(p.id).id}">ดูแบบที่คล้ายกัน</button>` : ""}</div></div>`;
     sum.push(`${i+1}. ${p.name}`);
   });
   if (adds.length){
-    html += `<div class="addons"><b>แนะนำให้แนบเพิ่ม</b><ul>${adds.map(a=>`<li><b>${esc(a.name)}</b> ${esc(a.pts[0])}${DETAILS[a.id] ? ` <a href="#d-${a.id}">ดูรายละเอียด</a>` : ""}</li>`).join("")}</ul></div>`;
+    html += `<div class="addons"><b>แนะนำให้แนบเพิ่ม</b><ul>${adds.map(a=>`<li><b>${esc(a.name)}</b> ${esc(a.pts[0])} <a href="#d-${a.id}">ดูรายละเอียด</a></li>`).join("")}</ul></div>`;
     sum.push(`สนใจแนบ: ${adds.map(a=>a.name).join(", ")}`);
   }
   sum.push("รบกวนช่วยทำใบเสนอราคาให้หน่อยค่ะ/ครับ");
@@ -1019,13 +1016,7 @@ function bindTlAge(){
   $("#tlMinus").onclick = () => set(tlAge - 1); $("#tlPlus").onclick = () => set(tlAge + 1);
   i.onchange = () => set(parseInt(i.value,10)||0);
 }
-function openProduct(id){
-  const p = byId(id); if (!p) return;
-  if (curCat !== "all" && !(GROUPS.find(g => g.id === curCat) || {ids:[]}).ids.includes(id)){ curCat = "all"; renderCatalogue(); }
-  else fillTimelines();
-  const d = $("#p-"+id); if (!d) return;
-  d.open = true; d.scrollIntoView({behavior:"smooth", block:"start"});
-}
+function openProduct(id){ detailInternal = true; location.hash = "#d-" + id; }
 
 /* ---------- FAQ ---------- */
 function renderFAQ(){ $("#faqList").innerHTML = FAQ.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`).join(""); }
@@ -1045,7 +1036,7 @@ function renderContact(){
 
 /* ---------- chat ---------- */
 const norm = s => String(s).toLowerCase().replace(/\s+/g,"").replace(/[?？!.,]/g,"");
-const SUGG = ["ลดหย่อนภาษีได้เท่าไร","มีโรคประจำตัวทำได้ไหม","ผ่อนรายเดือนได้ไหม","Copayment คืออะไร","ทำให้ลูก","ยกเลิกได้ไหม"];
+const SUGG = ["ลดหย่อนภาษีได้เท่าไร","มีโรคประจำตัวทำได้ไหม","ผ่อนรายเดือนได้ไหม","Copayment คืออะไร","ทำให้ลูก"];
 function botSay(text, extraHTML){
   const d = document.createElement("div"); d.className = "m bot"; d.innerHTML = esc(text) + (extraHTML||"");
   $("#msgs").appendChild(d); $("#msgs").scrollTop = $("#msgs").scrollHeight;
@@ -1922,8 +1913,113 @@ function cellHTML(v){
   if (v === NA) return `<span class="na">${NA}</span>`;
   return esc(v);
 }
+
+function autoDetail(id){
+  const p = anyById(id); if (!p) return null;
+  const rider = RIDERS.includes(p), facts = [];
+  facts.push(["ประเภท", rider ? "สัญญาเพิ่มเติม ต้องแนบกับประกันชีวิตแบบหลัก" : "แบบประกันหลัก"]);
+  facts.push(["อายุที่รับ", p.ageText || (p.age ? `${p.age[0]} – ${p.age[1]} ปี` : "ตามเงื่อนไขบริษัท")]);
+  if (!rider){
+    if (p.cover) facts.push(["ระยะเวลาคุ้มครอง", p.cover]);
+    if (p.pay) facts.push(["ระยะจ่ายเบี้ย", p.pay]);
+    facts.push(["ทุนขั้นต่ำ", p.minText || (p.minSA ? fmt(p.minSA)+" บาท" : "ตามแผน")]);
+    if (p.occ12) facts.push(["อาชีพ","รับเฉพาะงานความเสี่ยงต่ำถึงปานกลาง (ชั้น 1–2)"]);
+  }
+  const g = groupOf(id);
+  return {auto:true, name:p.name, type: rider ? "สัญญาเพิ่มเติม" : `แบบประกันหลัก${g ? " · "+g.t : ""}`, lead:p.pts[0],
+    highlights:p.pts, facts, plans:[], rows:[], tableNote:"", copay:false, wait:false, excl:false, extra:[], pairs:[],
+    pairIntro: rider ? "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้" : "ซื้อสัญญาเพิ่มเติม เช่น ประกันสุขภาพ แนบได้ตามเงื่อนไขของแต่ละแบบ ป้าเป็ดช่วยดูให้ได้ค่ะ"};
+}
+const getDetail = id => DETAILS[id] || autoDetail(id);
+
+const fq = q => (FAQ.find(f => f.q === q) || {}).a || "";
+const T_ACC_DEF = "เหตุการณ์ที่เกิดขึ้นอย่างฉับพลัน จากปัจจัยภายนอกร่างกาย และเราไม่ได้ตั้งใจให้เกิด เช่น รถชน ลื่นล้ม ถูกของมีคมบาด ส่วนการเจ็บป่วยจากโรคไม่นับเป็นอุบัติเหตุ";
+const T_TPD = "บาดเจ็บหรือเจ็บป่วยจนทำกิจวัตรประจำวันด้วยตัวเองไม่ได้อย่างถาวรตั้งแต่ 3 ใน 6 อย่าง และทำงานหารายได้ไม่ได้เลย ต่อเนื่องกันอย่างน้อย 180 วัน\n\nรวมถึงกรณีสูญเสียอวัยวะ เช่น ตาบอดสนิททั้ง 2 ข้าง สูญเสียมือหรือเท้า 2 ข้าง หรือสูญเสียมือ 1 ข้างกับเท้า 1 ข้าง\n\nนิยามที่ใช้จริงเป็นไปตามกรมธรรม์ของแต่ละสัญญา";
+const T_ADL = "1. ลุกจากเตียงไปเก้าอี้ได้เอง\n2. เดินหรือเคลื่อนที่จากห้องหนึ่งไปอีกห้องได้เอง\n3. สวมหรือถอดเสื้อผ้าได้เอง\n4. อาบน้ำได้เอง\n5. กินอาหารได้เอง\n6. เข้าห้องน้ำขับถ่ายได้เอง\n\nทำได้เองหมายถึงไม่ต้องให้คนอื่นช่วยและไม่ต้องใช้อุปกรณ์ช่วย";
+function productFAQ(id){
+  const p = anyById(id) || {}, d = getDetail(id) || {}, g = groupOf(id) || {}, rider = RIDERS.includes(p), out = [];
+  const add = (q, a) => { if (a) out.push({q, a}); };
+  const fact = k => ((d.facts || []).find(f => f[0] === k) || [])[1];
+  const kids = p.age && p.age[1] <= 14;
+
+  if (id === "bkk" || id === "smartkids"){
+    add("อุบัติเหตุหมายถึงอะไร", T_ACC_DEF);
+    add("ค่ารักษาจากอุบัติเหตุเบิกได้เท่าไร", "จ่ายตามจริง ไม่เกิน 5 เท่าของเบี้ยประกันรายเดือน ต่อการรักษา 1 ครั้ง สำหรับค่ารักษาภายใน 52 สัปดาห์นับจากวันเกิดเหตุ\n\nตัวอย่าง เบี้ยเดือนละ 615 บาท เบิกค่ารักษาได้สูงสุดครั้งละ 3,075 บาท");
+    add("เสียชีวิตหรือสูญเสียอวัยวะจากอุบัติเหตุได้เท่าไร", "• เสียชีวิตจากอุบัติเหตุ ได้เพิ่มอีก 100% ของทุน\n• สูญเสียมือ เท้า หรือสายตา 2 ส่วน ได้ 100% ของทุน\n• สูญเสียมือ เท้า หรือสายตา 1 ส่วน ได้ 60% ของทุน\n• สูญเสียนิ้วหัวแม่มือและนิ้วชี้ข้างเดียวกัน ได้ 25% ของทุน\n\nต้องเกิดภายใน 180 วันนับจากวันเกิดเหตุ และรวมกันไม่เกิน 100% ของทุน");
+    add("อุบัติเหตุแบบไหนที่ไม่คุ้มครอง", "• ขณะเมาสุรา (แอลกอฮอล์ในเลือดตั้งแต่ 150 มก.%) หรือใช้สารเสพติดจนขาดสติ\n• ทำร้ายตัวเอง หรือพยายามฆ่าตัวตาย\n• ถูกฆ่าหรือถูกทำร้ายร่างกายโดยเจตนา\n• ปวดหลังจากหมอนรองกระดูกหรือกระดูกสันหลังเสื่อม เว้นแต่กระดูกหักหรือเคลื่อนจากอุบัติเหตุ\n• สงคราม จลาจล การก่อการร้าย\n\nข้อยกเว้นทั้งหมดเป็นไปตามกรมธรรม์");
+  }
+  if (id === "smartkids"){
+    add("ถ้าพ่อแม่ผู้จ่ายเบี้ยเสียชีวิตหรือทุพพลภาพ ลูกได้อะไร", "ลูกได้รับ 50% ของทุนจากเพเยอร์ โพรเทค (แถมฟรีเมื่อซื้อ คช.) และ คช. ช่วยให้ไม่ต้องจ่ายเบี้ยที่เหลือ กรมธรรม์ของลูกยังคุ้มครองต่อจนครบสัญญา");
+    add("ซีไอ คิดส์ คุ้มครองโรคอะไร", "โรคร้ายแรงเด็ก 4 โรค คือ ไข้รูห์มาติกที่ทำให้หัวใจผิดปกติ, โรคคาวาซากิที่มีภาวะแทรกซ้อนทางหัวใจ, โรคเบาหวาน และภาวะน้ำในโพรงสมองที่ต้องใส่ท่อระบาย ได้รับ 50% ของทุน มีระยะรอคอย 90 วัน");
+  }
+  if (id === "ps104" || id === "ps126"){
+    add("อุบัติเหตุหมายถึงอะไร", T_ACC_DEF);
+    add("เสียชีวิตจากอุบัติเหตุได้เพิ่มเท่าไร", id === "ps126" ? "ได้เพิ่มจากสัญญาเพิ่มเติมเอดีบี 300% ของทุน (รวมทุกฉบับไม่เกิน 6 ล้านบาท) ต้องเสียชีวิตภายใน 180 วันนับจากวันเกิดเหตุ" : "ได้เพิ่มตามทุนของสัญญาเพิ่มเติมเอดีบีที่ระบุในกรมธรรม์ ต้องเสียชีวิตภายใน 180 วันนับจากวันเกิดเหตุ");
+    add("ขี่มอเตอร์ไซค์แล้วเกิดอุบัติเหตุ คุ้มครองไหม", "ส่วนเอดีบี (อุบัติเหตุที่แถมมา) ไม่คุ้มครองขณะขับขี่หรือโดยสารรถจักรยานยนต์ แต่ความคุ้มครองชีวิตหลักของแบบนี้ยังจ่ายตามปกติ");
+  }
+  if (id === "accidentcare" || id === "pa"){
+    add("อุบัติเหตุหมายถึงอะไร", T_ACC_DEF);
+    add("มีข้อยกเว้นอะไรบ้าง", "ข้อยกเว้นหลักของประกันอุบัติเหตุ เช่น เมาสุราหรือใช้สารเสพติดจนขาดสติ ทำร้ายตัวเอง และสงครามหรือการก่อการร้าย รายละเอียดต่างกันตามแผน ป้าเป็ดส่งรายละเอียดของแผนที่สนใจให้ได้ค่ะ");
+  }
+  if (g.id === "health"){
+    add("นอนโรงพยาบาล (ผู้ป่วยใน) กับผู้ป่วยนอกต่างกันอย่างไร", "ผู้ป่วยใน คือแพทย์ให้นอนโรงพยาบาลเพื่อรักษาต่อเนื่องไม่น้อยกว่า 6 ชั่วโมง ประกันสุขภาพส่วนใหญ่จ่ายกรณีนี้เป็นหลัก ส่วนผู้ป่วยนอกคือไปหาหมอแล้วกลับบ้าน ถ้าอยากได้ความคุ้มครองส่วนนี้ ซื้อโอพีดี สบายใจ แนบเพิ่มได้");
+    const ded = fact("ค่าใช้จ่ายส่วนแรก"); if (ded) add("ค่าใช้จ่ายส่วนแรกของแบบนี้เป็นอย่างไร", ded);
+    add("โรคที่เป็นมาก่อนทำประกัน คุ้มครองไหม", DETAILS[id] ? "ไม่คุ้มครอง เว้นแต่แถลงไว้และบริษัทรับโดยไม่ยกเว้น หรือไม่มีอาการและไม่ได้พบแพทย์เลยใน 5 ปีก่อนทำประกัน และ 3 ปีแรกหลังทำประกัน" : "โดยทั่วไปไม่คุ้มครองโรคที่เป็นมาก่อน เว้นแต่แถลงไว้และบริษัทรับโดยไม่ยกเว้น เงื่อนไขละเอียดเป็นไปตามกรมธรรม์ ควรแถลงสุขภาพตามจริงทุกข้อ");
+    add("ทำแล้วเคลมได้ทันทีไหม", fact("ระยะเวลารอคอย") ? `อุบัติเหตุคุ้มครองตั้งแต่วันแรก ส่วนการเจ็บป่วยมีระยะเวลารอคอย ${fact("ระยะเวลารอคอย")}` : fq("ระยะเวลารอคอยคืออะไร"));
+    if (DETAILS[id] && DETAILS[id].copay !== false) add("Copayment (ร่วมจ่าย) คืออะไร", fq("Copayment (ร่วมจ่าย) คืออะไร"));
+    const renew = fact("ต่ออายุได้ถึง"); if (renew) add("ต่ออายุทุกปีไหม เบี้ยขึ้นไหม", `เป็นสัญญาปีต่อปี ${renew}\n\nเบี้ย${fact("เบี้ยประกัน") || "ปรับตามอายุ"}`);
+    add("เคลมยังไง", fq("เคลมยังไง"));
+  }
+  if (g.id === "ci"){
+    if (["unjai","cancermax","happyci"].includes(id)) add("มะเร็งระยะไม่ลุกลามกับระยะลุกลามต่างกันอย่างไร", "ระยะไม่ลุกลาม คือเซลล์มะเร็งยังอยู่เฉพาะจุดที่เกิด ยังไม่กระจายไปเนื้อเยื่อรอบข้าง ส่วนระยะลุกลามคือมะเร็งกระจายออกไปแล้ว\n\nแบบนี้จ่ายระยะไม่ลุกลาม 20% ของทุน และจ่ายเต็มทุนเมื่อเป็นระยะลุกลามหรือโรคร้ายแรงอื่น โดยหักส่วนที่จ่ายไปแล้ว นิยามโรคเป็นไปตามกรมธรรม์");
+    if (id === "unjai" || id === "happyci") add("เคลมแล้วความคุ้มครองที่เหลือเป็นอย่างไร", "ถ้าเคลมมะเร็งระยะไม่ลุกลาม 20% ทุนที่เหลือยังคุ้มครองโรคร้ายแรงอื่นต่อ เมื่อจ่ายครบทุนแล้ว ความคุ้มครองโรคร้ายแรงจะสิ้นสุด" + (id === "unjai" ? " ส่วนประกันชีวิต 50,000 บาทยังอยู่" : ""));
+    if (id === "cancermax") add("เคลมแล้วความคุ้มครองที่เหลือเป็นอย่างไร", "ระยะไม่ลุกลามจ่าย 20% ต่อชนิดมะเร็ง ถ้าต่อมาลุกลามรับส่วนที่เหลือ ระหว่างรักษายังได้เงินชดเชยรายวัน และถ้าเสียชีวิตจากมะเร็ง ครอบครัวได้เงินจากเอ็นดิ้ง แคนเซอร์ เพิ่มจากประกันชีวิต");
+    add("ทำแล้วเคลมได้ทันทีไหม", DETAILS[id] ? "มีระยะเวลารอคอย 90 วัน ถ้าตรวจพบโรคภายใน 90 วันแรกหลังเริ่มคุ้มครอง จะยังเคลมไม่ได้" : fq("ระยะเวลารอคอยคืออะไร"));
+    add("โรคที่เป็นมาก่อนทำประกัน คุ้มครองไหม", "ไม่คุ้มครอง เว้นแต่แถลงไว้และบริษัทรับโดยไม่ยกเว้น ควรแถลงสุขภาพตามจริงทุกข้อ");
+    if (id !== "longlife") add("เคลมยังไง", "เมื่อแพทย์วินิจฉัยตรงตามนิยามโรคในกรมธรรม์ ยื่นใบรับรองแพทย์และผลตรวจที่เกี่ยวข้อง บริษัทจ่ายเป็นเงินก้อนตามทุน ใช้จ่ายได้อิสระ ป้าเป็ดช่วยเตรียมเอกสารให้ค่ะ");
+  }
+  if (id === "k2plus" || id === "protec" || id === "tp"){
+    add("ทุพพลภาพถาวรสิ้นเชิงหมายถึงอะไร", T_TPD);
+    add("กิจวัตรประจำวัน 6 อย่างมีอะไรบ้าง", T_ADL);
+  }
+  if (id === "k2plus"){
+    add("ทุพพลภาพแล้วได้เงินเท่าไร", "ได้ 100% ของทุนสัญญาทุพพลภาพ ซึ่งเท่ากับ 3 เท่าของทุนประกันชีวิต (ถ้าทุนประกันชีวิตเกิน 10 ล้านบาท ทุนทุพพลภาพเป็น 30 ล้านบาท) และถ้าเสียชีวิต ครอบครัวได้ทุนประกันชีวิต");
+    add("กรณีไหนที่ไม่คุ้มครอง", "• ฆ่าตัวตายหรือทำร้ายร่างกายตัวเอง\n• บาดเจ็บขณะก่ออาชญากรรมร้ายแรงหรือหลบหนีการจับกุม\n• สงคราม จลาจล การก่อการร้าย\n• โดยสารอากาศยานที่ไม่ใช่สายการบินพาณิชย์ หรือทำหน้าที่ประจำอากาศยาน\n• ทหาร ตำรวจ หรืออาสาสมัครขณะปฏิบัติการสงครามหรือปราบปราม\n• โรคหรือความบกพร่องที่รู้อยู่แล้วแต่ไม่แจ้ง เว้นแต่ทำประกันมาแล้วไม่น้อยกว่า 12 เดือน\n• บาดเจ็บขณะเมาสุราหรือใช้สารเสพติดจนขาดสติ");
+  }
+  if (id === "tp"){
+    add("ทพ. ช่วยอะไร", "ถ้าทุพพลภาพถาวรสิ้นเชิง บริษัทยกเว้นเบี้ยประกันชีวิตที่เหลือให้ ไม่ต้องจ่ายต่อ แต่กรมธรรม์ยังคุ้มครองครบ (ไม่รวมเบี้ยของสัญญาเพิ่มเติมอื่น เช่น ประกันสุขภาพ) ความคุ้มครอง ทพ. สิ้นสุดเมื่ออายุ 60 ปี");
+    add("กรณีไหนที่ไม่คุ้มครอง", "• ฆ่าตัวตายหรือทำร้ายร่างกายตัวเอง\n• ทหาร ตำรวจ หรืออาสาสมัครขณะปฏิบัติการสงครามหรือปราบปราม\n• ขับขี่หรือประจำอากาศยาน หรือโดยสารอากาศยานที่ไม่ใช่สายการบินพาณิชย์");
+  }
+  if (id === "kch") add("คช. ช่วยอะไร", fq("ทพ. กับ คช. คืออะไร"));
+  if (id === "pension"){
+    add("เริ่มรับเงินบำนาญเมื่อไร", "รับทุกปีตั้งแต่อายุ 60 ถึง 99 ปี แบบผ่อน (จ่าย 5 ปี, 10 ปี หรือถึงอายุ 60) ได้ปีละ 20% ของทุนประกัน");
+    add("ถ้าเสียชีวิตก่อนอายุ 60 ได้อะไร", "ครอบครัวได้ 110% ของเบี้ยที่จ่ายไปแล้ว หรือมูลค่าเวนคืน ถ้ามากกว่า");
+  }
+  if ((g.id === "save" || g.id === "edu") && !rider) add("เงินคืนได้รับเมื่อไร", DETAILS[id] ? "ได้ในวันครบรอบปีกรมธรรม์ตามตารางของแบบนี้ ดูได้ในหัวข้อสรุปผลประโยชน์ด้านบน และเงินครบสัญญาได้ในวันครบกำหนดสัญญา" : "ได้ในวันครบรอบปีกรมธรรม์ตามตารางผลประโยชน์ของแบบนี้ ดูภาพรวมได้ในไทม์ไลน์ด้านบน ป้าเป็ดส่งตารางเต็มให้ได้ค่ะ");
+  if (/มีเงินปันผล/.test(p.name || "")) add("เงินปันผลคืออะไร ได้แน่ไหม", fq("เงินปันผลคืออะไร ได้แน่ไหม"));
+
+  // ทั่วไป
+  add("อายุเท่าไรถึงสมัครได้", `${p.ageText || (p.age ? `รับอายุ ${p.age[0]}–${p.age[1]} ปี` : "ตามเงื่อนไขของบริษัท")}\n\n${fq("อายุคิดยังไง")}`);
+  if (g.id !== "health") add("ต้องตรวจสุขภาพไหม", fact("ตรวจสุขภาพ") || fq("ต้องไปตรวจสุขภาพไหม"));
+  let tax = fact("ลดหย่อนภาษี");
+  if (!tax){
+    if (id === "pension") tax = "";
+    else if (g.id === "health" && id !== "vhkids") tax = "ได้ ในหมวดเบี้ยประกันสุขภาพ สูงสุด 25,000 บาทต่อปี (รวมกับเบี้ยประกันชีวิตแล้วไม่เกิน 100,000 บาท)";
+    else if (g.id === "ci") tax = "ใช้ลดหย่อนในหมวดเบี้ยประกันสุขภาพได้ ตามเกณฑ์ของกรมสรรพากร";
+    else if (!rider && kids) tax = "ใช้ลดหย่อนในหมวดเบี้ยประกันชีวิตได้ตามเงื่อนไขของกรมสรรพากร ป้าเป็ดช่วยเช็กสิทธิ์ให้ได้ค่ะ";
+    else if (!rider && ["life","save","edu","retire"].includes(g.id)) tax = "ได้ ในหมวดเบี้ยประกันชีวิต สูงสุด 100,000 บาทต่อปี (กรมธรรม์ต้องมีระยะเวลาตั้งแต่ 10 ปีขึ้นไป)";
+  }
+  if (tax) add("ลดหย่อนภาษีได้ไหม", tax);
+  if (!rider && ["life","save","edu","retire"].includes(g.id)){
+    const loan = fact("กู้เงินตามกรมธรรม์");
+    add("กู้เงินจากกรมธรรม์ได้ไหม", loan ? `ได้ค่ะ ${loan} ระหว่างกู้ความคุ้มครองยังอยู่` : fq("กู้เงินจากกรมธรรม์ได้ไหม"));
+  }
+  if (!rider) add("ถ้าจ่ายเบี้ยไม่ทันจะเป็นยังไง", fq("ถ้าจ่ายเบี้ยไม่ทันจะเป็นยังไง"));
+  const seen = new Set(); return out.filter(x => !seen.has(x.q) && seen.add(x.q));
+}
+
 function detailHTML(id){
-  const d = DETAILS[id], n = d.plans.length;
+  const d = getDetail(id), n = d.plans.length;
   const head = `<tr><th class="corner" scope="col">ความคุ้มครอง</th>${d.plans.map(p => `<th scope="col"><span class="pl"><b>${esc(p.t)}</b>${p.s ? `<small>${esc(p.s)}</small>` : ""}</span></th>`).join("")}</tr>`;
   const body = d.rows.map(r => r.length === 1
     ? `<tr class="grp"><th colspan="${n+1}" scope="colgroup"><span>${esc(r[0])}</span></th></tr>`
@@ -1934,31 +2030,29 @@ function detailHTML(id){
   const p0 = anyById(id) || {}, grp = groupOf(id);
   const ICO = {age:'<circle cx="12" cy="7.5" r="3.5"/><path d="M5 20c.8-3.9 3.6-6 7-6s6.2 2.1 7 6"/>', cover:'<path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/>', opt:'<path d="M12 3 3 7.5l9 4.5 9-4.5z"/><path d="M3 12l9 4.5 9-4.5M3 16.5 12 21l9-4.5"/>'};
   const qf = (ic, b, v) => `<div class="qf"><svg viewBox="0 0 24 24" aria-hidden="true">${ICO[ic]}</svg><b>${esc(b)}</b><span>${esc(v)}</span></div>`;
-  const qfacts = `<div class="qfacts">${qf("age","อายุรับประกัน", p0.age ? `${p0.age[0]}–${p0.age[1]} ปี` : "ตามแบบ")}${qf("cover", p0.cover ? "คุ้มครอง" : "รูปแบบ", p0.cover || "แนบกับประกันชีวิต")}${qf("opt","ทางเลือก", d.noPlanBtn ? "1 แบบ" : `${n} แผน`)}</div>`;
+  const qfacts = `<div class="qfacts">${qf("age","อายุรับประกัน", p0.age ? `${p0.age[0]}–${p0.age[1]} ปี` : "ตามแบบ")}${qf("cover", p0.cover ? "คุ้มครอง" : "รูปแบบ", p0.cover || "แนบกับประกันชีวิต")}${qf("opt", n ? "ทางเลือก" : (p0.minText || p0.minSA ? "ทุนเริ่มต้น" : "ทางเลือก"), n ? (d.noPlanBtn ? "1 แบบ" : `${n} แผน`) : (p0.minText ? p0.minText : p0.minSA ? fmt(p0.minSA)+" บาท" : "ตามแผน"))}</div>`;
   const crumb = `<nav class="crumb" aria-label="ตำแหน่งหน้า"><a href="#top" data-home>หน้าแรก</a> › ${grp ? `<a href="#groups" data-grp="${grp.id}">${esc(grp.t)}</a> › ` : ""}${esc(d.name)}</nav>`;
   const sibIds = grp ? grp.ids.filter(x => x !== id) : [];
-  const sibs = sibIds.map(anyById).filter(Boolean).map(p => DETAILS[p.id]
-    ? `<a href="#d-${p.id}"><b>${esc(p.name)}</b><span>${esc((p.pts||[""])[0])}</span></a>`
-    : `<a href="#p-${p.id}" data-card="${p.id}"><b>${esc(p.name)}</b><span>${esc((p.pts||[""])[0])}</span></a>`).join("");
+  const sibs = sibIds.map(anyById).filter(Boolean).map(p => `<a href="#d-${p.id}"><b>${esc(p.name)}</b><span>${esc((p.pts||[""])[0])}</span></a>`).join("");
   const url = SITE_URL + "#d-" + id;
   const share = `<div class="share"><a target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}">แชร์ทาง LINE</a><a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}">แชร์ทาง Facebook</a></div>`;
-  const pairs = (d.pairs || []).map(x => x.id && DETAILS[x.id]
+  const pairs = (d.pairs || []).map(x => x.id && anyById(x.id)
     ? `<a href="#d-${x.id}"><b>${esc(x.t)}</b><span>${esc(x.d)}</span></a>`
-    : x.id
-    ? `<a href="#p-${x.id}" data-card="${x.id}"><b>${esc(x.t)}</b><span>${esc(x.d)}</span></a>`
     : `<div><b>${esc(x.t)}</b><span>${esc(x.d)}</span></div>`).join("");
   return `<div class="dbar"><div class="wrap"><button type="button" data-dclose>กลับ</button><span>${esc(d.name)}</span></div></div>
   <div class="wrap">
     ${crumb}
     <div class="dhead"><span class="dtag">${esc(d.type)}</span><h1 id="dTitle" tabindex="-1">${esc(d.name)}</h1><p>${esc(d.lead)}</p></div>
     ${qfacts}
-    ${box("เหมาะกับใคร", `<ul>${d.fit.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`)}
+    ${d.auto ? box("จุดเด่น", `<ul>${d.highlights.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`) : box("เหมาะกับใคร", `<ul>${d.fit.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`)}
     ${box("ข้อมูลสำคัญ", `<dl class="kv">${d.facts.map(f => `<div><dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd></div>`).join("")}</dl>`)}
-    ${box(d.tableTitle || `เปรียบเทียบ ${n} แผน`, `${n > 2 ? `<p class="swipe">เลื่อนตารางไปทางซ้าย-ขวาเพื่อดูครบทุกแผน</p>` : ""}<div class="cmp-wrap" tabindex="0" role="region" aria-label="ตารางเปรียบเทียบแผน"><table class="cmp${n <= 2 ? " cmp2" : ""}"><thead>${head}</thead><tbody>${body}</tbody>${d.noPlanBtn ? "" : `<tfoot>${foot}</tfoot>`}</table></div><p class="note">${esc(d.tableNote)}${JSON.stringify(d.rows).includes('"?"') ? " ช่องที่เขียนว่า “สอบถามป้าเป็ด” ทักถามได้เลย ป้าเป็ดตอบตามกรมธรรม์ให้ค่ะ" : ""}</p>`)}
+    ${!n ? "" : box(d.tableTitle || `เปรียบเทียบ ${n} แผน`, `${n > 2 ? `<p class="swipe">เลื่อนตารางไปทางซ้าย-ขวาเพื่อดูครบทุกแผน</p>` : ""}<div class="cmp-wrap" tabindex="0" role="region" aria-label="ตารางเปรียบเทียบแผน"><table class="cmp${n <= 2 ? " cmp2" : ""}"><thead>${head}</thead><tbody>${body}</tbody>${d.noPlanBtn ? "" : `<tfoot>${foot}</tfoot>`}</table></div><p class="note">${esc(d.tableNote)}${JSON.stringify(d.rows).includes('"?"') ? " ช่องที่เขียนว่า “สอบถามป้าเป็ด” ทักถามได้เลย ป้าเป็ดตอบตามกรมธรรม์ให้ค่ะ" : ""}</p>`)}
+    ${TL[id] ? (d.auto ? box : fold)("ไทม์ไลน์ จ่ายเบี้ยและรับเงิน", `<p class="note">ตัวอย่างเมื่อเริ่มทำตอนอายุ ${tlAge} ปี</p>${timelineHTML(anyById(id), tlAge)}`) : ""}
     ${d.extra.map(e => fold(e[0], e[1])).join("")}
     ${d.wait === false ? "" : fold("ระยะเวลารอคอย", d.wait || H_WAIT)}
     ${d.copay === false ? "" : fold("Copayment คืออะไร", H_COPAY)}
     ${d.excl === false ? "" : fold("ข้อยกเว้นหลัก", d.excl || H_EXCL)}
+    ${(() => { const fs = productFAQ(id); return fs.length ? fold("คำถามที่พบบ่อยของแบบนี้", fs.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`).join("")) : ""; })()}
     ${box("ซื้อคู่กับอะไรได้", `<p>${esc(d.pairIntro || "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้ และเสริมความคุ้มครองได้ด้วย")}</p>${pairs ? `<div class="pair">${pairs}</div>` : ""}`)}
     <section class="dbox dcta"><h2>อยากรู้เบี้ยของคุณ</h2><p>เบี้ยขึ้นกับอายุ เพศ อาชีพ แผน และค่าใช้จ่ายส่วนแรกที่เลือก ป้าเป็ดทำใบเสนอราคาให้ฟรี ไม่มีข้อผูกมัด</p>
       <div class="cta-row tight"><a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn" data-dask>ถามป้าเป็ด</button></div>${share}</section>
@@ -1971,7 +2065,7 @@ function detailHTML(id){
 let detailId = null, detailInternal = false;
 const baseTitle = document.title;
 function openDetail(id){
-  const d = DETAILS[id], el = $("#detail");
+  const d = getDetail(id), el = $("#detail");
   detailId = id;
   el.innerHTML = detailHTML(id);
   el.hidden = false; el.scrollTop = 0;
@@ -1998,10 +2092,11 @@ function closeDetail(){
   const internal = detailInternal; detailInternal = false;
   if (internal) { history.back(); return; }
   const id = hideDetail();
-  history.replaceState(null, "", "#p-"+id);
-  focusCard(id);
+  history.replaceState(null, "", "#groups");
+  const g = groupOf(id); if (g) openGroup(g.id);
 }
-function focusCard(id){
+function focusCard(id){ detailInternal = true; location.hash = "#d-" + id; }
+function focusCardOld(id){
   if (typeof showCatalog === "function") showCatalog();
   let c = $("#p-"+id);
   if (!c){ curCat = "all"; renderCatalogue(); c = $("#p-"+id); }
@@ -2010,8 +2105,8 @@ function focusCard(id){
   const s = c.querySelector("summary"); if (s) s.focus({preventScroll:true});
 }
 function route(){
-  const m = location.hash.match(/^#d-([\w-]+)$/);
-  if (m && DETAILS[m[1]]) { if (detailId !== m[1]) openDetail(m[1]); }
+  const m = location.hash.match(/^#[dp]-([\w-]+)$/);
+  if (m && anyById(m[1])) { if (detailId !== m[1]) openDetail(m[1]); }
   else { hideDetail(); detailInternal = false; }
 }
 window.addEventListener("hashchange", route);
@@ -2063,7 +2158,7 @@ function wcardHTML(p, g, feat){
   const rider = RIDERS.includes(p);
   const age = p.age ? `รับอายุ ${p.age[0]}–${p.age[1]} ปี` : "";
   const meta = [age, p.cover ? `คุ้มครอง${p.cover.startsWith("ถึง") ? "" : " "}${p.cover}` : ""].filter(Boolean).join(" · ");
-  const more = DETAILS[p.id] ? `<a class="btn small" href="#d-${p.id}">ดูรายละเอียด</a>` : `<button type="button" class="btn small" data-card="${p.id}">ดูรายละเอียด</button>`;
+  const more = `<a class="btn small" href="#d-${p.id}">ดูรายละเอียด</a>`;
   return `<article class="wcard"><div class="tgs">${feat ? `<span class="tg feat">ป้าเป็ดแนะนำ</span>` : ""}<span class="tg">${rider ? "สัญญาเพิ่มเติม" : "แบบประกันหลัก"}</span></div><h3>${esc(p.name)}</h3><p>${esc((p.pts||[""])[0])}</p>${meta ? `<div class="meta">${esc(meta)}</div>` : ""}<div class="cta-row tight">${more}<a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจเรื่อง${g.t} แบบ ${p.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a></div></article>`;
 }
 function openGroup(id, age){
@@ -2110,7 +2205,7 @@ function showCatalog(){
 function initV2(){
   renderWorries();
   document.querySelectorAll("[data-show-all]").forEach(b => b.addEventListener("click", showCatalog));
-  if (/^#(plans|p-)/.test(location.hash)) { showCatalog(); const t = $(location.hash); if (t) setTimeout(() => t.scrollIntoView(), 50); }
+  
   const rv = document.querySelectorAll(".rv");
   if ("IntersectionObserver" in window){
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12});
