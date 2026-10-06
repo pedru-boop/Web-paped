@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 3.5 | อัปเดต 6 ต.ค. 2569 -->
+<!-- ป้าเป็ด CFP® เว็บ | เวอร์ชัน 3.6 | อัปเดต 6 ต.ค. 2569 -->
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<meta name="version" content="3.5">
+<meta name="version" content="3.6">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ป้าเป็ด CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ | ช่วยเลือกแบบประกันที่ใช่</title>
 <meta name="description" content="ป้าเป็ด (ศศธร รุจิเรกานุสรณ์) นักวางแผนการเงิน CFP® ตัวแทนกรุงเทพประกันชีวิต เชียงใหม่ ช่วยเลือกแบบประกันชีวิต ประกันสุขภาพ ออมเงิน ลดหย่อนภาษี และวางแผนเกษียณ ตอบ 5 ข้อรู้ผลทันที ปรึกษาฟรีทาง LINE @422cilco">
@@ -475,6 +475,25 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
 .bc-total b{font-family:"Prompt","Mali",system-ui,sans-serif;font-size:1.45rem;color:var(--sky)}
 .bc-notes{font-size:.8rem;color:var(--ink-soft);padding-left:1.1rem;margin:.5rem 0 0}
 .wcard .tg.new{background:#FFE4EC;color:#B0164A}
+
+.lsheet{position:fixed;inset:0;z-index:80;display:flex;align-items:flex-end;justify-content:center}
+.lsheet[hidden]{display:none}
+.lscrim{position:absolute;inset:0;background:rgba(13,63,122,.42)}
+.lpanel{position:relative;width:min(30rem,100%);max-height:92vh;overflow-y:auto;background:#fff;border-radius:1.4rem 1.4rem 0 0;padding:1.3rem 1.2rem calc(env(safe-area-inset-bottom,0px) + 1.2rem);box-shadow:0 -8px 30px rgba(0,0,0,.2)}
+@media (min-width:700px){.lsheet{align-items:center}.lpanel{border-radius:1.4rem}}
+.lpanel h3{margin:0 2.6rem .6rem 0;color:var(--navy);font-size:1.2rem}
+.lsteps{margin:0 0 .8rem;padding-left:1.3rem;font-size:.95rem}
+.lsteps li{margin:.25rem 0}
+.lslab{margin:0 0 .25rem;font-size:.8rem;font-weight:700;color:var(--ink-soft)}
+.lmsg{background:var(--sky-soft);border-radius:.8rem;padding:.6rem .8rem;font-size:.95rem;margin-bottom:.9rem;user-select:all;-webkit-user-select:all}
+.lsbtns{display:flex;flex-direction:column;gap:.5rem}
+.lsbtns .btn.line{width:100%;min-height:3.2rem;font-size:1.02rem}
+.lsbtns .btn.small{align-self:center}
+.lqr{margin-top:1rem;text-align:center;border-top:1px dashed var(--line);padding-top:.9rem;font-size:.9rem}
+.lqr #lsQrBox,.cqr #contactQr{display:inline-block;padding:.5rem;background:#fff;border:1px solid var(--line);border-radius:.8rem}
+.lx{position:absolute;top:.9rem;right:.9rem;border:2px solid var(--navy);background:#fff;color:var(--navy);border-radius:.6rem;min-height:2.4rem;padding:0 .8rem;font-weight:700}
+.cqr{flex-basis:100%;text-align:center;margin-top:.6rem;font-size:.88rem}
+.cqr p{margin:.4rem 0 0}
 </style>
 </head>
 <body>
@@ -571,7 +590,7 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
     <p>ข้อมูลแบบประกันสรุปจากคู่มือตัวแทนประกันชีวิตมาตรฐาน กรุงเทพประกันชีวิต (V.14) เพื่อให้ข้อมูลเบื้องต้นเท่านั้น ไทม์ไลน์เป็นตัวอย่างประกอบความเข้าใจ เงินปันผลไม่รับประกันผล รายละเอียดความคุ้มครองเป็นไปตามกรมธรรม์</p>
     <p><b>ผู้ซื้อควรทำความเข้าใจรายละเอียดความคุ้มครองและเงื่อนไขก่อนตัดสินใจทำประกันภัยทุกครั้ง</b></p>
     <p id="licenseLine"></p>
-    <p class="ver">เวอร์ชัน 3.5 · อัปเดต 6 ต.ค. 2569</p>
+    <p class="ver">เวอร์ชัน 3.6 · อัปเดต 6 ต.ค. 2569</p>
   </div>
 </footer>
 
@@ -581,6 +600,22 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
 </div>
 
 <button class="fab" type="button" data-open-chat aria-controls="chat"><img class="av" src="data:image/jpeg;base64,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" alt="" width="40" height="40">ถามป้าเป็ด</button>
+
+<div class="lsheet" id="lsheet" hidden>
+  <div class="lscrim" data-lsx></div>
+  <div class="lpanel" role="dialog" aria-modal="true" aria-labelledby="lsT">
+    <h3 id="lsT">ส่งข้อความหาป้าเป็ดทาง LINE</h3>
+    <ol class="lsteps">
+      <li>กดปุ่มสีเขียวด้านล่าง ระบบเปิด LINE ให้</li>
+      <li>กด <b>“เพิ่มเพื่อน”</b> (ถ้าเป็นเพื่อนกันแล้ว เข้าแชตได้เลย)</li>
+      <li id="lsStep3">ในช่องพิมพ์ <b>กดค้าง แล้วเลือก “วาง”</b> ข้อความด้านล่างจะขึ้นมาเอง แล้วกดส่ง</li>
+    </ol>
+    <div id="lsMsgWrap"><p class="lslab">ข้อความที่คัดลอกให้</p><div class="lmsg" id="lsMsg"></div></div>
+    <div class="lsbtns"><button type="button" class="btn line" id="lsGo">คัดลอกข้อความ แล้วไปที่ LINE</button><button type="button" class="btn small" id="lsCopy">คัดลอกข้อความ</button></div>
+    <div class="lqr" id="lsQrWrap" hidden><p>เปิดเว็บจากคอมพิวเตอร์? สแกน QR นี้ด้วยมือถือเพื่อเพิ่มเพื่อน</p><div id="lsQrBox"></div></div>
+    <button type="button" class="lx" data-lsx>ปิด</button>
+  </div>
+</div>
 
 <div class="drawer" id="drawer" aria-hidden="true">
   <div class="scrim" data-xdrawer></div>
@@ -1060,14 +1095,15 @@ function openProduct(id){ detailInternal = true; location.hash = "#d-" + id; }
 function renderFAQ(){ $("#faqList").innerHTML = FAQ.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`).join(""); }
 
 /* ---------- contact ---------- */
-function lineMsgUrl(text){ const id = CONFIG.lineId.trim(); return id.startsWith("@") ? `https://line.me/R/oaMessage/${encodeURIComponent(id)}/?${encodeURIComponent(text)}` : `https://line.me/R/msg/text/?${encodeURIComponent(text)}`; }
+const LMSG = [];
+function lineMsgUrl(text){ LMSG.push(text); return `${lineAddUrl()}#m${LMSG.length - 1}`; }
 function lineAddUrl(){ const id = CONFIG.lineId.trim(); if (!id) return ""; return id.startsWith("@") ? `https://line.me/R/ti/p/${encodeURIComponent(id)}` : `https://line.me/ti/p/~${encodeURIComponent(id)}`; }
 function renderContact(){
   let h = "";
   if (CONFIG.lineId) h += `<a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl("สวัสดีค่ะป้าเป็ด สนใจปรึกษาเรื่องประกันค่ะ")}">ทักแชท LINE ${esc(CONFIG.lineId)}</a><a class="btn" target="_blank" rel="noopener" href="${lineAddUrl()}">เพิ่มเพื่อน LINE</a>`;
   if (CONFIG.phone) h += `<a class="btn" href="tel:${esc(CONFIG.phone)}">โทร ${esc(CONFIG.phone.replace(/(\d{3})(\d{3})(\d{4})/,"$1-$2-$3"))}</a>`;
   if (!h) h = `<a class="btn line" target="_blank" rel="noopener" href="https://line.me/R/msg/text/?${encodeURIComponent("สวัสดีค่ะป้าเป็ด สนใจปรึกษาเรื่องประกันค่ะ")}">ทักป้าเป็ดทาง LINE</a>`;
-  $("#contactBtns").innerHTML = h;
+  $("#contactBtns").innerHTML = h + (CONFIG.lineId ? `<div class="cqr"><div id="contactQr" aria-label="QR Code เพิ่มเพื่อน LINE"></div><p>สแกนเพื่อเพิ่มเพื่อน LINE ${esc(CONFIG.lineId)}</p></div>` : "");
   $("#brandName").textContent = CONFIG.name; $("#heroName").textContent = CONFIG.name;
   if (CONFIG.license){ $("#licenseLine").textContent = `${CONFIG.fullName ? "ตัวแทนประกันชีวิต: "+CONFIG.fullName+" · " : ""}ใบอนุญาตตัวแทนประกันชีวิตเลขที่ ${CONFIG.license} บริษัท กรุงเทพประกันชีวิต จำกัด (มหาชน)`; $("#heroLic").textContent = `ใบอนุญาตตัวแทนเลขที่ ${CONFIG.license}`; }
 }
@@ -1131,7 +1167,7 @@ function openChat(){
 function closeChat(){ $("#chat").classList.remove("open"); }
 document.querySelectorAll("[data-open-chat]").forEach(b => b.onclick = openChat);
 $("#chatClose").onclick = closeChat;
-document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if (closeDrawer()) return; if ($("#chat").classList.contains("open")) closeChat(); else if (detailId) closeDetail(); });
+document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if (closeLineSheet()) return; if (closeDrawer()) return; if ($("#chat").classList.contains("open")) closeChat(); else if (detailId) closeDetail(); });
 $("#composer").onsubmit = e => { e.preventDefault(); const v = $("#chatIn").value.trim(); if (!v) return; $("#chatIn").value = ""; ask(v); };
 $("#msgs").addEventListener("click", e => {
   const a = e.target.closest("a"); if (!a) return;
@@ -2489,6 +2525,42 @@ function route(){
 window.addEventListener("hashchange", route);
 document.addEventListener("click", e => { if (e.target.closest('a[href^="#d-"]')) detailInternal = true; }, true);
 
+
+/* ---------- LINE: เพิ่มเพื่อน + คัดลอกข้อความ ---------- */
+let qrLib = null;
+function loadQR(){ if (qrLib) return qrLib; qrLib = new Promise((res, rej) => { const sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"; sc.onload = () => res(window.QRCode); sc.onerror = rej; document.head.appendChild(sc); }); return qrLib; }
+function drawQR(el, size){ if (!el || el.dataset.done) return; loadQR().then(Q => { el.innerHTML = ""; new Q(el, {text: lineAddUrl(), width: size, height: size, colorDark:"#0D3F7A", colorLight:"#ffffff"}); el.dataset.done = "1"; }).catch(() => { el.innerHTML = `<p class="note">แสดง QR ไม่ได้ ค้นหา LINE ID ${esc(CONFIG.lineId)} แทนได้ค่ะ</p>`; }); }
+function copyText(t){
+  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t).then(() => true, () => fallbackCopy(t));
+  return Promise.resolve(fallbackCopy(t));
+}
+function fallbackCopy(t){ try { const ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand("copy"); ta.remove(); return ok; } catch(e){ return false; } }
+const isDesk = () => matchMedia("(hover:hover) and (pointer:fine)").matches;
+function openLineSheet(text){
+  const el = $("#lsheet"), has = !!text;
+  $("#lsMsgWrap").hidden = !has; $("#lsMsg").textContent = text || "";
+  $("#lsStep3").hidden = !has;
+  $("#lsGo").textContent = has ? "คัดลอกข้อความ แล้วไปที่ LINE" : "ไปที่ LINE เพิ่มเพื่อน";
+  $("#lsCopy").hidden = !has;
+  $("#lsQrWrap").hidden = !isDesk();
+  el.hidden = false; document.body.classList.add("noscroll");
+  if (isDesk()) drawQR($("#lsQrBox"), 168);
+  $("#lsGo").onclick = () => {
+    if (has) fallbackCopy(text), copyText(text);
+    track("line_click", {has_msg: has});
+    if (isDesk()) window.open(lineAddUrl(), "_blank", "noopener"); else location.href = lineAddUrl();
+  };
+  $("#lsCopy").onclick = () => copyText(text).then(ok => { $("#lsCopy").textContent = ok === false ? "คัดลอกไม่ได้ กดค้างที่ข้อความเพื่อคัดลอก" : "คัดลอกแล้ว ✓"; });
+  setTimeout(() => $("#lsGo").focus(), 30);
+}
+function closeLineSheet(){ const el = $("#lsheet"); if (el.hidden) return false; el.hidden = true; if (!detailId && !$("#drawer").classList.contains("open")) document.body.classList.remove("noscroll"); $("#lsCopy").textContent = "คัดลอกข้อความ"; return true; }
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href*="line.me/R/ti/p/"]'); if (!a) return;
+  e.preventDefault();
+  const m = a.getAttribute("href").match(/#m(\d+)$/);
+  openLineSheet(m ? LMSG[+m[1]] : "");
+}, true);
+
 /* ---------- v2: เรื่องที่ห่วง ---------- */
 const GROUPS = [
   {id:"life", t:"คุ้มครองชีวิต", s:"ส่งต่อเงินก้อนให้คนที่รัก",
@@ -2574,6 +2646,8 @@ const openWorry = openGroup;
 function openDrawer(){ const d = $("#drawer"); d.classList.add("open"); d.setAttribute("aria-hidden","false"); $("#menuBtn").setAttribute("aria-expanded","true"); document.body.classList.add("noscroll"); setTimeout(() => d.querySelector(".x").focus(), 30); }
 function closeDrawer(){ const d = $("#drawer"); if (!d.classList.contains("open")) return false; d.classList.remove("open"); d.setAttribute("aria-hidden","true"); $("#menuBtn").setAttribute("aria-expanded","false"); if (!detailId) document.body.classList.remove("noscroll"); return true; }
 function initV3(){
+  document.querySelectorAll("[data-lsx]").forEach(b => b.onclick = closeLineSheet);
+  if ("IntersectionObserver" in window && $("#contactQr")){ const io = new IntersectionObserver(es => { if (es[0].isIntersecting){ drawQR($("#contactQr"), 150); io.disconnect(); } }); io.observe($("#contactQr")); }
   $("#dGroups").innerHTML = GROUPS.map(g => `<a class="item" href="#groups" data-g="${g.id}"><svg viewBox="0 0 24 24" aria-hidden="true">${g.icon}</svg>${esc(g.t)}</a>`).join("");
   $("#menuBtn").onclick = openDrawer;
   $("#drawer").querySelectorAll("[data-xdrawer]").forEach(b => b.onclick = closeDrawer);
