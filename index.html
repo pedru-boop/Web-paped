@@ -538,6 +538,39 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
 .ehead{font-weight:700;margin:.2rem 0 .6rem}
 .ecard h3 small{font-size:.8rem;font-weight:600;color:var(--ink-soft)}
 .ecard .ehit{background:linear-gradient(90deg,#FFE9BF,#FFF6E3);border-radius:.6rem;padding:.35rem .6rem;font-weight:700;color:#7A4A00;font-size:.9rem}
+/* v3.7 ไทม์ไลน์เงินเข้า-ออก */
+.cf-key{display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin:.9rem 0 .35rem;font-size:.8rem;font-weight:700}
+.cf-key span{display:inline-flex;align-items:center;gap:.35rem}
+.cf-key .k-up{color:#3E8A1E}.cf-key .k-dn{color:#C0392B}
+.cf-key .k-up::before,.cf-key .k-dn::before{content:"";width:0;height:0;border-left:.36rem solid transparent;border-right:.36rem solid transparent}
+.cf-key .k-up::before{border-bottom:.55rem solid #4C9A2A}.cf-key .k-dn::before{border-top:.55rem solid #D9534F}
+.cf-ups{align-items:end}
+.cf-up{display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;min-height:2.6rem;min-width:0}
+.cf-up b{font-size:.6rem;font-weight:700;color:#2F6E14;line-height:1.1;white-space:nowrap;text-align:right;margin-bottom:.15rem}
+.cf-up b small{display:block;font-size:.52rem;font-weight:600;color:#5B7F45}
+.cf-up i{position:relative;display:block;width:2px;height:1.25rem;background:#4C9A2A;margin-right:1px}
+.cf-up i::before{content:"";position:absolute;left:50%;top:-.42rem;transform:translateX(-50%);border-left:.3rem solid transparent;border-right:.3rem solid transparent;border-bottom:.45rem solid #4C9A2A}
+.cf-up.mat b{font-size:.72rem;background:#F5B82E;color:#5A3A00;border-radius:.4rem;padding:.12rem .3rem;margin-bottom:.25rem}
+.cf-up.mat i{width:3px;height:1.6rem;background:#E3A21A}
+.cf-up.mat i::before{border-bottom-color:#E3A21A;border-left-width:.4rem;border-right-width:.4rem;top:-.5rem}
+.cf-axis .bc-yr{position:relative;border-left:1px solid rgba(255,255,255,.35)}
+.cf-axis .bc-yr:first-child{border-radius:.4rem 0 0 .4rem}.cf-axis .bc-yr:last-child{border-radius:0 .4rem .4rem 0}
+.cf-dn{min-height:1.55rem;min-width:0}
+.cf-dn i{position:relative;display:block;width:2px;height:1.05rem;background:#D9534F;margin-left:1px}
+.cf-dn i::after{content:"";position:absolute;left:50%;bottom:-.4rem;transform:translateX(-50%);border-left:.3rem solid transparent;border-right:.3rem solid transparent;border-top:.45rem solid #D9534F}
+.cf-br{margin-top:.15rem}
+.cf-brk{border:2px solid #E7A3A1;border-top:0;border-radius:0 0 .5rem .5rem;height:.6rem;position:relative}
+.cf-brk span{position:absolute;left:50%;top:.35rem;transform:translateX(-50%);background:#fff;padding:0 .4rem;font-size:.74rem;font-weight:700;color:#B03A2E;white-space:nowrap}
+.cf-yl{margin:1.15rem 0 0;font-size:.74rem;color:var(--ink-soft)}
+.lslead{margin:0 0 .7rem;font-size:.95rem}
+.lqr{display:flex;justify-content:center;margin:0 0 .8rem}
+.lsbtns{display:flex;flex-wrap:wrap;gap:.5rem}
+.bc-in{padding:0 .4rem}
+.cf-key{position:sticky;left:0;max-width:19rem}
+.cf-dn{display:flex;align-items:flex-start;gap:.2rem}
+.cf-dn i{margin-left:2px}
+.cf-dn small{font-size:.52rem;font-weight:600;color:#B03A2E;padding-top:.1rem}
+.cf-up.mat b{position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -648,15 +681,11 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
 <div class="lsheet" id="lsheet" hidden>
   <div class="lscrim" data-lsx></div>
   <div class="lpanel" role="dialog" aria-modal="true" aria-labelledby="lsT">
-    <h3 id="lsT">ส่งข้อความหาป้าเป็ดทาง LINE</h3>
-    <ol class="lsteps">
-      <li>กดปุ่มสีเขียวด้านล่าง ระบบเปิด LINE ให้</li>
-      <li>กด <b>“เพิ่มเพื่อน”</b> (ถ้าเป็นเพื่อนกันแล้ว เข้าแชตได้เลย)</li>
-      <li id="lsStep3">ในช่องพิมพ์ <b>กดค้าง แล้วเลือก “วาง”</b> ข้อความด้านล่างจะขึ้นมาเอง แล้วกดส่ง</li>
-    </ol>
-    <div id="lsMsgWrap"><p class="lslab">ข้อความที่คัดลอกให้</p><div class="lmsg" id="lsMsg"></div></div>
-    <div class="lsbtns"><button type="button" class="btn line" id="lsGo">คัดลอกข้อความ แล้วไปที่ LINE</button><button type="button" class="btn small" id="lsCopy">คัดลอกข้อความ</button></div>
-    <div class="lqr" id="lsQrWrap" hidden><p>เปิดเว็บจากคอมพิวเตอร์? สแกน QR นี้ด้วยมือถือเพื่อเพิ่มเพื่อน</p><div id="lsQrBox"></div></div>
+    <h3 id="lsT">ทักป้าเป็ดทาง LINE</h3>
+    <p class="lslead" id="lsLead"></p>
+    <div class="lqr"><div id="lsQrBox"></div></div>
+    <div id="lsMsgWrap"><p class="lslab">ข้อความที่จะส่ง</p><div class="lmsg" id="lsMsg"></div></div>
+    <div class="lsbtns"><a class="btn line" id="lsGo" href="#" target="_blank" rel="noopener">เปิด LINE ในคอมพิวเตอร์</a><a class="btn small" id="lsAdd" href="" target="_blank" rel="noopener">เพิ่มเพื่อนป้าเป็ด</a></div>
     <button type="button" class="lx" data-lsx>ปิด</button>
   </div>
 </div>
@@ -1140,7 +1169,7 @@ function renderFAQ(){ $("#faqList").innerHTML = FAQ.map(f => `<details class="fa
 
 /* ---------- contact ---------- */
 const LMSG = [];
-function lineMsgUrl(text){ LMSG.push(text); return `${lineAddUrl()}#m${LMSG.length - 1}`; }
+function lineMsgUrl(text){ const id = CONFIG.lineId.trim(); if (!id) return ""; if (!id.startsWith("@")) return lineAddUrl(); return `https://line.me/R/oaMessage/${encodeURIComponent(id)}/?${encodeURIComponent(text)}`; }
 function lineAddUrl(){ const id = CONFIG.lineId.trim(); if (!id) return ""; return id.startsWith("@") ? `https://line.me/R/ti/p/${encodeURIComponent(id)}` : `https://line.me/ti/p/~${encodeURIComponent(id)}`; }
 function renderContact(){
   let h = "";
@@ -2218,9 +2247,15 @@ function benefitChartHTML(sp){
     ci = j + 1; }
   const bandHTML = bandR.map(b => { const to = colOf(b.to); return `<p class="bc-cap">${esc(b.label)}</p><div class="bc-row"><div class="bc-band" style="grid-column:1 / ${to + 2}">${esc(b.text)}</div></div>`; }).join("");
   const yHTML = cols.map(c => `<div class="bc-yr">${yLab(c)}</div>`).join("");
-  const payHTML = cols.map(c => `<div class="bc-pay">${c[0] <= sp.pay ? "<i></i>" : ""}</div>`).join("");
-  const cashAt = c => { const hits = cashR.filter(r => { for (let y = r[0]; y <= r[1]; y += r[3]) if (y >= c[0] && y <= c[1]) return true; return false; }); return hits.map(r => r[2]).join("+"); };
-  const cashCells = cols.map(c => { const v = cashAt(c); return `<div class="bc-cash">${v ? `<b>${esc(v)}</b>` : ""}</div>`; }).join("");
+  const isMat = c => c[1] === N && !!sp.mat;
+  const payHTML = cols.map(c => `<div class="cf-dn">${c[0] <= sp.pay ? `<i></i>${c[0] !== c[1] && !sp.single ? "<small>ทุกปี</small>" : ""}` : ""}</div>`).join("");
+  const payEnd = cols.findIndex(c => c[1] >= sp.pay);
+  const cashHits = c => cashR.filter(r => { for (let y = r[0]; y <= r[1]; y += r[3]) if (y >= c[0] && y <= c[1]) return true; return false; });
+  const cashAt = c => cashHits(c).map(r => r[2]).join("+");
+  const cashCells = cols.map(c => { const v = cashAt(c), rng = c[0] !== c[1];
+    if (isMat(c)) return `<div class="cf-up mat"><b>${esc(v ? v + " + " + sp.mat : sp.mat)}</b><i></i></div>`;
+    return `<div class="cf-up">${v ? `<b>${esc(v)}${rng ? `<small>${cashHits(c).some(r => r[3] > 1) ? `ทุก ${cashHits(c).find(r => r[3] > 1)[3]} ปี` : "ทุกปี"}</small>` : ""}</b><i></i>` : ""}</div>`; }).join("");
+  const hasUp = cashR.length || sp.mat;
   // ผลรวม
   let total = null;
   if (!sp.unit && sp.mat && cashR.length && cashR.every(r => Number.isFinite(pctNum(r[2])))){
@@ -2233,13 +2268,16 @@ function benefitChartHTML(sp){
   const callout = sp.matText ? `<div class="bc-mat"><span>${esc(sp.matWhen || "")}</span><b>${esc(sp.matText)}</b></div>`
     : sp.mat ? `<div class="bc-mat"><span>มีชีวิตอยู่จนครบสัญญา (${endTxt})</span><b>รับ ${esc(sp.mat)}</b><small>${esc(sp.matSub || unit)}</small></div>` : "";
   const notes = [sp.deathNote ? "เสียชีวิต: " + sp.deathNote : "", sp.cashNote || "", sp.bandNote || "", ...(sp.notes || [])].filter(Boolean);
-  const tmpl = cols.map(c => c[0] === c[1] ? "minmax(0,1fr)" : "minmax(0,2fr)").join(" ");
+  const tmpl = cols.map(c => c[1] === N && sp.mat && c[0] === c[1] ? "minmax(2.9rem,1.3fr)" : c[0] === c[1] ? "minmax(0,1fr)" : "minmax(0,2fr)").join(" ");
   return `<div class="bc" style="--nc:${nc};--tmpl:${tmpl}"><div class="bc-scroll"><div class="bc-in" style="min-width:${Math.max(cols.reduce((s,c) => s + (c[0] === c[1] ? 1.55 : 3.1), 0), 15)}rem">
     <p class="bc-cap">คุ้มครองการเสียชีวิต (${esc(unit)})</p><div class="bc-row bc-deathrow">${dHTML}</div>
     ${bandHTML}
-    <p class="bc-cap">ปีกรมธรรม์ที่${sp.toAge ? ` (เริ่มอายุ ${sp.age} ปี)` : ""}</p><div class="bc-row">${yHTML}</div>
-    <p class="bc-cap">${payTxt}</p><div class="bc-row">${payHTML}</div>
-    ${cashR.length ? `<p class="bc-cap">${esc(sp.cashLabel || "รับเงินคืน")} (${esc(unit)})</p><div class="bc-row">${cashCells}</div>` : ""}
+    <div class="cf-key"><span class="k-up">${esc(sp.cashLabel || "รับเงินคืน")} สิ้นปี (${esc(unit)})</span><span class="k-dn">จ่ายเบี้ย ต้นปี</span></div>
+    ${hasUp ? `<div class="bc-row cf-ups">${cashCells}</div>` : ""}
+    <div class="bc-row cf-axis">${yHTML}</div>
+    <div class="bc-row cf-dns">${payHTML}</div>
+    <div class="bc-row cf-br"><div class="cf-brk" style="grid-column:1 / ${Math.max(0, payEnd) + 2}"><span>${payTxt}</span></div></div>
+    <p class="cf-yl">ปีกรมธรรม์ที่${sp.toAge ? ` (เริ่มทำตอนอายุ ${sp.age} ปี)` : ""}</p>
   </div></div>
   ${callout}
   ${total ? `<p class="bc-total">ผลประโยชน์รวมตลอดสัญญา <b>${total}</b> ${esc(unit)}</p>` : ""}
@@ -2537,36 +2575,31 @@ document.addEventListener("click", e => { if (e.target.closest('a[href^="#d-"]')
 /* ---------- LINE: เพิ่มเพื่อน + คัดลอกข้อความ ---------- */
 let qrLib = null;
 function loadQR(){ if (qrLib) return qrLib; qrLib = new Promise((res, rej) => { const sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"; sc.onload = () => res(window.QRCode); sc.onerror = rej; document.head.appendChild(sc); }); return qrLib; }
-function drawQR(el, size){ if (!el || el.dataset.done) return; loadQR().then(Q => { el.innerHTML = ""; new Q(el, {text: lineAddUrl(), width: size, height: size, colorDark:"#0D3F7A", colorLight:"#ffffff"}); el.dataset.done = "1"; }).catch(() => { el.innerHTML = `<p class="note">แสดง QR ไม่ได้ ค้นหา LINE ID ${esc(CONFIG.lineId)} แทนได้ค่ะ</p>`; }); }
+function drawQR(el, size, url){ if (!el || el.dataset.done) return; loadQR().then(Q => { el.innerHTML = ""; new Q(el, {text: url || lineAddUrl(), width: size, height: size, colorDark:"#0D3F7A", colorLight:"#ffffff", correctLevel: Q.CorrectLevel.L}); el.dataset.done = "1"; }).catch(() => { el.innerHTML = `<p class="note">แสดง QR ไม่ได้ ค้นหา LINE ID ${esc(CONFIG.lineId)} แทนได้ค่ะ</p>`; }); }
 function copyText(t){
   if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t).then(() => true, () => fallbackCopy(t));
   return Promise.resolve(fallbackCopy(t));
 }
 function fallbackCopy(t){ try { const ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length); const ok = document.execCommand("copy"); ta.remove(); return ok; } catch(e){ return false; } }
 const isDesk = () => matchMedia("(hover:hover) and (pointer:fine)").matches;
-function openLineSheet(text){
+function openLineSheet(url, text){
   const el = $("#lsheet"), has = !!text;
+  $("#lsT").textContent = has ? "ทักป้าเป็ดทาง LINE" : "เพิ่มเพื่อนป้าเป็ดทาง LINE";
+  $("#lsLead").textContent = has ? "สแกน QR ด้วยมือถือ แชตป้าเป็ดจะเปิดพร้อมข้อความนี้ กดส่งได้เลยค่ะ" : "สแกน QR ด้วยมือถือ เพื่อเพิ่มเพื่อนป้าเป็ด";
   $("#lsMsgWrap").hidden = !has; $("#lsMsg").textContent = text || "";
-  $("#lsStep3").hidden = !has;
-  $("#lsGo").textContent = has ? "คัดลอกข้อความ แล้วไปที่ LINE" : "ไปที่ LINE เพิ่มเพื่อน";
-  $("#lsCopy").hidden = !has;
-  $("#lsQrWrap").hidden = !isDesk();
+  const box = $("#lsQrBox"); box.innerHTML = ""; delete box.dataset.done; drawQR(box, 210, url);
+  $("#lsGo").href = url; $("#lsGo").textContent = has ? "เปิด LINE ในคอมพิวเตอร์" : "เพิ่มเพื่อนใน LINE คอมพิวเตอร์";
+  $("#lsAdd").hidden = !has; $("#lsAdd").href = lineAddUrl();
   el.hidden = false; document.body.classList.add("noscroll");
-  if (isDesk()) drawQR($("#lsQrBox"), 168);
-  $("#lsGo").onclick = () => {
-    if (has) fallbackCopy(text), copyText(text);
-    track("line_click", {has_msg: has});
-    if (isDesk()) window.open(lineAddUrl(), "_blank", "noopener"); else location.href = lineAddUrl();
-  };
-  $("#lsCopy").onclick = () => copyText(text).then(ok => { $("#lsCopy").textContent = ok === false ? "คัดลอกไม่ได้ กดค้างที่ข้อความเพื่อคัดลอก" : "คัดลอกแล้ว ✓"; });
   setTimeout(() => $("#lsGo").focus(), 30);
 }
-function closeLineSheet(){ const el = $("#lsheet"); if (el.hidden) return false; el.hidden = true; if (!detailId && !$("#drawer").classList.contains("open")) document.body.classList.remove("noscroll"); $("#lsCopy").textContent = "คัดลอกข้อความ"; return true; }
+function closeLineSheet(){ const el = $("#lsheet"); if (el.hidden) return false; el.hidden = true; if (!detailId && !$("#drawer").classList.contains("open")) document.body.classList.remove("noscroll"); return true; }
 document.addEventListener("click", e => {
-  const a = e.target.closest('a[href*="line.me/R/ti/p/"]'); if (!a) return;
-  e.preventDefault();
-  const m = a.getAttribute("href").match(/#m(\d+)$/);
-  openLineSheet(m ? LMSG[+m[1]] : "");
+  const a = e.target.closest('a[href*="line.me/R/"],a[href*="line.me/ti/"]'); if (!a || a.closest("#lsheet")) return;
+  const href = a.getAttribute("href"), m = href.match(/oaMessage\/[^/]+\/\?(.*)$/), text = m ? decodeURIComponent(m[1]) : "";
+  track("line_click", {has_msg: !!text});
+  if (!isDesk()) return; // มือถือ: เปิดแชต LINE พร้อมข้อความทันที
+  e.preventDefault(); openLineSheet(href, text);
 }, true);
 
 /* ---------- v2: เรื่องที่ห่วง ---------- */
