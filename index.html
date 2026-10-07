@@ -571,6 +571,48 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
 .cf-dn i{margin-left:2px}
 .cf-dn small{font-size:.52rem;font-weight:600;color:#B03A2E;padding-top:.1rem}
 .cf-up.mat b{position:relative;z-index:1}
+/* v3.7b: สีตามแบรนด์ + ลูกศรมีตัวเลข */
+.cf-key .k-up{color:#4C8F22}.cf-key .k-dn{color:var(--navy)}
+.cf-key .k-up::before{border-bottom-color:#8CC63F}.cf-key .k-dn::before{border-top-color:var(--navy)}
+.cf-up{min-height:3rem;align-items:stretch}
+.cf-up b{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;margin:0 0 0 auto;width:calc(100% - .35rem);max-width:2.6rem;min-height:2.6rem;padding:.65rem .1rem .25rem;background:linear-gradient(180deg,#A5D65A,#7FBF33);color:#fff;font-size:.74rem;font-weight:700;line-height:1.1;text-align:center;white-space:nowrap;clip-path:polygon(50% 0,100% .6rem,100% 100%,0 100%,0 .6rem);border-radius:0;text-shadow:0 1px 0 rgba(40,80,10,.35)}
+.cf-up b small{color:#fff;font-size:.56rem;font-weight:600;opacity:.95}
+.cf-up i{display:none}
+.cf-up.mat b{max-width:3.4rem;width:calc(100% - .2rem);min-height:3rem;background:linear-gradient(180deg,#C9E04F,var(--lime));color:var(--navy);font-size:.8rem;padding-top:.75rem;text-shadow:none;clip-path:polygon(50% 0,100% .7rem,100% 100%,0 100%,0 .7rem)}
+.cf-dn i{background:var(--navy)}
+.cf-dn i::after{border-top-color:var(--navy)}
+.cf-dn small{color:var(--navy)}
+.cf-brk{border-color:#9DB5D1}
+.cf-brk span{color:var(--navy)}
+.lc.pick{box-shadow:0 0 0 3px var(--lime),0 18px 30px -16px var(--c1s)}
+.lc-rip{background:radial-gradient(circle,rgba(181,211,52,.55) 0%,rgba(181,211,52,0) 70%)}
+.lc-ok{background:var(--lime);box-shadow:0 4px 10px -3px rgba(80,110,0,.5)}
+.lc-ok::after{border-color:var(--navy)}
+.lc-go{color:var(--pay)}
+.edu{background:var(--sky-soft);border-color:var(--line)}
+.ecard .ehit{background:var(--green-soft);color:var(--navy);border-left:4px solid var(--lime)}
+.plist{margin:0 0 .6rem;padding-left:1.2rem}
+.plist li{margin:.25rem 0}
+.dbar button{display:inline-flex;align-items:center;gap:.3rem;padding:0 .8rem}
+.dbar button svg{width:1.05rem;height:1.05rem;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.dbar span{flex:1;min-width:0}
+.dbar .dhome{background:var(--navy);color:#fff}
+@media (max-width:420px){.dbar .wrap{gap:.45rem}.dbar button{padding:0 .6rem;font-size:.9rem}}
+.cf-key{max-width:calc(100vw - 5rem)}
+/* v3.7c */
+.agebar{display:grid;grid-template-columns:auto 1fr;gap:.4rem .8rem;align-items:center;background:var(--sky-soft);border:1.5px solid var(--line);border-radius:1rem;padding:.8rem 1rem;margin:0 0 1rem}
+.agebar label{grid-column:1 / -1;font-weight:700;color:var(--navy)}
+.agebar label small{font-weight:500;color:var(--ink-soft)}
+.agebar input{width:6.5rem;min-height:2.9rem;font:inherit;font-size:1.1rem;border:2px solid var(--line);border-radius:.7rem;background:#fff;color:var(--ink);text-align:center}
+.agebar small#fMsg{font-size:.84rem;color:var(--ink-soft)}
+.faqg{margin:0 0 1.2rem}
+.faqg h3{font-size:1.02rem;color:var(--navy);margin:0 0 .4rem;padding-left:.6rem;border-left:4px solid var(--lime)}
+@media (max-width:700px){
+  .fab{padding:.3rem;gap:0}
+  .fab span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .fab .av{width:2.9rem;height:2.9rem}
+}
+.dbar span{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:.9rem;line-height:1.3}
 </style>
 </head>
 <body>
@@ -584,16 +626,6 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
   </div>
 </header>
 
-<div class="fbar" id="fbar">
-  <div class="wrap">
-    <div class="fgrid">
-      <div class="fcol-age"><label for="fAge">อายุปัจจุบัน</label><div class="fage"><input id="fAge" type="number" inputmode="numeric" min="0" max="85" placeholder="เช่น 35"><span>ปี</span></div></div>
-      <div class="fcol-grp"><label for="fGroup">สนใจเรื่อง</label><select id="fGroup"><option value="">โปรดระบุ</option></select></div>
-      <div class="fcol-go"><button type="button" class="go" id="fGo">ค้นหาแบบประกัน</button></div>
-    </div>
-    <small id="fMsg">ทำให้ลูก ใส่อายุของลูก · ถ้าเกินวันเกิด 6 เดือน นับเป็น 1 ปี</small>
-  </div>
-</div>
 
 <main id="top">
   <div class="wrap">
@@ -605,7 +637,7 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
           <p class="lead">เลือกความคุ้มครองที่สนใจ แล้วดูแบบประกันกรุงเทพประกันชีวิตที่ตอบโจทย์ได้ทันที ไม่ต้องกรอกชื่อหรือเบอร์โทร ป้าเป็ดทำใบเสนอราคาให้ฟรี</p>
           <div class="cta-row">
             <a class="btn main" href="#groups" id="startBtn">เลือกความคุ้มครอง</a>
-            <button class="btn" type="button" data-open-chat>ถามป้าเป็ดก่อน</button>
+            <a class="btn" href="#finder">ให้ป้าเป็ดช่วยเลือก</a>
           </div>
         </div>
         <figure class="portrait">
@@ -618,7 +650,8 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
 
   <section id="groups">
     <div class="wrap">
-      <div class="secHead rv"><h2>เลือกความคุ้มครองที่สนใจ</h2><p>แตะกลุ่มที่ตรงกับใจ แล้วดูแบบประกันทั้งหมดในกลุ่มนั้น ป้าเป็ดเรียงแบบที่แนะนำไว้ก่อน</p></div>
+      <div class="secHead rv"><h2>เลือกความคุ้มครองที่สนใจ</h2><p>ใส่อายุก่อน จะเห็นเฉพาะแบบที่สมัครได้ แล้วแตะกลุ่มที่ตรงกับใจ ป้าเป็ดเรียงแบบที่แนะนำไว้ก่อน</p></div>
+      <div class="agebar rv" id="agebar"><label for="fAge">อายุของคนที่จะทำประกัน <small>ไม่ใส่ก็ได้</small></label><div class="fage"><input id="fAge" type="number" inputmode="numeric" min="0" max="85" placeholder="เช่น 35"><span>ปี</span></div><small id="fMsg">ทำให้ลูก ใส่อายุของลูก · เกินวันเกิด 6 เดือน นับเพิ่ม 1 ปี</small></div>
       <div class="wgrid rv" id="wgrid"></div>
       <div class="wpanel" id="wpanel" hidden aria-live="polite"></div>
     </div>
@@ -676,7 +709,7 @@ button.pl.plb small:last-child{text-decoration:underline;opacity:.9}
   <div class="cta-row tight"><button type="button" class="btn main small" id="consentYes">ยอมรับ</button><button type="button" class="btn small" id="consentNo">ไม่ยอมรับ</button></div>
 </div>
 
-<button class="fab" type="button" data-open-chat aria-controls="chat"><img class="av" src="data:image/jpeg;base64,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" alt="" width="40" height="40">ถามป้าเป็ด</button>
+<button class="fab" type="button" data-open-chat aria-controls="chat" aria-label="ถามป้าเป็ด"><img class="av" src="data:image/jpeg;base64,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" alt="" width="40" height="40"><span>ถามป้าเป็ด</span></button>
 
 <div class="lsheet" id="lsheet" hidden>
   <div class="lscrim" data-lsx></div>
@@ -750,7 +783,7 @@ const PRODUCTS = [
  {id:"hr9920",name:"ห่วงรัก พรีเมียร์ 99/20",cat:"protect",g:{protect:4,health:3},age:[0,70],cover:"ถึงอายุ 99 ปี",pay:"20 ปี",payYears:20,minSA:200000,modes:"all",
   pts:["จ่ายเบี้ย 20 ปี คุ้มครองชีวิตถึงอายุ 99 ปี","แถมสัญญายกเว้นเบี้ยกรณีทุพพลภาพ (ทพ.) ให้ฟรี","ทุนต่ำกว่า 500,000 บาท ต้องแนบสัญญาเพิ่มเติม เช่น ประกันสุขภาพ","กู้เงินตามกรมธรรม์ได้ถึง 90% ของมูลค่าเวนคืน"]},
  {id:"hrdiv",name:"ห่วงรัก พรีเมียร์ (มีเงินปันผล)",cat:"protect",g:{protect:3,legacy:2},age:[0,70],cover:"ถึงอายุ 99 ปี",pay:"เลือก 5, 10, 15 หรือ 20 ปี",minSA:100000,modes:"all",tier:0,shortPay:true,div:true,
-  pts:["เลือกจ่ายสั้นได้ตั้งแต่ 5 ปี คุ้มครองถึงอายุ 99 ปี","อาจได้เงินปันผลรายปีตั้งแต่ปีที่ 2 (ไม่รับประกันผล)"]},
+  pts:["เลือกจ่ายเบี้ยได้ 5, 10, 15 หรือ 20 ปี คุ้มครองถึงอายุ 99 ปี","อาจได้เงินปันผลรายปีตั้งแต่ปีที่ 2 (ไม่รับประกันผล)"]},
  {id:"hr9901",name:"ห่วงรัก พรีเมียร์ 9901 (มีเงินปันผล)",cat:"legacy",g:{legacy:3,protect:2},age:[0,70],cover:"ถึงอายุ 99 ปี",pay:"ครั้งเดียว",minSA:100000,modes:"single",tier:2,shortPay:true,div:true,
   pts:["จ่ายเบี้ยครั้งเดียวจบ คุ้มครองถึงอายุ 99 ปี","อาจได้เงินปันผลรายปีตั้งแต่ปีที่ 2 (ไม่รับประกันผล)"]},
  {id:"prestige",name:"เพรสทีจ ไลฟ์ / เพรสทีจ ไลฟ์ 99/20",cat:"legacy",g:{legacy:4,protect:2},age:[0,70],ageNote:"จ่าย 5 หรือ 10 ปี รับถึงอายุ 70 ปี, จ่าย 15 หรือ 20 ปี รับถึงอายุ 65 ปี",cover:"ถึงอายุ 99 ปี",pay:"เลือก 5, 10, 15 หรือ 20 ปี",minSA:5000000,occ12:true,modes:"all",tier:3,shortPay:true,
@@ -1011,9 +1044,9 @@ const GOALS = [
   ["legacy","🎁","ส่งต่อมรดก / จ่ายสั้นคุ้มครองยาว","ทุนสูง ส่งต่อให้คนที่รัก"]
 ];
 const JOBS = [
-  [1,"💼","งานในสำนักงาน ค้าขาย ครู ข้าราชการ","ส่วนใหญ่ทำงานในร่ม"],
-  [2,"🧑‍🌾","งานนอกสถานที่บ้าง เกษตรกร งานวิชาชีพกลางแจ้ง","ใช้เครื่องจักรบางครั้ง"],
-  [3,"🛵","งานใช้แรง ช่าง ขับรถขนส่ง ใช้เครื่องจักรหนัก","เดินทางหรือทำงานนอกสถานที่เป็นประจำ"]
+  [1,"💼","พนักงานออฟฟิศ ข้าราชการ ครู แพทย์ ทันตแพทย์ เภสัชกร ขายของออนไลน์ แม่บ้าน","ส่วนใหญ่ทำงานในร่ม"],
+  [2,"🩺","พยาบาล กายภาพบำบัด ค้าขายในตลาด วิศวกร สถาปนิก ช่างตัดผม-ทำเล็บ นักเรียน นักศึกษา","ออกนอกสถานที่หรือใช้เครื่องมือบางครั้ง"],
+  [3,"🛵","เกษตรกรที่ลงมือทำเอง ช่างต่าง ๆ ขับรถรับจ้างหรือขนส่ง ทหารหรือตำรวจชั้นประทวน แรงงานโรงงาน","ใช้แรงหรือเครื่องจักร เดินทางเป็นประจำ"]
 ];
 const PAYS = [
   ["short","⏱️","อยากจ่ายสั้น ไม่เกิน 10 ปี","จ่ายหนักหน่อยแต่จบเร็ว"],
@@ -1039,7 +1072,7 @@ function renderQuiz(){
   } else if (k === "goal"){
     html += `<h3>อยากให้ประกันช่วยเรื่องไหนมากที่สุด</h3><p class="hint">เลือกข้อที่สำคัญที่สุด 1 ข้อ</p><div class="opts">${GOALS.map(g=>optBtn("goal",g[0],g[1],g[2],g[3])).join("")}</div>`;
   } else if (k === "job"){
-    html += `<h3>ลักษณะงานประจำเป็นแบบไหน</h3><p class="hint">บางแบบรับเฉพาะงานความเสี่ยงต่ำถึงปานกลาง</p><div class="opts">${JOBS.map(j=>optBtn("job",j[0],j[1],j[2],j[3])).join("")}</div>`;
+    html += `<h3>ลักษณะงานประจำเป็นแบบไหน</h3><p class="hint">บางแบบรับเฉพาะงานความเสี่ยงต่ำถึงปานกลาง</p><div class="opts">${JOBS.map(j=>optBtn("job",j[0],j[1],j[2],j[3])).join("")}</div><p class="hint">ไม่แน่ใจว่าอยู่กลุ่มไหน <a href="${lineMsgUrl("สวัสดีค่ะป้าเป็ด อยากให้ช่วยเช็กชั้นอาชีพค่ะ อาชีพของฉันคือ ")}" target="_blank" rel="noopener">ทักป้าเป็ดเช็กให้</a></p>`;
   } else if (k === "budget"){
     html += `<h3>งบประกันต่อปีประมาณเท่าไร</h3><p class="hint">ไม่ต้องเป๊ะ ใช้คัดแบบที่จ่ายไหวเท่านั้น</p><div class="opts">${BUDGET.map((b,i)=>optBtn("budget",i,"💰",b.t,b.s)).join("")}</div>`;
   } else if (k === "pay"){
@@ -1165,7 +1198,18 @@ function bindTlAge(){
 function openProduct(id){ detailInternal = true; location.hash = "#d-" + id; }
 
 /* ---------- FAQ ---------- */
-function renderFAQ(){ $("#faqList").innerHTML = FAQ.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`).join(""); }
+const FAQ_GROUPS = [
+  ["เริ่มต้นทำประกัน", ["ประกันชีวิตกับประกันสุขภาพต่างกันยังไง","อยากทำประกันให้ลูก","ทำประกันให้พ่อแม่สูงอายุได้ไหม","อายุคิดยังไง","สมัครต้องใช้อะไรบ้าง"]],
+  ["สุขภาพและการรับประกัน", ["มีโรคประจำตัว ทำประกันได้ไหม","ต้องไปตรวจสุขภาพไหม","ระยะเวลารอคอยคืออะไร"]],
+  ["การจ่ายเบี้ยและกรมธรรม์", ["ผ่อนรายเดือนได้ไหม","ถ้าจ่ายเบี้ยไม่ทันจะเป็นยังไง","กู้เงินจากกรมธรรม์ได้ไหม","เงินปันผลคืออะไร ได้แน่ไหม","ทพ. กับ คช. คืออะไร"]],
+  ["เคลมและภาษี", ["เคลมยังไง","Copayment (ร่วมจ่าย) คืออะไร","ลดหย่อนภาษีได้เท่าไร"]]
+];
+function renderFAQ(){
+  const item = f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`;
+  const used = new Set(FAQ_GROUPS.flatMap(g => g[1]));
+  const groups = [...FAQ_GROUPS.map(([t, qs]) => [t, qs.map(q => FAQ.find(f => f.q === q)).filter(Boolean)]), ["อื่น ๆ", FAQ.filter(f => !used.has(f.q))]].filter(g => g[1].length);
+  $("#faqList").innerHTML = groups.map(([t, fs]) => `<div class="faqg"><h3>${esc(t)}</h3>${fs.map(item).join("")}</div>`).join("");
+}
 
 /* ---------- contact ---------- */
 const LMSG = [];
@@ -2269,7 +2313,7 @@ function benefitChartHTML(sp){
     : sp.mat ? `<div class="bc-mat"><span>มีชีวิตอยู่จนครบสัญญา (${endTxt})</span><b>รับ ${esc(sp.mat)}</b><small>${esc(sp.matSub || unit)}</small></div>` : "";
   const notes = [sp.deathNote ? "เสียชีวิต: " + sp.deathNote : "", sp.cashNote || "", sp.bandNote || "", ...(sp.notes || [])].filter(Boolean);
   const tmpl = cols.map(c => c[1] === N && sp.mat && c[0] === c[1] ? "minmax(2.9rem,1.3fr)" : c[0] === c[1] ? "minmax(0,1fr)" : "minmax(0,2fr)").join(" ");
-  return `<div class="bc" style="--nc:${nc};--tmpl:${tmpl}"><div class="bc-scroll"><div class="bc-in" style="min-width:${Math.max(cols.reduce((s,c) => s + (c[0] === c[1] ? 1.55 : 3.1), 0), 15)}rem">
+  return `<div class="bc" style="--nc:${nc};--tmpl:${tmpl}"><div class="bc-scroll"><div class="bc-in" style="min-width:${Math.max(cols.reduce((s,c) => s + (c[0] === c[1] ? 2.45 : 4.2), 0), 15)}rem">
     <p class="bc-cap">คุ้มครองการเสียชีวิต (${esc(unit)})</p><div class="bc-row bc-deathrow">${dHTML}</div>
     ${bandHTML}
     <div class="cf-key"><span class="k-up">${esc(sp.cashLabel || "รับเงินคืน")} สิ้นปี (${esc(unit)})</span><span class="k-dn">จ่ายเบี้ย ต้นปี</span></div>
@@ -2323,7 +2367,7 @@ function autoDetail(id){
   const g = groupOf(id);
   return {auto:true, name:p.name, type: rider ? "สัญญาเพิ่มเติม" : `แบบประกันหลัก${g ? " · "+g.t : ""}`, lead:p.pts[0],
     highlights:p.pts, facts, plans:[], rows:[], tableNote:"", copay:false, wait:false, excl:false, extra:[], pairs:[],
-    pairIntro: rider ? "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้" : "ซื้อสัญญาเพิ่มเติม เช่น ประกันสุขภาพ แนบได้ตามเงื่อนไขของแต่ละแบบ ป้าเป็ดช่วยดูให้ได้ค่ะ"};
+    pairIntro: rider ? "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้" : (PAIR[id] || "")};
 }
 const getDetail = id => DETAILS[id] || autoDetail(id);
 
@@ -2457,7 +2501,7 @@ function productFAQ(id){
   // ทั่วไป
   add("อายุเท่าไรถึงสมัครได้", `${p.ageText || (p.age ? `รับอายุ ${p.age[0]}–${p.age[1]} ปี` : "ตามเงื่อนไขของบริษัท")}\n\n${fq("อายุคิดยังไง")}`);
   add("ต้องตรวจสุขภาพไหม", examAns(id));
-  if (!rider){ add("มีโรคประจำตัว ทำได้ไหม", diseaseAns(id)); add("จ่ายเบี้ยได้แบบไหน ผ่อนรายเดือนได้ไหม", modeAns(p)); }
+  if (!rider){ add("ซื้อสัญญาเพิ่มเติมแนบได้ไหม", pairText(id)); add("มีโรคประจำตัว ทำได้ไหม", diseaseAns(id)); add("จ่ายเบี้ยได้แบบไหน ผ่อนรายเดือนได้ไหม", modeAns(p)); }
   let tax = fact("ลดหย่อนภาษี");
   if (!tax){
     if (id === "pension") tax = "";
@@ -2494,7 +2538,7 @@ function detailHTML(id){
   const pairs = (d.pairs || []).filter(x => !x.id || !anyById(x.id) || userAge == null || inAge(anyById(x.id), userAge)).map(x => x.id && anyById(x.id)
     ? `<a href="#d-${x.id}"><b>${esc(x.t)}</b><span>${esc(x.d)}</span></a>`
     : `<div><b>${esc(x.t)}</b><span>${esc(x.d)}</span></div>`).join("");
-  return `<div class="dbar"><div class="wrap"><button type="button" data-dclose>กลับ</button><span>${esc(d.name)}</span></div></div>
+  return `<div class="dbar"><div class="wrap"><button type="button" data-dclose aria-label="ย้อนกลับไปหน้าก่อน"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>ย้อนกลับ</button><span>${esc(d.name.replace(/^(บีแอลเอ|กรุงเทพ)\s+/, "").replace(/\s*\(.*?\)/g, ""))}</span><button type="button" class="dhome" data-dhome aria-label="ไปหน้าแรก"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.6V20h13V9.6"/></svg>หน้าแรก</button></div></div>
   <div class="wrap">
     ${crumb}
     <div class="dhead"><span class="dtag">${esc(d.type)}</span><h1 id="dTitle" tabindex="-1">${esc(d.name)}</h1><p>${esc(d.lead)}</p></div>
@@ -2510,7 +2554,7 @@ function detailHTML(id){
     ${d.excl === false ? "" : fold("ข้อยกเว้นหลัก", d.excl || H_EXCL)}
     ${(() => { const fs = productFAQ(id), qa = f => `<details class="faq"><summary>${esc(f.q)}</summary><div>${esc(f.a).replace(/\n/g,"<br>")}</div></details>`;
       return fs.length ? fold(`คำถามเกี่ยวกับ ${d.name}`, fs.map(qa).join("")) : ""; })()}
-    ${box("ซื้อคู่กับอะไรได้", `<p>${esc(d.pairIntro || "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้ และเสริมความคุ้มครองได้ด้วย")}</p>${pairs ? `<div class="pair">${pairs}</div>` : ""}`)}
+    ${box("ซื้อคู่กับอะไรได้", (pi => pi.includes("\n") ? `<ul class="plist">${pi.split("\n").map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p>${esc(pi)}</p>`)((typeof PAIR !== "undefined" && PAIR[id] ? PAIR[id] + ((d.pairs || []).length ? "\nตัวอย่างที่นิยมแนบ:" : "") : "") || d.pairIntro || "ต้องแนบกับประกันชีวิตแบบหลัก ป้าเป็ดช่วยเลือกแบบหลักที่เข้ากับงบให้ได้ และเสริมความคุ้มครองได้ด้วย") + `${pairs ? `<div class="pair">${pairs}</div>` : ""}`)}
     <section class="dbox dcta"><h2>อยากรู้เบี้ยของคุณ</h2><p>เบี้ยขึ้นกับอายุ เพศ อาชีพ แผน และค่าใช้จ่ายส่วนแรกที่เลือก ป้าเป็ดทำใบเสนอราคาให้ฟรี ไม่มีข้อผูกมัด</p>
       <div class="cta-row tight"><a class="btn line" target="_blank" rel="noopener" href="${lineMsgUrl(`สวัสดีค่ะป้าเป็ด สนใจ ${d.name} ขอใบเสนอราคาค่ะ`)}">ขอใบเสนอราคาฟรี</a><button type="button" class="btn" data-dask>ถามป้าเป็ด</button></div></section>
     ${sibs ? box(`แบบที่คล้ายกัน ในหมวด${grp.t}${userAge != null ? ` (อายุ ${userAge} ปี)` : ""}`, sibs) : ""}
@@ -2529,6 +2573,7 @@ function openDetail(id){
   document.body.classList.add("noscroll");
   document.title = `${d.name} รายละเอียดและเปรียบเทียบแผน | ${CONFIG.name}`;
   el.querySelector("[data-dclose]").onclick = closeDetail;
+  el.querySelector("[data-dhome]").onclick = () => { hideDetail(); detailInternal = false; history.replaceState(null, "", location.pathname); window.scrollTo(0, 0); track("detail_home", {product:id}); };
   el.querySelector("[data-dask]").onclick = () => { openChat(); ask(d.name); };
   el.querySelectorAll("[data-plan]").forEach(a => a.addEventListener("click", () => track("plan_interest", {product:id, plan:a.dataset.plan})));
   bindTl(id); bindLoop(el);
@@ -2680,8 +2725,8 @@ function openGroup(id, age){
   el.hidden = false;
   el.querySelectorAll("[data-card]").forEach(b => b.onclick = () => focusCard(b.dataset.card));
   const all = el.querySelector("[data-allg]"); if (all) all.onclick = () => openGroup(id, null);
-  el.querySelector("[data-chage]").onclick = () => { window.scrollTo({top:0, behavior:"smooth"}); setTimeout(() => $("#fAge").focus(), 350); $("#fGroup").value = id; };
-  el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+  el.querySelector("[data-chage]").onclick = () => { $("#agebar").scrollIntoView({behavior:"smooth", block:"center"}); setTimeout(() => $("#fAge").focus({preventScroll:true}), 350); };
+  if (!groupNoScroll) el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
   track("group_open", {group:id, age: hasAge ? age : null});
 }
 const openWorry = openGroup;
@@ -2695,17 +2740,17 @@ function initV3(){
   $("#drawer").querySelectorAll("[data-xdrawer]").forEach(b => b.onclick = closeDrawer);
   $("#drawer").querySelectorAll("a").forEach(a => a.addEventListener("click", () => { closeDrawer(); if (a.dataset.g) setTimeout(() => openGroup(a.dataset.g), 40); }));
   if (userAge != null) $("#fAge").value = userAge;
-  $("#fGroup").innerHTML = `<option value="">โปรดระบุ</option>` + GROUPS.map(g => `<option value="${g.id}">${esc(g.t)}</option>`).join("");
-  $("#fGo").onclick = () => {
-    const gid = $("#fGroup").value, raw = $("#fAge").value.trim(), age = raw === "" ? NaN : Math.max(0, Math.min(99, parseInt(raw,10)));
-    const msg = $("#fMsg");
-    if (!gid){ msg.textContent = "กรุณาเลือกเรื่องที่สนใจก่อนนะคะ"; msg.classList.add("warn"); $("#fGroup").focus(); return; }
-    msg.textContent = "ทำให้ลูก ใส่อายุของลูก · ถ้าเกินวันเกิด 6 เดือน นับเป็น 1 ปี"; msg.classList.remove("warn");
+  const fa = $("#fAge"), applyAge = () => {
+    const raw = fa.value.trim(), age = raw === "" ? NaN : Math.max(0, Math.min(99, parseInt(raw,10)));
     if (Number.isFinite(age)) ans.age = age;
     setUserAge(Number.isFinite(age) ? age : null);
-    openGroup(gid, Number.isFinite(age) ? age : null);
+    const cur = $("#wgrid").querySelector('.wtile[aria-pressed="true"]');
+    if (cur && !$("#wpanel").hidden){ groupNoScroll = true; openGroup(cur.dataset.w); groupNoScroll = false; }
   };
+  fa.addEventListener("change", applyAge);
+  fa.addEventListener("keydown", e => { if (e.key === "Enter"){ e.preventDefault(); applyAge(); fa.blur(); } });
 }
+let groupNoScroll = false;
 function showCatalog(){
   const c = $("#catalog"); if (!c.hidden) return;
   c.hidden = false; $("#showAll").hidden = true;
@@ -2721,6 +2766,42 @@ function initV2(){
   } else rv.forEach(x => x.classList.add("in"));
 }
 
+/* ซื้อสัญญาเพิ่มเติมแนบ: ตามเงื่อนไขของแต่ละแบบในคู่มือ V.14 */
+const TPD5 = "แถมฟรี ทพ. (ยกเว้นเบี้ยเมื่อทุพพลภาพ) ทุนรวมทุกฉบับไม่เกิน 5 ล้านบาท สำหรับผู้ที่รับประกันอัตราปกติ";
+const PAIR = {
+  wl9999:"แนบได้เฉพาะประกันสุขภาพ ได้แก่ แฮปปี้ เฮลธ์ เพรสทีจ เฮลธ์ แวลู เฮลธ์ แวลู เฮลธ์ คิดส์ และโอพีดี สบายใจ\n" + TPD5 + "\nผู้เยาว์ ผู้ชำระเบี้ยแทนต้องซื้อ คช. ด้วย",
+  sudkhum:"ซื้อสัญญาเพิ่มเติมอื่นได้ ถ้าทุนต่ำกว่า 500,000 บาท ต้องซื้อสัญญาเพิ่มเติมพร้อมกันด้วย\nแถมฟรี เอดีบี และทีพีดี 50% ของทุน คุ้มครองช่วงจ่ายเบี้ย\nแถมฟรี ทพ. สำหรับผู้ที่รับประกันอัตราปกติ\nผู้เยาว์ ผู้ชำระเบี้ยต้องซื้อ คช. ด้วย",
+  hr9920:"ซื้อสัญญาเพิ่มเติมได้ ถ้าทุนต่ำกว่า 500,000 บาท ต้องมีสัญญาเพิ่มเติมแนบตั้งแต่วันเริ่มคุ้มครอง\nแถมฟรี ทพ. สำหรับผู้ที่รับประกันอัตราปกติ\nเด็กอายุ 0–4 ปี ผู้ชำระเบี้ยต้องซื้อ คช. ด้วย",
+  hrdiv:"ซื้อสัญญาเพิ่มเติมได้ เช่น ประกันสุขภาพ โรคร้ายแรง\n" + TPD5 + "\nผู้เยาว์ ผู้ชำระเบี้ยต้องซื้อ คช. ด้วย",
+  hr9901:"ซื้อสัญญาเพิ่มเติมได้ เช่น ประกันสุขภาพ โรคร้ายแรง\nผู้เยาว์ไม่ต้องซื้อ คช.",
+  prestige:"ซื้อสัญญาเพิ่มเติมได้ ยกเว้น ฉก. และ ฉป.\nผู้เยาว์ซื้อ คช. ไม่ได้",
+  hwldiv:"ซื้อสัญญาเพิ่มเติมได้ ยกเว้น ฉก. และ ฉป.\nผู้เยาว์ซื้อ คช. ไม่ได้\nแบบนี้ไม่แถม ทพ.",
+  hwl9901:"ซื้อสัญญาเพิ่มเติมได้ ยกเว้น ฉก. และ ฉป.\nผู้เยาว์ซื้อ คช. ไม่ได้\nแบบนี้ไม่แถม ทพ.",
+  hs999:"แถมฟรี เอดีบี999 ทุนเท่ากับแบบหลัก\nซื้อสัญญาเพิ่มเติมได้ ยกเว้น ทพ. ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด\nผู้เยาว์ไม่บังคับซื้อ คช.",
+  happykids:"แถมฟรี เพเยอร์ โพรเทค\nผู้ชำระเบี้ย (พ่อแม่หรือผู้ปกครอง อายุ 20–55 ปี) ต้องซื้อ คช. ด้วย\nซื้อประกันสุขภาพให้ลูกแนบได้",
+  pansuk:"ซื้อสัญญาเพิ่มเติมได้\n" + TPD5 + "\nผู้เยาว์ (ไม่เกิน 14 ปี) ต้องซื้อ คช. ด้วย",
+  hs147:"ซื้อสัญญาเพิ่มเติมได้ ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด และอาจมีเบี้ยเพิ่มเฉพาะสัญญาที่ซื้อ\nผู้เยาว์ซื้อ คช. ไม่ได้",
+  hs168:"ซื้อสัญญาเพิ่มเติมได้ ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด และอาจมีเบี้ยเพิ่มเฉพาะสัญญาที่ซื้อ\nผู้เยาว์ซื้อ คช. ไม่ได้",
+  hs1810:"ซื้อสัญญาเพิ่มเติมได้ ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด\n" + TPD5 + "\nผู้เยาว์ต้องซื้อ คช. ด้วย",
+  hs995:"ซื้อสัญญาเพิ่มเติมได้\n" + TPD5 + "\nผู้เยาว์ ผู้ชำระเบี้ยแทนต้องซื้อ คช. ด้วย",
+  hs9910:"ซื้อสัญญาเพิ่มเติมได้\n" + TPD5 + "\nผู้เยาว์ ผู้ชำระเบี้ยแทนต้องซื้อ คช. ด้วย",
+  hs2515:"แถมฟรี เอดีบี ทุนเท่ากับแบบหลัก\n" + TPD5 + "\nซื้อสัญญาเพิ่มเติมได้ ผู้เยาว์ (0–14 ปี) ต้องซื้อ คช. ด้วย",
+  tax105:"ซื้อสัญญาเพิ่มเติมได้ ยกเว้น ทพ. ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด\nผู้เยาว์ซื้อ คช. ไม่ได้",
+  pension:"ซื้อสัญญาเพิ่มเติมได้ ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด และอาจมีเบี้ยเพิ่มเฉพาะสัญญาที่ซื้อ",
+  k2plus:"ซื้อสัญญาเพิ่มเติมได้\n" + TPD5,
+  hs208:"ซื้อสัญญาเพิ่มเติมได้ ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด และอาจมีเบี้ยเพิ่มเฉพาะสัญญาที่ซื้อ\nผู้เยาว์ (0–14 ปี) ซื้อ คช. ไม่ได้",
+  hs126:"ซื้อสัญญาเพิ่มเติมได้ ยกเว้น ทพ. (และไม่แถม ทพ.) ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด\nผู้เยาว์ (0–14 ปี) ซื้อ คช. ไม่ได้",
+  hs157:"ซื้อสัญญาเพิ่มเติมได้ ยกเว้น ทพ. ถ้าซื้อ ต้องตอบคำถามสุขภาพละเอียด\nผู้เยาว์ซื้อ คช. ไม่ได้",
+  bkk:"ซื้อสัญญาเพิ่มเติมได้\nแถมฟรี ทพ. สำหรับผู้ที่รับประกันอัตราปกติ",
+  smartkids:"แถมฟรี ซีไอ คิดส์ และเพเยอร์ โพรเทค\nผู้ชำระเบี้ยต้องซื้อ คช. ด้วย\nซื้อประกันสุขภาพให้ลูกแนบได้"
+};
+const pairText = id => {
+  if (PAIR[id]) return PAIR[id];
+  const d = getDetail(id), pi = d && d.pairIntro || ""; if (!pi || /ตามเงื่อนไขของแต่ละแบบ/.test(pi)) return "";
+  if (!/เช่น$/.test(pi)) return pi;
+  const names = (d.pairs || []).map(x => (x.id && anyById(x.id) ? anyById(x.id).name : x.t || x.n || "")).filter(Boolean);
+  return names.length ? `${pi} ${names.join(", ")}` : pi.replace(/\s*เช่น$/, "");
+};
 /* ---------- v3.7: คำตอบเฉพาะของแต่ละแบบ ----------
    ที่มา: คู่มือตัวแทน V.14 (สัญญาหลัก/สัญญาเพิ่มเติม) และระเบียบการตรวจสุขภาพ ประกาศ 197/2566 */
 const EXAM_TBL = [[0,15,8],[16,45,10],[46,50,8],[51,60,5],[61,null,3]];
@@ -2859,6 +2940,7 @@ const TOPICS = [
   {id:"death", t:"เสียชีวิตได้เท่าไร", q:/เสียชีวิต/, dep:true, k:["เสียชีวิต","ตาย"]},
   {id:"excl", t:"กรณีไหนไม่คุ้มครอง", q:/ไม่คุ้มครอง|ข้อยกเว้น/, dep:true, k:["ไม่คุ้มครอง","ข้อยกเว้น"]},
   {id:"age", t:"รับอายุเท่าไร", q:/อายุเท่าไร/, dep:true, k:["รับอายุ","อายุเท่าไร","อายุเท่าไหร่","อายุกี่ปี","สมัครได้ถึง"]},
+  {id:"pair", t:"ซื้อสัญญาเพิ่มเติมแนบได้ไหม", q:/สัญญาเพิ่มเติมแนบ/, dep:true, k:["แนบ","ซื้อคู่","สัญญาเพิ่มเติม","ประกันสุขภาพแนบ","แถมฟรี"]},
   {id:"tax", t:"ลดหย่อนภาษีได้ไหม", q:/ลดหย่อน/, dep:false, k:["ภาษี","ลดหย่อน","tax"]},
   {id:"claim", t:"เคลมยังไง", q:/เคลม/, dep:false, k:["เคลม","เบิก","claim","สินไหม"]}
 ];
@@ -2925,11 +3007,11 @@ $("#msgs").addEventListener("change", e => {
 });
 
 /* ---------- แบบที่คล้ายกัน: แถบเลื่อนวนไม่สิ้นสุด ---------- */
-const GTONE = {life:["#1B75BB","#E4F1FB"], save:["#3E8A1E","#EAF6DF"], edu:["#B26A00","#FFF1D9"], retire:["#0B8A86","#DDF5F3"], health:["#1690CF","#E1F3FC"], ci:["#C2185B","#FCE6EE"], dis:["#6A4FB3","#EEE9FA"], acc:["#D35A0A","#FFEBDD"]};
+const GTONE = {};
 const hexA = (h, a) => `rgba(${parseInt(h.slice(1,3),16)},${parseInt(h.slice(3,5),16)},${parseInt(h.slice(5,7),16)},${a})`;
 function loopHTML(items, g){
   if (!items.length || !g) return "";
-  const [c1, c2] = GTONE[g.id] || GTONE.life;
+  const [c1, c2] = ["#0D3F7A", "#E2F2FC"];
   const cards = items.map(p => `<a class="lc" href="#d-${p.id}" data-lc="${p.id}"><span class="lc-ic">${icoSVG(g)}</span><b>${esc(p.name)}</b><span class="lc-t">${esc((p.pts||[""])[0])}</span><span class="lc-m">${p.age ? `<i>อายุ ${p.age[0]}–${p.age[1]} ปี</i>` : ""}${p.cover ? `<i>${esc(p.cover)}</i>` : ""}</span><span class="lc-go">ดูแบบนี้</span><span class="lc-ok" aria-hidden="true"></span></a>`).join("");
   const many = items.length > 1;
   return `<div class="loop" data-loop style="--c1:${c1};--c2:${c2};--c1a:${hexA(c1,.22)};--c1s:${hexA(c1,.5)}">${many ? `<button type="button" class="lp prev" aria-label="เลื่อนไปแบบก่อนหน้า"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>` : ""}<div class="ltrack" tabindex="0" role="group" aria-label="แบบที่คล้ายกัน">${cards}</div>${many ? `<button type="button" class="lp next" aria-label="เลื่อนไปแบบถัดไป"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>` : ""}</div>${many ? `<p class="lhint">ปัดซ้าย-ขวาดูได้เรื่อย ๆ แตะการ์ดเพื่อเปิดดู</p>` : ""}`;
@@ -2997,12 +3079,14 @@ function eduCardHTML(r, pAge, cAge){
   return `<article class="wcard ecard"><div class="tgs"><span class="tg ${r.child ? "kid" : ""}">${r.child ? "ทำในชื่อลูก" : "ทำในชื่อพ่อหรือแม่"}</span>${r.p.isNew ? `<span class="tg new">แบบใหม่</span>` : ""}</div><h3>${esc(r.p.name)}${r.lab && !r.p.name.includes(r.lab) ? ` <small>แบบ ${r.lab}</small>` : ""}</h3><p class="ehit">${esc(hit)}</p><p>จ่ายเบี้ย ${r.pay} ปี คุ้มครอง ${r.term} ปี${t.cashS ? ` มีเงินคืน ${esc(t.cashS)} ไว้ช่วยค่าเทอมระหว่างทาง` : ""}</p>${r.child ? `<p class="meta">ลูกต้องอายุไม่เกิน 14 ปี</p>` : ""}<div class="cta-row tight"><a class="btn small" href="#d-${r.id}">ดูรายละเอียด</a><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl(msg)}">ขอใบเสนอราคา</a></div></article>`;
 }
 function openEdu(g, pAge){
-  const el = $("#wpanel"), hasP = Number.isFinite(pAge);
+  const el = $("#wpanel"), kidAge = Number.isFinite(pAge) && pAge <= 14 ? pAge : null;
+  if (kidAge != null) pAge = NaN;
+  const hasP = Number.isFinite(pAge);
   el.innerHTML = `<div class="whead"><span class="wic">${icoSVG(g)}</span><h3>${esc(g.t)}</h3></div>
   <div class="wbody"><p>${esc(g.story)}</p>
   <div class="edu"><p class="eq">ให้เงินก้อนมาตรงช่วงที่ลูกต้องใช้ บอกอายุ 2 ข้อนี้ค่ะ</p>
   <div class="erow"><label for="eduP">อายุพ่อหรือแม่ (คนทำประกัน)<span class="fage"><input id="eduP" type="number" inputmode="numeric" min="15" max="70" placeholder="เช่น 35" value="${hasP && pAge >= 15 ? pAge : ""}"><span>ปี</span></span></label>
-  <label for="eduC">อายุลูกตอนนี้ <small>ไม่บอกก็ได้</small><span class="fage"><input id="eduC" type="number" inputmode="numeric" min="0" max="25" placeholder="เช่น 3"><span>ปี</span></span></label></div>
+  <label for="eduC">อายุลูกตอนนี้ <small>ไม่บอกก็ได้</small><span class="fage"><input id="eduC" type="number" inputmode="numeric" min="0" max="25" placeholder="เช่น 3" value="${kidAge != null ? kidAge : ""}"><span>ปี</span></span></label></div>
   <div class="cta-row tight"><button type="button" class="btn main small" id="eduGo">ดูแบบที่เหมาะ</button><button type="button" class="btn small" id="eduSkip">ข้าม ไม่ระบุอายุลูก</button></div></div>
   <div id="eduRes" aria-live="polite"></div>
   <div class="wmore"><span>อยากได้แผนที่คำนวณจากค่าเทอมจริงของลูก</span><a class="btn line small" target="_blank" rel="noopener" href="${lineMsgUrl("สวัสดีค่ะป้าเป็ด อยากวางแผนทุนการศึกษาลูกค่ะ")}">ปรึกษาป้าเป็ดฟรี</a></div></div>`;
@@ -3010,7 +3094,6 @@ function openEdu(g, pAge){
   const num = s => { const v = $(s).value.trim(); return v === "" ? NaN : parseInt(v, 10); };
   const show = skip => {
     const p = num("#eduP"), c = skip ? NaN : num("#eduC");
-    if (Number.isFinite(p)) setUserAge(p);
     const res = eduRows(p, c), hasC = Number.isFinite(c);
     let head = res.skip
       ? (res.over ? `ลูกอายุ ${c} ปีแล้ว แนะนำแบบระยะสั้น 10–15 ปี ได้เงินก้อนเร็ว` : "แบบระยะสั้น 10–15 ปี ได้เงินก้อนทันใช้ เหมาะกับทุนการศึกษาทั่วไป")
@@ -3022,7 +3105,8 @@ function openEdu(g, pAge){
   $("#eduGo").onclick = () => show(false);
   $("#eduSkip").onclick = () => { $("#eduC").value = ""; show(true); };
   ["#eduP","#eduC"].forEach(s => $(s).addEventListener("keydown", e => { if (e.key === "Enter") show(false); }));
-  el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+  if (kidAge != null) show(false);
+  if (!groupNoScroll) el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
   track("group_open", {group:"edu", age: hasP ? pAge : null});
 }
 
